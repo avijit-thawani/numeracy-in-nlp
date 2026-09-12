@@ -1,4 +1,0 @@
-# One paper per line: an arXiv/ACL/DOI/Semantic Scholar link, or a bare DOI.
-# Commit this file and the survey rebuilds itself. Lines starting with # are ignored.
-# Anything that could not be looked up is left here so you can fix it.
-

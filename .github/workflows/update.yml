@@ -59,7 +59,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md import/ data/ views/ survey.config.json
+          # -A rather than a list of paths, so that files the run *removes*
+          # get staged too. Listing paths meant a migration could delete a file
+          # in the working tree while git quietly kept resurrecting it.
+          git add -A
           if git diff --staged --quiet; then
             echo "Nothing changed."
             echo "changed=false" >> "$GITHUB_OUTPUT"
