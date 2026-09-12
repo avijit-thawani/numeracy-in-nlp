@@ -10,5 +10,11 @@
     "citationCount",
     "authors"
   ],
-  "sortBy": "year"
+  "sortBy": "year",
+  "algorithm": {
+    "forward": true,
+    "backward": true,
+    "minCount": 2,
+    "popularityPenalty": 0.2
+  }
 }

@@ -16,9 +16,12 @@ Make the repo **public**. GitHub Actions is free and unlimited on public repos, 
 
 You do not need to delete the demo papers this template ships with. Your new repo clears them automatically on its first run, before you touch anything.
 
-## 2. Overwrite `papers.txt`
+## 2. Give it some papers
 
-Open [`papers.txt`](papers.txt) in the GitHub editor, replace whatever is there with your own papers, one per line, and commit:
+Three ways to seed a survey. They all work, you can mix them, and each one
+triggers a rebuild as soon as you commit.
+
+**Paste links.** Open [`papers.txt`](papers.txt) and put one paper per line:
 
 ```
 https://arxiv.org/abs/2103.03874
@@ -26,25 +29,35 @@ https://aclanthology.org/2020.acl-main.463
 10.18653/v1/N18-2074
 ```
 
-arXiv, ACL Anthology, ACM, bioRxiv, OpenReview, PubMed, doi.org and Semantic Scholar links all work, as do bare DOIs and bare arXiv ids. Lines starting with `#` are ignored.
+arXiv, ACL Anthology, ACM, bioRxiv, OpenReview, PubMed, doi.org and Semantic
+Scholar links all work, as do bare DOIs and bare arXiv ids. Lines starting with
+`#` are ignored.
 
-Within a minute or two a bot commit rewrites `README.md` with your table. **Aim for at least ten papers**: suggestions come from papers that cite *several* of yours, so a handful of seeds produces few or none.
+**Drop in a bibliography.** Put a `.bib` or `.ris` file in [`import/`](import/).
+That is the export button in Zotero, Mendeley, EndNote, Google Scholar and most
+journal sites, so an existing library comes over in one drag and drop. Entries
+are matched by DOI, then arXiv id, then URL, then by title for entries that
+carry no identifier at all.
 
-That's it. You're done.
-
-### Faster ways to fill a survey
-
-Pasting links one at a time is not the only option.
-
-**Drop in a bibliography.** Put a `.bib` or `.ris` file in [`import/`](import/) and commit. Every entry is looked up and added. That's the export button in Zotero, Mendeley, EndNote, Google Scholar, and most journal sites, so an existing library comes across in one drag-and-drop. Entries are matched by DOI, then arXiv id, then URL, then by title if they carry no identifier at all.
-
-**Start from an existing survey.** Put `refs:` in front of a link in `papers.txt`:
+**Adopt an existing survey's bibliography.** Put `refs:` in front of a link in
+`papers.txt`:
 
 ```
 refs: https://arxiv.org/abs/2103.13136
 ```
 
-Everything that paper cites becomes a suggestion. A survey's bibliography is a reading list someone already curated for exactly this topic, so one line can seed dozens of papers — the example above contributes 65. They land in **Suggested next reads** rather than straight into your table, because that was the survey author's curation rather than yours; promote the ones you want by pasting their links into `papers.txt` as usual.
+Everything that paper cites becomes a suggestion. A survey's bibliography is a
+reading list someone already curated for this exact topic, so one line can seed
+dozens of papers; the example above contributes 65. These land in **Suggested
+next reads** rather than in your table, because that was the survey author's
+curation and not yours. Promote the ones you want by pasting their links into
+`papers.txt`.
+
+Within a minute or two a bot commit rewrites `README.md` with your table. **Aim
+for at least ten papers**, since suggestions come from papers that cite several
+of yours; a handful of seeds produces few or none.
+
+That is it. You are done.
 
 ## After that, it runs itself
 
@@ -73,12 +86,12 @@ Everything here has a sensible default; skip this section unless something bothe
 }
 ```
 
-- `title` / `description` — leave empty to use the repo name and description. Set them to override.
-- `contactEmail` — optional, sent only to OpenAlex to use their faster "polite pool". Left empty, the bot tries your public GitHub email and quietly skips it if you have none.
-- `candidateCount` — how many suggestions to show.
-- `sortBy` — `year`, `citations`, `title`, or `added`.
+- `title` / `description`: leave empty to use the repo name and description. Set them to override.
+- `contactEmail`: optional, sent only to OpenAlex to use their faster "polite pool". Left empty, the bot tries your public GitHub email and quietly skips it if you have none.
+- `candidateCount`: how many suggestions to show.
+- `sortBy`: `year`, `citations`, `title`, or `added`.
 
-**Writing your own prose.** Everything between `<!-- SURVEY:END -->` and the footer is yours and is never overwritten — scope notes, open questions, a call for contributions. Only the region between `<!-- SURVEY:START -->` and `<!-- SURVEY:END -->` is regenerated, so leave those two comments alone.
+**Writing your own prose.** Everything between `<!-- SURVEY:END -->` and the footer is yours and is never overwritten. Scope notes, open questions, a call for contributions. Only the region between `<!-- SURVEY:START -->` and `<!-- SURVEY:END -->` is regenerated, so leave those two comments alone.
 
 ## Files
 

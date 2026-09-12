@@ -141,6 +141,6 @@ To add any of these, paste its link into [`papers.txt`](papers.txt) and commit.
 
 ### Want your own living survey?
 
-Click **Use this template**, name your repo, and overwrite `papers.txt` with your papers — you get the table above plus ✨ daily reading suggestions mined from the citation graph, with no site to host and no API keys. Details in [SETUP.md](https://github.com/avijit-thawani/living-survey/blob/main/SETUP.md).
+Click **Use this template**, name your repo, and overwrite `papers.txt` with your papers, and you get the table above plus ✨ daily reading suggestions mined from the citation graph, with no site to host and no API keys. Details in [SETUP.md](https://github.com/avijit-thawani/living-survey/blob/main/SETUP.md).
 
 <!-- TEMPLATE-FOOTER:END -->

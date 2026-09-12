@@ -8,7 +8,13 @@ import { fetchPapers, fetchReferences, matchByTitle } from "../lib/semanticSchol
 import { fetchPapersFallback } from "../lib/openalex.js";
 import { buildCandidates } from "../lib/candidates.js";
 import { parseBibliography } from "../lib/bibliography.js";
-import { renderSurvey, applySurvey, renderCsv } from "../lib/renderReadme.js";
+import {
+  renderSurvey,
+  applySurvey,
+  renderCsv,
+  INTRO_START,
+  INTRO_END,
+} from "../lib/renderReadme.js";
 import { resolveIdentity, lookupOwnerEmail } from "../lib/identity.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -131,6 +137,24 @@ const clearDemoIfInherited = () => {
   const config = readJson(p("survey.config.json"), {});
   if (config.title === meta.title) {
     writeJson(p("survey.config.json"), { ...config, title: "", description: "" });
+  }
+
+  // The template's own README opens with an explainer aimed at people deciding
+  // whether to use it. That is noise on somebody's actual survey, so it goes
+  // too. The footer stays, since it is how readers of a survey discover this.
+  const readmePath = p("README.md");
+  if (existsSync(readmePath)) {
+    const text = readFileSync(readmePath, "utf8");
+    const from = text.indexOf(INTRO_START);
+    const to = text.indexOf(INTRO_END);
+    if (from !== -1 && to !== -1 && to > from) {
+      writeFileSync(
+        readmePath,
+        (text.slice(0, from) + text.slice(to + INTRO_END.length)).trimStart(),
+        "utf8"
+      );
+      log.info("Removed the template's introduction from your README.");
+    }
   }
 
   rmSync(marker);
@@ -362,7 +386,13 @@ const main = async () => {
   log.step("Working out suggested next reads");
   let candidates = [];
   try {
-    candidates = await buildCandidates({ papers, limit, dismissedIds: dismissed, seeded });
+    candidates = await buildCandidates({
+      papers,
+      limit,
+      dismissedIds: dismissed,
+      seeded,
+      algorithm: config.algorithm ?? {},
+    });
   } catch (err) {
     log.error(`Suggestions failed: ${err.message}. Keeping the previous list.`);
     candidates = readJson(p("data/candidates.json"), { candidates: [] }, { critical: true }).candidates ?? [];
