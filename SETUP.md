@@ -94,8 +94,8 @@ connects to it, which usually flags an outlier. Score is the default sort.
 
 Recs come from two directions through the citation graph:
 
-- **`cites N here`**: newer work that builds on N of your papers.
-- **`cited by N here`**: older work that N of your papers rest on. The forward
+- **`cites N in Core`**: newer work that builds on N of your papers.
+- **`cited by N in Core`**: older work that N of your papers rest on. The forward
   pass can never find these, since they predate your papers.
 - **`from ...`**: the bibliography of a paper you seeded with `refs:`.
 
