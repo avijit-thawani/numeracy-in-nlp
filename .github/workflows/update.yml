@@ -1,11 +1,12 @@
 name: Update survey
 
 on:
-  # Someone edited the seed list or the survey settings.
+  # Someone edited the seed list, dropped in a bibliography, or changed settings.
   push:
     paths:
       - "papers.txt"
       - "survey.config.json"
+      - "import/**"
   # Someone opened an "Add a paper" issue.
   issues:
     types: [opened]

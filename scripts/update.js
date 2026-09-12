@@ -1,12 +1,13 @@
-import { readFileSync, writeFileSync, existsSync, mkdirSync, rmSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, rmSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { log, writeSummary } from "../lib/log.js";
-import { resolveAll } from "../lib/resolve.js";
-import { fetchPapers } from "../lib/semanticScholar.js";
+import { resolveAll, resolveIdentifier } from "../lib/resolve.js";
+import { fetchPapers, fetchReferences, matchByTitle } from "../lib/semanticScholar.js";
 import { fetchPapersFallback } from "../lib/openalex.js";
 import { buildCandidates } from "../lib/candidates.js";
+import { parseBibliography } from "../lib/bibliography.js";
 import { renderSurvey, applySurvey, renderCsv } from "../lib/renderReadme.js";
 import { resolveIdentity, lookupOwnerEmail } from "../lib/identity.js";
 
@@ -122,6 +123,47 @@ const clearDemoIfInherited = () => {
   return true;
 };
 
+/**
+ * Reads any .bib or .ris files dropped in `import/` and turns them into
+ * lookups. These land in the survey itself rather than in suggestions: a
+ * bibliography export is the owner's own library, already curated.
+ */
+const readBibliographies = async () => {
+  const dir = p("import");
+  if (!existsSync(dir)) return { requests: [], files: [] };
+
+  const files = readdirSync(dir).filter((f) => /\.(bib|ris)$/i.test(f));
+  if (!files.length) return { requests: [], files: [] };
+
+  const requests = [];
+  const needTitleMatch = [];
+
+  for (const file of files) {
+    const text = readFileSync(join(dir, file), "utf8");
+    for (const entry of parseBibliography(file, text)) {
+      if (entry.id) requests.push({ id: entry.id, source: `${file}: ${entry.title}` });
+      else if (entry.url) {
+        const id = resolveIdentifier(entry.url);
+        if (id) requests.push({ id, source: `${file}: ${entry.title}` });
+        else if (entry.title) needTitleMatch.push({ file, title: entry.title });
+      } else if (entry.needsTitleMatch) needTitleMatch.push({ file, title: entry.title });
+    }
+  }
+
+  // Entries with no identifier at all: look them up by title.
+  if (needTitleMatch.length) {
+    log.info(`Looking up ${needTitleMatch.length} bibliography entr(y/ies) by title.`);
+    for (const { file, title } of needTitleMatch) {
+      const paperId = await matchByTitle(title);
+      if (paperId) requests.push({ id: paperId, source: `${file}: ${title}` });
+      else log.warn(`No match for bibliography entry "${title.slice(0, 60)}".`);
+    }
+  }
+
+  log.stat("papers found in bibliography files", requests.length);
+  return { requests, files };
+};
+
 const main = async () => {
   const refreshMode = process.argv.includes("--refresh");
   log.step(`Starting update${refreshMode ? " (refresh mode)" : ""}`);
@@ -156,11 +198,16 @@ const main = async () => {
     : [];
   const incoming = [...queueLines, ...linksFromIssue()];
 
-  const { resolved, unresolved } = resolveAll(incoming);
+  const { resolved, unresolved, seedFrom } = resolveAll(incoming);
 
+  const bibliography = await readBibliographies();
   const known = new Set(papers.map((x) => x.id));
-  const knownSources = new Set(papers.map((x) => x.source).filter(Boolean));
-  const toFetch = resolved.filter((r) => !knownSources.has(r.source));
+  const knownSources = new Set(
+    papers.flatMap((x) => [x.source, ...(x.aliases ?? [])]).filter(Boolean)
+  );
+  const toFetch = [...resolved, ...bibliography.requests].filter(
+    (r) => !knownSources.has(r.source)
+  );
   log.stat("new links queued", toFetch.length);
 
   // ---- Fetch ------------------------------------------------------------
@@ -181,13 +228,22 @@ const main = async () => {
     // Two different links can name the same paper (an arXiv URL and the ACL
     // DOI, say), so deduplicate against papers added earlier in this same run
     // as well as against the existing survey.
+    const byIdExisting = new Map(papers.map((x) => [x.id, x]));
     const fresh = [];
     for (const paper of added) {
       if (known.has(paper.id)) {
+        // The same paper can arrive under several source strings -- a .bib
+        // entry with a URL and a .ris entry with a DOI, say. Remember the
+        // extra ones, or they get looked up again on every future run.
+        const existing = byIdExisting.get(paper.id);
+        if (existing && paper.source && paper.source !== existing.source) {
+          existing.aliases = [...new Set([...(existing.aliases ?? []), paper.source])];
+        }
         log.debug(`Already in the survey, skipping: ${paper.title.slice(0, 60)}`);
         continue;
       }
       known.add(paper.id);
+      byIdExisting.set(paper.id, paper);
       fresh.push(paper);
     }
     if (fresh.length !== added.length) {
@@ -245,11 +301,53 @@ const main = async () => {
     log.stat("papers with changed citation counts", changed);
   }
 
+  // ---- Seed from a survey's bibliography --------------------------------
+  // `refs: <link>` in papers.txt means "suggest everything this paper cites".
+  // The ids are stored so they keep appearing in suggestions on later runs,
+  // until they are either promoted into the survey or dismissed.
+  const seededStore = readJson(p("data/seeded.json"), { seeded: [] });
+  let seeded = Array.isArray(seededStore.seeded) ? seededStore.seeded : [];
+
+  if (seedFrom.length) {
+    log.step(`Taking seed papers from ${seedFrom.length} bibliograph(y/ies)`);
+    const alreadySeededFrom = new Set(seeded.map((s) => s.from));
+
+    for (const target of seedFrom) {
+      if (alreadySeededFrom.has(target.id)) {
+        log.info(`Already seeded from ${target.id}; skipping.`);
+        continue;
+      }
+      // Fetch the survey itself too, so we can name it in the table.
+      const { found } = await fetchPapers([{ id: target.id, source: target.source }]);
+      const title = found[0]?.title ?? null;
+
+      const refIds = await fetchReferences(target.id);
+      const existing = new Set(seeded.map((s) => s.id));
+      let added = 0;
+      for (const id of refIds) {
+        if (existing.has(id)) continue;
+        existing.add(id);
+        seeded.push({ id, from: target.id, fromTitle: title });
+        added++;
+      }
+      log.info(`Added ${added} suggestion(s) from "${title ?? target.id}".`);
+    }
+  }
+
+  // Drop anything that has since been accepted into the survey or dismissed.
+  const acceptedIds = new Set(papers.map((x) => x.id));
+  const before = seeded.length;
+  seeded = seeded.filter((s) => !acceptedIds.has(s.id) && !dismissed.includes(s.id));
+  if (seeded.length !== before) {
+    log.info(`${before - seeded.length} seeded suggestion(s) are now in the survey or dismissed.`);
+  }
+  log.stat("seeded suggestions pending", seeded.length);
+
   // ---- Suggestions ------------------------------------------------------
   log.step("Working out suggested next reads");
   let candidates = [];
   try {
-    candidates = await buildCandidates({ papers, limit, dismissedIds: dismissed });
+    candidates = await buildCandidates({ papers, limit, dismissedIds: dismissed, seeded });
   } catch (err) {
     log.error(`Suggestions failed: ${err.message}. Keeping the previous list.`);
     candidates = readJson(p("data/candidates.json"), { candidates: [] }).candidates ?? [];
@@ -261,6 +359,7 @@ const main = async () => {
 
   writeJson(p("data/papers.json"), { updatedAt: new Date().toISOString(), papers });
   writeJson(p("data/candidates.json"), { updatedAt: new Date().toISOString(), candidates });
+  writeJson(p("data/seeded.json"), { updatedAt: new Date().toISOString(), seeded });
   writeFileSync(p("data/papers.csv"), `${renderCsv(papers)}\n`, "utf8");
 
   // Anything we could not resolve stays in papers.txt so it is visible and

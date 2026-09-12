@@ -32,6 +32,20 @@ Within a minute or two a bot commit rewrites `README.md` with your table. **Aim 
 
 That's it. You're done.
 
+### Faster ways to fill a survey
+
+Pasting links one at a time is not the only option.
+
+**Drop in a bibliography.** Put a `.bib` or `.ris` file in [`import/`](import/) and commit. Every entry is looked up and added. That's the export button in Zotero, Mendeley, EndNote, Google Scholar, and most journal sites, so an existing library comes across in one drag-and-drop. Entries are matched by DOI, then arXiv id, then URL, then by title if they carry no identifier at all.
+
+**Start from an existing survey.** Put `refs:` in front of a link in `papers.txt`:
+
+```
+refs: https://arxiv.org/abs/2103.13136
+```
+
+Everything that paper cites becomes a suggestion. A survey's bibliography is a reading list someone already curated for exactly this topic, so one line can seed dozens of papers — the example above contributes 65. They land in **Suggested next reads** rather than straight into your table, because that was the survey author's curation rather than yours; promote the ones you want by pasting their links into `papers.txt` as usual.
+
 ## After that, it runs itself
 
 | When | What happens |
@@ -72,10 +86,12 @@ Everything here has a sensible default; skip this section unless something bothe
 | --- | --- |
 | `README.md` | The survey. Generated between the markers. |
 | `papers.txt` | Your input queue. Anything unrecognised stays behind so you can fix it. |
+| `import/` | Drop `.bib` / `.ris` files here to bulk-import. |
 | `survey.config.json` | Optional overrides. |
 | `data/papers.json` | The papers, with full metadata. The real source of truth. |
 | `data/candidates.json` | The current suggestions. |
 | `data/papers.csv` | Spreadsheet export. |
+| `data/seeded.json` | Suggestions pulled from a `refs:` bibliography, pending your review. |
 | `data/dismissed.json` | Paper ids to never suggest again (create it yourself). |
 
 ## When something goes wrong
