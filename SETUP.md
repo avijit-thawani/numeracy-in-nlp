@@ -82,29 +82,64 @@ That is it. You are done.
 
 To act on a suggestion, copy its link into `import/papers.txt` and commit.
 
-## Optional tweaks
+## The two lists, and the Score
 
-Everything here has a sensible default; skip this section unless something bothers you.
+**Core** is what the survey contains. **Recs** is what to read next. Those names
+are used throughout: `data/core.json`, `data/recs.json`, `views/core-by-*.md`.
 
-`survey.config.json` overrides what is otherwise derived automatically:
+Both carry a **Score** from 0 to 100 for how tied into the survey a paper is,
+measured against the most connected paper in its own list. A Core paper scores
+on how many other Core papers cite it or it cites, so 0 means nothing else here
+connects to it, which usually flags an outlier. Score is the default sort.
 
-```json
-{
-  "title": "",
-  "description": "",
-  "contactEmail": "",
-  "candidateCount": 25,
-  "sortBy": "year"
-}
-```
+Recs come from two directions through the citation graph:
 
-- `title` / `description`: leave empty to use the repo name and description. Set them to override.
-- `contactEmail`: optional, sent only to OpenAlex to use their faster "polite pool". Left empty, the bot tries your public GitHub email and quietly skips it if you have none.
-- `candidateCount`: how many Recs to keep.
-- `previewRows`: how many rows of each list to show on the README, default 10.
-- `algorithm`: `forward`, `backward`, `minCount`, `popularityPenalty`. See the template's README for what these do.
+- **`cites N here`**: newer work that builds on N of your papers.
+- **`cited by N here`**: older work that N of your papers rest on. The forward
+  pass can never find these, since they predate your papers.
+- **`from ...`**: the bibliography of a paper you seeded with `refs:`.
 
-**Writing your own prose.** Everything between `<!-- SURVEY:END -->` and the footer is yours and is never overwritten. Scope notes, open questions, a call for contributions. Only the region between `<!-- SURVEY:START -->` and `<!-- SURVEY:END -->` is regenerated, so leave those two comments alone.
+The backward direction is divided by `citationCount ^ popularityPenalty`, the
+same idea as the IDF term in TF-IDF. Without it the list fills with the field's
+plumbing, since every NLP paper cites Adam and BERT and neither says anything
+about your topic.
+
+## Sorting
+
+GitHub renders markdown but runs no JavaScript, so a table cannot be sorted in
+the browser. Every sort order is written ahead of time to its own file under
+[`views/`](views/), and each column heading links to the file sorted that way.
+The active column is marked rather than linked. The README shows the top rows of
+each list and links to the rest.
+
+## Settings
+
+All of these have working defaults; change them only if you want to.
+
+`survey.config.json`:
+
+| Key | What it does |
+| --- | --- |
+| `title`, `description` | Leave empty to use the repo name and description. |
+| `contactEmail` | Optional, sent only to OpenAlex for their faster pool. Empty means the bot tries your public GitHub email and skips it if you have none. |
+| `candidateCount` | How many Recs to keep. |
+| `previewRows` | Rows of each list shown on the README. Default 10. |
+| `algorithm.forward` / `.backward` | Turn either direction off. |
+| `algorithm.minCount` | How many overlaps before a paper is suggested. Default 2. |
+| `algorithm.popularityPenalty` | Higher favours obscure papers, lower favours famous ones. Default 0.2. |
+| `algorithm.graphBudget` | How many papers' citations to refresh per run. Default 150, which bounds the cost for a large survey. |
+| `algorithm.graphMaxAgeDays` | How stale citation data may get. Default 7. |
+
+Elsewhere:
+
+- **How often it runs**: the `cron` line in `.github/workflows/update.yml`.
+- **Never suggest a paper again**: add its id to `data/dismissed.json`.
+- **The ranking itself**: `lib/recommend.js`, with scoring in `lib/score.js`.
+
+**Writing your own prose.** Everything between `<!-- SURVEY:END -->` and the
+footer is yours and is never overwritten. Only the region between
+`<!-- SURVEY:START -->` and `<!-- SURVEY:END -->` is regenerated, so leave those
+two comments alone.
 
 ## Files
 

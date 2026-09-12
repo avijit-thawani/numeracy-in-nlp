@@ -14,12 +14,18 @@ import {
   renderSurvey,
   applySurvey,
   renderCsv,
+  renderFooter,
+  applyFooter,
   INTRO_START,
   INTRO_END,
 } from "../lib/renderReadme.js";
 import { resolveIdentity, lookupOwnerEmail } from "../lib/identity.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+// Kept out of the repository: it is a derived cache, several megabytes, and
+// rewritten every run. See the cache step in the workflow.
+const GRAPH_CACHE = ".cache/graph.json";
 
 /** Small helper so title lookups are not one-at-a-time on a large .bib. */
 const inParallel = async (items, fn, limit = 4) => {
@@ -450,7 +456,7 @@ const main = async () => {
 
   // ---- Suggestions ------------------------------------------------------
   log.step("Working out suggested next reads");
-  const graph = loadGraph(readJson(p("data/graph.json"), { graph: {} }));
+  const graph = loadGraph(readJson(p(GRAPH_CACHE), { graph: {} }));
   let candidates = [];
   try {
     const built = await buildRecommendations({
@@ -482,7 +488,7 @@ const main = async () => {
   // backward ranking needs; drop everything else so the file cannot grow
   // without bound.
   writeJson(
-    p("data/graph.json"),
+    p(GRAPH_CACHE),
     saveGraph(graph, new Set([...papers.map((x) => x.id), ...[...graph.keys()].filter((k) => k.startsWith("counts:"))]))
   );
   writeFileSync(p("data/core.csv"), `${renderCsv(papers)}\n`, "utf8");
@@ -523,7 +529,7 @@ const main = async () => {
     recs: candidates,
     preview: Number(config.previewRows) || 10,
   });
-  writeFileSync(readmePath, applySurvey(existing, block), "utf8");
+  writeFileSync(readmePath, applyFooter(applySurvey(existing, block), renderFooter()), "utf8");
 
   log.step("Done");
   writeSummary();

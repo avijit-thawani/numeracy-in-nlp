@@ -42,6 +42,17 @@ jobs:
         with:
           node-version: "22"
 
+      # The citation graph is derived, not data. It is several megabytes and
+      # would be rewritten every day, so committing it would bloat the repo's
+      # history for no benefit. A cold cache just means the run refetches, and
+      # graphBudget already bounds how much that costs.
+      - name: Restore the citation graph cache
+        uses: actions/cache@v4
+        with:
+          path: .cache/graph.json
+          key: citation-graph-${{ github.run_id }}
+          restore-keys: citation-graph-
+
       - name: Build the survey
         env:
           # Cron and manual runs also re-check citation counts; a plain push
