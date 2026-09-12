@@ -2,9 +2,14 @@
 
 # Numeracy in NLP
 
-A living survey of how language models represent, understand, and reason about numbers. Maintained with [living-survey](https://github.com/avijit-thawani/living-survey).
+A living survey of numeracy in NLP
 
-**20** papers · last updated 2026-09-12
+**20** papers · **25** suggested · updated 2026-09-12
+
+> **How to read this page.**
+> **Papers** lists the 20 papers in this survey, with **Cited by** showing how often each has been cited.
+> **✨ Suggested next reads** is generated automatically, not hand-picked: it finds papers that cite several papers already here, ranked by **Overlap** — how many of them each one cites. A high overlap means the paper sits close to the centre of this topic.
+> To add a paper, put its link in [`papers.txt`](papers.txt) and commit; everything below rebuilds itself.
 
 ## Papers
 
@@ -31,7 +36,9 @@ A living survey of how language models represent, understand, and reason about n
 | 19 | [Decoupling Strategy and Generation in Negotiation Dialogues](https://www.semanticscholar.org/paper/b626754a0fd7de12c87e88165b2484ac5d98212a)<br><sub>He He et al.</sub><br><sub>A modular approach based on coarse dialogue acts (e.g., propose(price=50)) that decouples strategy and generation that can flexibly set the strategy using supervised learning, reinforcement learning, or domain-specific knowledge without degeneracy is proposed.</sub> | Conference on Empirical Methods in Natural Language Processing | 2018 | 257 |
 | 20 | [Numeral Understanding in Financial Tweets for Fine-Grained Crowd-Based Forecasting](https://www.semanticscholar.org/paper/cabb0a468af8184e0e930841435b65679b580521)<br><sub>Chung-Chi Chen et al.</sub><br><sub>This work is the first attempt to understand numerals in financial social media data, and it provides the first comparison of fine-grained opinion of individual investors and analysts based on their forecast price.</sub> | International Conference on Wirtschaftsinformatik | 2018 | 49 |
 
-## Suggested next reads
+## ✨ Suggested next reads
+
+<sub>Generated automatically from the citation graph — nobody picked these. Refreshed every week.</sub>
 
 | Paper | Venue | Year | Cited by | Overlap |
 | --- | --- | ---: | ---: | ---: |
@@ -60,8 +67,6 @@ A living survey of how language models represent, understand, and reason about n
 | [Judicial knowledge-enhanced magnitude-aware reasoning for numerical legal judgment prediction](https://www.semanticscholar.org/paper/6681f0a0cc6ddaa70cdea109b941c47538caaa27)<br><sub>Sheng Bi et al.</sub> | Artificial Intelligence and Law | 2022 | 14 | 3 |
 | [A Primer for Neural Arithmetic Logic Modules](https://www.semanticscholar.org/paper/def7c67c3688bc459fbef3ce50a466a0cbf411a9)<br><sub>Bhumika Mistry, K. Farrahi, Jonathon S. Hare</sub> | Journal of machine learning research | 2021 | 12 | 3 |
 | [Explicitly Encoding Structural Symmetry is Key to Length Generalization in Arithmetic Tasks](https://www.semanticscholar.org/paper/58557a9654b9f1770667cb71219379f65f32ded9)<br><sub>Mahdi Sabbaghi et al.</sub> | arXiv.org | 2024 | 11 | 3 |
-
-<sub>**Overlap** is how many papers already in this survey are cited by that paper — higher means more central to this topic.</sub>
 
 To add any of these, paste its link into [`papers.txt`](papers.txt) and commit.
 
