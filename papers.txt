@@ -1,4 +1,20 @@
-# One paper per line: an arXiv/ACL/DOI/Semantic Scholar link, or a bare DOI.
-# Commit this file and the survey rebuilds itself. Lines starting with # are ignored.
-# Anything that could not be looked up is left here so you can fix it.
-
+https://arxiv.org/abs/1803.02155
+https://arxiv.org/abs/1808.09637
+https://arxiv.org/abs/1809.05356
+https://arxiv.org/abs/1909.03065
+https://arxiv.org/abs/1910.06611
+https://arxiv.org/abs/1912.13283
+https://arxiv.org/abs/2003.07629
+https://arxiv.org/abs/2004.02363
+https://arxiv.org/abs/2004.07085
+https://arxiv.org/abs/2004.08500
+https://arxiv.org/abs/2004.12193
+https://arxiv.org/abs/2005.00242
+https://arxiv.org/abs/2005.00683
+https://arxiv.org/abs/2005.08516
+https://arxiv.org/abs/2006.01681
+https://arxiv.org/abs/2010.06666
+https://arxiv.org/abs/2103.03874
+https://arxiv.org/abs/2103.07191
+https://arxiv.org/abs/2004.04487
+https://arxiv.org/abs/2103.13136

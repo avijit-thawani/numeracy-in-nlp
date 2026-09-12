@@ -1,14 +1,8 @@
 {
-  "title": "Numeracy in NLP (demo)",
-  "description": "A demo survey showing what this template produces. Create your own with **Use this template** \u2014 a new survey clears these demo papers automatically on its first run. See [SETUP.md](SETUP.md).",
+  "title": "Numeracy in NLP",
+  "description": "A living survey of how language models represent, understand, and reason about numbers. Maintained with [living-survey](https://github.com/avijit-thawani/living-survey).",
   "contactEmail": "",
   "candidateCount": 25,
-  "tableColumns": [
-    "title",
-    "venue",
-    "year",
-    "citationCount",
-    "authors"
-  ],
+  "tableColumns": ["title", "venue", "year", "citationCount", "authors"],
   "sortBy": "year"
 }
