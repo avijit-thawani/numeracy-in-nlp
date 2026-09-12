@@ -8,6 +8,7 @@ import { fetchPapers } from "../lib/semanticScholar.js";
 import { fetchPapersFallback } from "../lib/openalex.js";
 import { buildCandidates } from "../lib/candidates.js";
 import { renderSurvey, applySurvey, renderCsv } from "../lib/renderReadme.js";
+import { resolveIdentity, lookupOwnerEmail } from "../lib/identity.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const p = (...parts) => join(ROOT, ...parts);
@@ -108,15 +109,12 @@ const clearDemoIfInherited = () => {
   writeJson(p("data/candidates.json"), { candidates: [] });
   writeFileSync(p("data/papers.csv"), "", "utf8");
 
-  // Only reset the title if the owner has not already named the survey.
+  // Blank the demo's title rather than substituting a placeholder: an empty
+  // title makes the survey fall back to the repository name and description,
+  // which the owner already chose when they created the repo.
   const config = readJson(p("survey.config.json"), {});
   if (config.title === meta.title) {
-    writeJson(p("survey.config.json"), {
-      ...config,
-      title: "My Living Survey",
-      description:
-        "Edit `survey.config.json` to set this title and description, and add papers to `papers.txt`.",
-    });
+    writeJson(p("survey.config.json"), { ...config, title: "", description: "" });
   }
 
   rmSync(marker);
@@ -131,7 +129,11 @@ const main = async () => {
   clearDemoIfInherited();
 
   const config = readJson(p("survey.config.json"), {});
-  const email = config.contactEmail || process.env.CONTACT_EMAIL || "";
+  const event = process.env.GITHUB_EVENT_PATH
+    ? readJson(process.env.GITHUB_EVENT_PATH, null)
+    : null;
+  const identity = resolveIdentity(config, event);
+  const email = await lookupOwnerEmail(config);
   const limit = Number(config.candidateCount) || 25;
 
   const store = readJson(p("data/papers.json"), { papers: [] });
@@ -280,11 +282,7 @@ const main = async () => {
   const readmePath = p("README.md");
   const existing = existsSync(readmePath) ? readFileSync(readmePath, "utf8") : "";
   const block = renderSurvey({
-    config: {
-      title: config.title ?? "My Living Survey",
-      description: config.description ?? "",
-      sortBy: config.sortBy,
-    },
+    config: { ...identity, sortBy: config.sortBy },
     papers,
     candidates,
   });

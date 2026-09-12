@@ -1,8 +1,14 @@
 {
-  "title": "Numeracy in NLP",
-  "description": "A living survey of how language models represent, understand, and reason about numbers. Maintained with [living-survey](https://github.com/avijit-thawani/living-survey).",
+  "title": "",
+  "description": "",
   "contactEmail": "",
   "candidateCount": 25,
-  "tableColumns": ["title", "venue", "year", "citationCount", "authors"],
+  "tableColumns": [
+    "title",
+    "venue",
+    "year",
+    "citationCount",
+    "authors"
+  ],
   "sortBy": "year"
 }
