@@ -467,7 +467,13 @@ const main = async () => {
       seeded,
       algorithm: config.algorithm ?? {},
     });
-    candidates = built.recs;
+    if (built.hydrationFailed) {
+      const previous = readJson(p("data/recs.json"), { recs: [] }, { critical: true }).recs ?? [];
+      candidates = previous;
+      log.stat("Recs kept from the previous run", previous.length);
+    } else {
+      candidates = built.recs;
+    }
     // Centrality comes back from the same pass, so Core can be scored and
     // sorted with no extra requests.
     for (const paper of papers) paper.score = built.coreScores.get(paper.id) ?? 0;
