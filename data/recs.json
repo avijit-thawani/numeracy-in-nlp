@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T23:19:43.056Z",
+  "updatedAt": "2026-09-12T23:42:42.533Z",
   "recs": [
     {
       "id": "afed6dc6900d3b37e528b9086661bba583d60bf6",
@@ -26,7 +26,7 @@
       "overlap": 8,
       "direction": "backward",
       "score": 100,
-      "why": "cited by 8 here",
+      "why": "cited by 8 in Core",
       "fromReferences": false
     },
     {
@@ -53,7 +53,7 @@
       "overlap": 7,
       "direction": "forward",
       "score": 100,
-      "why": "cites 7 here",
+      "why": "cites 7 in Core",
       "fromReferences": false
     },
     {
@@ -82,7 +82,7 @@
       "overlap": 6,
       "direction": "backward",
       "score": 83.07788911686413,
-      "why": "cited by 6 here",
+      "why": "cited by 6 in Core",
       "fromReferences": false
     },
     {
@@ -108,7 +108,7 @@
       "overlap": 3,
       "direction": "backward",
       "score": 80.05295081300713,
-      "why": "cited by 3 here",
+      "why": "cited by 3 in Core",
       "fromReferences": false
     },
     {
@@ -136,7 +136,7 @@
       "overlap": 3,
       "direction": "backward",
       "score": 74.66615884893376,
-      "why": "cited by 3 here",
+      "why": "cited by 3 in Core",
       "fromReferences": false
     },
     {
@@ -162,7 +162,7 @@
       "overlap": 4,
       "direction": "backward",
       "score": 71.8205092607361,
-      "why": "cited by 4 here",
+      "why": "cited by 4 in Core",
       "fromReferences": false
     },
     {
@@ -191,7 +191,7 @@
       "overlap": 5,
       "direction": "forward",
       "score": 71.42857142857143,
-      "why": "cites 5 here",
+      "why": "cites 5 in Core",
       "fromReferences": false
     },
     {
@@ -217,7 +217,7 @@
       "overlap": 5,
       "direction": "forward",
       "score": 71.42857142857143,
-      "why": "cites 5 here",
+      "why": "cites 5 in Core",
       "fromReferences": false
     },
     {
@@ -246,7 +246,7 @@
       "overlap": 5,
       "direction": "forward",
       "score": 71.42857142857143,
-      "why": "cites 5 here",
+      "why": "cites 5 in Core",
       "fromReferences": false
     },
     {
@@ -271,7 +271,7 @@
       "overlap": 2,
       "direction": "backward",
       "score": 59.443274789356224,
-      "why": "cited by 2 here",
+      "why": "cited by 2 in Core",
       "fromReferences": false
     },
     {
@@ -301,7 +301,7 @@
       "overlap": 4,
       "direction": "backward",
       "score": 59.337691041220886,
-      "why": "cited by 4 here",
+      "why": "cited by 4 in Core",
       "fromReferences": false
     },
     {
@@ -330,7 +330,7 @@
       "overlap": 3,
       "direction": "backward",
       "score": 57.64149766253558,
-      "why": "cited by 3 here",
+      "why": "cited by 3 in Core",
       "fromReferences": false
     },
     {
@@ -357,7 +357,7 @@
       "overlap": 4,
       "direction": "forward",
       "score": 57.14285714285714,
-      "why": "cites 4 here",
+      "why": "cites 4 in Core",
       "fromReferences": false
     },
     {
@@ -387,7 +387,7 @@
       "overlap": 4,
       "direction": "forward",
       "score": 57.14285714285714,
-      "why": "cites 4 here",
+      "why": "cites 4 in Core",
       "fromReferences": false
     },
     {
@@ -417,7 +417,7 @@
       "overlap": 4,
       "direction": "forward",
       "score": 57.14285714285714,
-      "why": "cites 4 here",
+      "why": "cites 4 in Core",
       "fromReferences": false
     },
     {
@@ -446,7 +446,7 @@
       "overlap": 4,
       "direction": "forward",
       "score": 57.14285714285714,
-      "why": "cites 4 here",
+      "why": "cites 4 in Core",
       "fromReferences": false
     },
     {
@@ -476,7 +476,7 @@
       "overlap": 4,
       "direction": "forward",
       "score": 57.14285714285714,
-      "why": "cites 4 here",
+      "why": "cites 4 in Core",
       "fromReferences": false
     },
     {
@@ -503,7 +503,7 @@
       "overlap": 4,
       "direction": "forward",
       "score": 57.14285714285714,
-      "why": "cites 4 here",
+      "why": "cites 4 in Core",
       "fromReferences": false
     },
     {
@@ -529,7 +529,7 @@
       "overlap": 4,
       "direction": "forward",
       "score": 57.14285714285714,
-      "why": "cites 4 here",
+      "why": "cites 4 in Core",
       "fromReferences": false
     },
     {
@@ -558,7 +558,7 @@
       "overlap": 4,
       "direction": "forward",
       "score": 57.14285714285714,
-      "why": "cites 4 here",
+      "why": "cites 4 in Core",
       "fromReferences": false
     },
     {
@@ -588,7 +588,7 @@
       "overlap": 5,
       "direction": "backward",
       "score": 56.07614176307124,
-      "why": "cited by 5 here",
+      "why": "cited by 5 in Core",
       "fromReferences": false
     },
     {
@@ -616,7 +616,7 @@
       "overlap": 3,
       "direction": "backward",
       "score": 53.99007166441896,
-      "why": "cited by 3 here",
+      "why": "cited by 3 in Core",
       "fromReferences": false
     },
     {
@@ -644,7 +644,7 @@
       "overlap": 3,
       "direction": "backward",
       "score": 53.86538194555207,
-      "why": "cited by 3 here",
+      "why": "cited by 3 in Core",
       "fromReferences": false
     },
     {
@@ -672,7 +672,7 @@
       "overlap": 3,
       "direction": "backward",
       "score": 52.17873665814143,
-      "why": "cited by 3 here",
+      "why": "cited by 3 in Core",
       "fromReferences": false
     },
     {
@@ -702,7 +702,7 @@
       "overlap": 5,
       "direction": "backward",
       "score": 51.75737047203969,
-      "why": "cited by 5 here",
+      "why": "cited by 5 in Core",
       "fromReferences": false
     },
     {
@@ -1082,7 +1082,7 @@
       "doi": "10.1016/0010-0277(90)90003-3",
       "arxivId": null,
       "pdf": null,
-      "citationCount": 1071,
+      "citationCount": 1072,
       "referenceCount": 29,
       "influentialCitationCount": 133,
       "source": null,
@@ -1124,8 +1124,8 @@
       "title": "Variability signatures distinguish verbal from nonverbal counting for both large and small numbers",
       "authors": [
         "Sara Cordes",
-        "Rochel Gelman",
-        "C. R. Gallistel",
+        "R. Gelman",
+        "C. Gallistel",
         "J. Whalen"
       ],
       "year": 2001,
@@ -1136,9 +1136,9 @@
       "doi": "10.3758/BF03196206",
       "arxivId": null,
       "pdf": "https://link.springer.com/content/pdf/10.3758/BF03196206.pdf",
-      "citationCount": 427,
+      "citationCount": 428,
       "referenceCount": 34,
-      "influentialCitationCount": 31,
+      "influentialCitationCount": 30,
       "source": null,
       "addedAt": "2026-09-12",
       "overlap": 0,
