@@ -4,7 +4,6 @@ on:
   # Someone edited the seed list, dropped in a bibliography, or changed settings.
   push:
     paths:
-      - "papers.txt"
       - "survey.config.json"
       - "import/**"
   # Someone opened an "Add a paper" issue.
@@ -60,7 +59,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md papers.txt data/
+          git add README.md import/ data/ views/ survey.config.json
           if git diff --staged --quiet; then
             echo "Nothing changed."
             echo "changed=false" >> "$GITHUB_OUTPUT"

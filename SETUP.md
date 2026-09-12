@@ -21,7 +21,7 @@ You do not need to delete the demo papers this template ships with. Your new rep
 Three ways to seed a survey. They all work, you can mix them, and each one
 triggers a rebuild as soon as you commit.
 
-**Paste links.** Open [`papers.txt`](papers.txt) and put one paper per line:
+**Paste links, DOIs or titles.** Open [`import/papers.txt`](import/papers.txt) and put one paper per line:
 
 ```
 https://arxiv.org/abs/2103.03874
@@ -30,8 +30,8 @@ https://aclanthology.org/2020.acl-main.463
 ```
 
 arXiv, ACL Anthology, ACM, bioRxiv, OpenReview, PubMed, doi.org and Semantic
-Scholar links all work, as do bare DOIs and bare arXiv ids. Lines starting with
-`#` are ignored.
+Scholar links all work, as do bare DOIs, bare arXiv ids, and a paper's plain
+title if you do not have a link to hand. Lines starting with `#` are ignored.
 
 **Drop in a bibliography.** Put a `.bib` or `.ris` file in [`import/`](import/).
 That is the export button in Zotero, Mendeley, EndNote, Google Scholar and most
@@ -39,19 +39,22 @@ journal sites, so an existing library comes over in one drag and drop. Entries
 are matched by DOI, then arXiv id, then URL, then by title for entries that
 carry no identifier at all.
 
-**Adopt an existing survey's bibliography.** Put `refs:` in front of a link in
-`papers.txt`:
+**Expand from a single paper.** Put `refs:` in front of a link:
 
 ```
 refs: https://arxiv.org/abs/2103.13136
 ```
 
-Everything that paper cites becomes a suggestion. A survey's bibliography is a
-reading list someone already curated for this exact topic, so one line can seed
-dozens of papers; the example above contributes 65. These land in **Suggested
-next reads** rather than in your table, because that was the survey author's
-curation and not yours. Promote the ones you want by pasting their links into
-`papers.txt`.
+Everything that paper cites becomes a Rec. Useful in several directions: point
+it at a survey to adopt a ready-made reading list for the topic, at your own
+thesis or preprint to lay out what it rests on, or at a draft before you submit
+to catch related work you have missed. One line can seed dozens of papers; the
+example above contributes 65. The popularity penalty strips the generic
+references, so you get the topical ones rather than Adam and BERT.
+
+These arrive as Recs rather than Core, because the curation was the cited
+paper's author's and not yours. Promote the ones you want by copying their links
+into `import/papers.txt`.
 
 Within a minute or two a bot commit rewrites `README.md` with your table. **Aim
 for at least ten papers**, since suggestions come from papers that cite several
@@ -59,16 +62,25 @@ of yours; a handful of seeds produces few or none.
 
 That is it. You are done.
 
+## Keeping it up to date
+
+| To | Do this |
+| --- | --- |
+| Add more papers | More lines in `import/papers.txt`, or another `.bib` in `import/`. Both are re-read every run and nothing is added twice. |
+| Promote a Rec into Core | Copy its link into `import/papers.txt` and commit. It leaves Recs on the next run. |
+| Reject a Rec for good | Add its id to `data/dismissed.json`. |
+| Edit by hand or with an agent | Core is `data/core.json`, Recs is `data/recs.json`. Everything else is generated from those and will be overwritten. |
+
 ## After that, it runs itself
 
 | When | What happens |
 | --- | --- |
-| You edit `papers.txt` | New papers are looked up and added |
+| You edit `import/papers.txt` | New papers are looked up and added |
 | Someone opens an **Add a paper** issue | The bot ingests the links, replies, and closes the issue |
 | Every day | Citation counts refresh and suggestions are recomputed |
 | You click **Run workflow** in the Actions tab | Same as the daily run, on demand |
 
-To act on a suggestion, copy its link into `papers.txt` and commit.
+To act on a suggestion, copy its link into `import/papers.txt` and commit.
 
 ## Optional tweaks
 
@@ -99,7 +111,7 @@ Everything here has a sensible default; skip this section unless something bothe
 | File | What it is |
 | --- | --- |
 | `README.md` | The survey. Generated between the markers. |
-| `papers.txt` | Your input queue. Anything unrecognised stays behind so you can fix it. |
+| `import/papers.txt` | Your input queue. Anything unrecognised stays behind so you can fix it. |
 | `import/` | Drop `.bib` / `.ris` files here to bulk-import. |
 | `survey.config.json` | Optional overrides. |
 | `data/core.json` | Core: the papers in the survey, with full metadata. The source of truth. |
@@ -113,7 +125,7 @@ Everything here has a sensible default; skip this section unless something bothe
 
 Open the **Actions** tab and look at the most recent run. Every run writes a summary of what it added, what it suggested, and any warnings.
 
-- **A link stayed in `papers.txt`.** It could not be identified, or neither database knows it. Try another link for the same paper, ideally arXiv or DOI.
+- **A link stayed in `import/papers.txt`.** It could not be identified, or neither database knows it. Try another link for the same paper, ideally arXiv or DOI.
 - **Warnings about HTTP 429.** Semantic Scholar's free tier is shared by everyone and throttles in bursts. The run retries with backoff, falls back to OpenAlex, and retries anything still missing next time. Normal and self-correcting.
 - **No suggestions.** Expected until you have roughly ten papers.
 - **The daily refresh stopped.** GitHub disables cron in public repos after 60 days of no repository activity. The bot's own commits normally prevent this; if the survey has been completely static, re-enable the workflow in the Actions tab.

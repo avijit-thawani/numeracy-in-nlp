@@ -257,20 +257,41 @@ const main = async () => {
   log.stat("papers in Core", papers.length);
 
   // ---- Gather new links -------------------------------------------------
-  const queueFile = p("papers.txt");
+  // The seed list moved into import/ so everything you feed the survey lives
+  // in one folder. Older surveys keep it at the root; move it once.
+  const legacyQueue = p("papers.txt");
+  const queueFile = p("import/papers.txt");
+  if (existsSync(legacyQueue) && !existsSync(queueFile)) {
+    mkdirSync(dirname(queueFile), { recursive: true });
+    writeFileSync(queueFile, readFileSync(legacyQueue, "utf8"), "utf8");
+    rmSync(legacyQueue);
+    log.info("Moved papers.txt into import/.");
+  }
   const queueLines = existsSync(queueFile)
     ? readFileSync(queueFile, "utf8").split(/\r?\n/)
     : [];
   const incoming = [...queueLines, ...linksFromIssue()];
 
-  const { resolved, unresolved, seedFrom } = resolveAll(incoming);
+  const { resolved, unresolved, seedFrom, titles } = resolveAll(incoming);
+
+  // Lines that are titles rather than links get looked up by name.
+  const fromTitles = [];
+  for (const title of titles) {
+    const paperId = await matchByTitle(title);
+    if (paperId) fromTitles.push({ id: paperId, source: title });
+    else {
+      log.warn(`No paper found matching the title "${title}".`);
+      unresolved.push(title);
+    }
+  }
+  if (fromTitles.length) log.stat("papers matched by title", fromTitles.length);
 
   const bibliography = await readBibliographies();
   const known = new Set(papers.map((x) => x.id));
   const knownSources = new Set(
     papers.flatMap((x) => [x.source, ...(x.aliases ?? [])]).filter(Boolean)
   );
-  const toFetch = [...resolved, ...bibliography.requests].filter(
+  const toFetch = [...resolved, ...fromTitles, ...bibliography.requests].filter(
     (r) => !knownSources.has(r.source)
   );
   log.stat("new links queued", toFetch.length);
@@ -455,9 +476,13 @@ const main = async () => {
     );
   }
   const header = [
-    "# One paper per line: an arXiv/ACL/DOI/Semantic Scholar link, or a bare DOI.",
-    "# Commit this file and the survey rebuilds itself. Lines starting with # are ignored.",
-    "# Anything that could not be looked up is left here so you can fix it.",
+    "# One paper per line. A link (arXiv, ACL, DOI, Semantic Scholar), a bare DOI",
+    "# or arXiv id, or just the paper's title.",
+    "#",
+    "# Prefix a line with 'refs:' to pull in everything that paper cites.",
+    "#",
+    "# Commit this file and the survey rebuilds itself. Lines starting with # are",
+    "# ignored. Anything that could not be looked up is left here so you can fix it.",
     "",
   ];
   writeFileSync(queueFile, `${header.concat(leftovers).join("\n")}\n`, "utf8");
