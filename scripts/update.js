@@ -14,11 +14,26 @@ import { resolveIdentity, lookupOwnerEmail } from "../lib/identity.js";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const p = (...parts) => join(ROOT, ...parts);
 
-const readJson = (path, fallback) => {
+/**
+ * `critical` marks files whose contents are the survey itself. For those, a
+ * parse error must stop the run: quietly falling back to an empty default
+ * would rebuild the README from nothing and commit away every paper. A merge
+ * conflict left in data/papers.json is the realistic way this happens.
+ */
+const readJson = (path, fallback, { critical = false } = {}) => {
   try {
     if (!existsSync(path)) return fallback;
     return JSON.parse(readFileSync(path, "utf8"));
   } catch (err) {
+    if (critical) {
+      log.error(
+        `${path} is not valid JSON (${err.message}). Refusing to continue, because ` +
+          `rebuilding from an empty file would erase the survey. If this is a merge ` +
+          `conflict, fix the file or restore it with: git checkout HEAD~1 -- ${path}`
+      );
+      writeSummary();
+      process.exit(1);
+    }
     log.warn(`Could not read ${path} (${err.message}); starting from defaults.`);
     return fallback;
   }
@@ -93,7 +108,7 @@ const clearDemoIfInherited = () => {
   // The marker can come back -- a rebase or a revert will happily restore a
   // deleted file -- so never decide to destroy data on its presence alone.
   // Only clear when what is on disk is still exactly the untouched demo.
-  const current = readJson(p("data/papers.json"), { papers: [] }).papers ?? [];
+  const current = readJson(p("data/papers.json"), { papers: [] }, { critical: true }).papers ?? [];
   const demoIds = new Set(meta.paperIds ?? []);
   const ownPapers = current.filter((x) => !demoIds.has(x.id));
 
@@ -178,7 +193,7 @@ const main = async () => {
   const email = await lookupOwnerEmail(config);
   const limit = Number(config.candidateCount) || 25;
 
-  const store = readJson(p("data/papers.json"), { papers: [] });
+  const store = readJson(p("data/papers.json"), { papers: [] }, { critical: true });
   let papers = Array.isArray(store.papers) ? store.papers : [];
 
   // Heal any duplicates that a previous run may have written.
@@ -305,7 +320,7 @@ const main = async () => {
   // `refs: <link>` in papers.txt means "suggest everything this paper cites".
   // The ids are stored so they keep appearing in suggestions on later runs,
   // until they are either promoted into the survey or dismissed.
-  const seededStore = readJson(p("data/seeded.json"), { seeded: [] });
+  const seededStore = readJson(p("data/seeded.json"), { seeded: [] }, { critical: true });
   let seeded = Array.isArray(seededStore.seeded) ? seededStore.seeded : [];
 
   if (seedFrom.length) {
@@ -350,7 +365,7 @@ const main = async () => {
     candidates = await buildCandidates({ papers, limit, dismissedIds: dismissed, seeded });
   } catch (err) {
     log.error(`Suggestions failed: ${err.message}. Keeping the previous list.`);
-    candidates = readJson(p("data/candidates.json"), { candidates: [] }).candidates ?? [];
+    candidates = readJson(p("data/candidates.json"), { candidates: [] }, { critical: true }).candidates ?? [];
   }
   log.stat("suggestions", candidates.length);
 

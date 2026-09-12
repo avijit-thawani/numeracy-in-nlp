@@ -52,8 +52,8 @@ Everything that paper cites becomes a suggestion. A survey's bibliography is a r
 | --- | --- |
 | You edit `papers.txt` | New papers are looked up and added |
 | Someone opens an **Add a paper** issue | The bot ingests the links, replies, and closes the issue |
-| Every Monday | Citation counts refresh and suggestions are recomputed |
-| You click **Run workflow** in the Actions tab | Same as the weekly run, on demand |
+| Every day | Citation counts refresh and suggestions are recomputed |
+| You click **Run workflow** in the Actions tab | Same as the daily run, on demand |
 
 To act on a suggestion, copy its link into `papers.txt` and commit.
 
@@ -101,7 +101,7 @@ Open the **Actions** tab and look at the most recent run. Every run writes a sum
 - **A link stayed in `papers.txt`.** It could not be identified, or neither database knows it. Try another link for the same paper, ideally arXiv or DOI.
 - **Warnings about HTTP 429.** Semantic Scholar's free tier is shared by everyone and throttles in bursts. The run retries with backoff, falls back to OpenAlex, and retries anything still missing next time. Normal and self-correcting.
 - **No suggestions.** Expected until you have roughly ten papers.
-- **The weekly refresh stopped.** GitHub disables cron in public repos after 60 days of no repository activity. The bot's own commits normally prevent this; if the survey has been completely static, re-enable the workflow in the Actions tab.
+- **The daily refresh stopped.** GitHub disables cron in public repos after 60 days of no repository activity. The bot's own commits normally prevent this; if the survey has been completely static, re-enable the workflow in the Actions tab.
 
 ## Credits
 

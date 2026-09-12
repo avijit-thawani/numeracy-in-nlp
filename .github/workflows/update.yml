@@ -17,11 +17,12 @@ on:
         description: "Also re-fetch citation counts for every paper"
         type: boolean
         default: true
-  # Weekly refresh. This commit is also what keeps the schedule alive: GitHub
+  # Daily refresh. This commit is also what keeps the schedule alive: GitHub
   # disables cron in public repos after 60 days with no repository activity,
   # and its own runs do not count as activity -- but the commit it makes does.
+  # An odd minute, because on-the-hour crons queue behind everyone else's.
   schedule:
-    - cron: "17 4 * * 1"
+    - cron: "17 4 * * *"
 
 permissions:
   contents: write
