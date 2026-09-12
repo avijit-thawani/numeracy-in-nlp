@@ -1,0 +1,24 @@
+name: Add a paper
+description: Suggest a paper for this living survey. No git required.
+title: "Add paper: "
+labels: ["add-paper"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Paste one or more paper links below and submit. A bot will look them up,
+        add them to the survey table, and close this issue.
+  - type: textarea
+    id: links
+    attributes:
+      label: Paper link(s)
+      description: One per line. arXiv, ACL Anthology, DOI, or Semantic Scholar links all work.
+      placeholder: |
+        https://arxiv.org/abs/1706.03762
+        10.18653/v1/N18-2074
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it relevant? (optional)

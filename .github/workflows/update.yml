@@ -1,0 +1,91 @@
+name: Update survey
+
+on:
+  # Someone edited the seed list or the survey settings.
+  push:
+    paths:
+      - "papers.txt"
+      - "survey.config.json"
+  # Someone opened an "Add a paper" issue.
+  issues:
+    types: [opened]
+  # The "Run workflow" button.
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: "Also re-fetch citation counts for every paper"
+        type: boolean
+        default: true
+  # Weekly refresh. This commit is also what keeps the schedule alive: GitHub
+  # disables cron in public repos after 60 days with no repository activity,
+  # and its own runs do not count as activity -- but the commit it makes does.
+  schedule:
+    - cron: "17 4 * * 1"
+
+permissions:
+  contents: write
+  issues: write
+
+# Never let two runs rewrite the data files at once.
+concurrency:
+  group: update-survey
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Build the survey
+        env:
+          # Cron and manual runs also re-check citation counts; a plain push
+          # only looks up the new papers, which is much quicker.
+          REFRESH: ${{ github.event_name == 'schedule' || inputs.refresh == true }}
+        run: |
+          if [ "$REFRESH" = "true" ]; then
+            node scripts/update.js --refresh
+          else
+            node scripts/update.js
+          fi
+
+      - name: Commit the results
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md papers.txt data/
+          if git diff --staged --quiet; then
+            echo "Nothing changed."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Update living survey"
+            # Another run may have landed while we were fetching.
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Matches the label or the title prefix: "Use this template" copies files
+      # but not labels, so a fresh survey has no 'add-paper' label until the
+      # first one is created.
+      - name: Reply to the paper request
+        if: >-
+          github.event_name == 'issues' &&
+          (contains(github.event.issue.labels.*.name, 'add-paper') ||
+           startsWith(github.event.issue.title, 'Add paper:'))
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.html_url }}
+          CHANGED: ${{ steps.commit.outputs.changed }}
+        run: |
+          if [ "$CHANGED" = "true" ]; then
+            gh issue comment "$ISSUE" --body "Added to the survey — thanks! See the updated table in the README."
+            gh issue close "$ISSUE"
+          else
+            gh issue comment "$ISSUE" --body "I could not look that one up, or it was already in the survey. Check the [run log](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details."
+          fi
