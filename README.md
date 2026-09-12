@@ -4,7 +4,7 @@
 
 A living survey of numeracy in NLP
 
-**20** in Core · updated 2026-09-12
+**20** in Core · **64** Recs · updated 2026-09-12
 
 ## Core
 
@@ -29,7 +29,20 @@ The papers in this survey.
 
 <sub>Found by following the citation graph, not picked by hand. Refreshed daily. To accept one, paste its link into [`import/papers.txt`](import/papers.txt) and commit.</sub>
 
-_Nothing yet._ Recs appear once several papers here share a citing paper, which usually needs around ten.
+| # | [Paper](views/recs-by-title.md) | Venue | [Year](views/recs-by-year.md) | [Cited by](views/recs-by-citations.md) | Score &#9660; | Why |
+| ---: | --- | --- | ---: | ---: | ---: | --- |
+| 1 | [Analysing Mathematical Reasoning Abilities of Neural Models](https://www.semanticscholar.org/paper/afed6dc6900d3b37e528b9086661bba583d60bf6)<br><sub>D. Saxton et al.</sub><br><sub>This paper conducts a comprehensive analysis of models from two broad classes of the most powerful sequence-to-sequence architectures and finds notable differences in their ability to resolve mathematical problems and generalize their knowledge.</sub> | International Conference on Learning Representations | 2019 | 532 | 100  cited by 8 here |
+| 2 | [Investigating the Limitations of Transformers with Simple Arithmetic Tasks](https://www.semanticscholar.org/paper/2cc3ab9fa41ba2804e301f7eae9598636e62422a)<br><sub>Rodrigo Nogueira, Zhiying Jiang, Jimmy J. Li</sub><br><sub>It is found that how a number is represented in its surface form has a strong influence on the model's accuracy, and this result bolsters evidence that subword tokenizers and positional encodings are components in current transformer designs that might need improvement.</sub> | - | 2021 | 165 | 100  cites 7 here |
+| 3 | [Do NLP Models Know Numbers? Probing Numeracy in Embeddings](https://www.semanticscholar.org/paper/0427110f0e79f41e69a8eb00a3ec8868bac26a4f)<br><sub>Eric Wallace et al.</sub><br><sub>This work investigates the numerical reasoning capabilities of a state-of-the-art question answering model on the DROP dataset and finds this model excels on questions that require numerical reasoning, i.e., it already captures numeracy.</sub> | Conference on Empirical Methods in Natural Language Processing | 2019 | 319 | 83  cited by 6 here |
+| 4 | [Measuring Arithmetic Extrapolation Performance](https://www.semanticscholar.org/paper/112ac68ddb0f021517dd465e89918fa52755cc35)<br><sub>Andreas Madsen, alexander rosenberg johansen</sub><br><sub>It is found that consistently learning arithmetic extrapolation is challenging, in particular for multiplication, in the first extensive evaluation with respect to convergence of the NALU and its sub-units.</sub> | Neural Information Processing Systems | 2019 | 12 | 80  cited by 3 here |
+| 5 | [Neural Arithmetic Expression Calculator](https://www.semanticscholar.org/paper/6f69e19348870552a7ab92d038c8b8d753fe6b60)<br><sub>Kaiyu Chen et al.</sub><br><sub>This paper presents a pure neural solver for arithmetic expression calculation (AEC) problem, which includes the adding, subtracting, multiplying, dividing and bracketing operations, and regards the arithmetic expressions calculation as a hierarchical reinforcement learning problem.</sub> | arXiv.org | 2018 | 17 | 75  cited by 3 here |
+| 6 | [Verb Physics: Relative Physical Knowledge of Actions and Objects](https://www.semanticscholar.org/paper/c9f343b492c170c726f607c255ec6c7177dc5800)<br><sub>M. Forbes, Yejin Choi</sub><br><sub>An approach to infer relative physical knowledge of actions and objects along five dimensions (e.g., size, weight, and strength) from unstructured natural language text is presented.</sub> | Annual Meeting of the Association for Computational Linguistics | 2017 | 87 | 72  cited by 4 here |
+| 7 | [A Survey of Deep Learning for Mathematical Reasoning](https://www.semanticscholar.org/paper/2dbec38fe353ab0e495ad09263389dbc9260824d)<br><sub>Pan Lu et al.</sub><br><sub>This survey paper reviews the key tasks, datasets, and methods at the intersection of mathematical reasoning and deep learning over the past decade, and evaluates existing benchmarks and methods and discusses future research directions in this domain.</sub> | Annual Meeting of the Association for Computational Linguistics | 2022 | 209 | 71  cites 5 here |
+| 8 | [Investigating Numeracy Learning Ability of a Text-to-Text Transfer Model](https://www.semanticscholar.org/paper/37588705a2af7d5b24d901dd33ade1ff293aabdd)<br><sub>Kuntal Pal, Chitta Baral</sub><br><sub>This work investigates the ability of text-to-text transfer learning model (T5), which has outperformed its predecessors in the conventional NLP tasks, to learn numeracy, to struggle considerably in the extrapolation setting across all four tasks.</sub> | Conference on Empirical Methods in Natural Language Processing | 2021 | 22 | 71  cites 5 here |
+| 9 | [Injecting the score of the first-stage retriever as text improves BERT-based re-rankers](https://www.semanticscholar.org/paper/1c1b9f56f904a4fc8e980c3ccb5aa92b342d856b)<br><sub>Arian Askari et al.</sub><br><sub>A novel approach for combining first-stage lexical retrieval models and Transformer-based re-rankers is proposed, which injects the relevance score of the lexical model as a token into the input of the cross-encoder re-ranker.</sub> | Discover Computing | 2024 | 9 | 71  cites 5 here |
+| 10 | [How Pre-trained Word Representations Capture Commonsense Physical Comparisons](https://www.semanticscholar.org/paper/41094beddc498680d807e99e07efa41fec5d6724)<br><sub>Pranav Goel</sub><br><sub>This work investigates how comparisons are made: models learn a consistent ordering over all the objects in the comparisons and finds probing models have significantly higher accuracy than those baseline models which use dataset artifacts.</sub> | Conference on Empirical Methods in Natural Language Processing | 2019 | 7 | 59  cited by 2 here |
+
+[... and 54 more, sorted by score](views/recs-by-score.md)
 
 <!-- SURVEY:END -->
 
