@@ -71,10 +71,15 @@ const clearDemoIfInherited = () => {
   const marker = p(".demo-survey");
   if (!existsSync(marker)) return false;
 
+  const meta = readJson(marker, null);
+  if (!meta?.repo) {
+    log.warn("The .demo-survey marker is unreadable; leaving your data alone.");
+    return false;
+  }
+
   // Still running in the template repo itself: keep the demo.
   const here = process.env.GITHUB_REPOSITORY ?? "";
-  const origin = readFileSync(marker, "utf8").trim();
-  if (here && origin && here === origin) {
+  if (here && here === meta.repo) {
     log.debug("Running in the template repo; keeping the demo survey.");
     return false;
   }
@@ -83,20 +88,36 @@ const clearDemoIfInherited = () => {
     return false;
   }
 
+  // The marker can come back -- a rebase or a revert will happily restore a
+  // deleted file -- so never decide to destroy data on its presence alone.
+  // Only clear when what is on disk is still exactly the untouched demo.
+  const current = readJson(p("data/papers.json"), { papers: [] }).papers ?? [];
+  const demoIds = new Set(meta.paperIds ?? []);
+  const ownPapers = current.filter((x) => !demoIds.has(x.id));
+
+  if (ownPapers.length) {
+    log.info(
+      `Found ${ownPapers.length} paper(s) of your own, so the demo has already been cleared. Removing the marker.`
+    );
+    rmSync(marker);
+    return false;
+  }
+
   log.step("First run in a new survey: clearing the template's demo papers");
   writeJson(p("data/papers.json"), { papers: [] });
   writeJson(p("data/candidates.json"), { candidates: [] });
   writeFileSync(p("data/papers.csv"), "", "utf8");
 
+  // Only reset the title if the owner has not already named the survey.
   const config = readJson(p("survey.config.json"), {});
-  writeJson(p("survey.config.json"), {
-    ...config,
-    title: config.title === "Numeracy in NLP (demo)" ? "My Living Survey" : config.title,
-    description:
-      config.title === "Numeracy in NLP (demo)"
-        ? "Edit `survey.config.json` to set this title and description, and add papers to `papers.txt`."
-        : config.description,
-  });
+  if (config.title === meta.title) {
+    writeJson(p("survey.config.json"), {
+      ...config,
+      title: "My Living Survey",
+      description:
+        "Edit `survey.config.json` to set this title and description, and add papers to `papers.txt`.",
+    });
+  }
 
   rmSync(marker);
   log.info("Demo cleared. Your papers from papers.txt are being added now.");
