@@ -8,6 +8,7 @@ import { fetchPapers, fetchReferences, matchByTitle } from "../lib/semanticSchol
 import { fetchPapersFallback } from "../lib/openalex.js";
 import { buildRecommendations } from "../lib/recommend.js";
 import { allViews } from "../lib/views.js";
+import { loadGraph, saveGraph } from "../lib/graphCache.js";
 import { parseBibliography } from "../lib/bibliography.js";
 import {
   renderSurvey,
@@ -19,6 +20,20 @@ import {
 import { resolveIdentity, lookupOwnerEmail } from "../lib/identity.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+/** Small helper so title lookups are not one-at-a-time on a large .bib. */
+const inParallel = async (items, fn, limit = 4) => {
+  const out = new Array(items.length);
+  let next = 0;
+  const worker = async () => {
+    while (next < items.length) {
+      const i = next++;
+      out[i] = await fn(items[i]);
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+  return out;
+};
 const p = (...parts) => join(ROOT, ...parts);
 
 /**
@@ -193,11 +208,15 @@ const readBibliographies = async () => {
   // Entries with no identifier at all: look them up by title.
   if (needTitleMatch.length) {
     log.info(`Looking up ${needTitleMatch.length} bibliography entr(y/ies) by title.`);
-    for (const { file, title } of needTitleMatch) {
+    const matched = await inParallel(needTitleMatch, async ({ file, title }) => {
       const paperId = await matchByTitle(title);
-      if (paperId) requests.push({ id: paperId, source: `${file}: ${title}` });
-      else log.warn(`No match for bibliography entry "${title.slice(0, 60)}".`);
-    }
+      if (!paperId) {
+        log.warn(`No match for bibliography entry "${title.slice(0, 60)}".`);
+        return null;
+      }
+      return { id: paperId, source: `${file}: ${title}` };
+    });
+    requests.push(...matched.filter(Boolean));
   }
 
   log.stat("papers found in bibliography files", requests.length);
@@ -275,15 +294,15 @@ const main = async () => {
   const { resolved, unresolved, seedFrom, titles } = resolveAll(incoming);
 
   // Lines that are titles rather than links get looked up by name.
-  const fromTitles = [];
-  for (const title of titles) {
-    const paperId = await matchByTitle(title);
-    if (paperId) fromTitles.push({ id: paperId, source: title });
-    else {
+  const fromTitles = (
+    await inParallel(titles, async (title) => {
+      const paperId = await matchByTitle(title);
+      if (paperId) return { id: paperId, source: title };
       log.warn(`No paper found matching the title "${title}".`);
       unresolved.push(title);
-    }
-  }
+      return null;
+    })
+  ).filter(Boolean);
   if (fromTitles.length) log.stat("papers matched by title", fromTitles.length);
 
   const bibliography = await readBibliographies();
@@ -431,9 +450,11 @@ const main = async () => {
 
   // ---- Suggestions ------------------------------------------------------
   log.step("Working out suggested next reads");
+  const graph = loadGraph(readJson(p("data/graph.json"), { graph: {} }));
   let candidates = [];
   try {
     const built = await buildRecommendations({
+      graph,
       core: papers,
       limit,
       dismissedIds: dismissed,
@@ -457,6 +478,13 @@ const main = async () => {
   writeJson(p("data/core.json"), { updatedAt: stamp, core: papers });
   writeJson(p("data/recs.json"), { updatedAt: stamp, recs: candidates });
   writeJson(p("data/seeded.json"), { updatedAt: stamp, seeded });
+  // Keep cached edges for current papers, plus the global citation counts the
+  // backward ranking needs; drop everything else so the file cannot grow
+  // without bound.
+  writeJson(
+    p("data/graph.json"),
+    saveGraph(graph, new Set([...papers.map((x) => x.id), ...[...graph.keys()].filter((k) => k.startsWith("counts:"))]))
+  );
   writeFileSync(p("data/core.csv"), `${renderCsv(papers)}\n`, "utf8");
 
   // One markdown file per list per sort order, since GitHub renders markdown
