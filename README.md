@@ -33,7 +33,7 @@ The papers in this survey.
 
 ## ✨ Recs
 
-<sub>Found by following the citation graph, not picked by hand. Refreshed daily. To accept one, paste its link into [`papers.txt`](papers.txt) and commit.</sub>
+<sub>Found by following the citation graph, not picked by hand. Refreshed daily. To accept one, paste its link into [`import/papers.txt`](import/papers.txt) and commit.</sub>
 
 | # | [Paper](views/recs-by-title.md) | Venue | [Year](views/recs-by-year.md) | [Cited by](views/recs-by-citations.md) | Score &#9660; | Why |
 | ---: | --- | --- | ---: | ---: | ---: | --- |
