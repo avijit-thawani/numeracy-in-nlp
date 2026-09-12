@@ -16,5 +16,6 @@
     "backward": true,
     "minCount": 2,
     "popularityPenalty": 0.2
-  }
+  },
+  "previewRows": 10
 }

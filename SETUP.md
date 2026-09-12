@@ -88,8 +88,9 @@ Everything here has a sensible default; skip this section unless something bothe
 
 - `title` / `description`: leave empty to use the repo name and description. Set them to override.
 - `contactEmail`: optional, sent only to OpenAlex to use their faster "polite pool". Left empty, the bot tries your public GitHub email and quietly skips it if you have none.
-- `candidateCount`: how many suggestions to show.
-- `sortBy`: `year`, `citations`, `title`, or `added`.
+- `candidateCount`: how many Recs to keep.
+- `previewRows`: how many rows of each list to show on the README, default 10.
+- `algorithm`: `forward`, `backward`, `minCount`, `popularityPenalty`. See the template's README for what these do.
 
 **Writing your own prose.** Everything between `<!-- SURVEY:END -->` and the footer is yours and is never overwritten. Scope notes, open questions, a call for contributions. Only the region between `<!-- SURVEY:START -->` and `<!-- SURVEY:END -->` is regenerated, so leave those two comments alone.
 
@@ -101,9 +102,10 @@ Everything here has a sensible default; skip this section unless something bothe
 | `papers.txt` | Your input queue. Anything unrecognised stays behind so you can fix it. |
 | `import/` | Drop `.bib` / `.ris` files here to bulk-import. |
 | `survey.config.json` | Optional overrides. |
-| `data/papers.json` | The papers, with full metadata. The real source of truth. |
-| `data/candidates.json` | The current suggestions. |
-| `data/papers.csv` | Spreadsheet export. |
+| `data/core.json` | Core: the papers in the survey, with full metadata. The source of truth. |
+| `data/recs.json` | Recs: the current suggestions. |
+| `data/core.csv` | Spreadsheet export of Core. |
+| `views/` | The same two lists rendered in every sort order, one file each. |
 | `data/seeded.json` | Suggestions pulled from a `refs:` bibliography, pending your review. |
 | `data/dismissed.json` | Paper ids to never suggest again (create it yourself). |
 

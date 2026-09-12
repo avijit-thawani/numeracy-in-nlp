@@ -6,7 +6,8 @@ import { log, writeSummary } from "../lib/log.js";
 import { resolveAll, resolveIdentifier } from "../lib/resolve.js";
 import { fetchPapers, fetchReferences, matchByTitle } from "../lib/semanticScholar.js";
 import { fetchPapersFallback } from "../lib/openalex.js";
-import { buildCandidates } from "../lib/candidates.js";
+import { buildRecommendations } from "../lib/recommend.js";
+import { allViews } from "../lib/views.js";
 import { parseBibliography } from "../lib/bibliography.js";
 import {
   renderSurvey,
@@ -114,7 +115,7 @@ const clearDemoIfInherited = () => {
   // The marker can come back -- a rebase or a revert will happily restore a
   // deleted file -- so never decide to destroy data on its presence alone.
   // Only clear when what is on disk is still exactly the untouched demo.
-  const current = readJson(p("data/papers.json"), { papers: [] }, { critical: true }).papers ?? [];
+  const current = readJson(p("data/core.json"), { core: [] }, { critical: true }).core ?? [];
   const demoIds = new Set(meta.paperIds ?? []);
   const ownPapers = current.filter((x) => !demoIds.has(x.id));
 
@@ -127,9 +128,9 @@ const clearDemoIfInherited = () => {
   }
 
   log.step("First run in a new survey: clearing the template's demo papers");
-  writeJson(p("data/papers.json"), { papers: [] });
-  writeJson(p("data/candidates.json"), { candidates: [] });
-  writeFileSync(p("data/papers.csv"), "", "utf8");
+  writeJson(p("data/core.json"), { core: [] });
+  writeJson(p("data/recs.json"), { recs: [] });
+  writeFileSync(p("data/core.csv"), "", "utf8");
 
   // Blank the demo's title rather than substituting a placeholder: an empty
   // title makes the survey fall back to the repository name and description,
@@ -203,6 +204,30 @@ const readBibliographies = async () => {
   return { requests, files };
 };
 
+/**
+ * The two lists were once called "papers" and "candidates"; they are now Core
+ * and Recs, consistently, everywhere. Surveys created before the rename carry
+ * the old filenames, so move them across once and keep going.
+ */
+const migrateLegacyNames = () => {
+  const moves = [
+    ["data/papers.json", "data/core.json", "papers", "core"],
+    ["data/candidates.json", "data/recs.json", "candidates", "recs"],
+  ];
+  for (const [from, to, oldKey, newKey] of moves) {
+    if (!existsSync(p(from)) || existsSync(p(to))) continue;
+    const old = readJson(p(from), null, { critical: true });
+    if (!old) continue;
+    writeJson(p(to), { updatedAt: old.updatedAt, [newKey]: old[oldKey] ?? [] });
+    rmSync(p(from));
+    log.info(`Renamed ${from} to ${to}.`);
+  }
+  if (existsSync(p("data/papers.csv")) && !existsSync(p("data/core.csv"))) {
+    writeFileSync(p("data/core.csv"), readFileSync(p("data/papers.csv"), "utf8"), "utf8");
+    rmSync(p("data/papers.csv"));
+  }
+};
+
 const main = async () => {
   const refreshMode = process.argv.includes("--refresh");
   log.step(`Starting update${refreshMode ? " (refresh mode)" : ""}`);
@@ -217,8 +242,9 @@ const main = async () => {
   const email = await lookupOwnerEmail(config);
   const limit = Number(config.candidateCount) || 25;
 
-  const store = readJson(p("data/papers.json"), { papers: [] }, { critical: true });
-  let papers = Array.isArray(store.papers) ? store.papers : [];
+  migrateLegacyNames();
+  const store = readJson(p("data/core.json"), { core: [] }, { critical: true });
+  let papers = Array.isArray(store.core) ? store.core : [];
 
   // Heal any duplicates that a previous run may have written.
   const byId = new Map();
@@ -228,7 +254,7 @@ const main = async () => {
     papers = [...byId.values()];
   }
   const dismissed = readJson(p("data/dismissed.json"), { ids: [] }).ids ?? [];
-  log.stat("papers already in survey", papers.length);
+  log.stat("papers in Core", papers.length);
 
   // ---- Gather new links -------------------------------------------------
   const queueFile = p("papers.txt");
@@ -386,26 +412,39 @@ const main = async () => {
   log.step("Working out suggested next reads");
   let candidates = [];
   try {
-    candidates = await buildCandidates({
-      papers,
+    const built = await buildRecommendations({
+      core: papers,
       limit,
       dismissedIds: dismissed,
       seeded,
       algorithm: config.algorithm ?? {},
     });
+    candidates = built.recs;
+    // Centrality comes back from the same pass, so Core can be scored and
+    // sorted with no extra requests.
+    for (const paper of papers) paper.score = built.coreScores.get(paper.id) ?? 0;
   } catch (err) {
     log.error(`Suggestions failed: ${err.message}. Keeping the previous list.`);
-    candidates = readJson(p("data/candidates.json"), { candidates: [] }, { critical: true }).candidates ?? [];
+    candidates = readJson(p("data/recs.json"), { recs: [] }, { critical: true }).recs ?? [];
   }
-  log.stat("suggestions", candidates.length);
+  log.stat("Recs", candidates.length);
 
   // ---- Write everything out --------------------------------------------
   log.step("Writing data files and README");
 
-  writeJson(p("data/papers.json"), { updatedAt: new Date().toISOString(), papers });
-  writeJson(p("data/candidates.json"), { updatedAt: new Date().toISOString(), candidates });
-  writeJson(p("data/seeded.json"), { updatedAt: new Date().toISOString(), seeded });
-  writeFileSync(p("data/papers.csv"), `${renderCsv(papers)}\n`, "utf8");
+  const stamp = new Date().toISOString();
+  writeJson(p("data/core.json"), { updatedAt: stamp, core: papers });
+  writeJson(p("data/recs.json"), { updatedAt: stamp, recs: candidates });
+  writeJson(p("data/seeded.json"), { updatedAt: stamp, seeded });
+  writeFileSync(p("data/core.csv"), `${renderCsv(papers)}\n`, "utf8");
+
+  // One markdown file per list per sort order, since GitHub renders markdown
+  // but runs no JavaScript, so column headings link between files instead.
+  for (const file of allViews({ core: papers, recs: candidates, config: identity, updated: stamp })) {
+    const full = p(file.path);
+    mkdirSync(dirname(full), { recursive: true });
+    writeFileSync(full, file.body, "utf8");
+  }
 
   // Anything we could not resolve stays in papers.txt so it is visible and
   // fixable, rather than vanishing silently.
@@ -427,8 +466,9 @@ const main = async () => {
   const existing = existsSync(readmePath) ? readFileSync(readmePath, "utf8") : "";
   const block = renderSurvey({
     config: { ...identity, sortBy: config.sortBy },
-    papers,
-    candidates,
+    core: papers,
+    recs: candidates,
+    preview: Number(config.previewRows) || 10,
   });
   writeFileSync(readmePath, applySurvey(existing, block), "utf8");
 
