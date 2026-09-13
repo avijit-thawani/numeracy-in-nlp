@@ -5,4 +5,4 @@
 #
 # Commit this file and the survey rebuilds itself. Lines starting with # are
 # ignored. Anything that could not be looked up is left here so you can fix it.
-
+https://arxiv.org/abs/2605.22875    # RMA: an Agentic System for Research-Level Mathematical Problems
