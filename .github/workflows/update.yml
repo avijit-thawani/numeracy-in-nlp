@@ -11,6 +11,11 @@ on:
     paths:
       - "survey.config.json"
       - "import/**"
+      # Code too, so syncing a template change re-renders the survey instead
+      # of leaving it on the previous format until something else triggers a
+      # run. Cheap now the citation graph is cached.
+      - "lib/**"
+      - "scripts/**"
   # Someone opened an "Add a paper" issue.
   issues:
     types: [opened]

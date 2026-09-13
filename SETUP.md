@@ -134,6 +134,9 @@ All of these have working defaults; change them only if you want to.
 | `algorithm.popularityPenalty` | Higher favours obscure papers, lower favours famous ones. Default 0.2. |
 | `algorithm.graphBudget` | How many papers' citations to refresh per run. Default 150, which bounds the cost for a large survey. |
 | `algorithm.graphMaxAgeDays` | How stale citation data may get. Default 7. |
+| `recPullRequests.enabled` | Open a pull request per Rec, so accepting is a merge and rejecting a close. Needs *Allow GitHub Actions to create and approve pull requests* in Settings. |
+| `recPullRequests.count` | How many may sit open at once. `"all"` gives every Rec one, turning the pull request list into your whole triage queue. Default 3. |
+| `recPullRequests.maxPerRun` | Cap on how many to open in a single run, so a large survey fills the queue over a few runs instead of firing dozens of notifications at once. Default 20. |
 
 Elsewhere:
 

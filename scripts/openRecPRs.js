@@ -105,6 +105,29 @@ const recordLinks = () => {
   }
 };
 
+/**
+ * Closes pull requests for papers that have dropped out of Recs, because they
+ * were accepted, dismissed, or simply outranked. Without this the queue only
+ * ever grows.
+ */
+const closeStale = (recs) => {
+  const current = new Set(recs.map(branchFor));
+  try {
+    const open = JSON.parse(
+      gh(["pr", "list", "--state", "open", "--limit", "200", "--json", "number,headRefName"])
+    ).filter((x) => x.headRefName.startsWith(BRANCH_PREFIX) && !current.has(x.headRefName));
+
+    for (const pr of open) {
+      gh(["pr", "close", String(pr.number), "--delete-branch", "--comment",
+          "No longer among the current suggestions."]);
+      log.info(`Closed #${pr.number}, no longer recommended.`);
+    }
+    if (open.length) log.stat("stale pull requests closed", open.length);
+  } catch (err) {
+    log.warn(`Could not tidy stale pull requests: ${String(err.message).split("\n")[0]}`);
+  }
+};
+
 const main = () => {
   const config = readJson(p("survey.config.json"), {});
   const settings = config.recPullRequests ?? {};
@@ -130,18 +153,32 @@ const main = () => {
     log.warn(`Could not list existing pull requests: ${err.message.split("\n")[0]}`);
   }
 
+  // Close anything still open for a paper that is no longer recommended, so
+  // the queue reflects the current Recs rather than every paper ever
+  // suggested.
+  closeStale(recs);
+
   // `count` is a ceiling on how many sit open at once, not how many to open
   // per run. Treating it as the latter opened a fresh batch every day and
   // quietly accumulated: ten piled up during one afternoon of testing.
+  // "all" gives every Rec its own pull request, which turns the pull request
+  // list into the whole triage queue.
   let openNow = 0;
   try {
-    openNow = JSON.parse(gh(["pr", "list", "--state", "open", "--limit", "100", "--json", "headRefName"]))
+    openNow = JSON.parse(gh(["pr", "list", "--state", "open", "--limit", "200", "--json", "headRefName"]))
       .filter((x) => x.headRefName.startsWith(BRANCH_PREFIX)).length;
   } catch {
     /* treat as none open */
   }
 
-  const room = (Number(settings.count) || 3) - openNow;
+  const ceiling = settings.count === "all" ? recs.length : Number(settings.count) || 3;
+  const room = Math.min(
+    ceiling - openNow,
+    // Never open more than this in one go. With "all" on a large survey the
+    // first run would otherwise fire off dozens of notifications at once; a
+    // per-run cap fills the queue over a few runs instead.
+    Number(settings.maxPerRun) || 20
+  );
   if (room <= 0) {
     log.info(`${openNow} Rec pull request(s) already await a decision; not opening more.`);
     recordLinks();
