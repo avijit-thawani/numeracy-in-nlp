@@ -72,6 +72,39 @@ const body = (rec) =>
     "suggested again.",
   ].join("\n");
 
+/**
+ * Writes each open pull request's link into data/recs.json so the next render
+ * can put a "review" link on that row. Must run on every path, including when
+ * no new pull requests are opened: a survey that is already at its quota still
+ * needs its existing ones linked, and skipping that silently left every row
+ * without a link.
+ */
+const recordLinks = () => {
+  try {
+    const open = JSON.parse(
+      gh(["pr", "list", "--state", "open", "--limit", "100", "--json", "headRefName,url,number"])
+    );
+    const byBranch = new Map(open.map((x) => [x.headRefName, x]));
+
+    const path = p("data/recs.json");
+    const store = readJson(path, { recs: [] });
+    let linked = 0;
+    store.recs = (store.recs ?? []).map((rec) => {
+      const match = byBranch.get(branchFor(rec));
+      if (!match) {
+        const { prUrl, prNumber, ...rest } = rec;
+        return rest;
+      }
+      linked++;
+      return { ...rec, prUrl: match.url, prNumber: match.number };
+    });
+    writeFileSync(path, `${JSON.stringify(store, null, 2)}\n`, "utf8");
+    log.stat("Recs linked to a pull request", linked);
+  } catch (err) {
+    log.warn(`Could not record pull request links: ${String(err.message).split("\n")[0]}`);
+  }
+};
+
 const main = () => {
   const config = readJson(p("survey.config.json"), {});
   const settings = config.recPullRequests ?? {};
@@ -111,6 +144,7 @@ const main = () => {
   const room = (Number(settings.count) || 3) - openNow;
   if (room <= 0) {
     log.info(`${openNow} Rec pull request(s) already await a decision; not opening more.`);
+    recordLinks();
     return;
   }
 
@@ -118,6 +152,7 @@ const main = () => {
 
   if (!wanted.length) {
     log.info("Every top Rec already has a pull request.");
+    recordLinks();
     return;
   }
 
@@ -185,32 +220,7 @@ const main = () => {
     }
   }
 
-  // Write the links back into data/recs.json so the next render can put a
-  // "review" link on each row. Existing open pull requests are picked up too,
-  // not just the ones this run created, or a rerun would drop their links.
-  try {
-    const open = JSON.parse(
-      gh(["pr", "list", "--state", "open", "--limit", "100", "--json", "headRefName,url,number"])
-    );
-    const byBranch = new Map(open.map((x) => [x.headRefName, x]));
-
-    const path = p("data/recs.json");
-    const store = readJson(path, { recs: [] });
-    let linked = 0;
-    store.recs = (store.recs ?? []).map((rec) => {
-      const match = byBranch.get(branchFor(rec));
-      if (!match) {
-        const { prUrl, prNumber, ...rest } = rec;
-        return rest;
-      }
-      linked++;
-      return { ...rec, prUrl: match.url, prNumber: match.number };
-    });
-    writeFileSync(path, `${JSON.stringify(store, null, 2)}\n`, "utf8");
-    log.stat("Recs linked to a pull request", linked);
-  } catch (err) {
-    log.warn(`Could not record pull request links: ${String(err.message).split("\n")[0]}`);
-  }
+  recordLinks();
 
   log.stat("pull requests opened", opened);
   writeSummary();
