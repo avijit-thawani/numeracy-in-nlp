@@ -20,6 +20,7 @@
   "previewRows": 10,
   "recPullRequests": {
     "enabled": true,
-    "count": 3
+    "count": "all",
+    "maxPerRun": 20
   }
 }
