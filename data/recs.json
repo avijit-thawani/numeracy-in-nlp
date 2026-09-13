@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-13T00:53:39.280Z",
+  "updatedAt": "2026-09-13T01:07:41.911Z",
   "recs": [
     {
       "id": "afed6dc6900d3b37e528b9086661bba583d60bf6",
@@ -162,7 +162,9 @@
       "direction": "forward",
       "score": 66.66666666666666,
       "why": "cites 6 in Core",
-      "fromReferences": false
+      "fromReferences": false,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/11",
+      "prNumber": 11
     },
     {
       "id": "c9e55ef1b3362db711d95a928a28a8cbd0db3092",
@@ -191,7 +193,9 @@
       "direction": "forward",
       "score": 66.66666666666666,
       "why": "cites 6 in Core",
-      "fromReferences": false
+      "fromReferences": false,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/12",
+      "prNumber": 12
     },
     {
       "id": "c9343c26a0e604f7afd94b7290bbdf8d96cd65b6",
@@ -217,7 +221,9 @@
       "direction": "forward",
       "score": 66.66666666666666,
       "why": "cites 6 in Core",
-      "fromReferences": false
+      "fromReferences": false,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/13",
+      "prNumber": 13
     },
     {
       "id": "6f69e19348870552a7ab92d038c8b8d753fe6b60",
