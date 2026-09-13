@@ -138,6 +138,7 @@ const main = () => {
   }
 
   let opened = 0;
+  const created = new Map();
 
   for (const rec of wanted) {
     const branch = branchFor(rec);
@@ -155,12 +156,13 @@ const main = () => {
            "commit", "-q", "-m", `Add: ${rec.title}`.slice(0, 72)]);
       git(["push", "-q", "-f", "origin", branch]);
 
-      gh(["pr", "create",
+      const url = gh(["pr", "create",
           "--base", base,
           "--head", branch,
           "--title", `Add: ${rec.title}`.slice(0, 72),
           "--body", body(rec),
-          ...labelArgs]);
+          ...labelArgs]).trim().split("\n").pop();
+      created.set(rec.id, url);
       opened++;
       log.info(`Opened a pull request for "${rec.title.slice(0, 55)}".`);
     } catch (err) {
@@ -181,6 +183,33 @@ const main = () => {
         /* already there */
       }
     }
+  }
+
+  // Write the links back into data/recs.json so the next render can put a
+  // "review" link on each row. Existing open pull requests are picked up too,
+  // not just the ones this run created, or a rerun would drop their links.
+  try {
+    const open = JSON.parse(
+      gh(["pr", "list", "--state", "open", "--limit", "100", "--json", "headRefName,url,number"])
+    );
+    const byBranch = new Map(open.map((x) => [x.headRefName, x]));
+
+    const path = p("data/recs.json");
+    const store = readJson(path, { recs: [] });
+    let linked = 0;
+    store.recs = (store.recs ?? []).map((rec) => {
+      const match = byBranch.get(branchFor(rec));
+      if (!match) {
+        const { prUrl, prNumber, ...rest } = rec;
+        return rest;
+      }
+      linked++;
+      return { ...rec, prUrl: match.url, prNumber: match.number };
+    });
+    writeFileSync(path, `${JSON.stringify(store, null, 2)}\n`, "utf8");
+    log.stat("Recs linked to a pull request", linked);
+  } catch (err) {
+    log.warn(`Could not record pull request links: ${String(err.message).split("\n")[0]}`);
   }
 
   log.stat("pull requests opened", opened);

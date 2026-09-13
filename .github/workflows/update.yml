@@ -71,6 +71,17 @@ jobs:
             node scripts/update.js
           fi
 
+      # Pull requests must exist before the final render, so each Rec row can
+      # link to its own. Opening them needs the survey data this run just
+      # wrote, hence the order: build, open, render, commit.
+      - name: Open pull requests for the top Recs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git fetch -q origin "${GITHUB_REF_NAME}"
+          node scripts/openRecPRs.js
+          node scripts/render.js
+
       - name: Commit the results
         id: commit
         run: |
@@ -120,15 +131,3 @@ jobs:
           else
             gh issue comment "$ISSUE" --body "I could not look that one up, or it was already in the survey. Check the [run log](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details."
           fi
-
-      # One pull request per top Rec, so accepting is a merge and rejecting is
-      # a close. Off unless survey.config.json turns it on, because GitHub
-      # blocks Actions from opening pull requests until a repository setting
-      # is changed by hand.
-      - name: Open pull requests for the top Recs
-        if: steps.commit.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git fetch -q origin "${GITHUB_REF_NAME}"
-          node scripts/openRecPRs.js

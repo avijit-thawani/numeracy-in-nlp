@@ -89,6 +89,27 @@ const linksFromIssue = () => {
   // settings rather than files, so "Use this template" does not copy them --
   // gating on the label alone would silently never fire in a fresh survey.
   const labels = (issue.labels ?? []).map((l) => (typeof l === "string" ? l : l?.name));
+
+  // "Drop paper" issues carry a paper id in the body and reject it, which is
+  // what the Decide column's "drop" link opens.
+  if (labels.includes("drop-paper") || /^drop paper:/i.test(String(issue.title ?? ""))) {
+    const id = String(issue.body ?? "").trim().split(/\s+/)[0];
+    if (/^[0-9a-f]{40}$/i.test(id)) {
+      const store = readJson(p("data/dismissed.json"), { ids: [], notes: {} });
+      store.ids = store.ids ?? [];
+      store.notes = store.notes ?? {};
+      if (!store.ids.includes(id)) {
+        store.ids.push(id);
+        store.notes[id] = String(issue.title ?? "").replace(/^Drop paper:\s*/i, "");
+        writeJson(p("data/dismissed.json"), store);
+        log.info(`Dismissed ${id} from issue #${issue.number}.`);
+      }
+    } else {
+      log.warn(`Issue #${issue.number} is a drop request but its body is not a paper id.`);
+    }
+    return [];
+  }
+
   const looksLikeRequest =
     labels.includes("add-paper") || /^add paper:/i.test(String(issue.title ?? ""));
 
