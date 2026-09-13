@@ -221,11 +221,15 @@ const clearDemoIfInherited = () => {
   writeJson(rp("data/recs.json"), { recs: [] });
   writeFileSync(rp("data/core.csv"), "", "utf8");
 
-  // Blank the demo's title rather than substituting a placeholder: an empty
-  // title makes the survey fall back to the repository name and description,
-  // which the owner already chose when they created the repo.
+  // Blank any title rather than substituting a placeholder: an empty title
+  // makes the survey fall back to the repository name and description, which
+  // the owner already chose when they created the repo.
+  //
+  // Unconditional, because the alternative was conditional on the title still
+  // matching the one recorded in the marker -- and when the template's own
+  // title moved on, every new survey quietly opened under the old demo's name.
   const config = readJson(rp("survey.config.json"), {});
-  if (meta.title && config.title === meta.title) {
+  if (config.title || config.description) {
     writeJson(rp("survey.config.json"), { ...config, title: "", description: "" });
   }
 
