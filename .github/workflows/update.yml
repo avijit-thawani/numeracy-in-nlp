@@ -3,6 +3,11 @@ name: Update survey
 on:
   # Someone edited the seed list, dropped in a bibliography, or changed settings.
   push:
+    # Only the default branch. Without this, pushing a rec/ branch for a
+    # suggestion fired an entire survey run on that branch: wasted work, a
+    # polluted pull request diff, and worst of all a second run holding the
+    # same concurrency slot, which let a stale run overwrite a fresher one.
+    branches: [main]
     paths:
       - "survey.config.json"
       - "import/**"
@@ -81,30 +86,20 @@ jobs:
           fi
           git commit -q -m "Update living survey"
 
-          # Another run may have landed while this one was fetching papers.
-          # Everything under data/ and views/, and the README's generated
-          # block, is rewritten wholesale every run, so two runs conflict on
-          # every one of those files. "-X theirs" during a rebase favours the
-          # commit being replayed, which is this run's fresher output, while
-          # genuine remote changes such as someone editing import/ still merge
-          # normally. Without it this step just fails.
-          for attempt in 1 2 3; do
-            if git push -q origin "${GITHUB_REF_NAME}" 2>/dev/null; then
-              echo "changed=true" >> "$GITHUB_OUTPUT"
-              exit 0
-            fi
-            echo "Push raced with another run; rebasing and retrying ($attempt of 3)."
-            git fetch -q origin "${GITHUB_REF_NAME}"
-            git rebase -X theirs "origin/${GITHUB_REF_NAME}" || {
-              git rebase --abort || true
-              echo "::warning::Rebase failed; leaving this run's changes for the next one."
-              echo "changed=false" >> "$GITHUB_OUTPUT"
-              exit 0
-            }
-          done
+          # If another run landed first, throw this run's output away rather
+          # than forcing it on top. Everything under data/ and views/ is a pure
+          # function of the inputs in import/, so a discarded output costs only
+          # the recompute, whereas forcing it can revert work that was based on
+          # newer inputs. That happened: a stale run overwrote a merged paper
+          # and Core silently dropped back from 22 to 20.
+          if git push -q origin "${GITHUB_REF_NAME}" 2>/dev/null; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
 
-          echo "::error::Could not push after 3 attempts."
-          exit 1
+          echo "::warning::Another run pushed first. Discarding this run's output; the next run will regenerate it from the current inputs."
+          git reset -q --hard "origin/${GITHUB_REF_NAME}" 2>/dev/null || true
+          echo "changed=false" >> "$GITHUB_OUTPUT"
 
       # Matches the label or the title prefix: "Use this template" copies files
       # but not labels, so a fresh survey has no 'add-paper' label until the
