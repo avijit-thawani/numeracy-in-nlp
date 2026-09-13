@@ -1,6 +1,10 @@
 # Setting up your own living survey
 
-A living survey is a GitHub repo whose README *is* the survey: a table of the papers you have read, plus a ✨ regularly refreshed list of papers you probably should read next. There is no website to deploy, no server, and no API keys.
+A living survey is a GitHub repo whose README *is* the survey: a table of the papers you have read, plus a ✨ regularly refreshed list of papers you probably should read next.
+
+**It is your repo and nothing else.** No website to deploy, no server, no database, no account, no API keys. Your papers and every file derived from them (`data/`, `views/`, the README itself) are committed to the repo you own, and a GitHub Action running in your own Actions minutes rewrites them in place. The only thing that leaves is a lookup of each paper's public metadata from Semantic Scholar and OpenAlex; delete the repo and nothing of yours survives anywhere.
+
+**No LLM is involved in the recommendations.** Recs are computed by a citation graph algorithm — `lib/recommend.js`, scored in `lib/score.js`, with every knob exposed in `survey.config.json`. It is deterministic: the same survey produces the same list, every row states exactly why it is there (`cites 4 in Core`), and if you dislike the ranking you can change the rule rather than reword a prompt. Nothing here calls a model at all: the one-line summary under each title is Semantic Scholar's own `tldr` field, fetched like the rest of the metadata.
 
 Setup is two steps.
 
@@ -48,17 +52,24 @@ refs: https://arxiv.org/abs/2103.13136
 Everything that paper cites becomes a Rec. Useful in several directions: point
 it at a survey to adopt a ready-made reading list for the topic, at your own
 thesis or preprint to lay out what it rests on, or at a draft before you submit
-to catch related work you have missed. One line can seed dozens of papers; the
-example above contributes 65. The popularity penalty strips the generic
-references, so you get the topical ones rather than Adam and BERT.
+to catch related work you have missed. One line seeds as many papers as that
+one cites, which for a survey is usually dozens — the example above contributes
+65. The popularity penalty strips the generic references, so you get the topical
+ones rather than Adam and BERT.
 
 These arrive as Recs rather than Core, because the curation was the cited
 paper's author's and not yours. Promote the ones you want by copying their links
 into `import/papers.txt`.
 
-Within a minute or two a bot commit rewrites `README.md` with your table. **Aim
-for at least ten papers**, since suggestions come from papers that cite several
-of yours; a handful of seeds produces few or none.
+Within a minute or two a bot commit rewrites `README.md` with your table.
+
+**Three papers is usually enough to get Recs.** A paper is suggested once it
+connects to at least two of yours, so the real threshold is two papers with
+something in common rather than any particular count. On the demo survey three
+seeds already produce sixteen candidates, and eleven produce over two hundred.
+Two papers that cite nothing in common produce none, and a single paper cannot
+produce any; if you are stuck there, either add another paper or set
+`algorithm.minCount` to `1`.
 
 That is it. You are done.
 
@@ -130,7 +141,7 @@ All of these have working defaults; change them only if you want to.
 | `candidateCount` | How many Recs to keep. |
 | `previewRows` | Rows of each list shown on the README. Default 10. |
 | `algorithm.forward` / `.backward` | Turn either direction off. |
-| `algorithm.minCount` | How many overlaps before a paper is suggested. Default 2. |
+| `algorithm.minCount` | How many of your papers something must connect to before it is suggested. Default 2. Set it to 1 for a survey too small to produce any. |
 | `algorithm.popularityPenalty` | Higher favours obscure papers, lower favours famous ones. Default 0.2. |
 | `algorithm.graphBudget` | How many papers' citations to refresh per run. Default 150, which bounds the cost for a large survey. |
 | `algorithm.graphMaxAgeDays` | How stale citation data may get. Default 7. |
@@ -170,7 +181,9 @@ Open the **Actions** tab and look at the most recent run. Every run writes a sum
 
 - **A link stayed in `import/papers.txt`.** It could not be identified, or neither database knows it. Try another link for the same paper, ideally arXiv or DOI.
 - **Warnings about HTTP 429.** Semantic Scholar's free tier is shared by everyone and throttles in bursts. The run retries with backoff, falls back to OpenAlex, and retries anything still missing next time. Normal and self-correcting.
-- **No suggestions.** Expected until you have roughly ten papers.
+- **No suggestions.** Expected while nothing outside the survey connects to two
+  of your papers, which in practice means one or two seeds. Add another, or set
+  `algorithm.minCount` to `1`.
 - **The daily refresh stopped.** GitHub disables cron in public repos after 60 days of no repository activity. The bot's own commits normally prevent this; if the survey has been completely static, re-enable the workflow in the Actions tab.
 
 ## Credits

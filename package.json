@@ -9,7 +9,8 @@
   },
   "scripts": {
     "update": "node scripts/update.js",
-    "refresh": "node scripts/update.js --refresh"
+    "refresh": "node scripts/update.js --refresh",
+    "test": "node --test --test-timeout=15000 \"test/**/*.test.js\""
   },
   "license": "MIT"
 }

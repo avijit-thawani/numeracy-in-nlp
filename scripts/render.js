@@ -59,8 +59,11 @@ export const render = () => {
 
   const readmePath = p("README.md");
   const existing = existsSync(readmePath) ? readFileSync(readmePath, "utf8") : "";
+  // No `sortBy` here. It was passed in for a long time and never read: the
+  // README is always sorted by Score and the alternatives live in views/.
+  // Four surveys had set it to "year" and silently got Score anyway.
   const block = renderSurvey({
-    config: { ...identity, sortBy: config.sortBy },
+    config: identity,
     core,
     recs,
     repo,

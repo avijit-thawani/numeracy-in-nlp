@@ -7,25 +7,22 @@ import { resolveAll, resolveIdentifier } from "../lib/resolve.js";
 import { fetchPapers, fetchReferences, matchByTitle } from "../lib/semanticScholar.js";
 import { fetchPapersFallback } from "../lib/openalex.js";
 import { buildRecommendations } from "../lib/recommend.js";
-import { allViews } from "../lib/views.js";
-import { loadGraph, saveGraph } from "../lib/graphCache.js";
+import { loadGraph, saveGraph, keysWorthKeeping } from "../lib/graphCache.js";
 import { parseBibliography } from "../lib/bibliography.js";
-import {
-  renderSurvey,
-  applySurvey,
-  renderCsv,
-  renderFooter,
-  applyFooter,
-  INTRO_START,
-  INTRO_END,
-} from "../lib/renderReadme.js";
-import { resolveIdentity, lookupOwnerEmail } from "../lib/identity.js";
+import { INTRO_START, INTRO_END } from "../lib/renderReadme.js";
+import { lookupOwnerEmail } from "../lib/identity.js";
+import { render } from "./render.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
 // Kept out of the repository: it is a derived cache, several megabytes, and
 // rewritten every run. See the cache step in the workflow.
 const GRAPH_CACHE = ".cache/graph.json";
+
+// Links pulled out of an "Add a paper" issue, parked outside the commit so the
+// commit step can recover them if it has to discard this run. See where it is
+// written for why an issue needs this and a file does not.
+const ISSUE_RECOVERY = ".cache/issue-links.txt";
 
 /** Small helper so title lookups are not one-at-a-time on a large .bib. */
 const inParallel = async (items, fn, limit = 4) => {
@@ -220,13 +217,17 @@ const readBibliographies = async () => {
   const requests = [];
   const needTitleMatch = [];
 
+  // `fromFile` marks a request as coming from a bibliography rather than from
+  // a line in papers.txt. It decides where a failure gets reported: a .bib
+  // entry must never be written back into papers.txt, because the file is
+  // re-read every run and the entry would be re-reported every run too.
   for (const file of files) {
     const text = readFileSync(join(dir, file), "utf8");
     for (const entry of parseBibliography(file, text)) {
-      if (entry.id) requests.push({ id: entry.id, source: `${file}: ${entry.title}` });
+      if (entry.id) requests.push({ id: entry.id, source: `${file}: ${entry.title}`, fromFile: true });
       else if (entry.url) {
         const id = resolveIdentifier(entry.url);
-        if (id) requests.push({ id, source: `${file}: ${entry.title}` });
+        if (id) requests.push({ id, source: `${file}: ${entry.title}`, fromFile: true });
         else if (entry.title) needTitleMatch.push({ file, title: entry.title });
       } else if (entry.needsTitleMatch) needTitleMatch.push({ file, title: entry.title });
     }
@@ -241,7 +242,7 @@ const readBibliographies = async () => {
         log.warn(`No match for bibliography entry "${title.slice(0, 60)}".`);
         return null;
       }
-      return { id: paperId, source: `${file}: ${title}` };
+      return { id: paperId, source: `${file}: ${title}`, fromFile: true };
     });
     requests.push(...matched.filter(Boolean));
   }
@@ -281,10 +282,6 @@ const main = async () => {
   clearDemoIfInherited();
 
   const config = readJson(p("survey.config.json"), {});
-  const event = process.env.GITHUB_EVENT_PATH
-    ? readJson(process.env.GITHUB_EVENT_PATH, null)
-    : null;
-  const identity = resolveIdentity(config, event);
   const email = await lookupOwnerEmail(config);
   const limit = Number(config.candidateCount) || 25;
 
@@ -313,10 +310,42 @@ const main = async () => {
     rmSync(legacyQueue);
     log.info("Moved papers.txt into import/.");
   }
-  const queueLines = existsSync(queueFile)
+  const rawQueueLines = existsSync(queueFile)
     ? readFileSync(queueFile, "utf8").split(/\r?\n/)
     : [];
-  const incoming = [...queueLines, ...linksFromIssue()];
+
+  // Surveys that ran the older code have papers.txt full of bibliography
+  // source labels a previous run wrote back. They are not valid input, they
+  // cost a futile title search each, and they multiply. Drop them on sight;
+  // the file is rewritten at the end of every run, so this heals in one pass
+  // and the entries themselves are still in the .bib they came from.
+  const BIB_LABEL = /^\S+\.(?:bib|ris):\s/i;
+  const queueLines = rawQueueLines.filter((line) => !BIB_LABEL.test(line.trim()));
+  const purged = rawQueueLines.length - queueLines.length;
+  if (purged) {
+    log.info(`Removed ${purged} stale bibliography line(s) that an older run wrote into papers.txt.`);
+  }
+
+  const issueLinks = linksFromIssue();
+  const incoming = [...queueLines, ...issueLinks];
+
+  // An issue is the one input that is not a file in the repository. Every
+  // other input survives the commit step throwing this run's output away,
+  // because `git reset --hard` restores import/ along with data/ and the next
+  // run reads it again. An issue's links have no such copy: the run that
+  // ingested them loses them, and the issue does not fire a second time.
+  //
+  // So leave them somewhere the reset cannot reach. The commit step appends
+  // them to a fresh papers.txt if it has to discard, which is a push to
+  // import/ and therefore triggers the run that ingests them.
+  if (issueLinks.length) {
+    mkdirSync(dirname(p(ISSUE_RECOVERY)), { recursive: true });
+    writeFileSync(p(ISSUE_RECOVERY), `${issueLinks.join("\n")}\n`, "utf8");
+  } else if (existsSync(p(ISSUE_RECOVERY))) {
+    // Cleared rather than left behind. A stale file would make a later run's
+    // discard path requeue links that are already in Core.
+    rmSync(p(ISSUE_RECOVERY));
+  }
 
   const { resolved, unresolved, seedFrom, titles } = resolveAll(incoming);
 
@@ -511,29 +540,37 @@ const main = async () => {
   writeJson(p("data/core.json"), { updatedAt: stamp, core: papers });
   writeJson(p("data/recs.json"), { updatedAt: stamp, recs: candidates });
   writeJson(p("data/seeded.json"), { updatedAt: stamp, seeded });
-  // Keep cached edges for current papers, plus the global citation counts the
-  // backward ranking needs; drop everything else so the file cannot grow
-  // without bound.
-  writeJson(
-    p(GRAPH_CACHE),
-    saveGraph(graph, new Set([...papers.map((x) => x.id), ...[...graph.keys()].filter((k) => k.startsWith("counts:"))]))
-  );
-  writeFileSync(p("data/core.csv"), `${renderCsv(papers)}\n`, "utf8");
-
-  // One markdown file per list per sort order, since GitHub renders markdown
-  // but runs no JavaScript, so column headings link between files instead.
-  for (const file of allViews({ core: papers, recs: candidates, config: identity, updated: stamp })) {
-    const full = p(file.path);
-    mkdirSync(dirname(full), { recursive: true });
-    writeFileSync(full, file.body, "utf8");
-  }
+  // Keep cached edges for current papers, plus the citation counts those
+  // papers' references actually need. See keysWorthKeeping for why the counts
+  // are pruned by need rather than by age.
+  writeJson(p(GRAPH_CACHE), saveGraph(graph, keysWorthKeeping(graph, papers.map((x) => x.id))));
 
   // Anything we could not resolve stays in papers.txt so it is visible and
   // fixable, rather than vanishing silently.
-  const leftovers = [...unresolved, ...stillMissing.map((r) => r.source).filter(Boolean)];
+  //
+  // Only lines that came from papers.txt are written back, and only ever as
+  // the line the owner actually typed. Writing a bibliography entry's `source`
+  // label here instead ("thesis.bib: Some Title") was a ratchet: the label is
+  // not a parseable input, so the next run read it as a title, failed to match
+  // it, and wrote it back again -- while the .bib re-contributed its own copy.
+  // One survey reached 95 leftover lines covering 12 papers, one of them 24
+  // times, and burned a title-search request on each of them every run.
+  const fileFailures = stillMissing.filter((r) => r.fromFile).map((r) => r.source).filter(Boolean);
+  const leftovers = [
+    ...new Set([...unresolved, ...stillMissing.filter((r) => !r.fromFile).map((r) => r.source).filter(Boolean)]),
+  ];
+
   if (leftovers.length) {
     log.warn(
-      `${leftovers.length} link(s) could not be looked up and were left in papers.txt: ${leftovers.join(", ")}`
+      `${leftovers.length} line(s) could not be looked up and were left in papers.txt: ${leftovers.join(", ")}`
+    );
+  }
+  if (fileFailures.length) {
+    const unique = [...new Set(fileFailures)];
+    log.warn(
+      `${unique.length} bibliography entr(y/ies) could not be looked up. They stay in their source file, ` +
+        `so nothing is lost and nothing accumulates: ${unique.slice(0, 10).join("; ")}` +
+        (unique.length > 10 ? ` (and ${unique.length - 10} more)` : "")
     );
   }
   const header = [
@@ -548,15 +585,12 @@ const main = async () => {
   ];
   writeFileSync(queueFile, `${header.concat(leftovers).join("\n")}\n`, "utf8");
 
-  const readmePath = p("README.md");
-  const existing = existsSync(readmePath) ? readFileSync(readmePath, "utf8") : "";
-  const block = renderSurvey({
-    config: { ...identity, sortBy: config.sortBy },
-    core: papers,
-    recs: candidates,
-    preview: Number(config.previewRows) || 10,
-  });
-  writeFileSync(readmePath, applyFooter(applySurvey(existing, block), renderFooter()), "utf8");
+  // Rendering lives in one place. This used to be a second copy of the README,
+  // CSV and views pipeline, whose output the workflow then overwrote by
+  // running scripts/render.js -- and because this copy passed no `repo`, the
+  // Decide column it produced was a row of dashes. One implementation, called
+  // from both, cannot drift like that.
+  render();
 
   log.step("Done");
   writeSummary();

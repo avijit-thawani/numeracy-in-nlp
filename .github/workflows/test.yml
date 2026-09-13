@@ -1,0 +1,45 @@
+name: Tests
+
+# Guards the pure, offline parts of the pipeline: link parsing, bibliography
+# parsing, scoring, ranking and rendering. Nothing here touches the network, so
+# it runs in seconds and cannot be thrown off by Semantic Scholar throttling.
+#
+# The point is that a survey should never be the place a bug is discovered. Two
+# of the bugs these tests cover only ever appeared in somebody's repository:
+# a first run whose Score column read zero behind a red annotation, and a seed
+# list that grew to 95 lines covering 12 papers.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "lib/**"
+      - "scripts/**"
+      - "test/**"
+      - "package.json"
+      - ".github/workflows/test.yml"
+  pull_request:
+    paths:
+      - "lib/**"
+      - "scripts/**"
+      - "test/**"
+      - "package.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      # No dependencies and no lockfile, so there is nothing to install: the
+      # test runner ships with Node. Keeping it that way is deliberate, since
+      # the Action a survey runs must not need an install step either.
+      - run: npm test

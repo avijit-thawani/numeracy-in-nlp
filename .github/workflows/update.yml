@@ -69,6 +69,11 @@ jobs:
           # Cron and manual runs also re-check citation counts; a plain push
           # only looks up the new papers, which is much quicker.
           REFRESH: ${{ github.event_name == 'schedule' || inputs.refresh == true }}
+          # Actions does not put GITHUB_TOKEN in the environment on its own, so
+          # without this the owner-email lookup behind `contactEmail` bailed out
+          # every run and OpenAlex's polite pool was never reached. Read-only
+          # use: one call to /users/<owner> for a public email.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ "$REFRESH" = "true" ]; then
             node scripts/update.js --refresh
@@ -117,6 +122,31 @@ jobs:
           git reset -q --hard "origin/${GITHUB_REF_NAME}" 2>/dev/null || true
           echo "changed=false" >> "$GITHUB_OUTPUT"
 
+          # Every input except an issue is a file, so the reset above restores
+          # it and a later run reads it again. An issue's links exist only in
+          # the event, which does not fire twice, so discarding would lose the
+          # paper outright and the requester would be told it could not be
+          # found. Append them to the seed list instead: that is a push to
+          # import/, which triggers the run that ingests them.
+          if [ -s .cache/issue-links.txt ]; then
+            while IFS= read -r link; do
+              [ -n "$link" ] || continue
+              grep -qxF "$link" import/papers.txt || printf '%s\n' "$link" >> import/papers.txt
+            done < .cache/issue-links.txt
+
+            if ! git diff --quiet -- import/papers.txt; then
+              git add import/papers.txt
+              git commit -q -m "Queue papers from an issue that a concurrent run displaced"
+              if git push -q origin "${GITHUB_REF_NAME}" 2>/dev/null; then
+                echo "requeued=true" >> "$GITHUB_OUTPUT"
+                echo "::notice::Requeued the issue's links in import/papers.txt; the run that triggers will add them."
+              else
+                git reset -q --hard "origin/${GITHUB_REF_NAME}" 2>/dev/null || true
+                echo "::warning::Could not requeue the issue's links. Re-open the issue to retry."
+              fi
+            fi
+          fi
+
       # Matches the label or the title prefix: "Use this template" copies files
       # but not labels, so a fresh survey has no 'add-paper' label until the
       # first one is created.
@@ -129,10 +159,16 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE: ${{ github.event.issue.html_url }}
           CHANGED: ${{ steps.commit.outputs.changed }}
+          REQUEUED: ${{ steps.commit.outputs.requeued }}
         run: |
           if [ "$CHANGED" = "true" ]; then
             gh issue comment "$ISSUE" --body "Added to the survey — thanks! See the updated table in the README."
             gh issue close "$ISSUE"
+          elif [ "$REQUEUED" = "true" ]; then
+            # Do not say "could not look that one up" here: the lookup worked,
+            # a concurrent run just displaced the result. Leave the issue open
+            # until the requeued run has actually added the paper.
+            gh issue comment "$ISSUE" --body "Another update was running, so I queued this in \`import/papers.txt\` instead. The next run adds it, usually within a minute or two."
           else
             gh issue comment "$ISSUE" --body "I could not look that one up, or it was already in the survey. Check the [run log](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details."
           fi
