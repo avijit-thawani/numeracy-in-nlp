@@ -26,6 +26,7 @@ on:
 permissions:
   contents: write
   issues: write
+  pull-requests: write
 
 # Never let two runs rewrite the data files at once.
 concurrency:
@@ -124,3 +125,15 @@ jobs:
           else
             gh issue comment "$ISSUE" --body "I could not look that one up, or it was already in the survey. Check the [run log](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details."
           fi
+
+      # One pull request per top Rec, so accepting is a merge and rejecting is
+      # a close. Off unless survey.config.json turns it on, because GitHub
+      # blocks Actions from opening pull requests until a repository setting
+      # is changed by hand.
+      - name: Open pull requests for the top Recs
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git fetch -q origin "${GITHUB_REF_NAME}"
+          node scripts/openRecPRs.js
