@@ -7,3 +7,4 @@
 # ignored. Anything that could not be looked up is left here so you can fix it.
 
 https://arxiv.org/abs/1909.07940
+https://arxiv.org/abs/1706.03799    # Verb Physics: Relative Physical Knowledge of Actions and Objects
