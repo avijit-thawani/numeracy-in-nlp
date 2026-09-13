@@ -97,9 +97,24 @@ const main = () => {
     log.warn(`Could not list existing pull requests: ${err.message.split("\n")[0]}`);
   }
 
-  const wanted = recs
-    .filter((r) => !taken.has(branchFor(r)))
-    .slice(0, Number(settings.count) || 3);
+  // `count` is a ceiling on how many sit open at once, not how many to open
+  // per run. Treating it as the latter opened a fresh batch every day and
+  // quietly accumulated: ten piled up during one afternoon of testing.
+  let openNow = 0;
+  try {
+    openNow = JSON.parse(gh(["pr", "list", "--state", "open", "--limit", "100", "--json", "headRefName"]))
+      .filter((x) => x.headRefName.startsWith(BRANCH_PREFIX)).length;
+  } catch {
+    /* treat as none open */
+  }
+
+  const room = (Number(settings.count) || 3) - openNow;
+  if (room <= 0) {
+    log.info(`${openNow} Rec pull request(s) already await a decision; not opening more.`);
+    return;
+  }
+
+  const wanted = recs.filter((r) => !taken.has(branchFor(r))).slice(0, room);
 
   if (!wanted.length) {
     log.info("Every top Rec already has a pull request.");
