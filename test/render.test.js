@@ -142,6 +142,39 @@ test("the README keeps the order the ranking chose, not score order", () => {
   assert.ok(block.indexOf("New") < block.indexOf("Established"), "the reserved paper must stay on top");
 });
 
+/**
+ * The window used to be written into the Why column, which is the
+ * second-to-last column of a table wide enough to scroll: "the best paper
+ * published this month" rendered as an unremarkable middle row. Each window
+ * gets its own table so the answer to "what is new?" is a heading.
+ */
+test("each recency window gets its own table", () => {
+  const recs = [
+    { id: "a", title: "Fresh", score: 5, why: "past month · cites 2 in Core", freshWindow: "past month" },
+    { id: "b", title: "Newish", score: 9, why: "past year · cites 3 in Core", freshWindow: "past year" },
+    { id: "c", title: "Classic", score: 99, why: "cited by 9 in Core" },
+  ];
+  const block = renderSurvey({ config: { title: "T", description: "" }, core: [], recs });
+
+  assert.match(block, /### New in the past month/);
+  assert.match(block, /### New in the past year/);
+  assert.match(block, /### Most connected, any year/);
+  assert.ok(
+    block.indexOf("### New in the past month") < block.indexOf("### New in the past year"),
+    "narrower windows come first"
+  );
+  assert.ok(block.indexOf("Fresh") < block.indexOf("Classic"));
+});
+
+test("a window heading is not repeated in every row of its table", () => {
+  const recs = [
+    { id: "a", title: "Fresh", score: 5, why: "past month · cites 2 in Core", freshWindow: "past month" },
+  ];
+  const block = renderSurvey({ config: { title: "T", description: "" }, core: [], recs });
+  assert.match(block, /cites 2 in Core/);
+  assert.doesNotMatch(block, /past month · cites/, "the heading already said when");
+});
+
 test("with nothing reserved, Recs are still shown by score", () => {
   const recs = [
     { id: "low", title: "Low", score: 2, why: "cites 2 in Core" },
