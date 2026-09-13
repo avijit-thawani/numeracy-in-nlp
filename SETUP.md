@@ -16,7 +16,7 @@ Make the repo **public**. GitHub Actions is free and unlimited on public repos, 
 
 You do not need to delete the demo papers this template ships with. Your new repo clears them automatically on its first run, before you touch anything.
 
-## 2. Give it some papers
+## 2. Seed it
 
 Three ways to seed a survey. They all work, you can mix them, and each one
 triggers a rebuild as soon as you commit.
@@ -62,16 +62,7 @@ of yours; a handful of seeds produces few or none.
 
 That is it. You are done.
 
-## Keeping it up to date
-
-| To | Do this |
-| --- | --- |
-| Add more papers | More lines in `import/papers.txt`, or another `.bib` in `import/`. Both are re-read every run and nothing is added twice. |
-| Promote a Rec into Core | Copy its link into `import/papers.txt` and commit. It leaves Recs on the next run. |
-| Reject a Rec for good | Add its id to `data/dismissed.json`. |
-| Edit by hand or with an agent | Core is `data/core.json`, Recs is `data/recs.json`. Everything else is generated from those and will be overwritten. |
-
-## After that, it runs itself
+## 3. It runs itself
 
 | When | What happens |
 | --- | --- |
@@ -80,7 +71,21 @@ That is it. You are done.
 | Every day | Citation counts refresh and suggestions are recomputed |
 | You click **Run workflow** in the Actions tab | Same as the daily run, on demand |
 
-To act on a suggestion, copy its link into `import/papers.txt` and commit.
+## 4. Grow it from Recs
+
+Every row in the Recs table carries a **Decide** link. `add` and `drop` open a
+prefilled issue that the bot acts on and closes. Where a pull request is
+waiting, `review` opens it, and accepting the paper is a merge while rejecting
+it is a close. Nothing needs editing by hand.
+
+The longhand equivalents, if you prefer them:
+
+| To | Do this |
+| --- | --- |
+| Add more papers | More lines in `import/papers.txt`, or another `.bib` in `import/`. Both are re-read every run and nothing is added twice. |
+| Promote a Rec into Core | Copy its link into `import/papers.txt` and commit. It leaves Recs on the next run. |
+| Reject a Rec for good | Add its id to `data/dismissed.json`. |
+| Edit by hand or with an agent | Core is `data/core.json`, Recs is `data/recs.json`. Everything else is generated from those and will be overwritten. |
 
 ## The two lists, and the Score
 
