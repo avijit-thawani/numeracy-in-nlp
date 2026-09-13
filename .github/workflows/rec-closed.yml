@@ -1,0 +1,50 @@
+name: Reject a Rec
+
+# Closing a Rec's pull request without merging is how you say "not this one".
+# Record that, so the paper is never suggested again. Merging needs no handler:
+# it lands a new line in import/papers.txt, which the update workflow already
+# watches.
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reject-rec
+  cancel-in-progress: false
+
+jobs:
+  dismiss:
+    if: >-
+      github.event.pull_request.merged == false &&
+      startsWith(github.event.pull_request.head.ref, 'rec/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Remember the rejection
+        env:
+          BRANCH: ${{ github.event.pull_request.head.ref }}
+          TITLE: ${{ github.event.pull_request.title }}
+        run: node scripts/dismiss.js "${BRANCH#rec/}" "$TITLE"
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/dismissed.json
+          if git diff --staged --quiet; then
+            echo "Already dismissed."
+          else
+            git commit -q -m "Reject: ${{ github.event.pull_request.title }}"
+            git push -q
+          fi
+
+      - name: Delete the branch
+        continue-on-error: true
+        run: git push -q origin --delete "${{ github.event.pull_request.head.ref }}"
