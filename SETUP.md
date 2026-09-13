@@ -222,7 +222,8 @@ All of these have working defaults; change them only if you want to.
 | `algorithm.freshness.windows` | The reserved slots, as `{ days, count, label }`. Default: 10 from the past 30 days, then 10 from the past 180. |
 | `algorithm.freshness.pool` | How many ranked candidates to fetch dates for, since a paper cut before that is never considered for a window. Default 400. |
 | `algorithm.graphBudget` | How many papers' citations to refresh per run. Default 150, which bounds the cost for a large survey. |
-| `algorithm.graphMaxAgeDays` | How stale citation data may get. Default 7. |
+| `algorithm.graphMaxAgeDays` | How stale a *recent* paper's citation data may get. Default 7. |
+| `algorithm.graphAgeAware` | Let older papers go staler than that, since their citation lists barely move: the allowance is `graphMaxAgeDays` × the paper's age in years, capped at 12×. Default on. Turn it off for a uniform weekly refresh. |
 | `recPullRequests.enabled` | Open a pull request per Rec, so accepting is a merge and rejecting a close. Needs *Allow GitHub Actions to create and approve pull requests* in Settings. |
 | `recPullRequests.count` | How many may sit open at once. `"all"` gives every Rec one, turning the pull request list into your whole triage queue. Default 3. |
 | `recPullRequests.maxPerRun` | Cap on how many to open in a single run, so a large survey fills the queue over a few runs instead of firing dozens of notifications at once. Default 20. |

@@ -1,7 +1,13 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { loadGraph, saveGraph, keysWorthKeeping, refreshGraph } from "../lib/graphCache.js";
+import {
+  loadGraph,
+  saveGraph,
+  keysWorthKeeping,
+  refreshGraph,
+  stalenessAllowance,
+} from "../lib/graphCache.js";
 
 const today = new Date().toISOString().slice(0, 10);
 
@@ -82,4 +88,83 @@ test("counts are exposed without their key prefix", async () => {
   ]);
   const out = await refreshGraph({ graph, paperIds: ["a"], maxAgeDays: 7 });
   assert.equal(out.citationCounts.get("r"), 42);
+});
+
+// ---- Age-aware staleness ----------------------------------------------
+
+const NOW = new Date("2026-09-13T00:00:00Z");
+const daysBefore = (n) => new Date(NOW.getTime() - n * 86_400_000).toISOString().slice(0, 10);
+
+/**
+ * The refresh budget exists to notice new citations. An old paper's citation
+ * list grows by a fraction of a percent a week and a new one can double, so
+ * spending the same on both wastes most of the budget where nothing changes.
+ */
+test("a recent paper keeps the base allowance", () => {
+  assert.equal(stalenessAllowance(2026, 7, NOW), 7);
+  assert.equal(stalenessAllowance(2025, 7, NOW), 7);
+});
+
+test("an older paper is allowed to go staler, up to a cap", () => {
+  assert.equal(stalenessAllowance(2024, 7, NOW), 14);
+  assert.equal(stalenessAllowance(2021, 7, NOW), 35);
+  assert.equal(stalenessAllowance(1990, 7, NOW), 84, "capped at twelve times the base");
+});
+
+/**
+ * A missing year must not buy a paper a three-month holiday: refreshing an old
+ * paper too often costs one request, missing a new paper's citations costs a
+ * Rec that the recency windows exist to surface.
+ */
+test("a paper with no year is treated as new", () => {
+  assert.equal(stalenessAllowance(null, 7, NOW), 7);
+  assert.equal(stalenessAllowance(undefined, 7, NOW), 7);
+  assert.equal(stalenessAllowance("not a year", 7, NOW), 7);
+});
+
+test("the budget goes to the new paper rather than the old one", async () => {
+  // Both were last fetched 20 days ago: past the 7-day base, but only the
+  // recent paper is past its own allowance.
+  const graph = new Map([
+    ["new", { fetchedAt: daysBefore(20), citedBy: [], cites: [] }],
+    ["old", { fetchedAt: daysBefore(20), citedBy: [], cites: [] }],
+  ]);
+
+  const asked = [];
+  await refreshGraph({
+    graph,
+    paperIds: ["new", "old"],
+    years: new Map([["new", new Date().getFullYear()], ["old", 2005]]),
+    budget: 10,
+    fetchCitations: async (ids) => {
+      asked.push(...ids);
+      return new Map(ids.map((id) => [id, []]));
+    },
+    fetchReferences: async (ids) => ({ edges: new Map(ids.map((id) => [id, []])), citationCounts: new Map() }),
+  });
+
+  assert.deepEqual(asked, ["new"], "only the recent paper was due");
+});
+
+test("turning age-awareness off refreshes everything on the base schedule", async () => {
+  const graph = new Map([
+    ["new", { fetchedAt: daysBefore(20), citedBy: [], cites: [] }],
+    ["old", { fetchedAt: daysBefore(20), citedBy: [], cites: [] }],
+  ]);
+
+  const asked = [];
+  await refreshGraph({
+    graph,
+    paperIds: ["new", "old"],
+    years: new Map([["new", 2026], ["old", 2005]]),
+    ageAware: false,
+    budget: 10,
+    fetchCitations: async (ids) => {
+      asked.push(...ids);
+      return new Map(ids.map((id) => [id, []]));
+    },
+    fetchReferences: async (ids) => ({ edges: new Map(ids.map((id) => [id, []])), citationCounts: new Map() }),
+  });
+
+  assert.deepEqual(asked.sort(), ["new", "old"]);
 });
