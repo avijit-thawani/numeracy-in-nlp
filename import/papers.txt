@@ -5,4 +5,4 @@
 #
 # Commit this file and the survey rebuilds itself. Lines starting with # are
 # ignored. Anything that could not be looked up is left here so you can fix it.
-
+https://www.semanticscholar.org/paper/f56fc41eff96afbc64030ce5e97d444706e4997c    # Leap-Of-Thought: Teaching Pre-Trained Models to Systematically Reason Over Implicit Knowledge
