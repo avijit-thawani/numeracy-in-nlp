@@ -1,8 +1,10 @@
 {
   "ids": [
-    "1c1b9f56f904a4fc8e980c3ccb5aa92b342d856b"
+    "1c1b9f56f904a4fc8e980c3ccb5aa92b342d856b",
+    "2dbec38fe353ab0e495ad09263389dbc9260824d"
   ],
   "notes": {
-    "1c1b9f56f904a4fc8e980c3ccb5aa92b342d856b": "Injecting the score of the first-stage retriever as text improves B"
+    "1c1b9f56f904a4fc8e980c3ccb5aa92b342d856b": "Injecting the score of the first-stage retriever as text improves B",
+    "2dbec38fe353ab0e495ad09263389dbc9260824d": "A Survey of Deep Learning for Mathematical Reasoning"
   }
 }
