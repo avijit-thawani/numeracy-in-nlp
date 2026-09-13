@@ -5,4 +5,4 @@
 #
 # Commit this file and the survey rebuilds itself. Lines starting with # are
 # ignored. Anything that could not be looked up is left here so you can fix it.
-
+https://www.semanticscholar.org/paper/b8e6e8fd64d71f7c89b1aa9cf1fa073451f6d5e9    # “Was It Good? It Was Provocative.” Learning the Meaning of Scalar Adjectives
