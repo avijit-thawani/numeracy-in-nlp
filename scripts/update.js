@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { log, writeSummary } from "../lib/log.js";
 import { resolveAll, resolveIdentifier } from "../lib/resolve.js";
 import { fetchPapers, fetchReferences, matchByTitle } from "../lib/semanticScholar.js";
+import { parseAuthorTarget, resolveAuthorPapers } from "../lib/authors.js";
 import { fetchPapersFallback } from "../lib/openalex.js";
 import { buildRecommendations } from "../lib/recommend.js";
 import { loadGraph, saveGraph, keysWorthKeeping } from "../lib/graphCache.js";
@@ -347,7 +348,7 @@ const main = async () => {
     rmSync(p(ISSUE_RECOVERY));
   }
 
-  const { resolved, unresolved, seedFrom, titles } = resolveAll(incoming);
+  const { resolved, unresolved, seedFrom, authors: authorLines, titles } = resolveAll(incoming);
 
   // Lines that are titles rather than links get looked up by name.
   const fromTitles = (
@@ -363,10 +364,72 @@ const main = async () => {
 
   const bibliography = await readBibliographies();
   const known = new Set(papers.map((x) => x.id));
+
+  // ---- Seed from author profiles ---------------------------------------
+  // An `author:` line is a subscription, not a one-off import, so it cannot
+  // live in papers.txt the way a link does: that file is rewritten every run
+  // with only the lines that failed. The profiles are kept here instead, and
+  // every run asks each one for its current publication list. That is what
+  // makes the author case self-maintaining -- they publish, the daily run adds
+  // it -- and it costs one request per author per run.
+  const authorStore = readJson(p("data/authors.json"), { authors: [] }, { critical: true });
+  let authorSeeds = Array.isArray(authorStore.authors) ? authorStore.authors : [];
+
+  for (const line of authorLines) {
+    if (authorSeeds.some((a) => a.target.toLowerCase() === line.target.toLowerCase())) {
+      log.info(`Already following "${line.target}"; skipping.`);
+      continue;
+    }
+    // A profile nobody can query (Google Scholar) must not be stored, or every
+    // future run re-reports it. Leave the line in papers.txt instead, where the
+    // owner can see it and swap it for one that works.
+    const parsed = parseAuthorTarget(line.target);
+    if (!parsed || parsed.kind === "unsupported") {
+      log.warn(`Cannot follow "${line.target}". ${parsed?.reason ?? "Unrecognised profile."}`);
+      unresolved.push(line.source);
+      continue;
+    }
+    authorSeeds.push({ target: line.target, source: line.source, authorId: null, name: null });
+  }
+
+  const authorRequests = [];
+  if (authorSeeds.length) {
+    log.step(`Checking ${authorSeeds.length} author profile(s) for new work`);
+
+    for (const seed of authorSeeds) {
+      // A profile already resolved once keeps its Semantic Scholar id, so
+      // later runs skip the name search -- and, more to the point, cannot
+      // silently switch to a different person with the same name.
+      const target = seed.authorId
+        ? { kind: "semanticScholar", value: seed.authorId, label: seed.name ?? `author ${seed.authorId}` }
+        : parseAuthorTarget(seed.target);
+
+      const found = await resolveAuthorPapers({ target, email });
+      if (!found) {
+        if (!seed.authorId) log.warn(`Could not follow "${seed.target}" this run.`);
+        continue;
+      }
+
+      seed.authorId = found.authorId;
+      seed.name = found.name ?? seed.name ?? seed.target;
+      seed.paperCount = found.papers.length;
+      seed.checkedAt = new Date().toISOString().slice(0, 10);
+
+      const fresh = found.papers.filter((x) => !known.has(x.id) && !dismissed.includes(x.id));
+      for (const paper of fresh) {
+        // The source records which profile brought the paper in, and is unique
+        // per paper so the "already queued" check does not collapse a whole
+        // bibliography into one entry.
+        authorRequests.push({ id: paper.id, source: `${seed.source} | ${paper.id}` });
+      }
+      log.stat(`new papers by ${seed.name}`, fresh.length);
+    }
+  }
+
   const knownSources = new Set(
     papers.flatMap((x) => [x.source, ...(x.aliases ?? [])]).filter(Boolean)
   );
-  const toFetch = [...resolved, ...fromTitles, ...bibliography.requests].filter(
+  const toFetch = [...resolved, ...fromTitles, ...bibliography.requests, ...authorRequests].filter(
     (r) => !knownSources.has(r.source)
   );
   log.stat("new links queued", toFetch.length);
@@ -540,6 +603,7 @@ const main = async () => {
   writeJson(p("data/core.json"), { updatedAt: stamp, core: papers });
   writeJson(p("data/recs.json"), { updatedAt: stamp, recs: candidates });
   writeJson(p("data/seeded.json"), { updatedAt: stamp, seeded });
+  if (authorSeeds.length) writeJson(p("data/authors.json"), { updatedAt: stamp, authors: authorSeeds });
   // Keep cached edges for current papers, plus the citation counts those
   // papers' references actually need. See keysWorthKeeping for why the counts
   // are pruned by need rather than by age.
@@ -576,6 +640,10 @@ const main = async () => {
   const header = [
     "# One paper per line. A link (arXiv, ACL, DOI, Semantic Scholar), a bare DOI",
     "# or arXiv id, or just the paper's title.",
+    "#",
+    "# 'author: <profile>' follows everyone's work by one person: a Semantic Scholar",
+    "# author page, an OpenAlex id, an ORCID, or just their name. Their papers become",
+    "# Core, and new ones are picked up automatically. (Google Scholar has no API.)",
     "#",
     "# Prefix a line with 'refs:' to pull in everything that paper cites.",
     "#",

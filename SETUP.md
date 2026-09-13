@@ -22,8 +22,44 @@ You do not need to delete the demo papers this template ships with. Your new rep
 
 ## 2. Seed it
 
-Three ways to seed a survey. They all work, you can mix them, and each one
+Four ways to seed a survey. They all work, you can mix them, and each one
 triggers a rebuild as soon as you commit.
+
+### Start from a profile
+
+The fastest start, and the one most people want: name a person, and everything
+they have published becomes Core. Put one line in
+[`import/papers.txt`](import/papers.txt):
+
+```
+author: https://www.semanticscholar.org/author/Niyati-Bafna/2090730520
+author: https://openalex.org/A5023888391
+author: https://orcid.org/0000-0002-1825-0097
+author: Niyati Bafna
+```
+
+Any of those four forms works — a Semantic Scholar author page, an OpenAlex
+author id, an ORCID, or just the name. A name is searched for, and if several
+profiles match, the run takes the one with the most papers and writes the
+runners-up into the log, so a wrong pick is visible and you can replace the
+line with the profile URL.
+
+> **Google Scholar profiles do not work**, and cannot: there is no public API,
+> and the URL carries an opaque user id rather than the person's name, so there
+> is nothing to fall back on. Use one of the other three, or the name.
+
+Point it at yourself to get a reading list built around your own work, or at
+someone whose work you are trying to catch up on. Either way it keeps working:
+the profile is followed rather than imported once, so when they publish, the
+daily run adds the paper and the suggestions move with it. Followed profiles
+are recorded in `data/authors.json`.
+
+Papers by that author are Core, and everything those papers cite feeds the
+backward half of the ranking, so the foundations of their field surface as Recs
+without a separate import. If you want their *whole* bibliography listed rather
+than ranked, add a `refs:` line for the specific paper.
+
+### The other three
 
 **Paste links, DOIs or titles.** Open [`import/papers.txt`](import/papers.txt) and put one paper per line:
 
@@ -108,6 +144,16 @@ measured against the most connected paper in its own list. A Core paper scores
 on how many other Core papers cite it or it cites, so 0 means nothing else here
 connects to it, which usually flags an outlier. Score is the default sort.
 
+**Recent work gets the top slots.** A paper published last month has had no
+time to be cited, so on score alone it would sit below everything established —
+backwards, if what you want is to know what has appeared lately. The top of the
+Recs list is therefore reserved: the best 10 from the past month, then the best
+10 from the past six months, then everything else by score. The windows do not
+overlap, they are filled by the same Score as the rest, and a window with
+nothing in it gives its slots back. Rows that took a reserved slot say so in
+the Why column (`past month · cites 3 in Core`). Turn it off or resize it with
+`algorithm.freshness`.
+
 Recs come from two directions through the citation graph:
 
 - **`cites N in Core`**: newer work that builds on N of your papers.
@@ -143,6 +189,9 @@ All of these have working defaults; change them only if you want to.
 | `algorithm.forward` / `.backward` | Turn either direction off. |
 | `algorithm.minCount` | How many of your papers something must connect to before it is suggested. Default 2. Set it to 1 for a survey too small to produce any. |
 | `algorithm.popularityPenalty` | Higher favours obscure papers, lower favours famous ones. Default 0.2. |
+| `algorithm.freshness.enabled` | Reserve the top of Recs for recent work. Default on. |
+| `algorithm.freshness.windows` | The reserved slots, as `{ days, count, label }`. Default: 10 from the past 30 days, then 10 from the past 180. |
+| `algorithm.freshness.pool` | How many ranked candidates to fetch dates for, since a paper cut before that is never considered for a window. Default 400. |
 | `algorithm.graphBudget` | How many papers' citations to refresh per run. Default 150, which bounds the cost for a large survey. |
 | `algorithm.graphMaxAgeDays` | How stale citation data may get. Default 7. |
 | `recPullRequests.enabled` | Open a pull request per Rec, so accepting is a merge and rejecting a close. Needs *Allow GitHub Actions to create and approve pull requests* in Settings. |
@@ -166,6 +215,7 @@ two comments alone.
 | --- | --- |
 | `README.md` | The survey. Generated between the markers. |
 | `import/papers.txt` | Your input queue. Anything unrecognised stays behind so you can fix it. |
+| `data/authors.json` | Profiles from `author:` lines, re-checked every run so new work arrives on its own. |
 | `import/` | Drop `.bib` / `.ris` files here to bulk-import. |
 | `survey.config.json` | Optional overrides. |
 | `data/core.json` | Core: the papers in the survey, with full metadata. The source of truth. |
