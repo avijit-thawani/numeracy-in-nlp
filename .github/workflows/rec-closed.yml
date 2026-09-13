@@ -45,6 +45,18 @@ jobs:
             git push -q
           fi
 
+  # Runs whether the pull request was merged or rejected, so branches do not
+  # pile up. Merging needs no other handling: the new line in
+  # import/papers.txt is a push to the default branch, which the update
+  # workflow already watches.
+  tidy:
+    if: startsWith(github.event.pull_request.head.ref, 'rec/')
+    runs-on: ubuntu-latest
+    steps:
       - name: Delete the branch
         continue-on-error: true
-        run: git push -q origin --delete "${{ github.event.pull_request.head.ref }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api --method DELETE \
+            "repos/${{ github.repository }}/git/refs/heads/${{ github.event.pull_request.head.ref }}"
