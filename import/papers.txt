@@ -5,4 +5,4 @@
 #
 # Commit this file and the survey rebuilds itself. Lines starting with # are
 # ignored. Anything that could not be looked up is left here so you can fix it.
-
+https://doi.org/10.18653/v1/2026.findings-acl.92    # Static Models, Dynamic World: A Unified Perspective on Temporal Perception in Large Language Models
