@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-13T00:27:05.163Z",
+  "updatedAt": "2026-09-13T00:47:21.282Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -46,7 +46,7 @@
       "influentialCitationCount": 48,
       "source": "https://arxiv.org/abs/1808.09637",
       "addedAt": "2026-09-12",
-      "score": 12.5
+      "score": 10
     },
     {
       "id": "cabb0a468af8184e0e930841435b65679b580521",
@@ -70,7 +70,7 @@
       "influentialCitationCount": 3,
       "source": "https://arxiv.org/abs/1809.05356",
       "addedAt": "2026-09-12",
-      "score": 12.5
+      "score": 10
     },
     {
       "id": "81b4920ad488affaee27389ff9540b7fea90a4ce",
@@ -94,7 +94,7 @@
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.03065",
       "addedAt": "2026-09-12",
-      "score": 12.5
+      "score": 10
     },
     {
       "id": "dfba20af7aacd819e7b22cf2bf189cd7af9da0a1",
@@ -144,7 +144,7 @@
       "influentialCitationCount": 31,
       "source": "https://arxiv.org/abs/1912.13283",
       "addedAt": "2026-09-12",
-      "score": 12.5
+      "score": 20
     },
     {
       "id": "e081dfa64e5ed12fe15fc885ec82ef1f35ab9830",
@@ -167,7 +167,7 @@
       "influentialCitationCount": 0,
       "source": "https://arxiv.org/abs/2003.07629",
       "addedAt": "2026-09-12",
-      "score": 25
+      "score": 20
     },
     {
       "id": "716efab73e1916fdc2a23727b581d200271ed499",
@@ -191,7 +191,7 @@
       "influentialCitationCount": 0,
       "source": "https://arxiv.org/abs/2004.02363",
       "addedAt": "2026-09-12",
-      "score": 25
+      "score": 20
     },
     {
       "id": "4599f96dd1a2584e00d342953fc7e1361ffd6e1f",
@@ -213,7 +213,7 @@
       "influentialCitationCount": 1,
       "source": "https://arxiv.org/abs/2004.07085",
       "addedAt": "2026-09-12",
-      "score": 37.5
+      "score": 30
     },
     {
       "id": "45e5d7637a585a87d967a4a357d17c5d89aecea2",
@@ -289,7 +289,7 @@
       "influentialCitationCount": 16,
       "source": "https://arxiv.org/abs/2005.00242",
       "addedAt": "2026-09-12",
-      "score": 12.5
+      "score": 20
     },
     {
       "id": "016760dc4a05489ddf5dbb48aecbb49e214e1b71",
@@ -313,7 +313,7 @@
       "influentialCitationCount": 12,
       "source": "https://arxiv.org/abs/2005.00683",
       "addedAt": "2026-09-12",
-      "score": 37.5
+      "score": 50
     },
     {
       "id": "72e6b14c081ad3e6a1c295b60e5c834837e6b304",
@@ -338,7 +338,7 @@
       "influentialCitationCount": 1,
       "source": "https://arxiv.org/abs/2005.08516",
       "addedAt": "2026-09-12",
-      "score": 12.5
+      "score": 30
     },
     {
       "id": "0bfd4ed399054eae26c3cdaabc0aed80ca95e125",
@@ -361,7 +361,7 @@
       "influentialCitationCount": 3,
       "source": "https://arxiv.org/abs/2006.01681",
       "addedAt": "2026-09-12",
-      "score": 37.5
+      "score": 30
     },
     {
       "id": "0c7f81e26ae77b4be5e5e6ab96641effe219ab1c",
@@ -385,7 +385,7 @@
       "influentialCitationCount": 1,
       "source": "https://arxiv.org/abs/2010.06666",
       "addedAt": "2026-09-12",
-      "score": 12.5
+      "score": 20
     },
     {
       "id": "57d1e7ac339e783898f2c3b1af55737cbeee9fc5",
@@ -459,7 +459,7 @@
       "influentialCitationCount": 25,
       "source": "https://arxiv.org/abs/2004.04487",
       "addedAt": "2026-09-12",
-      "score": 25
+      "score": 40
     },
     {
       "id": "28a5a53dafacebad8a7c47773079caeffb9a5baa",
@@ -484,6 +484,57 @@
       "source": "https://arxiv.org/abs/2103.13136",
       "addedAt": "2026-09-12",
       "score": 100
+    },
+    {
+      "id": "0427110f0e79f41e69a8eb00a3ec8868bac26a4f",
+      "title": "Do NLP Models Know Numbers? Probing Numeracy in Embeddings",
+      "authors": [
+        "Eric Wallace",
+        "Yizhong Wang",
+        "Sujian Li",
+        "Sameer Singh",
+        "Matt Gardner"
+      ],
+      "year": 2019,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "publicationDate": "2019-09-17",
+      "summary": "This work investigates the numerical reasoning capabilities of a state-of-the-art question answering model on the DROP dataset and finds this model excels on questions that require numerical reasoning, i.e., it already captures numeracy.",
+      "url": "https://www.semanticscholar.org/paper/0427110f0e79f41e69a8eb00a3ec8868bac26a4f",
+      "doi": "10.18653/v1/D19-1534",
+      "arxivId": "1909.07940",
+      "pdf": "https://www.aclweb.org/anthology/D19-1534.pdf",
+      "citationCount": 319,
+      "referenceCount": 30,
+      "influentialCitationCount": 37,
+      "source": "https://arxiv.org/abs/1909.07940",
+      "addedAt": "2026-09-13",
+      "score": 70
+    },
+    {
+      "id": "dda6fb309f62e2557a071522354d8c2c897a2805",
+      "title": "DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over Paragraphs",
+      "authors": [
+        "Dheeru Dua",
+        "Yizhong Wang",
+        "Pradeep Dasigi",
+        "Gabriel Stanovsky",
+        "Sameer Singh",
+        "Matt Gardner"
+      ],
+      "year": 2019,
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "publicationDate": "2019-03-01",
+      "summary": "A new reading comprehension benchmark, DROP, which requires Discrete Reasoning Over the content of Paragraphs, and presents a new model that combines reading comprehension methods with simple numerical reasoning to achieve 51% F1.",
+      "url": "https://www.semanticscholar.org/paper/dda6fb309f62e2557a071522354d8c2c897a2805",
+      "doi": "10.18653/v1/N19-1246",
+      "arxivId": "1903.00161",
+      "pdf": "https://doi.org/10.18653/v1/n19-1246",
+      "citationCount": 1366,
+      "referenceCount": 54,
+      "influentialCitationCount": 233,
+      "source": "https://arxiv.org/abs/1903.00161",
+      "addedAt": "2026-09-13",
+      "score": 10
     }
   ]
 }
