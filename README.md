@@ -27,7 +27,7 @@ The papers in this survey.
 
 ## ✨ Recs
 
-<sub>Found by following the citation graph, not picked by hand. Refreshed daily. To accept one, paste its link into [`import/papers.txt`](import/papers.txt) and commit.</sub>
+<sub>Found by following the citation graph — a deterministic algorithm you can tune, not an LLM. Refreshed daily. Use the **Decide** column to accept or reject one.</sub>
 
 | # | [Paper](views/recs-by-title.md) | Venue | [Year](views/recs-by-year.md) | [Cited by](views/recs-by-citations.md) | Score &#9660; | Why | Decide |
 | ---: | --- | --- | ---: | ---: | ---: | --- | --- |
@@ -59,6 +59,8 @@ The papers in this survey.
 ### Want your own living survey?
 
 Click **Use this template**, add your papers, and a daily GitHub Action keeps
-the tables above up to date. No hosting, no API keys. See **[SETUP.md](https://github.com/avijit-thawani/living-survey/blob/main/SETUP.md)**.
+the tables above up to date. Everything lives in your own repo — no website, no
+backend, no database, no API keys — and the Recs come from a citation graph
+algorithm you can tune, not from an LLM. See **[SETUP.md](https://github.com/avijit-thawani/living-survey/blob/main/SETUP.md)**.
 
 <!-- TEMPLATE-FOOTER:END -->
