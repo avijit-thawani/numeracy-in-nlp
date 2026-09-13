@@ -107,6 +107,21 @@ const main = () => {
   }
 
   const base = process.env.GITHUB_REF_NAME || "main";
+
+  // Labels are repository settings rather than files, so "Use this template"
+  // does not copy them and `gh pr create --label` fails outright on a fresh
+  // survey. Create it first; the call is harmless if it already exists.
+  let labelArgs = ["--label", LABEL];
+  try {
+    gh(["label", "create", LABEL, "--description", "A suggested paper awaiting a decision", "--color", "1D76DB"]);
+    log.info(`Created the "${LABEL}" label.`);
+  } catch (err) {
+    if (!/already exists/i.test(String(err.stderr || err.message))) {
+      log.warn(`Could not create the "${LABEL}" label; opening pull requests without it.`);
+      labelArgs = [];
+    }
+  }
+
   let opened = 0;
 
   for (const rec of wanted) {
@@ -130,7 +145,7 @@ const main = () => {
           "--head", branch,
           "--title", `Add: ${rec.title}`.slice(0, 72),
           "--body", body(rec),
-          "--label", LABEL]);
+          ...labelArgs]);
       opened++;
       log.info(`Opened a pull request for "${rec.title.slice(0, 55)}".`);
     } catch (err) {
