@@ -5,5 +5,4 @@
 #
 # Commit this file and the survey rebuilds itself. Lines starting with # are
 # ignored. Anything that could not be looked up is left here so you can fix it.
-https://arxiv.org/abs/1909.07940    # Do NLP Models Know Numbers? Probing Numeracy in Embeddings
-https://arxiv.org/abs/1706.03762    # reject-path test
+
