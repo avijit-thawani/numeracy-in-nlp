@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 
 import { renderTable, allViews, SORTS } from "../lib/views.js";
 import {
+  renderSurvey,
   applySurvey,
   applyFooter,
   renderFooter,
@@ -124,6 +125,30 @@ test("a README with no markers keeps its prose", () => {
   const out = applySurvey("# Mine\n\nProse.\n", `${SURVEY_START}\nblock\n${SURVEY_END}`);
   assert.match(out, /Prose\./);
   assert.match(out, /block/);
+});
+
+/**
+ * The recency windows reserve the top of the Recs list, and a paper published
+ * last month scores low by construction. Re-sorting by score here put those
+ * papers back among the rest, where the preview cut them off -- the feature
+ * ran every day and was invisible on every front page.
+ */
+test("the README keeps the order the ranking chose, not score order", () => {
+  const recs = [
+    { id: "fresh", title: "New", score: 2, why: "past month · cites 2 in Core", freshWindow: "past month" },
+    { id: "old", title: "Established", score: 100, why: "cited by 9 in Core" },
+  ];
+  const block = renderSurvey({ config: { title: "T", description: "" }, core: [], recs });
+  assert.ok(block.indexOf("New") < block.indexOf("Established"), "the reserved paper must stay on top");
+});
+
+test("with nothing reserved, Recs are still shown by score", () => {
+  const recs = [
+    { id: "low", title: "Low", score: 2, why: "cites 2 in Core" },
+    { id: "high", title: "High", score: 100, why: "cited by 9 in Core" },
+  ];
+  const block = renderSurvey({ config: { title: "T", description: "" }, core: [], recs });
+  assert.ok(block.indexOf("High") < block.indexOf("Low"));
 });
 
 test("rendering twice is stable", () => {
