@@ -134,6 +134,35 @@ The longhand equivalents, if you prefer them:
 | Reject a Rec for good | Add its id to `data/dismissed.json`. |
 | Edit by hand or with an agent | Core is `data/core.json`, Recs is `data/recs.json`. Everything else is generated from those and will be overwritten. |
 
+## More than one survey in one repo
+
+A survey is a *directory*, not a repository. Put a `survey.config.json` in a
+folder and it becomes one, with its own `import/`, `data/`, `views/` and
+README:
+
+```
+my-surveys/
+  README.md            an index, if you want one
+  demos/dean/survey.config.json
+  demos/bengio/survey.config.json
+```
+
+Nothing to configure: if any survey is nested, the repo root stops being one
+and the single daily Action builds each in turn. This is how the template repo
+holds its four demos. The tradeoffs, so you can choose knowingly:
+
+- **One Action, one queue.** Surveys are built one after another, not at once,
+  because the metadata API throttles hard under any concurrency. Four small
+  surveys take about as long as one survey four times the size.
+- **One issue tracker.** The Decide links write a `survey: demos/dean` line
+  into the issue so a request reaches the right survey. A request typed by hand
+  without that line is ignored rather than guessed at.
+- **A repo-level index.** Put `<!-- SURVEYS:START -->` and `<!-- SURVEYS:END -->`
+  in the root README and each run rewrites the list of surveys and their counts
+  between them. Leave them out and your front page is left alone.
+
+One survey at the root is still the default and still works exactly as before.
+
 ## The two lists, and the Score
 
 **Core** is what the survey contains. **Recs** is what to read next. Those names

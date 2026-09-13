@@ -12,9 +12,19 @@ import { loadGraph, saveGraph, keysWorthKeeping } from "../lib/graphCache.js";
 import { parseBibliography } from "../lib/bibliography.js";
 import { INTRO_START, INTRO_END } from "../lib/renderReadme.js";
 import { lookupOwnerEmail } from "../lib/identity.js";
-import { render } from "./render.js";
+import { findSurveys, surveyName, surveyByName } from "../lib/surveys.js";
+import { render, renderIndex } from "./render.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+
+/**
+ * The survey currently being built. A repository can hold several, and they
+ * are built strictly one after another -- both because the shared Semantic
+ * Scholar pool throttles anything else, and because every file path below is
+ * relative to this. Module-level rather than threaded through forty call
+ * sites: the loop that sets it is the only writer, and it is sequential.
+ */
+let SURVEY_ROOT = ROOT;
 
 // Kept out of the repository: it is a derived cache, several megabytes, and
 // rewritten every run. See the cache step in the workflow.
@@ -24,6 +34,9 @@ const GRAPH_CACHE = ".cache/graph.json";
 // commit step can recover them if it has to discard this run. See where it is
 // written for why an issue needs this and a file does not.
 const ISSUE_RECOVERY = ".cache/issue-links.txt";
+
+// Which survey those links belong to, for the same reason.
+const ISSUE_SURVEY = ".cache/issue-survey.txt";
 
 /** Small helper so title lookups are not one-at-a-time on a large .bib. */
 const inParallel = async (items, fn, limit = 4) => {
@@ -38,7 +51,11 @@ const inParallel = async (items, fn, limit = 4) => {
   await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
   return out;
 };
-const p = (...parts) => join(ROOT, ...parts);
+/** A path inside the survey being built. */
+const p = (...parts) => join(SURVEY_ROOT, ...parts);
+
+/** A path inside the repository, shared by every survey in it. */
+const rp = (...parts) => join(ROOT, ...parts);
 
 /**
  * `critical` marks files whose contents are the survey itself. For those, a
@@ -71,17 +88,37 @@ const writeJson = (path, value) => {
 };
 
 /**
+ * Which survey an issue is about, as a `survey: <path>` line in its body.
+ *
+ * One repository, several surveys, but only one issue tracker: without this a
+ * request would be applied to whichever survey the loop happened to be on. The
+ * Decide links write the line themselves; a request typed by hand and missing
+ * it belongs to the only survey there is, and is ignored when there are
+ * several rather than guessed at.
+ */
+const surveyFromIssue = (body) => {
+  const line = String(body ?? "").match(/^\s*survey:\s*(\S+)\s*$/im);
+  return line ? line[1] : null;
+};
+
+/**
  * When the workflow is triggered by someone opening an "Add a paper" issue,
  * pull any links out of the issue body so they get ingested like any other
  * seed link.
  */
-const linksFromIssue = () => {
+const linksFromIssue = ({ isOnlySurvey, thisSurvey }) => {
   const eventPath = process.env.GITHUB_EVENT_PATH;
   if (process.env.GITHUB_EVENT_NAME !== "issues" || !eventPath) return [];
 
   const event = readJson(eventPath, null);
   const issue = event?.issue;
   if (!issue) return [];
+
+  const wanted = surveyFromIssue(issue.body);
+  if (wanted ? wanted.replace(/^\.?\//, "") !== thisSurvey : !isOnlySurvey) {
+    log.debug(`Issue #${issue.number} is not for ${thisSurvey}; skipping it here.`);
+    return [];
+  }
 
   // Match on either the label or the title prefix. Labels are repository
   // settings rather than files, so "Use this template" does not copy them --
@@ -123,16 +160,18 @@ const linksFromIssue = () => {
 };
 
 /**
- * The template ships with a small demo survey so its own page shows something
- * real. A repo created from the template inherits that demo, which is not what
- * anyone wants their survey to start as. The first run in a fresh repo clears
- * it automatically, so nobody has to know to delete someone else's papers.
+ * The template repo carries demo surveys under `demos/`, so its front page can
+ * point at something real. A repo created from the template inherits them,
+ * which is not what anyone wants their own survey to open as. The first run in
+ * a fresh repo deletes them, so nobody has to know to remove someone else's
+ * papers.
  *
  * Keyed off a marker file rather than the repo name, so cloning or renaming
- * behaves predictably.
+ * behaves predictably. Runs at the repository level, before any survey is
+ * built, because what it removes is whole surveys.
  */
 const clearDemoIfInherited = () => {
-  const marker = p(".demo-survey");
+  const marker = rp(".demo-survey");
   if (!existsSync(marker)) return false;
 
   const meta = readJson(marker, null);
@@ -141,49 +180,59 @@ const clearDemoIfInherited = () => {
     return false;
   }
 
-  // Still running in the template repo itself: keep the demo.
+  // Still running in the template repo itself: keep the demos.
   const here = process.env.GITHUB_REPOSITORY ?? "";
   if (here && here === meta.repo) {
-    log.debug("Running in the template repo; keeping the demo survey.");
+    log.debug("Running in the template repo; keeping its demo surveys.");
     return false;
   }
   if (!here) {
-    log.debug("No GITHUB_REPOSITORY set (local run); keeping the demo survey.");
+    log.debug("No GITHUB_REPOSITORY set (local run); keeping the demo surveys.");
     return false;
   }
 
   // The marker can come back -- a rebase or a revert will happily restore a
   // deleted file -- so never decide to destroy data on its presence alone.
-  // Only clear when what is on disk is still exactly the untouched demo.
-  const current = readJson(p("data/core.json"), { core: [] }, { critical: true }).core ?? [];
+  // Only clear when what is on disk is still exactly what the template ships.
+  const current = readJson(rp("data/core.json"), { core: [] }, { critical: true }).core ?? [];
   const demoIds = new Set(meta.paperIds ?? []);
   const ownPapers = current.filter((x) => !demoIds.has(x.id));
 
   if (ownPapers.length) {
     log.info(
-      `Found ${ownPapers.length} paper(s) of your own, so the demo has already been cleared. Removing the marker.`
+      `Found ${ownPapers.length} paper(s) of your own, so the template's demos have already been cleared. Removing the marker.`
     );
     rmSync(marker);
     return false;
   }
 
-  log.step("First run in a new survey: clearing the template's demo papers");
-  writeJson(p("data/core.json"), { core: [] });
-  writeJson(p("data/recs.json"), { recs: [] });
-  writeFileSync(p("data/core.csv"), "", "utf8");
+  log.step("First run in a new survey: clearing what came from the template");
+
+  // The demo surveys, each a whole directory. Deleting them is what stops a
+  // new survey opening with somebody else's reading lists.
+  for (const dir of meta.demoDirs ?? []) {
+    const full = rp(dir);
+    if (!full.startsWith(ROOT) || !existsSync(full)) continue;
+    rmSync(full, { recursive: true, force: true });
+    log.info(`Removed the template's demo surveys in ${dir}/.`);
+  }
+
+  writeJson(rp("data/core.json"), { core: [] });
+  writeJson(rp("data/recs.json"), { recs: [] });
+  writeFileSync(rp("data/core.csv"), "", "utf8");
 
   // Blank the demo's title rather than substituting a placeholder: an empty
   // title makes the survey fall back to the repository name and description,
   // which the owner already chose when they created the repo.
-  const config = readJson(p("survey.config.json"), {});
-  if (config.title === meta.title) {
-    writeJson(p("survey.config.json"), { ...config, title: "", description: "" });
+  const config = readJson(rp("survey.config.json"), {});
+  if (meta.title && config.title === meta.title) {
+    writeJson(rp("survey.config.json"), { ...config, title: "", description: "" });
   }
 
   // The template's own README opens with an explainer aimed at people deciding
   // whether to use it. That is noise on somebody's actual survey, so it goes
   // too. The footer stays, since it is how readers of a survey discover this.
-  const readmePath = p("README.md");
+  const readmePath = rp("README.md");
   if (existsSync(readmePath)) {
     const text = readFileSync(readmePath, "utf8");
     const from = text.indexOf(INTRO_START);
@@ -199,7 +248,7 @@ const clearDemoIfInherited = () => {
   }
 
   rmSync(marker);
-  log.info("Demo cleared. Your papers from papers.txt are being added now.");
+  log.info("Cleared. Your papers from papers.txt are being added now.");
   return true;
 };
 
@@ -276,17 +325,15 @@ const migrateLegacyNames = () => {
   }
 };
 
-const main = async () => {
-  const refreshMode = process.argv.includes("--refresh");
-  log.step(`Starting update${refreshMode ? " (refresh mode)" : ""}`);
-
-  clearDemoIfInherited();
-
+/**
+ * Builds one survey: everything from reading its seed list to writing its
+ * README. `SURVEY_ROOT` is already pointing at it.
+ */
+const runSurvey = async ({ refreshMode, isOnlySurvey, label }) => {
   const config = readJson(p("survey.config.json"), {});
   const email = await lookupOwnerEmail(config);
   const limit = Number(config.candidateCount) || 25;
 
-  migrateLegacyNames();
   const store = readJson(p("data/core.json"), { core: [] }, { critical: true });
   let papers = Array.isArray(store.core) ? store.core : [];
 
@@ -327,7 +374,7 @@ const main = async () => {
     log.info(`Removed ${purged} stale bibliography line(s) that an older run wrote into papers.txt.`);
   }
 
-  const issueLinks = linksFromIssue();
+  const issueLinks = linksFromIssue({ isOnlySurvey, thisSurvey: label });
   const incoming = [...queueLines, ...issueLinks];
 
   // An issue is the one input that is not a file in the repository. Every
@@ -339,13 +386,18 @@ const main = async () => {
   // So leave them somewhere the reset cannot reach. The commit step appends
   // them to a fresh papers.txt if it has to discard, which is a push to
   // import/ and therefore triggers the run that ingests them.
+  //
+  // Repo-level paths, not survey-level: the commit step is one shell script
+  // for the whole run. It needs to know which survey's seed list to append to,
+  // hence the companion file naming it.
   if (issueLinks.length) {
-    mkdirSync(dirname(p(ISSUE_RECOVERY)), { recursive: true });
-    writeFileSync(p(ISSUE_RECOVERY), `${issueLinks.join("\n")}\n`, "utf8");
-  } else if (existsSync(p(ISSUE_RECOVERY))) {
+    mkdirSync(dirname(rp(ISSUE_RECOVERY)), { recursive: true });
+    writeFileSync(rp(ISSUE_RECOVERY), `${issueLinks.join("\n")}\n`, "utf8");
+    writeFileSync(rp(ISSUE_SURVEY), `${label}\n`, "utf8");
+  } else if (existsSync(rp(ISSUE_RECOVERY))) {
     // Cleared rather than left behind. A stale file would make a later run's
     // discard path requeue links that are already in Core.
-    rmSync(p(ISSUE_RECOVERY));
+    rmSync(rp(ISSUE_RECOVERY));
   }
 
   const { resolved, unresolved, seedFrom, authors: authorLines, titles } = resolveAll(incoming);
@@ -440,7 +492,7 @@ const main = async () => {
 
   if (toFetch.length) {
     log.step("Fetching new papers");
-    const s2 = await fetchPapers(toFetch);
+    const s2 = await log.phase("fetching new papers", () => fetchPapers(toFetch));
     added = s2.found;
 
     if (s2.missing.length) {
@@ -572,14 +624,16 @@ const main = async () => {
   const graph = loadGraph(readJson(p(GRAPH_CACHE), { graph: {} }));
   let candidates = [];
   try {
-    const built = await buildRecommendations({
-      graph,
-      core: papers,
-      limit,
-      dismissedIds: dismissed,
-      seeded,
-      algorithm: config.algorithm ?? {},
-    });
+    const built = await log.phase("working out Recs", () =>
+      buildRecommendations({
+        graph,
+        core: papers,
+        limit,
+        dismissedIds: dismissed,
+        seeded,
+        algorithm: config.algorithm ?? {},
+      })
+    );
     if (built.hydrationFailed) {
       const previous = readJson(p("data/recs.json"), { recs: [] }, { critical: true }).recs ?? [];
       candidates = previous;
@@ -658,7 +712,42 @@ const main = async () => {
   // running scripts/render.js -- and because this copy passed no `repo`, the
   // Decide column it produced was a row of dashes. One implementation, called
   // from both, cannot drift like that.
-  render();
+  render(SURVEY_ROOT, { name: label, isOnlySurvey });
+};
+
+const main = async () => {
+  const refreshMode = process.argv.includes("--refresh");
+  log.step(`Starting update${refreshMode ? " (refresh mode)" : ""}`);
+
+  clearDemoIfInherited();
+
+  const { surveys, index } = findSurveys(ROOT);
+  const isOnlySurvey = surveys.length === 1 && !index;
+
+  if (!isOnlySurvey) {
+    log.info(`This repository holds ${surveys.length} surveys: ${surveys.map((d) => surveyName(ROOT, d)).join(", ")}.`);
+  }
+
+  for (const dir of surveys) {
+    SURVEY_ROOT = dir;
+    const label = surveyName(ROOT, dir);
+    if (!isOnlySurvey) log.step(`── ${label}`);
+
+    // One survey failing must not take the others with it: they share nothing
+    // but the code, and a throttled or malformed survey is exactly when the
+    // others still want updating.
+    try {
+      migrateLegacyNames();
+      await runSurvey({ refreshMode, isOnlySurvey, label });
+    } catch (err) {
+      log.error(`${label} failed: ${err.stack ?? err.message}`);
+      if (isOnlySurvey) throw err;
+    }
+  }
+
+  // The repository's own front page, listing what it holds. Only written if it
+  // asks for one, so a hand-written landing page stays hand-written.
+  if (index) renderIndex(ROOT, surveys);
 
   log.step("Done");
   writeSummary();

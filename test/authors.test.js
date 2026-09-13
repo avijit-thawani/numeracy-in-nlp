@@ -88,13 +88,26 @@ test("a name with several matching profiles takes the most published one", async
  * cannot learn the person's name. Returning a stand-in would overwrite the
  * real name stored on the first run with "author 2090730520".
  */
-test("following by id reports no name rather than inventing one", async () => {
+test("following by id looks the name up rather than inventing one", async () => {
   const result = await resolveAuthorPapers({
     target: { kind: "semanticScholar", value: "2090730520", label: "author 2090730520" },
     papersFor: async () => [{ id: "p1", title: "A paper", year: 2026 }],
+    nameFor: async () => "Niyati Bafna",
+  });
+  assert.equal(result.name, "Niyati Bafna");
+  assert.equal(result.authorId, "2090730520");
+});
+
+test("a name lookup that fails does not sink the papers it came with", async () => {
+  const result = await resolveAuthorPapers({
+    target: { kind: "semanticScholar", value: "42", label: "author 42" },
+    papersFor: async () => [{ id: "p1" }],
+    nameFor: async () => {
+      throw new Error("429");
+    },
   });
   assert.equal(result.name, null);
-  assert.equal(result.authorId, "2090730520");
+  assert.equal(result.papers.length, 1);
 });
 
 test("a name nobody matches is a failure, not an author with no papers", async () => {

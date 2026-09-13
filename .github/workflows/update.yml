@@ -9,8 +9,11 @@ on:
     # same concurrency slot, which let a stale run overwrite a fresher one.
     branches: [main]
     paths:
+      # Both layouts: one survey at the root, or several in subfolders.
       - "survey.config.json"
       - "import/**"
+      - "**/survey.config.json"
+      - "**/import/**"
       # Code too, so syncing a template change re-renders the survey instead
       # of leaving it on the previous format until something else triggers a
       # run. Cheap now the citation graph is cached.
@@ -60,7 +63,11 @@ jobs:
       - name: Restore the citation graph cache
         uses: actions/cache@v4
         with:
-          path: .cache/graph.json
+          # Each survey caches its own graph next to itself, so a repo holding
+          # several does not make them share one file and evict each other.
+          path: |
+            .cache/graph.json
+            **/.cache/graph.json
           key: citation-graph-${{ github.run_id }}
           restore-keys: citation-graph-
 
@@ -129,13 +136,23 @@ jobs:
           # found. Append them to the seed list instead: that is a push to
           # import/, which triggers the run that ingests them.
           if [ -s .cache/issue-links.txt ]; then
+            # Which survey the issue was for: a repo can hold several, and the
+            # run that read the issue is the only thing that knows.
+            SEEDS="import/papers.txt"
+            if [ -s .cache/issue-survey.txt ]; then
+              DIR=$(tr -d '\r\n' < .cache/issue-survey.txt)
+              [ "$DIR" = "." ] || SEEDS="$DIR/import/papers.txt"
+            fi
+            mkdir -p "$(dirname "$SEEDS")"
+            touch "$SEEDS"
+
             while IFS= read -r link; do
               [ -n "$link" ] || continue
-              grep -qxF "$link" import/papers.txt || printf '%s\n' "$link" >> import/papers.txt
+              grep -qxF "$link" "$SEEDS" || printf '%s\n' "$link" >> "$SEEDS"
             done < .cache/issue-links.txt
 
-            if ! git diff --quiet -- import/papers.txt; then
-              git add import/papers.txt
+            if ! git diff --quiet -- "$SEEDS"; then
+              git add "$SEEDS"
               git commit -q -m "Queue papers from an issue that a concurrent run displaced"
               if git push -q origin "${GITHUB_REF_NAME}" 2>/dev/null; then
                 echo "requeued=true" >> "$GITHUB_OUTPUT"
