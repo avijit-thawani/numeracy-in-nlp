@@ -1,8 +1,12 @@
 # One paper per line. A link (arXiv, ACL, DOI, Semantic Scholar), a bare DOI
 # or arXiv id, or just the paper's title.
 #
+# 'author: <profile>' follows everyone's work by one person: a Semantic Scholar
+# author page, an OpenAlex id, an ORCID, or just their name. Their papers become
+# Core, and new ones are picked up automatically. (Google Scholar has no API.)
+#
 # Prefix a line with 'refs:' to pull in everything that paper cites.
 #
 # Commit this file and the survey rebuilds itself. Lines starting with # are
 # ignored. Anything that could not be looked up is left here so you can fix it.
-
+https://doi.org/10.25073/2588-1086/vnucsce.6505    # VLSP 2025 Shared Task: Vietnamese Temporal Question Answering (TemporalQA)
