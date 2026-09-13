@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-13T02:32:19.940Z",
+  "updatedAt": "2026-09-13T09:34:02.730Z",
   "recs": [
     {
       "id": "afed6dc6900d3b37e528b9086661bba583d60bf6",
@@ -893,7 +893,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/34",
+      "prNumber": 34
     },
     {
       "id": "05dd7254b632376973f3a1b4d39485da17814df5",
@@ -921,7 +923,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/35",
+      "prNumber": 35
     },
     {
       "id": "1518039b5001f1836565215eb047526b3ac7f462",
@@ -948,7 +952,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/36",
+      "prNumber": 36
     },
     {
       "id": "451d4a16e425ecbf38c4b1cca0dcf5d9bec8255c",
@@ -978,7 +984,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/37",
+      "prNumber": 37
     },
     {
       "id": "c6850869aa5e78a107c378d2e8bfa39633158c0c",
@@ -1033,7 +1041,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/38",
+      "prNumber": 38
     },
     {
       "id": "d9f6ada77448664b71128bb19df15765336974a6",
@@ -1065,7 +1075,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/39",
+      "prNumber": 39
     },
     {
       "id": "4e6412fc27a6d10555fee95325a9ef556a819c05",
@@ -1091,7 +1103,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/40",
+      "prNumber": 40
     },
     {
       "id": "e7cafbce5945fe8d9ca94df04bd7cb45f68af1ae",
@@ -1116,7 +1130,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/41",
+      "prNumber": 41
     },
     {
       "id": "63e39cdf1ad884da6bc69096bb3413b5b1100559",
@@ -1142,7 +1158,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/42",
+      "prNumber": 42
     },
     {
       "id": "4c6fe6179c408e1fbb3871af13d1a8e64f766e54",
@@ -1168,7 +1186,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/43",
+      "prNumber": 43
     },
     {
       "id": "24d34fb890b3c13a1019342faf129e25b6419a14",
@@ -1196,14 +1216,16 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/44",
+      "prNumber": 44
     },
     {
       "id": "3182aa468641a3aa4f1b26a853aed45a48099853",
       "title": "EFFECTIVE TEACHERS OF NUMERACY",
       "authors": [
         "Mike Askew",
-        "Valerie Rhodes",
+        "V. Rhodes",
         "M. Brown",
         "D. Wiliam",
         "David C. Johnson"
@@ -1225,7 +1247,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/45",
+      "prNumber": 45
     },
     {
       "id": "187c25de08261760cf48b4e9dabf308d2f7f15d9",
@@ -1252,7 +1276,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/46",
+      "prNumber": 46
     },
     {
       "id": "730043364aed106241ef18ab3e3b5e316802a254",
@@ -1281,7 +1307,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/47",
+      "prNumber": 47
     },
     {
       "id": "6ddc5a5009e6b2a146e103e7d1dac283d3741fa3",
@@ -1307,7 +1335,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/48",
+      "prNumber": 48
     },
     {
       "id": "f56fc41eff96afbc64030ce5e97d444706e4997c",
@@ -1336,7 +1366,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/49",
+      "prNumber": 49
     },
     {
       "id": "51db583f89e0191c7ebf3fe212c5271c98b33c6b",
@@ -1470,7 +1502,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/50",
+      "prNumber": 50
     },
     {
       "id": "007bc04c97f9f8bcec0487699e197315418f22e7",
@@ -1508,7 +1542,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/51",
+      "prNumber": 51
     },
     {
       "id": "75e17a2dc0a2b2c1cce5ab89d8c703fb8bddbef1",
@@ -1535,7 +1571,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/52",
+      "prNumber": 52
     },
     {
       "id": "b042444e4e9501ab2fcae6b1f6b9d834146b3fc9",
@@ -1564,7 +1602,9 @@
       "direction": null,
       "score": 0,
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
-      "fromReferences": true
+      "fromReferences": true,
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/53",
+      "prNumber": 53
     },
     {
       "id": "4eb8ac1f091befb9eebb60d5b80fdac5667fd758",
