@@ -5,4 +5,4 @@
 #
 # Commit this file and the survey rebuilds itself. Lines starting with # are
 # ignored. Anything that could not be looked up is left here so you can fix it.
-
+https://doi.org/10.1007/s10791-024-09435-8    # Injecting the score of the first-stage retriever as text improves BERT-based re-rankers
