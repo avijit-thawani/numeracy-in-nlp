@@ -140,3 +140,48 @@ test("papers already in Core are never suggested back", async () => {
   });
   assert.ok(!result.recs.some((r) => r.id === "c"), "Core must not appear in Recs");
 });
+
+// ---- Citation intent ---------------------------------------------------
+
+/**
+ * Two candidates cited by exactly the same number of your papers. The one
+ * whose citations were methodology or influential should win, because the
+ * other was mentioned in passing.
+ */
+test("a paper built on beats one merely mentioned, at equal count", async () => {
+  const graph = new Map([
+    ["a", { fetchedAt: today, citedBy: ["built-on", "mentioned"], cites: [], citedByStrong: ["built-on"] }],
+    ["b", { fetchedAt: today, citedBy: ["built-on", "mentioned"], cites: [], citedByStrong: ["built-on"] }],
+  ]);
+
+  const result = await build({ core: core("a", "b"), graph });
+  const order = result.recs.map((r) => r.id);
+  assert.ok(order.indexOf("built-on") < order.indexOf("mentioned"));
+  assert.ok(
+    result.recs.find((r) => r.id === "built-on").score > result.recs.find((r) => r.id === "mentioned").score
+  );
+});
+
+/**
+ * About 40% of edges carry no label at all, so the absence of one must not
+ * read as a negative signal.
+ */
+test("edges with no labels rank exactly as they did before", async () => {
+  const unlabelled = new Map([
+    ["a", { fetchedAt: today, citedBy: ["x", "y"], cites: [] }],
+    ["b", { fetchedAt: today, citedBy: ["x", "y"], cites: [] }],
+  ]);
+  const result = await build({ core: core("a", "b"), graph: unlabelled });
+  const scores = result.recs.map((r) => Math.round(r.score));
+  assert.deepEqual(scores, [100, 100], "neither is favoured, and neither is punished");
+});
+
+test("the boost can be switched off", async () => {
+  const graph = new Map([
+    ["a", { fetchedAt: today, citedBy: ["built-on", "mentioned"], cites: [], citedByStrong: ["built-on"] }],
+    ["b", { fetchedAt: today, citedBy: ["built-on", "mentioned"], cites: [], citedByStrong: ["built-on"] }],
+  ]);
+  const result = await build({ core: core("a", "b"), graph, algorithm: { intentBoost: 0 } });
+  const scores = result.recs.map((r) => Math.round(r.score));
+  assert.deepEqual(scores, [100, 100]);
+});

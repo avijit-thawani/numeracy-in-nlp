@@ -138,9 +138,12 @@ test("the budget goes to the new paper rather than the old one", async () => {
     budget: 10,
     fetchCitations: async (ids) => {
       asked.push(...ids);
-      return new Map(ids.map((id) => [id, []]));
+      return new Map(ids.map((id) => [id, { ids: [], strong: [] }]));
     },
-    fetchReferences: async (ids) => ({ edges: new Map(ids.map((id) => [id, []])), citationCounts: new Map() }),
+    fetchReferences: async (ids) => ({
+      edges: new Map(ids.map((id) => [id, { ids: [], strong: [] }])),
+      citationCounts: new Map(),
+    }),
   });
 
   assert.deepEqual(asked, ["new"], "only the recent paper was due");
@@ -161,10 +164,44 @@ test("turning age-awareness off refreshes everything on the base schedule", asyn
     budget: 10,
     fetchCitations: async (ids) => {
       asked.push(...ids);
-      return new Map(ids.map((id) => [id, []]));
+      return new Map(ids.map((id) => [id, { ids: [], strong: [] }]));
     },
-    fetchReferences: async (ids) => ({ edges: new Map(ids.map((id) => [id, []])), citationCounts: new Map() }),
+    fetchReferences: async (ids) => ({
+      edges: new Map(ids.map((id) => [id, { ids: [], strong: [] }])),
+      citationCounts: new Map(),
+    }),
   });
 
   assert.deepEqual(asked.sort(), ["new", "old"]);
+});
+
+
+/**
+ * The intent of a citation lives on the edge, so the cache has to keep which
+ * edges the API called influential or labelled methodology -- otherwise the
+ * ranking would have to refetch to know.
+ */
+test("the cache remembers which edges build on the work", async () => {
+  const graph = new Map();
+  const out = await refreshGraph({
+    graph,
+    paperIds: ["seed"],
+    fetchCitations: async () => new Map([["seed", { ids: ["a", "b"], strong: ["a"] }]]),
+    fetchReferences: async () => ({
+      edges: new Map([["seed", { ids: ["x", "y"], strong: ["y"] }]]),
+      citationCounts: new Map(),
+    }),
+  });
+
+  assert.deepEqual(out.citationEdges.get("seed"), ["a", "b"]);
+  assert.deepEqual([...out.strongCitations.get("seed")], ["a"]);
+  assert.deepEqual([...out.strongReferences.get("seed")], ["y"]);
+});
+
+test("a cache written before intents existed still works, with no boost", async () => {
+  const graph = new Map([["seed", { fetchedAt: today, citedBy: ["a"], cites: ["x"] }]]);
+  const out = await refreshGraph({ graph, paperIds: ["seed"] });
+
+  assert.deepEqual(out.citationEdges.get("seed"), ["a"]);
+  assert.equal(out.strongCitations.get("seed").size, 0, "no labels means no bonus, not a penalty");
 });
