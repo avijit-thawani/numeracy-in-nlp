@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-13T22:30:06.919Z",
+  "updatedAt": "2026-09-14T09:53:45.497Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -408,7 +408,7 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6384,
+      "citationCount": 6387,
       "referenceCount": 71,
       "influentialCitationCount": 1446,
       "source": "https://arxiv.org/abs/2103.03874",
@@ -431,7 +431,7 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1346,
+      "citationCount": 1347,
       "referenceCount": 28,
       "influentialCitationCount": 274,
       "source": "https://arxiv.org/abs/2103.07191",
