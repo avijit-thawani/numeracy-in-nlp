@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-14T17:27:44.237Z",
+  "updatedAt": "2026-09-14T17:36:51.912Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -9,6 +9,21 @@
         "Jakob Uszkoreit",
         "Ashish Vaswani"
       ],
+      "topAuthors": [
+        {
+          "name": "Jakob Uszkoreit",
+          "hIndex": 32,
+          "authorId": "39328010"
+        },
+        {
+          "name": "Ashish Vaswani",
+          "hIndex": 26,
+          "authorId": "40348417"
+        }
+      ],
+      "affiliations": [
+        "Google"
+      ],
       "year": 2018,
       "venue": "North American Chapter of the Association for Computational Linguistics",
       "publicationDate": "2018-03-06",
@@ -17,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 2920,
+      "citationCount": 2922,
       "referenceCount": 14,
       "influentialCitationCount": 268,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -33,6 +48,19 @@
         "Anusha Balakrishnan",
         "Percy Liang"
       ],
+      "topAuthors": [
+        {
+          "name": "Percy Liang",
+          "hIndex": 104,
+          "authorId": "145419642"
+        },
+        {
+          "name": "He He",
+          "hIndex": 42,
+          "authorId": "144533687"
+        }
+      ],
+      "affiliations": [],
       "year": 2018,
       "venue": "Conference on Empirical Methods in Natural Language Processing",
       "publicationDate": "2018-08-29",
@@ -57,6 +85,19 @@
         "Yow-Ting Shiue",
         "Hsin-Hsi Chen"
       ],
+      "topAuthors": [
+        {
+          "name": "Hen-Hsen Huang",
+          "hIndex": 15,
+          "authorId": "152354730"
+        },
+        {
+          "name": "Chung-Chi Chen",
+          "hIndex": 12,
+          "authorId": "2109523457"
+        }
+      ],
+      "affiliations": [],
       "year": 2018,
       "venue": "International Conference on Wirtschaftsinformatik",
       "publicationDate": "2018-09-14",
@@ -80,6 +121,22 @@
         "Daniel Khashabi",
         "Qiang Ning",
         "Dan Roth"
+      ],
+      "topAuthors": [
+        {
+          "name": "Dan Roth",
+          "hIndex": 99,
+          "authorId": "144590225"
+        },
+        {
+          "name": "Daniel Khashabi",
+          "hIndex": 48,
+          "authorId": "1783281"
+        }
+      ],
+      "affiliations": [
+        "University of Pennsylvania, Oracle",
+        "Johns Hopkins University"
       ],
       "year": 2019,
       "venue": "Conference on Empirical Methods in Natural Language Processing",
@@ -107,6 +164,19 @@
         "J. Schmidhuber",
         "Jianfeng Gao"
       ],
+      "topAuthors": [
+        {
+          "name": "Jianfeng Gao",
+          "hIndex": 98,
+          "authorId": "1800422"
+        },
+        {
+          "name": "J. Schmidhuber",
+          "hIndex": 96,
+          "authorId": "145341374"
+        }
+      ],
+      "affiliations": [],
       "year": 2019,
       "venue": "arXiv.org",
       "publicationDate": "2019-09-25",
@@ -131,6 +201,22 @@
         "Yoav Goldberg",
         "Jonathan Berant"
       ],
+      "topAuthors": [
+        {
+          "name": "Jonathan Berant",
+          "hIndex": 59,
+          "authorId": "1750652"
+        },
+        {
+          "name": "Yoav Goldberg",
+          "hIndex": 46,
+          "authorId": "79775260"
+        }
+      ],
+      "affiliations": [
+        "Tel-Aviv University and Google DeepMind",
+        "Bar-Ilan University"
+      ],
       "year": 2019,
       "venue": "Transactions of the Association for Computational Linguistics",
       "publicationDate": "2019-12-31",
@@ -154,6 +240,19 @@
         "Markus Ring",
         "A. Hotho"
       ],
+      "topAuthors": [
+        {
+          "name": "A. Hotho",
+          "hIndex": 54,
+          "authorId": "1792623"
+        },
+        {
+          "name": "Markus Ring",
+          "hIndex": 11,
+          "authorId": "40473966"
+        }
+      ],
+      "affiliations": [],
       "year": 2020,
       "venue": "Frontiers in Artificial Intelligence",
       "publicationDate": "2020-03-17",
@@ -178,6 +277,19 @@
         "J. Gratch",
         "Jonathan May"
       ],
+      "topAuthors": [
+        {
+          "name": "J. Gratch",
+          "hIndex": 66,
+          "authorId": "145438097"
+        },
+        {
+          "name": "Gale M. Lucas",
+          "hIndex": 40,
+          "authorId": "2419453"
+        }
+      ],
+      "affiliations": [],
       "year": 2020,
       "venue": "arXiv.org",
       "publicationDate": "2020-04-06",
@@ -199,6 +311,21 @@
       "authors": [
         "Lukas Faber",
         "Roger Wattenhofer"
+      ],
+      "topAuthors": [
+        {
+          "name": "Roger Wattenhofer",
+          "hIndex": 82,
+          "authorId": "1716440"
+        },
+        {
+          "name": "Lukas Faber",
+          "hIndex": 8,
+          "authorId": "36352356"
+        }
+      ],
+      "affiliations": [
+        "ETH Zurich"
       ],
       "year": 2020,
       "venue": "International Conference on Machine Learning",
@@ -226,6 +353,22 @@
         "Noah A. Smith",
         "Eran Yahav"
       ],
+      "topAuthors": [
+        {
+          "name": "Noah A. Smith",
+          "hIndex": 115,
+          "authorId": "144365875"
+        },
+        {
+          "name": "Eran Yahav",
+          "hIndex": 50,
+          "authorId": "1743232"
+        }
+      ],
+      "affiliations": [
+        "Technion",
+        "University of Washington"
+      ],
       "year": 2020,
       "venue": "Annual Meeting of the Association for Computational Linguistics",
       "publicationDate": "2020-04-01",
@@ -249,6 +392,21 @@
         "Chi Zhang",
         "Yixin Zhu",
         "Song-Chun Zhu"
+      ],
+      "topAuthors": [
+        {
+          "name": "Song-Chun Zhu",
+          "hIndex": 92,
+          "authorId": "145380991"
+        },
+        {
+          "name": "Yixin Zhu",
+          "hIndex": 31,
+          "authorId": "2672448"
+        }
+      ],
+      "affiliations": [
+        "Peking University"
       ],
       "year": 2020,
       "venue": "AAAI Conference on Artificial Intelligence",
@@ -276,6 +434,22 @@
         "Matt Gardner",
         "Dan Roth"
       ],
+      "topAuthors": [
+        {
+          "name": "Dan Roth",
+          "hIndex": 99,
+          "authorId": "144590225"
+        },
+        {
+          "name": "Hao Wu",
+          "hIndex": 52,
+          "authorId": "1664776313"
+        }
+      ],
+      "affiliations": [
+        "University of Pennsylvania, Oracle",
+        "Allen Institute for Artificial Intelligence"
+      ],
       "year": 2020,
       "venue": "Conference on Empirical Methods in Natural Language Processing",
       "publicationDate": "2020-05-01",
@@ -299,6 +473,22 @@
         "Seyeon Lee",
         "Rahul Khanna",
         "Xiang Ren"
+      ],
+      "topAuthors": [
+        {
+          "name": "Xiang Ren",
+          "hIndex": 43,
+          "authorId": "1384550891"
+        },
+        {
+          "name": "Bill Yuchen Lin",
+          "hIndex": 39,
+          "authorId": "51583409"
+        }
+      ],
+      "affiliations": [
+        "Allen Institute for AI (AI2)",
+        "University of Southern California"
       ],
       "year": 2020,
       "venue": "Conference on Empirical Methods in Natural Language Processing",
@@ -325,6 +515,22 @@
         "Bhavdeep Singh Sachdeva",
         "Chitta Baral"
       ],
+      "topAuthors": [
+        {
+          "name": "Chitta Baral",
+          "hIndex": 44,
+          "authorId": "1760291"
+        },
+        {
+          "name": "Swaroop Mishra",
+          "hIndex": 29,
+          "authorId": "1817207"
+        }
+      ],
+      "affiliations": [
+        "Arizona State University",
+        "Amazon"
+      ],
       "year": 2020,
       "venue": "arXiv.org",
       "publicationDate": "2020-05-18",
@@ -348,6 +554,19 @@
         "T. Pevný",
         "V. Šmídl"
       ],
+      "topAuthors": [
+        {
+          "name": "T. Pevný",
+          "hIndex": 33,
+          "authorId": "1802358"
+        },
+        {
+          "name": "V. Šmídl",
+          "hIndex": 19,
+          "authorId": "10192900"
+        }
+      ],
+      "affiliations": [],
       "year": 2020,
       "venue": "Neural Information Processing Systems",
       "publicationDate": "2020-06-02",
@@ -372,6 +591,19 @@
         "Andrew Barker",
         "Lexi Loessberg-Zahl"
       ],
+      "topAuthors": [
+        {
+          "name": "Devin J. Johnson",
+          "hIndex": 3,
+          "authorId": "2109809054"
+        },
+        {
+          "name": "Denise Mak",
+          "hIndex": 2,
+          "authorId": "2058698050"
+        }
+      ],
+      "affiliations": [],
       "year": 2020,
       "venue": "BlackboxNLP Workshop on Analyzing and Interpreting Neural Networks for NLP",
       "publicationDate": "2020-10-13",
@@ -400,6 +632,22 @@
         "D. Song",
         "J. Steinhardt"
       ],
+      "topAuthors": [
+        {
+          "name": "D. Song",
+          "hIndex": 137,
+          "authorId": "143711382"
+        },
+        {
+          "name": "J. Steinhardt",
+          "hIndex": 49,
+          "authorId": "5164568"
+        }
+      ],
+      "affiliations": [
+        "UC Berkeley",
+        "University of Chicago"
+      ],
       "year": 2021,
       "venue": "NeurIPS Datasets and Benchmarks",
       "publicationDate": "2021-03-05",
@@ -408,7 +656,7 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6387,
+      "citationCount": 6389,
       "referenceCount": 71,
       "influentialCitationCount": 1446,
       "source": "https://arxiv.org/abs/2103.03874",
@@ -422,6 +670,21 @@
         "Arkil Patel",
         "S. Bhattamishra",
         "Navin Goyal"
+      ],
+      "topAuthors": [
+        {
+          "name": "Navin Goyal",
+          "hIndex": 24,
+          "authorId": "144260125"
+        },
+        {
+          "name": "Arkil Patel",
+          "hIndex": 11,
+          "authorId": "1443788809"
+        }
+      ],
+      "affiliations": [
+        "Mila, McGill"
       ],
       "year": 2021,
       "venue": "North American Chapter of the Association for Computational Linguistics",
@@ -446,6 +709,22 @@
         "Ankit Gupta",
         "Jonathan Berant"
       ],
+      "topAuthors": [
+        {
+          "name": "Jonathan Berant",
+          "hIndex": 59,
+          "authorId": "1750652"
+        },
+        {
+          "name": "Mor Geva",
+          "hIndex": 33,
+          "authorId": "22245981"
+        }
+      ],
+      "affiliations": [
+        "Tel-Aviv University and Google DeepMind",
+        "Google Research"
+      ],
       "year": 2020,
       "venue": "Annual Meeting of the Association for Computational Linguistics",
       "publicationDate": "2020-04-01",
@@ -469,6 +748,22 @@
         "J. Pujara",
         "Pedro A. Szekely",
         "Filip Ilievski"
+      ],
+      "topAuthors": [
+        {
+          "name": "J. Pujara",
+          "hIndex": 26,
+          "authorId": "2634786"
+        },
+        {
+          "name": "Pedro A. Szekely",
+          "hIndex": 17,
+          "authorId": "144171096"
+        }
+      ],
+      "affiliations": [
+        "Vrije Universiteit Amsterdam",
+        "University of Southern California"
       ],
       "year": 2021,
       "venue": "North American Chapter of the Association for Computational Linguistics",
@@ -495,6 +790,22 @@
         "Sameer Singh",
         "Matt Gardner"
       ],
+      "topAuthors": [
+        {
+          "name": "Sameer Singh",
+          "hIndex": 63,
+          "authorId": "34650964"
+        },
+        {
+          "name": "Matt Gardner",
+          "hIndex": 50,
+          "authorId": "40642935"
+        }
+      ],
+      "affiliations": [
+        "University of California, Irvine",
+        "Allen Institute for Artificial Intelligence"
+      ],
       "year": 2019,
       "venue": "Conference on Empirical Methods in Natural Language Processing",
       "publicationDate": "2019-09-17",
@@ -520,6 +831,22 @@
         "Gabriel Stanovsky",
         "Sameer Singh",
         "Matt Gardner"
+      ],
+      "topAuthors": [
+        {
+          "name": "Sameer Singh",
+          "hIndex": 63,
+          "authorId": "34650964"
+        },
+        {
+          "name": "Matt Gardner",
+          "hIndex": 50,
+          "authorId": "40642935"
+        }
+      ],
+      "affiliations": [
+        "Allen Institute for Artificial Intelligence",
+        "University of California, Irvine"
       ],
       "year": 2019,
       "venue": "North American Chapter of the Association for Computational Linguistics",
