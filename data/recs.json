@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-14T16:29:27.013Z",
+  "updatedAt": "2026-09-14T16:41:14.453Z",
   "recs": [
     {
       "id": "99f4a70bc9c0a2ad56f17de03adc3f72c2aa43d8",
@@ -10,6 +10,17 @@
         "Le Ngoc Toan",
         "H. Nguyễn"
       ],
+      "topAuthors": [
+        {
+          "name": "H. Nguyễn",
+          "hIndex": 5
+        },
+        {
+          "name": "Ha My Linh",
+          "hIndex": 2
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": "VNU Journal of Science Computer Science and Communication Engineering",
       "publicationDate": "2026-08-19",
@@ -40,6 +51,17 @@
         "Daisuke Miyashita",
         "Jun Deguchi"
       ],
+      "topAuthors": [
+        {
+          "name": "Jun Deguchi",
+          "hIndex": 11
+        },
+        {
+          "name": "F. Tachibana",
+          "hIndex": 10
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": null,
       "publicationDate": "2026-09-09",
@@ -66,7 +88,6 @@
       "id": "d26701f78f38ffaa0108d36e9dbc6b04c9706a9d",
       "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
       "authors": [
-        "T.-A. Cao",
         "Chi-Yu Chen",
         "Shuang Cheng",
         "Xu Cheng",
@@ -75,7 +96,7 @@
         "Kewen Ge",
         "Rui-Jun Ge",
         "Jia-Yi Huang",
-        "Ya-Sen Jiao",
+        "Yasen Jiao",
         "Da-Hua Lin",
         "Zhou-Han Lin",
         "Yi-Fan Liu",
@@ -94,6 +115,17 @@
         "Qi Zhang",
         "Bo-Wen Zhou"
       ],
+      "topAuthors": [
+        {
+          "name": "Biqing Qi",
+          "hIndex": 23
+        },
+        {
+          "name": "Qi Zhang",
+          "hIndex": 10
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": null,
       "publicationDate": "2026-09-09",
@@ -127,6 +159,17 @@
         "Pietro Liò",
         "George D. Montañez"
       ],
+      "topAuthors": [
+        {
+          "name": "C. Schönlieb",
+          "hIndex": 28
+        },
+        {
+          "name": "D. Murari",
+          "hIndex": 6
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": null,
       "publicationDate": "2026-09-08",
@@ -161,6 +204,17 @@
         "Shengzhong Liu",
         "Fan Wu"
       ],
+      "topAuthors": [
+        {
+          "name": "Chaoyue Niu",
+          "hIndex": 17
+        },
+        {
+          "name": "Shengzhong Liu",
+          "hIndex": 5
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": null,
       "publicationDate": "2026-09-04",
@@ -194,6 +248,17 @@
         "Jun-Yu Wang",
         "Zhizheng Wu"
       ],
+      "topAuthors": [
+        {
+          "name": "Zhizheng Wu",
+          "hIndex": 39
+        },
+        {
+          "name": "Yu-Xiang Wang",
+          "hIndex": 0
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": null,
       "publicationDate": "2026-09-03",
@@ -230,6 +295,17 @@
         "Kai-Wei Chang",
         "Y. Wu"
       ],
+      "topAuthors": [
+        {
+          "name": "Eric Jiang",
+          "hIndex": 4
+        },
+        {
+          "name": "Dong Liu",
+          "hIndex": 4
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": null,
       "publicationDate": "2026-09-02",
@@ -262,6 +338,17 @@
         "Xiao-Le Cui",
         "Guibo Luo"
       ],
+      "topAuthors": [
+        {
+          "name": "Guibo Luo",
+          "hIndex": 14
+        },
+        {
+          "name": "Yuesheng Zhu",
+          "hIndex": 7
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": "Pacific Rim International Conference on Artificial Intelligence",
       "publicationDate": "2026-09-01",
@@ -311,6 +398,17 @@
         "Honggou Yang",
         "Xian-Ming Liu"
       ],
+      "topAuthors": [
+        {
+          "name": "An-Hui Liu",
+          "hIndex": 7
+        },
+        {
+          "name": "Shuang Su",
+          "hIndex": 3
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": null,
       "publicationDate": "2026-08-31",
@@ -342,6 +440,17 @@
         "Yi Jin",
         "Xue Liu"
       ],
+      "topAuthors": [
+        {
+          "name": "Bowei He",
+          "hIndex": 5
+        },
+        {
+          "name": "Xue Liu",
+          "hIndex": 5
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": null,
       "publicationDate": "2026-08-31",
@@ -372,6 +481,19 @@
         "A. Pyayt",
         "M. Gubanov"
       ],
+      "topAuthors": [
+        {
+          "name": "M. Gubanov",
+          "hIndex": 15
+        },
+        {
+          "name": "A. Pyayt",
+          "hIndex": 12
+        }
+      ],
+      "affiliations": [
+        "Florida State Univesrity"
+      ],
       "year": 2026,
       "venue": "Proc. ACM Manag. Data",
       "publicationDate": "2026-03-05",
@@ -401,6 +523,17 @@
         "Haruki Fujimaki",
         "Makoto P. Kato"
       ],
+      "topAuthors": [
+        {
+          "name": "Haruki Fujimaki",
+          "hIndex": 1
+        },
+        {
+          "name": "Makoto P. Kato",
+          "hIndex": 1
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
       "publicationDate": "2026-05-11",
@@ -429,6 +562,17 @@
         "Vallidevi Krishnamurthy",
         "Abhilasha Singh"
       ],
+      "topAuthors": [
+        {
+          "name": "Vallidevi Krishnamurthy",
+          "hIndex": 3
+        },
+        {
+          "name": "Abhilasha Singh",
+          "hIndex": 2
+        }
+      ],
+      "affiliations": [],
       "year": 2025,
       "venue": "Conference Information and Communication Technology",
       "publicationDate": "2025-12-19",
@@ -461,6 +605,17 @@
         "Selby Mykael Lima dos Santos",
         "Rejani Bandeira Vieira Sousa"
       ],
+      "topAuthors": [
+        {
+          "name": "Antonio de Sousa Leitão",
+          "hIndex": 0
+        },
+        {
+          "name": "Allan Kardec Duailibe Barros",
+          "hIndex": 0
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": "arXiv.org",
       "publicationDate": "2026-06-17",
@@ -489,6 +644,17 @@
         "D. Rueckert",
         "G. Kaissis"
       ],
+      "topAuthors": [
+        {
+          "name": "D. Rueckert",
+          "hIndex": 13
+        },
+        {
+          "name": "G. Kaissis",
+          "hIndex": 9
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": "arXiv.org",
       "publicationDate": "2026-04-22",
@@ -520,6 +686,17 @@
         "Jaemoo Choi",
         "Yongxin Chen"
       ],
+      "topAuthors": [
+        {
+          "name": "Yongxin Chen",
+          "hIndex": 9
+        },
+        {
+          "name": "Jaemoo Choi",
+          "hIndex": 6
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": "arXiv.org",
       "publicationDate": "2026-05-20",
@@ -552,6 +729,19 @@
         "Alberto F. De Souza",
         "C. Badue",
         "Thiago Oliveira-Santos"
+      ],
+      "topAuthors": [
+        {
+          "name": "Thiago Oliveira-Santos",
+          "hIndex": 27
+        },
+        {
+          "name": "C. Badue",
+          "hIndex": 20
+        }
+      ],
+      "affiliations": [
+        "Universidade Federal do Espirito Santo"
       ],
       "year": 2025,
       "venue": "Journal of the Brazilian Computer Society",
@@ -588,6 +778,17 @@
         "André F. T. Martins",
         "Marcos V. Treviso"
       ],
+      "topAuthors": [
+        {
+          "name": "E. Ponti",
+          "hIndex": 33
+        },
+        {
+          "name": "Yuxiang Huang",
+          "hIndex": 7
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": "arXiv.org",
       "publicationDate": "2026-05-18",
@@ -620,6 +821,17 @@
         "Priya Nair",
         "D. Whitmore"
       ],
+      "topAuthors": [
+        {
+          "name": "Rohan Desai",
+          "hIndex": 2
+        },
+        {
+          "name": "D. Whitmore",
+          "hIndex": 1
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": "arXiv.org",
       "publicationDate": "2026-06-30",
@@ -654,6 +866,17 @@
         "Han-Jie Chen",
         "Jiarong Xing"
       ],
+      "topAuthors": [
+        {
+          "name": "Jiarong Xing",
+          "hIndex": 6
+        },
+        {
+          "name": "Zhuang Wang",
+          "hIndex": 4
+        }
+      ],
+      "affiliations": [],
       "year": 2026,
       "venue": "arXiv.org",
       "publicationDate": "2026-05-27",
@@ -685,6 +908,17 @@
         "Felix Hill",
         "Pushmeet Kohli"
       ],
+      "topAuthors": [
+        {
+          "name": "Pushmeet Kohli",
+          "hIndex": 118
+        },
+        {
+          "name": "Edward Grefenstette",
+          "hIndex": 47
+        }
+      ],
+      "affiliations": [],
       "year": 2019,
       "venue": "International Conference on Learning Representations",
       "publicationDate": "2019-04-02",
@@ -712,6 +946,17 @@
         "Zhiying Jiang",
         "Jimmy J. Li"
       ],
+      "topAuthors": [
+        {
+          "name": "Rodrigo Nogueira",
+          "hIndex": 32
+        },
+        {
+          "name": "Jimmy J. Li",
+          "hIndex": 2
+        }
+      ],
+      "affiliations": [],
       "year": 2021,
       "venue": null,
       "publicationDate": "2021-02-25",
@@ -738,6 +983,17 @@
         "M. Forbes",
         "Yejin Choi"
       ],
+      "topAuthors": [
+        {
+          "name": "Yejin Choi",
+          "hIndex": 113
+        },
+        {
+          "name": "M. Forbes",
+          "hIndex": 19
+        }
+      ],
+      "affiliations": [],
       "year": 2017,
       "venue": "Annual Meeting of the Association for Computational Linguistics",
       "publicationDate": "2017-06-12",
@@ -764,6 +1020,17 @@
         "Kuntal Pal",
         "Chitta Baral"
       ],
+      "topAuthors": [
+        {
+          "name": "Chitta Baral",
+          "hIndex": 32
+        },
+        {
+          "name": "Kuntal Pal",
+          "hIndex": 14
+        }
+      ],
+      "affiliations": [],
       "year": 2021,
       "venue": "Conference on Empirical Methods in Natural Language Processing",
       "publicationDate": "2021-09-10",
@@ -789,6 +1056,20 @@
       "authors": [
         "Andreas Madsen",
         "alexander rosenberg johansen"
+      ],
+      "topAuthors": [
+        {
+          "name": "alexander rosenberg johansen",
+          "hIndex": 13
+        },
+        {
+          "name": "Andreas Madsen",
+          "hIndex": 7
+        }
+      ],
+      "affiliations": [
+        "Technical University of Denmark",
+        "Mila"
       ],
       "year": 2019,
       "venue": "Neural Information Processing Systems",
@@ -818,6 +1099,17 @@
         "G. Corrado",
         "J. Dean"
       ],
+      "topAuthors": [
+        {
+          "name": "G. Corrado",
+          "hIndex": 43
+        },
+        {
+          "name": "Tomas Mikolov",
+          "hIndex": 40
+        }
+      ],
+      "affiliations": [],
       "year": 2013,
       "venue": "International Conference on Learning Representations",
       "publicationDate": "2013-01-16",
@@ -826,7 +1118,7 @@
       "doi": null,
       "arxivId": "1301.3781",
       "pdf": null,
-      "citationCount": 35054,
+      "citationCount": 35055,
       "referenceCount": 36,
       "influentialCitationCount": 4365,
       "source": null,
@@ -845,6 +1137,13 @@
       "authors": [
         "G. Miller"
       ],
+      "topAuthors": [
+        {
+          "name": "G. Miller",
+          "hIndex": 48
+        }
+      ],
+      "affiliations": [],
       "year": 1995,
       "venue": "Human Language Technology - The Baltic Perspectiv",
       "publicationDate": "1995-11-01",
@@ -872,6 +1171,13 @@
       "authors": [
         "T. Kohonen"
       ],
+      "topAuthors": [
+        {
+          "name": "T. Kohonen",
+          "hIndex": 69
+        }
+      ],
+      "affiliations": [],
       "year": 1990,
       "venue": "Neurocomputing",
       "publicationDate": "1990-09-01",
@@ -899,6 +1205,13 @@
       "authors": [
         "K. Wynn"
       ],
+      "topAuthors": [
+        {
+          "name": "K. Wynn",
+          "hIndex": 45
+        }
+      ],
+      "affiliations": [],
       "year": 1990,
       "venue": "Cognition",
       "publicationDate": "1990-08-01",
@@ -926,6 +1239,20 @@
       "authors": [
         "Ofir Press",
         "Lior Wolf"
+      ],
+      "topAuthors": [
+        {
+          "name": "Lior Wolf",
+          "hIndex": 64
+        },
+        {
+          "name": "Ofir Press",
+          "hIndex": 21
+        }
+      ],
+      "affiliations": [
+        "Facebook AI Research and Tel Aviv University",
+        "University of Washington"
       ],
       "year": 2016,
       "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
@@ -957,6 +1284,17 @@
         "C. Gallistel",
         "J. Whalen"
       ],
+      "topAuthors": [
+        {
+          "name": "C. Gallistel",
+          "hIndex": 59
+        },
+        {
+          "name": "R. Gelman",
+          "hIndex": 57
+        }
+      ],
+      "affiliations": [],
       "year": 2001,
       "venue": "Psychonomic Bulletin & Review",
       "publicationDate": "2001-12-01",
@@ -988,6 +1326,17 @@
         "D. Wiliam",
         "David C. Johnson"
       ],
+      "topAuthors": [
+        {
+          "name": "D. Wiliam",
+          "hIndex": 44
+        },
+        {
+          "name": "Mike Askew",
+          "hIndex": 22
+        }
+      ],
+      "affiliations": [],
       "year": 1997,
       "venue": null,
       "publicationDate": null,
@@ -1016,6 +1365,17 @@
         "Katherine D. Kinzler",
         "E. Spelke"
       ],
+      "topAuthors": [
+        {
+          "name": "E. Spelke",
+          "hIndex": 98
+        },
+        {
+          "name": "Katherine D. Kinzler",
+          "hIndex": 36
+        }
+      ],
+      "affiliations": [],
       "year": 2007,
       "venue": "Progress in Brain Research",
       "publicationDate": null,
@@ -1046,6 +1406,19 @@
         "Peter Clark",
         "Yoav Goldberg",
         "Jonathan Berant"
+      ],
+      "topAuthors": [
+        {
+          "name": "Jonathan Berant",
+          "hIndex": 59
+        },
+        {
+          "name": "Oyvind Tafjord",
+          "hIndex": 34
+        }
+      ],
+      "affiliations": [
+        "Tel-Aviv University and Google DeepMind"
       ],
       "year": 2020,
       "venue": "Neural Information Processing Systems",
@@ -1183,6 +1556,20 @@
         "Andrei Popescu-Belis",
         "Ken C. Anderson"
       ],
+      "topAuthors": [
+        {
+          "name": "Noah A. Smith",
+          "hIndex": 115
+        },
+        {
+          "name": "Zhe Zhang",
+          "hIndex": 77
+        }
+      ],
+      "affiliations": [
+        "University of Washington",
+        "Johns Hopkins University"
+      ],
       "year": null,
       "venue": null,
       "publicationDate": null,
@@ -1223,6 +1610,20 @@
         "Michal Guerquin",
         "Michael Schmitz"
       ],
+      "topAuthors": [
+        {
+          "name": "Oren Etzioni",
+          "hIndex": 88
+        },
+        {
+          "name": "Peter Clark",
+          "hIndex": 64
+        }
+      ],
+      "affiliations": [
+        "Allen Institute for AI",
+        "Allen Institute for Artificial Intelligence"
+      ],
       "year": 2019,
       "venue": "The AI Magazine",
       "publicationDate": "2019-09-04",
@@ -1251,6 +1652,19 @@
         "S. Bhattamishra",
         "Arkil Patel",
         "Navin Goyal"
+      ],
+      "topAuthors": [
+        {
+          "name": "Navin Goyal",
+          "hIndex": 24
+        },
+        {
+          "name": "S. Bhattamishra",
+          "hIndex": 11
+        }
+      ],
+      "affiliations": [
+        "Mila, McGill"
       ],
       "year": 2020,
       "venue": "Conference on Computational Natural Language Learning",
@@ -1284,6 +1698,17 @@
         "R. L. Mapou",
         "E. Kaplan"
       ],
+      "topAuthors": [
+        {
+          "name": "Deborah A. Fein",
+          "hIndex": 61
+        },
+        {
+          "name": "E. Kaplan",
+          "hIndex": 45
+        }
+      ],
+      "affiliations": [],
       "year": 2004,
       "venue": "Archives of Clinical Neuropsychology",
       "publicationDate": "2004-09-01",
@@ -1312,6 +1737,19 @@
         "M. Marneffe",
         "Christopher D. Manning",
         "Christopher Potts"
+      ],
+      "topAuthors": [
+        {
+          "name": "Christopher D. Manning",
+          "hIndex": 149
+        },
+        {
+          "name": "Christopher Potts",
+          "hIndex": 58
+        }
+      ],
+      "affiliations": [
+        "Stanford University"
       ],
       "year": 2010,
       "venue": "Annual Meeting of the Association for Computational Linguistics",
@@ -1345,6 +1783,19 @@
         "Devamanyu Hazarika",
         "L. Carin"
       ],
+      "topAuthors": [
+        {
+          "name": "L. Carin",
+          "hIndex": 100
+        },
+        {
+          "name": "Devamanyu Hazarika",
+          "hIndex": 32
+        }
+      ],
+      "affiliations": [
+        "National University of Singapore"
+      ],
       "year": 2020,
       "venue": "Conference on Empirical Methods in Natural Language Processing",
       "publicationDate": "2020-11-01",
@@ -1375,6 +1826,17 @@
         "Mathijs Rochus",
         "M. Zorzi"
       ],
+      "topAuthors": [
+        {
+          "name": "M. Zorzi",
+          "hIndex": 53
+        },
+        {
+          "name": "Alberto Testolin",
+          "hIndex": 20
+        }
+      ],
+      "affiliations": [],
       "year": 2020,
       "venue": "Scientific Reports",
       "publicationDate": "2020-06-22",
@@ -1405,6 +1867,19 @@
         "Hiroya Takamura",
         "Hsin-Hsi Chen"
       ],
+      "topAuthors": [
+        {
+          "name": "Hsin-Hsi Chen",
+          "hIndex": 39
+        },
+        {
+          "name": "Hiroya Takamura",
+          "hIndex": 29
+        }
+      ],
+      "affiliations": [
+        "AIST, Japan"
+      ],
       "year": 2019,
       "venue": "Annual Meeting of the Association for Computational Linguistics",
       "publicationDate": "2019-07-01",
@@ -1433,6 +1908,17 @@
         "Daniel M. Spokoyny",
         "Taylor Berg-Kirkpatrick"
       ],
+      "topAuthors": [
+        {
+          "name": "Daniel M. Spokoyny",
+          "hIndex": 6
+        },
+        {
+          "name": "Taylor Berg-Kirkpatrick",
+          "hIndex": 5
+        }
+      ],
+      "affiliations": [],
       "year": 2020,
       "venue": "Conference on Empirical Methods in Natural Language Processing",
       "publicationDate": "2020-10-20",
@@ -1466,6 +1952,19 @@
         "Libin Shen",
         "Kewei Tu"
       ],
+      "topAuthors": [
+        {
+          "name": "Kewei Tu",
+          "hIndex": 28
+        },
+        {
+          "name": "Libin Shen",
+          "hIndex": 19
+        }
+      ],
+      "affiliations": [
+        "School of Engineering and Applied Science, University of Pennsylvania"
+      ],
       "year": 2019,
       "venue": "Findings",
       "publicationDate": "2019-12-28",
@@ -1497,6 +1996,20 @@
         "Aditya Joshi",
         "P. Bhattacharyya"
       ],
+      "topAuthors": [
+        {
+          "name": "P. Bhattacharyya",
+          "hIndex": 58
+        },
+        {
+          "name": "Aditya Joshi",
+          "hIndex": 20
+        }
+      ],
+      "affiliations": [
+        "University of New South Wales",
+        "IIT Bombay"
+      ],
       "year": 2019,
       "venue": "WASSA@NAACL-HLT",
       "publicationDate": "2019-06-01",
@@ -1525,6 +2038,20 @@
         "Marten Postma",
         "Filip Ilievski",
         "P. Vossen"
+      ],
+      "topAuthors": [
+        {
+          "name": "P. Vossen",
+          "hIndex": 42
+        },
+        {
+          "name": "Marten Postma",
+          "hIndex": 37
+        }
+      ],
+      "affiliations": [
+        "Vrije Universiteit Amsterdam",
+        "Information Sciences Institute"
       ],
       "year": 2018,
       "venue": "International Workshop on Semantic Evaluation",
@@ -1557,6 +2084,20 @@
         "Dane Bell",
         "M. Surdeanu"
       ],
+      "topAuthors": [
+        {
+          "name": "M. Surdeanu",
+          "hIndex": 44
+        },
+        {
+          "name": "Rebecca Sharp",
+          "hIndex": 11
+        }
+      ],
+      "affiliations": [
+        "University of Arizona",
+        "Information Sciences Institute"
+      ],
       "year": 2018,
       "venue": "International Conference on Language Resources and Evaluation",
       "publicationDate": "2018-05-01",
@@ -1584,6 +2125,13 @@
       "authors": [
         "M. Nefedov"
       ],
+      "topAuthors": [
+        {
+          "name": "M. Nefedov",
+          "hIndex": 19
+        }
+      ],
+      "affiliations": [],
       "year": 2020,
       "venue": null,
       "publicationDate": null,
@@ -1612,6 +2160,17 @@
         "Sandra Williams",
         "R. Power"
       ],
+      "topAuthors": [
+        {
+          "name": "R. Power",
+          "hIndex": 26
+        },
+        {
+          "name": "Sandra Williams",
+          "hIndex": 17
+        }
+      ],
+      "affiliations": [],
       "year": 2010,
       "venue": "International Conference on Language Resources and Evaluation",
       "publicationDate": "2010-05-01",
