@@ -27,6 +27,21 @@ const BRANCH_PREFIX = "rec/";
 const BATCH_PREFIX = "recs/";
 const LABEL = "rec";
 
+/**
+ * Has someone edited this pull request themselves?
+ *
+ * The bot rewrites a batch branch from scratch on every run and force-pushes
+ * it, which is right while nobody has touched it and destructive the moment
+ * somebody has: deleting the lines you do not want *is* the review, and it
+ * happens as a commit on this branch. A run that rebuilt the branch underneath
+ * that would silently throw the curation away.
+ *
+ * The bot's own version is always exactly one commit on top of the base, so
+ * anything more means a human has been here. Counting commits rather than
+ * reading authors avoids guessing at how the Actions identity is spelled.
+ */
+export const hasHumanCommits = (commits) => (commits ?? []).length > 1;
+
 /** `past month` -> `recs/past-month`, stable across runs so a PR updates in place. */
 const batchBranch = (window) =>
   `${BATCH_PREFIX}${String(window).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
@@ -194,6 +209,25 @@ const openBatches = ({ recs, base, labelArgs }) => {
     const branch = batchBranch(window);
     const seedFile = p("import/papers.txt");
     const title = `Add ${papers.length} paper${papers.length === 1 ? "" : "s"} from the ${window}`;
+    const already = byBranch.get(branch);
+
+    // Never rebuild a pull request someone is in the middle of curating.
+    if (already) {
+      let commits = [];
+      try {
+        commits = JSON.parse(gh(["pr", "view", String(already.number), "--json", "commits"])).commits ?? [];
+      } catch {
+        // If we cannot tell, assume it has been touched. Leaving a pull
+        // request slightly stale costs a run; overwriting it costs the work.
+        commits = [{}, {}];
+      }
+
+      if (hasHumanCommits(commits)) {
+        links.set(window, already);
+        log.info(`#${already.number} has your own edits on it, so this run left it alone.`);
+        continue;
+      }
+    }
 
     try {
       git(["checkout", "-q", "-B", branch, `origin/${base}`]);
@@ -212,11 +246,10 @@ const openBatches = ({ recs, base, labelArgs }) => {
       // changes. An open pull request picks the new contents up in place.
       git(["push", "-q", "-f", "origin", branch]);
 
-      const existing = byBranch.get(branch);
-      if (existing) {
-        gh(["pr", "edit", String(existing.number), "--title", title, "--body", batchBody(window, papers)]);
-        links.set(window, existing);
-        log.info(`Updated #${existing.number} with the current ${window} table.`);
+      if (already) {
+        gh(["pr", "edit", String(already.number), "--title", title, "--body", batchBody(window, papers)]);
+        links.set(window, already);
+        log.info(`Updated #${already.number} with the current ${window} table.`);
       } else {
         const url = gh([
           "pr", "create",
@@ -454,4 +487,7 @@ const main = () => {
   writeSummary();
 };
 
-main();
+// Only when run as a script. Importing this file -- which the tests do, for
+// the helpers -- must not start opening pull requests, and in a survey with
+// them switched on it would have tried.
+if (import.meta.url === `file://${process.argv[1]}`) main();

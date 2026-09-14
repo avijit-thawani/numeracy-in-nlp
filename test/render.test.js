@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 
 import { renderTable, allViews, sortLinks, SORTS } from "../lib/views.js";
 import { topAuthorsOf, affiliationsOf } from "../lib/semanticScholar.js";
+import { hasHumanCommits } from "../scripts/openRecPRs.js";
 import {
   renderSurvey,
   applySurvey,
@@ -486,4 +487,24 @@ test("a row whose add goes to a pull request says so", () => {
   assert.match(withPr, /\[add via PR\]\(https:\/\/github\.com\/o\/r\/pull\/12\)/);
   assert.match(withIssue, /\[add\]\(https:\/\/github\.com\/o\/r\/issues\/new/);
   assert.doesNotMatch(withIssue, /add via PR/);
+});
+
+// ---- Not clobbering a review in progress -------------------------------
+
+/**
+ * Deleting the lines you do not want *is* the review, and it lands as a commit
+ * on the batch branch. The bot rewrites that branch from scratch every run, so
+ * without this check a run would force-push over somebody's curation.
+ */
+test("a batch branch nobody has touched is the bot's single commit", () => {
+  assert.equal(hasHumanCommits([{ messageHeadline: "Add 5 papers from the past month" }]), false);
+  assert.equal(hasHumanCommits([]), false);
+  assert.equal(hasHumanCommits(undefined), false);
+});
+
+test("an extra commit means a human has been editing, so leave it alone", () => {
+  assert.equal(
+    hasHumanCommits([{ messageHeadline: "Add 5 papers" }, { messageHeadline: "Update import/papers.txt" }]),
+    true
+  );
 });
