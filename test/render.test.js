@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 import { renderTable, allViews, sortLinks, SORTS } from "../lib/views.js";
+import { topAuthorsOf, affiliationsOf } from "../lib/semanticScholar.js";
 import {
   renderSurvey,
   applySurvey,
@@ -63,15 +64,22 @@ test("Decide offers add and drop links once the repo is known", () => {
   assert.match(row, /\[drop\]\(https:\/\/github\.com\/owner\/survey\/issues\/new\?labels=drop-paper/);
 });
 
-test("Decide prefers a pull request when one is open", () => {
+/**
+ * The words stay put even when the destination changes. A cell reading
+ * "review #71" described the mechanism and left the reader no way to tell that
+ * this is how a paper joins their list.
+ */
+test("Decide always asks the same question, and add opens the pull request", () => {
   const [, , row] = renderTable({
     rows: [rec({ prUrl: "https://github.com/o/r/pull/12", prNumber: 12 })],
     list: "recs",
-    sort: "score",
     showWhy: true,
     repo: "o/r",
   });
-  assert.match(row, /\[review #12\]/);
+
+  assert.match(row, /\[add\]\(https:\/\/github\.com\/o\/r\/pull\/12\)/, "merging the PR is the acceptance");
+  assert.match(row, /\[drop\]\(https:\/\/github\.com\/o\/r\/issues\/new\?labels=drop-paper/);
+  assert.doesNotMatch(row, /review/, "no mechanism words, and no issue numbers");
 });
 
 test("a pipe in a title cannot break the table", () => {
@@ -82,7 +90,7 @@ test("a pipe in a title cannot break the table", () => {
     showWhy: true,
     repo: "o/r",
   });
-  assert.equal(columnCount(row), 5);
+  assert.equal(columnCount(row), 7);
 });
 
 /**
@@ -315,4 +323,80 @@ test("config beats the repo name, which beats the default", () => {
 test("a run with no event still knows the repository it is in", () => {
   assert.equal(resolveIdentity({}, null, "someone/numeracy-in-nlp").title, "Numeracy in NLP");
   assert.equal(resolveIdentity({ title: "Chosen" }, null, "someone/numeracy-in-nlp").title, "Chosen");
+});
+
+// ---- Author and affiliation signals -----------------------------------
+
+test("the top two authors by h-index are named, not the first two", () => {
+  const authors = [
+    { name: "First Author", hIndex: 3, affiliations: ["Small College"] },
+    { name: "Senior Author", hIndex: 63, affiliations: ["UC Irvine"] },
+    { name: "Middle Author", hIndex: 50, affiliations: ["UC Irvine"] },
+  ];
+  assert.deepEqual(topAuthorsOf(authors), [
+    { name: "Senior Author", hIndex: 63 },
+    { name: "Middle Author", hIndex: 50 },
+  ]);
+});
+
+test("an author with no h-index is left out rather than counted as zero", () => {
+  assert.deepEqual(topAuthorsOf([{ name: "Unknown" }, { name: "Known", hIndex: 5 }]), [
+    { name: "Known", hIndex: 5 },
+  ]);
+  assert.deepEqual(topAuthorsOf([]), []);
+  assert.deepEqual(topAuthorsOf(undefined), []);
+});
+
+test("the affiliation most of the authors share wins", () => {
+  const authors = [
+    { name: "A", hIndex: 5, affiliations: ["MIT"] },
+    { name: "B", hIndex: 4, affiliations: ["Google"] },
+    { name: "C", hIndex: 3, affiliations: ["Google"] },
+  ];
+  assert.deepEqual(affiliationsOf(authors), ["Google", "MIT"]);
+});
+
+/**
+ * One author each at two places is the common case on a two-author paper, and
+ * the established one is the more informative answer.
+ */
+test("a tie on count is broken by the more established author", () => {
+  const authors = [
+    { name: "Junior", hIndex: 2, affiliations: ["Somewhere"] },
+    { name: "Senior", hIndex: 60, affiliations: ["Anthropic"] },
+  ];
+  assert.equal(affiliationsOf(authors)[0], "Anthropic");
+});
+
+test("missing affiliations are absent, not empty strings", () => {
+  assert.deepEqual(affiliationsOf([{ name: "A", hIndex: 1, affiliations: [] }]), []);
+  assert.deepEqual(affiliationsOf([{ name: "A", hIndex: 1, affiliations: ["  "] }]), []);
+});
+
+test("both columns say so when a paper carries neither signal", () => {
+  const [, , row] = renderTable({ rows: [rec({ topAuthors: [], affiliations: [] })], list: "core" });
+  const cells = row.split("|").map((c) => c.trim());
+  assert.ok(cells.includes("-"), "an empty column reads as a dash, not a blank cell");
+});
+
+test("the author column carries the h-index that justifies it", () => {
+  const [, , row] = renderTable({
+    rows: [rec({ topAuthors: [{ name: "Sameer Singh", hIndex: 63 }], affiliations: ["UC Irvine"] })],
+    list: "core",
+  });
+  assert.match(row, /Sameer Singh \(h=63\)/);
+  assert.match(row, /UC Irvine/);
+});
+
+test("one author cannot fill both affiliation slots with their own employers", () => {
+  const authors = [
+    { name: "Senior", hIndex: 63, affiliations: ["UC Irvine", "A Startup"] },
+    { name: "Other", hIndex: 50, affiliations: ["Allen Institute"] },
+  ];
+  assert.deepEqual(affiliationsOf(authors), ["UC Irvine", "Allen Institute"]);
+});
+
+test("but a lone author's second affiliation still beats an empty slot", () => {
+  const authors = [{ name: "Solo", hIndex: 20, affiliations: ["MIT", "DeepMind"] }];
+  assert.deepEqual(affiliationsOf(authors), ["MIT", "DeepMind"]);
 });

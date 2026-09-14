@@ -120,10 +120,15 @@ That is it. You are done.
 
 ## 4. Grow it from Recs
 
-Every row in the Recs table carries a **Decide** link. `add` and `drop` open a
-prefilled issue that the bot acts on and closes. Where a pull request is
-waiting, `review` opens it, and accepting the paper is a merge while rejecting
-it is a close. Nothing needs editing by hand.
+Every row in the Recs table carries a **Decide** cell offering the same two
+choices, `add` and `drop`. Both open a prefilled issue that the bot acts on and
+closes, so nothing needs editing by hand.
+
+Where `recPullRequests` is on, `add` instead opens the pull request already
+waiting for that paper, and merging it is the acceptance. The words do not
+change with the mechanism: whichever is behind the link, you are answering the
+same question. Dropping a paper still goes through an issue, and the next run
+closes the pull request along with every other Rec that has left the list.
 
 The longhand equivalents, if you prefer them:
 
@@ -196,6 +201,28 @@ The backward direction is divided by `citationCount ^ popularityPenalty`, the
 same idea as the IDF term in TF-IDF. Without it the list fills with the field's
 plumbing, since every NLP paper cites Adam and BERT and neither says anything
 about your topic.
+
+## Judging a paper you cannot judge by its citations
+
+A paper published last month has no citations, so every measure derived from
+them — citation count, Score's own inputs, field-normalised impact — is zero for
+exactly the papers the *New in the past month* table exists to show. Two columns
+carry signal that does not depend on time:
+
+- **Top authors**: the two authors with the highest h-index, and that h-index.
+  The best two rather than the first two, because the first author is usually
+  the most junior and the senior name is the one that predicts quality. A mean
+  would be dragged down by every student on the paper and a sum would just
+  reward long author lists.
+- **Affiliation**: the one or two places the authors are from, by how many of
+  them share it, ties broken by the h-index of whoever carries it. Each author
+  votes once, so a paper does not list one person's two employers.
+
+Both come from the same Semantic Scholar request as everything else, so they
+cost nothing. Affiliations are free text there and are missing perhaps half the
+time; a dash means the API had nothing, not that the authors are unaffiliated.
+Existing surveys fill these in on their next full refresh, which the daily run
+does.
 
 ## Sorting
 
