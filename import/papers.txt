@@ -10,3 +10,43 @@
 # Commit this file and the survey rebuilds itself. Lines starting with # are
 # ignored. Anything that could not be looked up is left here so you can fix it.
 
+# --- past month ---
+# RecurTrace: Adaptive Latent Reasoning with Loop-Time Memory
+#   Zhizheng Wu (h=39) · 2026 · 0 citations · past month · cites 2 in your list
+https://arxiv.org/abs/2609.03379
+
+# Answer-Distribution Trajectories: A Stochastic-Dynamics View of LLM Reasoning
+#   C. Schönlieb (h=28) · 2026 · 0 citations · past month · cites 2 in your list
+https://arxiv.org/abs/2609.09030
+
+# NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction
+#   Biqing Qi (h=23) · 2026 · 0 citations · past month · cites 2 in your list
+https://arxiv.org/abs/2609.10715
+
+# TROVE: Adaptive Agent Skill Orchestration via Trace-Grounded Route Validation and Editing
+#   Chaoyue Niu (h=17) · 2026 · 0 citations · past month · cites 2 in your list
+https://arxiv.org/abs/2609.05019
+
+# AgentFactory: Towards Automated Agentic System Design and Optimization
+#   Guibo Luo (h=14) · Peking University Shenzhen Hospital · 2026 · 0 citations · past month · cites 2 in your list
+https://arxiv.org/abs/2609.01045
+
+# Prefix-Denoising Consistency: Test-Time Verification for Diffusion Language Models
+#   Junpei Komiyama (h=14) · 2026 · 0 citations · past month · cites 2 in your list
+https://arxiv.org/abs/2608.25311
+
+# From Atomic to Agentic: Towards Interpretable Evaluation of LLMs'Agentic Mathematical Capabilities
+#   Philip S. Yu (h=12) · 2026 · 0 citations · past month · cites 2 in your list
+https://arxiv.org/abs/2608.26950
+
+# Fine-Tuning a KV Cache Concatenation-Aware Model or Recomputing KV Caches? Why Not Both?
+#   Jun Deguchi (h=11) · 2026 · 0 citations · past month · cites 2 in your list
+https://arxiv.org/abs/2609.09768
+
+# Safin-1: Safety from Within through Memory-Native State Evolution
+#   Ermo Hua (h=11) · 2026 · 0 citations · past month · cites 2 in your list
+https://arxiv.org/abs/2609.00092
+
+# TuringLLM: Efficiently Scaling Foundation Models Toward Physical AI
+#   An-Hui Liu (h=7) · 2026 · 0 citations · past month · cites 2 in your list
+https://arxiv.org/abs/2608.30567
