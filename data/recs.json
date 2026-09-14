@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-14T09:53:45.497Z",
+  "updatedAt": "2026-09-14T15:56:25.481Z",
   "recs": [
     {
       "id": "99f4a70bc9c0a2ad56f17de03adc3f72c2aa43d8",
@@ -66,7 +66,7 @@
       "id": "d26701f78f38ffaa0108d36e9dbc6b04c9706a9d",
       "title": "NCP-ArchPreview Technical Report: Moving towards Latent Space Language Models through Next Concept Prediction",
       "authors": [
-        "The Intern-NCP Team Jiaqi Cao",
+        "T.-A. Cao",
         "Chi-Yu Chen",
         "Shuang Cheng",
         "Xu Cheng",
@@ -85,7 +85,7 @@
         "Jun-Zhe Shen",
         "Yun-Chong Song",
         "Hao Sun",
-        "Zhong-Bo Tian",
+        "Zhongbo Tian",
         "Yi-Xuan Wang",
         "Ru-Bin Wei",
         "Jia-Xi Xiong",
@@ -826,9 +826,9 @@
       "doi": null,
       "arxivId": "1301.3781",
       "pdf": null,
-      "citationCount": 35049,
+      "citationCount": 35051,
       "referenceCount": 36,
-      "influentialCitationCount": 4364,
+      "influentialCitationCount": 4365,
       "source": null,
       "addedAt": "2026-09-14",
       "overlap": 0,
@@ -853,9 +853,9 @@
       "doi": "10.1145/219717.219748",
       "arxivId": null,
       "pdf": "https://dl.acm.org/doi/pdf/10.1145/219717.219748",
-      "citationCount": 17719,
+      "citationCount": 17722,
       "referenceCount": 8,
-      "influentialCitationCount": 2694,
+      "influentialCitationCount": 2695,
       "source": null,
       "addedAt": "2026-09-14",
       "overlap": 0,
