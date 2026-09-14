@@ -176,3 +176,48 @@ test("a paper dated in the future is not treated as fresh", () => {
   });
   assert.equal(out[0].id, "now");
 });
+
+// ---- Earning a reserved slot -------------------------------------------
+
+/**
+ * The failure this exists to stop: on a 20-paper numeracy survey, every one of
+ * the ten "past month" rows was an agent or inference paper that had cited the
+ * same two famous entries in passing. They met the floor of 2 and nothing
+ * else, so they filled slots reserved for the most relevant recent work.
+ */
+test("a reserved slot needs more than the bare minimum connection", () => {
+  const recent = (id, overlap) => ({
+    id,
+    score: 20,
+    overlap,
+    publicationDate: new Date(Date.now() - 5 * 86_400_000).toISOString().slice(0, 10),
+    why: `cites ${overlap} in your list`,
+  });
+
+  const out = applyFreshness([recent("weak", 2), recent("strong", 4)], {
+    windows: [{ days: 30, count: 5, label: "past month" }],
+    minOverlap: 3,
+  });
+
+  assert.equal(out.filter((p) => p.freshWindow).length, 1);
+  assert.equal(out.find((p) => p.freshWindow).id, "strong");
+});
+
+test("an unfillable window gives its slots back rather than taking weak papers", () => {
+  const weak = {
+    id: "weak",
+    score: 20,
+    overlap: 2,
+    publicationDate: new Date().toISOString().slice(0, 10),
+    why: "cites 2 in your list",
+  };
+  const out = applyFreshness([weak], { windows: [{ days: 30, count: 5, label: "past month" }], minOverlap: 3 });
+  assert.equal(out.length, 1, "the paper is still in the list");
+  assert.equal(out[0].freshWindow, undefined, "but not promoted into the recent table");
+});
+
+test("with no threshold set, anything recent still qualifies", () => {
+  const paper = { id: "a", score: 1, overlap: 0, publicationDate: new Date().toISOString().slice(0, 10) };
+  const out = applyFreshness([paper], { windows: [{ days: 30, count: 1, label: "past month" }] });
+  assert.equal(out[0].freshWindow, "past month");
+});
