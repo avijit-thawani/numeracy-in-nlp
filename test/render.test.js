@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { renderTable, allViews, SORTS } from "../lib/views.js";
+import { renderTable, allViews, sortLinks, SORTS } from "../lib/views.js";
 import {
   renderSurvey,
   applySurvey,
@@ -82,18 +82,36 @@ test("a pipe in a title cannot break the table", () => {
     showWhy: true,
     repo: "o/r",
   });
-  assert.equal(columnCount(row), 8);
+  assert.equal(columnCount(row), 5);
 });
 
-test("the active column is marked and the others are links", () => {
-  const [head] = renderTable({ rows: [rec()], list: "core", sort: "year" });
-  assert.ok(!/\[Year\]/.test(head), "the active column must not link to itself");
-  assert.match(head, /\[Score\]\(core-by-score\.md\)/);
+/**
+ * The sort links moved out of the headings and under the table when Venue,
+ * Year and Cited by were folded into one Details cell.
+ */
+test("the active sort is marked and the others are links", () => {
+  const line = sortLinks("core", "year");
+  assert.match(line, /\*\*Year\*\*/, "the active sort is named, not linked");
+  assert.ok(!/\[Year\]/.test(line), "the active sort must not link to itself");
+  assert.match(line, /\[Score\]\(core-by-score\.md\)/);
+  assert.match(line, /\[Cited by\]\(core-by-citations\.md\)/);
+});
+
+test("the details cell carries year, venue, citations and the reason", () => {
+  const [, , row] = renderTable({
+    rows: [rec({ year: 2026, venue: "ACL", citationCount: 1, why: "cites 2 in your list" })],
+    list: "recs",
+    showWhy: true,
+    repo: "o/r",
+  });
+  assert.match(row, /2026 · ACL/);
+  assert.match(row, /1 citation</, "singular, since it is read as prose");
+  assert.match(row, /cites 2 in your list/);
 });
 
 test("an empty list explains itself instead of rendering an empty table", () => {
-  assert.match(renderTable({ rows: [], list: "core", sort: "score" })[0], /Nothing in Core yet/);
-  assert.match(renderTable({ rows: [], list: "recs", sort: "score" })[0], /Nothing yet/);
+  assert.match(renderTable({ rows: [], list: "core" })[0], /Nothing in your list yet/);
+  assert.match(renderTable({ rows: [], list: "recs" })[0], /Nothing yet/);
 });
 
 test("every list and sort combination gets a file", () => {
@@ -222,11 +240,23 @@ test("each recency window gets its own table", () => {
 
 test("a window heading is not repeated in every row of its table", () => {
   const recs = [
-    { id: "a", title: "Fresh", score: 5, why: "past month · cites 2 in Core", freshWindow: "past month" },
+    { id: "a", title: "Fresh", score: 5, why: "past month · cites 2 in your list", freshWindow: "past month" },
   ];
   const block = renderSurvey({ config: { title: "T", description: "" }, core: [], recs });
-  assert.match(block, /cites 2 in Core/);
+  assert.match(block, /cites 2 in your list/);
   assert.doesNotMatch(block, /past month · cites/, "the heading already said when");
+});
+
+/**
+ * "Core" is still the name in the files, and every survey carries `why`
+ * strings written before the rename. Renaming them as they are rendered means
+ * the next render is enough; nothing has to recompute its Recs first.
+ */
+test("a why string written before the rename still reads as your list", () => {
+  const recs = [{ id: "a", title: "Old", score: 5, why: "cited by 4 in Core" }];
+  const block = renderSurvey({ config: { title: "T", description: "" }, core: [], recs });
+  assert.match(block, /cited by 4 in your list/);
+  assert.doesNotMatch(block, /in Core/);
 });
 
 test("with nothing reserved, Recs are still shown by score", () => {

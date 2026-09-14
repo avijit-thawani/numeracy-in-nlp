@@ -101,7 +101,7 @@ const rows = [
 test("the index links each survey by folder and shows its counts", () => {
   const block = renderIndexBlock(rows);
   assert.match(block, /\[Jeff Dean\]\(demos\/dean\/\)/);
-  assert.match(block, /\*\*37\*\* in Core/);
+  assert.match(block, /\*\*37\*\* in your list/);
   assert.match(block, /\*\*25\*\* Recs/);
   assert.match(block, /\[demos\/bengio\]\(demos\/bengio\/\)/, "no title falls back to the folder");
   assert.doesNotMatch(block, /\*\*0\*\* Recs/, "a survey with no Recs yet says nothing rather than zero");

@@ -4,7 +4,7 @@ A living survey is a GitHub repo whose README *is* the survey: a table of the pa
 
 **It is your repo and nothing else.** No website to deploy, no server, no database, no account, no API keys. Your papers and every file derived from them (`data/`, `views/`, the README itself) are committed to the repo you own, and a GitHub Action running in your own Actions minutes rewrites them in place. The only thing that leaves is a lookup of each paper's public metadata from Semantic Scholar and OpenAlex; delete the repo and nothing of yours survives anywhere.
 
-**No LLM is involved in the recommendations.** Recs are computed by a citation graph algorithm — `lib/recommend.js`, scored in `lib/score.js`, with every knob exposed in `survey.config.json`. It is deterministic: the same survey produces the same list, every row states exactly why it is there (`cites 4 in Core`), and if you dislike the ranking you can change the rule rather than reword a prompt. Nothing here calls a model at all: the one-line summary under each title is Semantic Scholar's own `tldr` field, fetched like the rest of the metadata.
+**No LLM is involved in the recommendations.** Recs are computed by a citation graph algorithm — `lib/recommend.js`, scored in `lib/score.js`, with every knob exposed in `survey.config.json`. It is deterministic: the same survey produces the same list, every row states exactly why it is there (`cites 4 in your list`), and if you dislike the ranking you can change the rule rather than reword a prompt. Nothing here calls a model at all: the one-line summary under each title is Semantic Scholar's own `tldr` field, fetched like the rest of the metadata.
 
 Setup is two steps.
 
@@ -28,7 +28,7 @@ triggers a rebuild as soon as you commit.
 ### Start from a profile
 
 The fastest start, and the one most people want: name a person, and everything
-they have published becomes Core. Put one line in
+they have published becomes your list. Put one line in
 [`import/papers.txt`](import/papers.txt):
 
 ```
@@ -54,7 +54,7 @@ the profile is followed rather than imported once, so when they publish, the
 daily run adds the paper and the suggestions move with it. Followed profiles
 are recorded in `data/authors.json`.
 
-Papers by that author are Core, and everything those papers cite feeds the
+Papers by that author become your list, and everything those papers cite feeds the
 backward half of the ranking, so the foundations of their field surface as Recs
 without a separate import. If you want their *whole* bibliography listed rather
 than ranked, add a `refs:` line for the specific paper.
@@ -93,7 +93,7 @@ one cites, which for a survey is usually dozens — the example above contribute
 65. The popularity penalty strips the generic references, so you get the topical
 ones rather than Adam and BERT.
 
-These arrive as Recs rather than Core, because the curation was the cited
+These arrive as Recs rather than into your list, because the curation was the cited
 paper's author's and not yours. Promote the ones you want by copying their links
 into `import/papers.txt`.
 
@@ -130,9 +130,9 @@ The longhand equivalents, if you prefer them:
 | To | Do this |
 | --- | --- |
 | Add more papers | More lines in `import/papers.txt`, or another `.bib` in `import/`. Both are re-read every run and nothing is added twice. |
-| Promote a Rec into Core | Copy its link into `import/papers.txt` and commit. It leaves Recs on the next run. |
+| Promote a Rec into your list | Copy its link into `import/papers.txt` and commit. It leaves Recs on the next run. |
 | Reject a Rec for good | Add its id to `data/dismissed.json`. |
-| Edit by hand or with an agent | Core is `data/core.json`, Recs is `data/recs.json`. Everything else is generated from those and will be overwritten. |
+| Edit by hand or with an agent | Your list is `data/core.json`, Recs is `data/recs.json`. Everything else is generated from those and will be overwritten. |
 
 ## More than one survey in one repo
 
@@ -165,12 +165,14 @@ One survey at the root is still the default and still works exactly as before.
 
 ## The two lists, and the Score
 
-**Core** is what the survey contains. **Recs** is what to read next. Those names
+**Your list** is what the survey contains. **Recs** is what to read next. In the
+files those are still `core` and `recs` -- `data/core.json`, `views/core-by-*.md` --
+because renaming them is a migration every existing survey would have to run.
 are used throughout: `data/core.json`, `data/recs.json`, `views/core-by-*.md`.
 
 Both carry a **Score** from 0 to 100 for how tied into the survey a paper is,
-measured against the most connected paper in its own list. A Core paper scores
-on how many other Core papers cite it or it cites, so 0 means nothing else here
+measured against the most connected paper in its own list. A paper in your list
+scores on how many others in it cite it or it cites, so 0 means nothing else here
 connects to it, which usually flags an outlier. Score is the default sort.
 
 **Recent work gets the top slots.** A paper published last month has had no
@@ -180,13 +182,13 @@ Recs list is therefore reserved: the best 10 from the past month, then the best
 10 from the past six months, then everything else by score. The windows do not
 overlap, they are filled by the same Score as the rest, and a window with
 nothing in it gives its slots back. Rows that took a reserved slot say so in
-the Why column (`past month · cites 3 in Core`). Turn it off or resize it with
+its own table under its own heading. Turn it off or resize it with
 `algorithm.freshness`.
 
 Recs come from two directions through the citation graph:
 
-- **`cites N in Core`**: newer work that builds on N of your papers.
-- **`cited by N in Core`**: older work that N of your papers rest on. The forward
+- **`cites N in your list`**: newer work that builds on N of your papers.
+- **`cited by N in your list`**: older work that N of your papers rest on. The forward
   pass can never find these, since they predate your papers.
 - **`from ...`**: the bibliography of a paper you seeded with `refs:`.
 
@@ -248,9 +250,9 @@ two comments alone.
 | `data/authors.json` | Profiles from `author:` lines, re-checked every run so new work arrives on its own. |
 | `import/` | Drop `.bib` / `.ris` files here to bulk-import. |
 | `survey.config.json` | Optional overrides. |
-| `data/core.json` | Core: the papers in the survey, with full metadata. The source of truth. |
+| `data/core.json` | Your list: the papers in the survey, with full metadata. The source of truth. |
 | `data/recs.json` | Recs: the current suggestions. |
-| `data/core.csv` | Spreadsheet export of Core. |
+| `data/core.csv` | Spreadsheet export of your list. |
 | `views/` | The same two lists rendered in every sort order, one file each. |
 | `data/seeded.json` | Suggestions pulled from a `refs:` bibliography, pending your review. |
 | `data/dismissed.json` | Paper ids to never suggest again (create it yourself). |

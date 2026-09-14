@@ -349,7 +349,7 @@ const runSurvey = async ({ refreshMode, isOnlySurvey, label }) => {
     papers = [...byId.values()];
   }
   const dismissed = readJson(p("data/dismissed.json"), { ids: [] }).ids ?? [];
-  log.stat("papers in Core", papers.length);
+  log.stat("papers in your list", papers.length);
 
   // ---- Gather new links -------------------------------------------------
   // The seed list moved into import/ so everything you feed the survey lives
@@ -701,7 +701,7 @@ const runSurvey = async ({ refreshMode, isOnlySurvey, label }) => {
     "#",
     "# 'author: <profile>' follows everyone's work by one person: a Semantic Scholar",
     "# author page, an OpenAlex id, an ORCID, or just their name. Their papers become",
-    "# Core, and new ones are picked up automatically. (Google Scholar has no API.)",
+    "# your list, and new ones are picked up automatically. (Google Scholar has no API.)",
     "#",
     "# Prefix a line with 'refs:' to pull in everything that paper cites.",
     "#",

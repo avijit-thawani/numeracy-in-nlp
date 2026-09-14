@@ -78,7 +78,7 @@ export const render = (surveyRoot = ROOT, { name = ".", isOnlySurvey = true } = 
   });
   writeFileSync(readmePath, applyFooter(applySurvey(existing, block), renderFooter()), "utf8");
 
-  log.info(`${isOnlySurvey ? "Rendered" : `Rendered ${name}:`} ${core.length} in Core and ${recs.length} Recs.`);
+  log.info(`${isOnlySurvey ? "Rendered" : `Rendered ${name}:`} ${core.length} in your list and ${recs.length} Recs.`);
 };
 
 /**
