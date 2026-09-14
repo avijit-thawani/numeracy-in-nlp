@@ -334,14 +334,14 @@ test("the top two authors by h-index are named, not the first two", () => {
     { name: "Middle Author", hIndex: 50, affiliations: ["UC Irvine"] },
   ];
   assert.deepEqual(topAuthorsOf(authors), [
-    { name: "Senior Author", hIndex: 63 },
-    { name: "Middle Author", hIndex: 50 },
+    { name: "Senior Author", hIndex: 63, authorId: null },
+    { name: "Middle Author", hIndex: 50, authorId: null },
   ]);
 });
 
 test("an author with no h-index is left out rather than counted as zero", () => {
   assert.deepEqual(topAuthorsOf([{ name: "Unknown" }, { name: "Known", hIndex: 5 }]), [
-    { name: "Known", hIndex: 5 },
+    { name: "Known", hIndex: 5, authorId: null },
   ]);
   assert.deepEqual(topAuthorsOf([]), []);
   assert.deepEqual(topAuthorsOf(undefined), []);
@@ -381,11 +381,22 @@ test("both columns say so when a paper carries neither signal", () => {
 
 test("the author column carries the h-index that justifies it", () => {
   const [, , row] = renderTable({
-    rows: [rec({ topAuthors: [{ name: "Sameer Singh", hIndex: 63 }], affiliations: ["UC Irvine"] })],
+    rows: [rec({ topAuthors: [{ name: "Sameer Singh", hIndex: 63, authorId: "34650964" }], affiliations: ["UC Irvine"] })],
     list: "core",
   });
-  assert.match(row, /Sameer Singh \(h=63\)/);
-  assert.match(row, /UC Irvine/);
+  assert.match(row, /\[Sameer Singh\]\(https:\/\/www\.semanticscholar\.org\/author\/Sameer-Singh\/34650964\)/);
+  assert.match(row, /\(h=63\)/);
+  assert.match(row, /UC Irvine/, "affiliations stay plain: S2 has no page for an institution");
+  assert.doesNotMatch(row, /\[UC Irvine\]\(/);
+});
+
+test("an author with no id is named but not linked", () => {
+  const [, , row] = renderTable({
+    rows: [rec({ topAuthors: [{ name: "No Id", hIndex: 4, authorId: null }] })],
+    list: "core",
+  });
+  assert.match(row, /No Id \(h=4\)/);
+  assert.doesNotMatch(row, /semanticscholar\.org\/author/);
 });
 
 test("one author cannot fill both affiliation slots with their own employers", () => {

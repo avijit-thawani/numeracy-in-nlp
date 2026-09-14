@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { scoreCore, scoreRecs } from "../lib/score.js";
+import { scoreCore, scoreRecs, applyAuthority, authorityFactor } from "../lib/score.js";
 
 const edges = (entries) => new Map(Object.entries(entries));
 
@@ -85,4 +85,65 @@ test("a direction with no entries does not produce NaN", () => {
   const scores = scoreRecs({ forwardCounts: new Map(), backwardScores: new Map([["a", 3]]) });
   assert.equal(scores.get("a"), 100);
   assert.ok(!Number.isNaN(scores.get("a")));
+});
+
+// ---- Author authority --------------------------------------------------
+
+/**
+ * A famous author writing outside your topic must not outrank a paper that
+ * cites four of yours: connection stays the ranking, authority only breaks
+ * ties inside it. That is why this is a small multiplier and not a term added
+ * to the score.
+ */
+test("authority nudges the order without overturning it", () => {
+  const papers = [
+    { id: "connected", score: 100, topAuthors: [] },
+    { id: "famous", score: 60, topAuthors: [{ name: "Big Name", hIndex: 99 }] },
+  ];
+  const out = applyAuthority(papers, 0.2);
+  assert.equal(out[0].id, "connected");
+  assert.ok(out[0].score > out[1].score, "the well-connected paper keeps the top spot");
+});
+
+test("between equally connected papers, the established author wins", () => {
+  const out = applyAuthority(
+    [
+      { id: "unknown", score: 50, topAuthors: [{ name: "New", hIndex: 1 }] },
+      { id: "senior", score: 50, topAuthors: [{ name: "Senior", hIndex: 80 }] },
+    ],
+    0.2
+  );
+  const byId = new Map(out.map((p) => [p.id, p.score]));
+  assert.ok(byId.get("senior") > byId.get("unknown"));
+});
+
+test("the top of the list is still 100 after adjustment", () => {
+  const out = applyAuthority(
+    [
+      { id: "a", score: 100, topAuthors: [] },
+      { id: "b", score: 90, topAuthors: [{ name: "X", hIndex: 50 }] },
+    ],
+    0.2
+  );
+  assert.equal(Math.max(...out.map((p) => p.score)), 100);
+});
+
+test("a weight of zero leaves every score exactly as it was", () => {
+  const papers = [{ id: "a", score: 42, topAuthors: [{ name: "X", hIndex: 90 }] }];
+  assert.deepEqual(applyAuthority(papers, 0), papers);
+});
+
+/**
+ * h-indexes are long-tailed: 5 to 20 is a real difference, 80 to 95 is noise.
+ */
+test("the h-index curve flattens at the top", () => {
+  const gainLow = authorityFactor([{ hIndex: 20 }], 0.2) - authorityFactor([{ hIndex: 5 }], 0.2);
+  const gainHigh = authorityFactor([{ hIndex: 95 }], 0.2) - authorityFactor([{ hIndex: 80 }], 0.2);
+  assert.ok(gainLow > gainHigh * 3, "early h-index growth counts for much more");
+});
+
+test("no author data means no adjustment at all", () => {
+  assert.equal(authorityFactor([], 0.2), 1);
+  assert.equal(authorityFactor(undefined, 0.2), 1);
+  assert.equal(authorityFactor([{ name: "X" }], 0.2), 1);
 });

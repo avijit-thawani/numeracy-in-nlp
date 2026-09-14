@@ -6,7 +6,7 @@ import { log, writeSummary } from "../lib/log.js";
 import { resolveAll, resolveIdentifier } from "../lib/resolve.js";
 import { fetchPapers, fetchReferences, matchByTitle } from "../lib/semanticScholar.js";
 import { parseAuthorTarget, resolveAuthorPapers } from "../lib/authors.js";
-import { fetchPapersFallback } from "../lib/openalex.js";
+import { fetchPapersFallback, fetchAffiliations } from "../lib/openalex.js";
 import { buildRecommendations } from "../lib/recommend.js";
 import { loadGraph, saveGraph, keysWorthKeeping } from "../lib/graphCache.js";
 import { parseBibliography } from "../lib/bibliography.js";
@@ -653,6 +653,21 @@ const runSurvey = async ({ refreshMode, isOnlySurvey, label }) => {
     candidates = readJson(p("data/recs.json"), { recs: [] }, { critical: true }).recs ?? [];
   }
   log.stat("Recs", candidates.length);
+
+  // Affiliations, where Semantic Scholar had none. Only for the suggestions,
+  // which is a bounded handful, and only for ones still missing it.
+  if (candidates.length) {
+    try {
+      const filled = await log.phase("filling in affiliations", () => fetchAffiliations(candidates, email));
+      if (filled.size) {
+        candidates = candidates.map((c) => (filled.has(c.id) ? { ...c, affiliations: filled.get(c.id) } : c));
+      }
+    } catch (err) {
+      // A column that stays empty is a much smaller problem than a run that
+      // fails, so this never takes the survey down with it.
+      log.warn(`Could not enrich affiliations: ${err.message}`);
+    }
+  }
 
   // ---- Write everything out --------------------------------------------
   log.step("Writing data files and README");
