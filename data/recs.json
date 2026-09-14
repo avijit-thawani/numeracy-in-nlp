@@ -1,88 +1,97 @@
 {
-  "updatedAt": "2026-09-14T16:41:14.453Z",
+  "updatedAt": "2026-09-14T17:27:44.237Z",
   "recs": [
     {
-      "id": "99f4a70bc9c0a2ad56f17de03adc3f72c2aa43d8",
-      "title": "VLSP 2025 Shared Task: Vietnamese Temporal Question Answering (TemporalQA)",
+      "id": "bfaadb53521fdb320ee9ba8ed3faf403b7145384",
+      "title": "RecurTrace: Adaptive Latent Reasoning with Loop-Time Memory",
       "authors": [
-        "Duc Thi Pham",
-        "Ha My Linh",
-        "Le Ngoc Toan",
-        "H. Nguyễn"
+        "Yu-Xiang Wang",
+        "Kun-Yu Feng",
+        "Ying-Da Shen",
+        "Hao Xu",
+        "Jun-Yu Wang",
+        "Zhizheng Wu"
       ],
       "topAuthors": [
         {
-          "name": "H. Nguyễn",
-          "hIndex": 5
+          "name": "Zhizheng Wu",
+          "hIndex": 39,
+          "authorId": "2758425"
         },
         {
-          "name": "Ha My Linh",
-          "hIndex": 2
-        }
-      ],
-      "affiliations": [],
-      "year": 2026,
-      "venue": "VNU Journal of Science Computer Science and Communication Engineering",
-      "publicationDate": "2026-08-19",
-      "summary": "This task aims to benchmark systems in their ability to comprehend and perform reasoning over temporal information expressed in Vietnamese, providing the first dedicated benchmark for temporal reasoning in Vietnamese, filling animportant resource gap and supporting future research on temporal understanding and reasoning for Vietnamese NLP.",
-      "url": "https://www.semanticscholar.org/paper/99f4a70bc9c0a2ad56f17de03adc3f72c2aa43d8",
-      "doi": "10.25073/2588-1086/vnucsce.6505",
-      "arxivId": null,
-      "pdf": "https://jcsce.vnu.edu.vn/index.php/jcsce/article/download/6505/237",
-      "citationCount": 0,
-      "referenceCount": 26,
-      "influentialCitationCount": 0,
-      "source": null,
-      "addedAt": "2026-09-14",
-      "overlap": 2,
-      "direction": "forward",
-      "score": 22.22222222222222,
-      "why": "past month · cites 2 in your list",
-      "fromReferences": false,
-      "freshWindow": "past month",
-      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/71",
-      "prNumber": 71
-    },
-    {
-      "id": "03e4374e9b3a20015e0baf9064fbbee439618493",
-      "title": "Fine-Tuning a KV Cache Concatenation-Aware Model or Recomputing KV Caches? Why Not Both?",
-      "authors": [
-        "F. Tachibana",
-        "Daisuke Miyashita",
-        "Jun Deguchi"
-      ],
-      "topAuthors": [
-        {
-          "name": "Jun Deguchi",
-          "hIndex": 11
-        },
-        {
-          "name": "F. Tachibana",
-          "hIndex": 10
+          "name": "Yu-Xiang Wang",
+          "hIndex": 0,
+          "authorId": "2470701631"
         }
       ],
       "affiliations": [],
       "year": 2026,
       "venue": null,
-      "publicationDate": "2026-09-09",
-      "summary": "A combined approach is proposed that fine-tunes the model while taking KV cache concatenation into account and selectively recomputes a subset of the KV caches and demonstrates improved accuracy for long-context inputs.",
-      "url": "https://www.semanticscholar.org/paper/03e4374e9b3a20015e0baf9064fbbee439618493",
+      "publicationDate": "2026-09-03",
+      "summary": "RecurTrace introduces Loop Memory Attention, which lets each looped layer attend to its own states from previous iterations along the loop-time axis, so the model can revisit earlier computations instead of relying on the latest state alone.",
+      "url": "https://www.semanticscholar.org/paper/bfaadb53521fdb320ee9ba8ed3faf403b7145384",
       "doi": null,
-      "arxivId": "2609.09768",
+      "arxivId": "2609.03379",
       "pdf": null,
       "citationCount": 0,
-      "referenceCount": 39,
+      "referenceCount": 53,
       "influentialCitationCount": 0,
       "source": null,
       "addedAt": "2026-09-14",
       "overlap": 2,
       "direction": "forward",
-      "score": 22.22222222222222,
+      "score": 21.48529628023697,
       "why": "past month · cites 2 in your list",
       "fromReferences": false,
       "freshWindow": "past month",
-      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/72",
-      "prNumber": 72
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/76",
+      "prNumber": 76
+    },
+    {
+      "id": "f0720a95e441d4701cc99344b0fa95c7089ac9c2",
+      "title": "Answer-Distribution Trajectories: A Stochastic-Dynamics View of LLM Reasoning",
+      "authors": [
+        "M. Catala",
+        "Haitz Sáez de Ocáriz Borde",
+        "D. Murari",
+        "C. Schönlieb",
+        "Pietro Liò",
+        "George D. Montañez"
+      ],
+      "topAuthors": [
+        {
+          "name": "C. Schönlieb",
+          "hIndex": 28,
+          "authorId": "29398330"
+        },
+        {
+          "name": "D. Murari",
+          "hIndex": 6,
+          "authorId": "2082098916"
+        }
+      ],
+      "affiliations": [],
+      "year": 2026,
+      "venue": null,
+      "publicationDate": "2026-09-08",
+      "summary": "This work introduces answer-distribution trajectories, a stochastic-dynamics-inspired representation that tracks the model's full predictive distribution over answers as reasoning unfolds, and suggests that answer-distribution trajectories provide a rich framework for analysing and evaluating the dynamics of LLM reasoning.",
+      "url": "https://www.semanticscholar.org/paper/f0720a95e441d4701cc99344b0fa95c7089ac9c2",
+      "doi": null,
+      "arxivId": "2609.09030",
+      "pdf": null,
+      "citationCount": 0,
+      "referenceCount": 46,
+      "influentialCitationCount": 0,
+      "source": null,
+      "addedAt": "2026-09-14",
+      "overlap": 2,
+      "direction": "forward",
+      "score": 21.22666295907214,
+      "why": "past month · cites 2 in your list",
+      "fromReferences": false,
+      "freshWindow": "past month",
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/74",
+      "prNumber": 74
     },
     {
       "id": "d26701f78f38ffaa0108d36e9dbc6b04c9706a9d",
@@ -118,11 +127,13 @@
       "topAuthors": [
         {
           "name": "Biqing Qi",
-          "hIndex": 23
+          "hIndex": 23,
+          "authorId": "66242399"
         },
         {
           "name": "Qi Zhang",
-          "hIndex": 10
+          "hIndex": 10,
+          "authorId": "2256972722"
         }
       ],
       "affiliations": [],
@@ -141,56 +152,12 @@
       "addedAt": "2026-09-14",
       "overlap": 2,
       "direction": "forward",
-      "score": 22.22222222222222,
+      "score": 21.074465262428898,
       "why": "past month · cites 2 in your list",
       "fromReferences": false,
       "freshWindow": "past month",
       "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/73",
       "prNumber": 73
-    },
-    {
-      "id": "f0720a95e441d4701cc99344b0fa95c7089ac9c2",
-      "title": "Answer-Distribution Trajectories: A Stochastic-Dynamics View of LLM Reasoning",
-      "authors": [
-        "M. Catala",
-        "Haitz Sáez de Ocáriz Borde",
-        "D. Murari",
-        "C. Schönlieb",
-        "Pietro Liò",
-        "George D. Montañez"
-      ],
-      "topAuthors": [
-        {
-          "name": "C. Schönlieb",
-          "hIndex": 28
-        },
-        {
-          "name": "D. Murari",
-          "hIndex": 6
-        }
-      ],
-      "affiliations": [],
-      "year": 2026,
-      "venue": null,
-      "publicationDate": "2026-09-08",
-      "summary": "This work introduces answer-distribution trajectories, a stochastic-dynamics-inspired representation that tracks the model's full predictive distribution over answers as reasoning unfolds, and suggests that answer-distribution trajectories provide a rich framework for analysing and evaluating the dynamics of LLM reasoning.",
-      "url": "https://www.semanticscholar.org/paper/f0720a95e441d4701cc99344b0fa95c7089ac9c2",
-      "doi": null,
-      "arxivId": "2609.09030",
-      "pdf": null,
-      "citationCount": 0,
-      "referenceCount": 46,
-      "influentialCitationCount": 0,
-      "source": null,
-      "addedAt": "2026-09-14",
-      "overlap": 2,
-      "direction": "forward",
-      "score": 22.22222222222222,
-      "why": "past month · cites 2 in your list",
-      "fromReferences": false,
-      "freshWindow": "past month",
-      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/74",
-      "prNumber": 74
     },
     {
       "id": "36c9bc2679b9ef9e4d3db0fa7225fa78c6449f89",
@@ -207,11 +174,13 @@
       "topAuthors": [
         {
           "name": "Chaoyue Niu",
-          "hIndex": 17
+          "hIndex": 17,
+          "authorId": "3388591"
         },
         {
           "name": "Shengzhong Liu",
-          "hIndex": 5
+          "hIndex": 5,
+          "authorId": "2332066974"
         }
       ],
       "affiliations": [],
@@ -230,103 +199,12 @@
       "addedAt": "2026-09-14",
       "overlap": 2,
       "direction": "forward",
-      "score": 22.22222222222222,
+      "score": 20.84309723167279,
       "why": "past month · cites 2 in your list",
       "fromReferences": false,
       "freshWindow": "past month",
       "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/75",
       "prNumber": 75
-    },
-    {
-      "id": "bfaadb53521fdb320ee9ba8ed3faf403b7145384",
-      "title": "RecurTrace: Adaptive Latent Reasoning with Loop-Time Memory",
-      "authors": [
-        "Yu-Xiang Wang",
-        "Kun-Yu Feng",
-        "Ying-Da Shen",
-        "Hao Xu",
-        "Jun-Yu Wang",
-        "Zhizheng Wu"
-      ],
-      "topAuthors": [
-        {
-          "name": "Zhizheng Wu",
-          "hIndex": 39
-        },
-        {
-          "name": "Yu-Xiang Wang",
-          "hIndex": 0
-        }
-      ],
-      "affiliations": [],
-      "year": 2026,
-      "venue": null,
-      "publicationDate": "2026-09-03",
-      "summary": "RecurTrace introduces Loop Memory Attention, which lets each looped layer attend to its own states from previous iterations along the loop-time axis, so the model can revisit earlier computations instead of relying on the latest state alone.",
-      "url": "https://www.semanticscholar.org/paper/bfaadb53521fdb320ee9ba8ed3faf403b7145384",
-      "doi": null,
-      "arxivId": "2609.03379",
-      "pdf": null,
-      "citationCount": 0,
-      "referenceCount": 53,
-      "influentialCitationCount": 0,
-      "source": null,
-      "addedAt": "2026-09-14",
-      "overlap": 2,
-      "direction": "forward",
-      "score": 22.22222222222222,
-      "why": "past month · cites 2 in your list",
-      "fromReferences": false,
-      "freshWindow": "past month",
-      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/76",
-      "prNumber": 76
-    },
-    {
-      "id": "b81444131d4d703af5347b63243c29d52874750d",
-      "title": "Codebook Agent: Amortized Topology Design for LLM Multi-Agent Systems",
-      "authors": [
-        "Jin-Xi Yu",
-        "Yubei Li",
-        "Eric Jiang",
-        "Zhi Zhang",
-        "Dong Liu",
-        "Wen-Xiao Zhao",
-        "Levina Li",
-        "Kai-Wei Chang",
-        "Y. Wu"
-      ],
-      "topAuthors": [
-        {
-          "name": "Eric Jiang",
-          "hIndex": 4
-        },
-        {
-          "name": "Dong Liu",
-          "hIndex": 4
-        }
-      ],
-      "affiliations": [],
-      "year": 2026,
-      "venue": null,
-      "publicationDate": "2026-09-02",
-      "summary": "Codebook Agent is the most accurate method on all six benchmarks the authors compare, and an MLP proxy that reads the flattened adjacency, regressed on measured utility and per-task normalized token cost, reranks the top decoded candidates in a single batched forward pass.",
-      "url": "https://www.semanticscholar.org/paper/b81444131d4d703af5347b63243c29d52874750d",
-      "doi": null,
-      "arxivId": "2609.02264",
-      "pdf": null,
-      "citationCount": 0,
-      "referenceCount": 43,
-      "influentialCitationCount": 0,
-      "source": null,
-      "addedAt": "2026-09-14",
-      "overlap": 2,
-      "direction": "forward",
-      "score": 22.22222222222222,
-      "why": "past month · cites 2 in your list",
-      "fromReferences": false,
-      "freshWindow": "past month",
-      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/77",
-      "prNumber": 77
     },
     {
       "id": "fbd0a5950d272bab1ed0b23bdc1ee1c8b0d2e759",
@@ -341,14 +219,18 @@
       "topAuthors": [
         {
           "name": "Guibo Luo",
-          "hIndex": 14
+          "hIndex": 14,
+          "authorId": "34708617"
         },
         {
           "name": "Yuesheng Zhu",
-          "hIndex": 7
+          "hIndex": 7,
+          "authorId": "2275924972"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "Peking University Shenzhen Hospital"
+      ],
       "year": 2026,
       "venue": "Pacific Rim International Conference on Artificial Intelligence",
       "publicationDate": "2026-09-01",
@@ -364,12 +246,211 @@
       "addedAt": "2026-09-14",
       "overlap": 2,
       "direction": "forward",
-      "score": 22.22222222222222,
+      "score": 20.696465294547554,
       "why": "past month · cites 2 in your list",
       "fromReferences": false,
       "freshWindow": "past month",
       "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/78",
       "prNumber": 78
+    },
+    {
+      "id": "146e5726740d85dafff4cdc50eb079dbb731266c",
+      "title": "Prefix-Denoising Consistency: Test-Time Verification for Diffusion Language Models",
+      "authors": [
+        "Yuki Ichihara",
+        "Naoto Iwase",
+        "Mohammad Atif Quamar",
+        "Junpei Komiyama"
+      ],
+      "topAuthors": [
+        {
+          "name": "Junpei Komiyama",
+          "hIndex": 14,
+          "authorId": "2762536"
+        },
+        {
+          "name": "Yuki Ichihara",
+          "hIndex": 3,
+          "authorId": "2345925590"
+        }
+      ],
+      "affiliations": [],
+      "year": 2026,
+      "venue": null,
+      "publicationDate": "2026-08-26",
+      "summary": "PDC consistently improves upon the initial sample, outperforms independent generations under a computational constrained comparison, and is robust to different unmasking strategies and parameter settings, highlighting prefix-conditioned regeneration as an effective DLM-specific primitive for test-time verification.",
+      "url": "https://www.semanticscholar.org/paper/146e5726740d85dafff4cdc50eb079dbb731266c",
+      "doi": null,
+      "arxivId": "2608.25311",
+      "pdf": null,
+      "citationCount": 0,
+      "referenceCount": 37,
+      "influentialCitationCount": 0,
+      "source": null,
+      "addedAt": "2026-09-14",
+      "overlap": 2,
+      "direction": "forward",
+      "score": 20.696465294547554,
+      "why": "past month · cites 2 in your list",
+      "fromReferences": false,
+      "freshWindow": "past month",
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/101",
+      "prNumber": 101
+    },
+    {
+      "id": "02369ba7595d71de6a09383960b49f26e548b095",
+      "title": "From Atomic to Agentic: Towards Interpretable Evaluation of LLMs'Agentic Mathematical Capabilities",
+      "authors": [
+        "Jiayi Kuang",
+        "Yinghui Li",
+        "Yun-Ze Song",
+        "Keyu Chen",
+        "Zhi-Feng Shen",
+        "Yangning Li",
+        "Yi-Dong Wang",
+        "Di Yin",
+        "Ruizhi Qiao",
+        "Xing Sun",
+        "Kailun Jin",
+        "Ying Shen",
+        "Liang Lin",
+        "Philip S. Yu"
+      ],
+      "topAuthors": [
+        {
+          "name": "Philip S. Yu",
+          "hIndex": 12,
+          "authorId": "2284755458"
+        },
+        {
+          "name": "Yangning Li",
+          "hIndex": 11,
+          "authorId": "2258649570"
+        }
+      ],
+      "affiliations": [],
+      "year": 2026,
+      "venue": null,
+      "publicationDate": "2026-08-27",
+      "summary": "Experiments reveal that models with similar end-to-end accuracy can exhibit markedly different agentic capability profiles, demonstrating that process-level evaluation is crucial for interpreting the true potential of LLMs and guiding the development of next-generation mathematical agents.",
+      "url": "https://www.semanticscholar.org/paper/02369ba7595d71de6a09383960b49f26e548b095",
+      "doi": null,
+      "arxivId": "2608.26950",
+      "pdf": null,
+      "citationCount": 0,
+      "referenceCount": 78,
+      "influentialCitationCount": 0,
+      "source": null,
+      "addedAt": "2026-09-14",
+      "overlap": 2,
+      "direction": "forward",
+      "score": 20.581376578345992,
+      "why": "past month · cites 2 in your list",
+      "fromReferences": false,
+      "freshWindow": "past month",
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/102",
+      "prNumber": 102
+    },
+    {
+      "id": "03e4374e9b3a20015e0baf9064fbbee439618493",
+      "title": "Fine-Tuning a KV Cache Concatenation-Aware Model or Recomputing KV Caches? Why Not Both?",
+      "authors": [
+        "F. Tachibana",
+        "Daisuke Miyashita",
+        "Jun Deguchi"
+      ],
+      "topAuthors": [
+        {
+          "name": "Jun Deguchi",
+          "hIndex": 11,
+          "authorId": "49192096"
+        },
+        {
+          "name": "F. Tachibana",
+          "hIndex": 10,
+          "authorId": "38257658"
+        }
+      ],
+      "affiliations": [],
+      "year": 2026,
+      "venue": null,
+      "publicationDate": "2026-09-09",
+      "summary": "A combined approach is proposed that fine-tunes the model while taking KV cache concatenation into account and selectively recomputes a subset of the KV caches and demonstrates improved accuracy for long-context inputs.",
+      "url": "https://www.semanticscholar.org/paper/03e4374e9b3a20015e0baf9064fbbee439618493",
+      "doi": null,
+      "arxivId": "2609.09768",
+      "pdf": null,
+      "citationCount": 0,
+      "referenceCount": 39,
+      "influentialCitationCount": 0,
+      "source": null,
+      "addedAt": "2026-09-14",
+      "overlap": 2,
+      "direction": "forward",
+      "score": 20.5170023074956,
+      "why": "past month · cites 2 in your list",
+      "fromReferences": false,
+      "freshWindow": "past month",
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/72",
+      "prNumber": 72
+    },
+    {
+      "id": "2eb05c5cb8f028f498205e7c999db88d8763118c",
+      "title": "Safin-1: Safety from Within through Memory-Native State Evolution",
+      "authors": [
+        "Ming Zhang",
+        "Kai-Sen Yang",
+        "Shu Yu",
+        "Ermo Hua",
+        "Zhe-Kai Chen",
+        "Cheng Jin",
+        "Jing-Nan Zheng",
+        "Yi Zhang",
+        "Zhongtian Ma",
+        "Jia-Wei Zhou",
+        "Sirui Chen",
+        "Qiaosheng Zhang",
+        "Xiang Wang",
+        "Ning Ding",
+        "Xia Hu",
+        "Bowen Zhou",
+        "Youbang Sun",
+        "Chaochao Lu"
+      ],
+      "topAuthors": [
+        {
+          "name": "Ermo Hua",
+          "hIndex": 11,
+          "authorId": "2290020564"
+        },
+        {
+          "name": "Bowen Zhou",
+          "hIndex": 9,
+          "authorId": "2310664569"
+        }
+      ],
+      "affiliations": [],
+      "year": 2026,
+      "venue": null,
+      "publicationDate": "2026-08-31",
+      "summary": "The routed-state interface unifies contextual memory and persistent capability adaptation within the model's native computation, reframing memory from a passive record of prior context into an active substrate for maintaining and evolving model behavior.",
+      "url": "https://www.semanticscholar.org/paper/2eb05c5cb8f028f498205e7c999db88d8763118c",
+      "doi": null,
+      "arxivId": "2609.00092",
+      "pdf": null,
+      "citationCount": 0,
+      "referenceCount": 123,
+      "influentialCitationCount": 0,
+      "source": null,
+      "addedAt": "2026-09-14",
+      "overlap": 2,
+      "direction": "forward",
+      "score": 20.5170023074956,
+      "why": "past month · cites 2 in your list",
+      "fromReferences": false,
+      "freshWindow": "past month",
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/103",
+      "prNumber": 103
     },
     {
       "id": "aa7f9b0c5b3aa1eb0215feba0c3ea0e74a7a3cc4",
@@ -401,11 +482,13 @@
       "topAuthors": [
         {
           "name": "An-Hui Liu",
-          "hIndex": 7
+          "hIndex": 7,
+          "authorId": "30526089"
         },
         {
           "name": "Shuang Su",
-          "hIndex": 3
+          "hIndex": 3,
+          "authorId": "2279392413"
         }
       ],
       "affiliations": [],
@@ -424,54 +507,12 @@
       "addedAt": "2026-09-14",
       "overlap": 2,
       "direction": "forward",
-      "score": 22.22222222222222,
+      "score": 20.19090738331841,
       "why": "past month · cites 2 in your list",
       "fromReferences": false,
       "freshWindow": "past month",
       "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/79",
       "prNumber": 79
-    },
-    {
-      "id": "9751fda578ebc5ef14fc987b28d08ae8eecf7ea1",
-      "title": "Beneath the Diff: Diagnosing and Mitigating Algorithmic Mode Collapse in Code-Level Autonomous Research Loops",
-      "authors": [
-        "Bowei He",
-        "Weixu Zhang",
-        "Yi Jin",
-        "Xue Liu"
-      ],
-      "topAuthors": [
-        {
-          "name": "Bowei He",
-          "hIndex": 5
-        },
-        {
-          "name": "Xue Liu",
-          "hIndex": 5
-        }
-      ],
-      "affiliations": [],
-      "year": 2026,
-      "venue": null,
-      "publicationDate": "2026-08-31",
-      "summary": "This work identifies a robust failure mode that is accompanied by a widening gap between in-loop metric gains and gains measured on independent held-out evaluations and proposes Diversity-Aware Proposal Sampling (DAPS), a lightweight mitigation that combines category-coverage reweighting, persistent edit memory, and a validation gate.",
-      "url": "https://www.semanticscholar.org/paper/9751fda578ebc5ef14fc987b28d08ae8eecf7ea1",
-      "doi": null,
-      "arxivId": "2609.00077",
-      "pdf": null,
-      "citationCount": 0,
-      "referenceCount": 50,
-      "influentialCitationCount": 0,
-      "source": null,
-      "addedAt": "2026-09-14",
-      "overlap": 2,
-      "direction": "forward",
-      "score": 22.22222222222222,
-      "why": "past month · cites 2 in your list",
-      "fromReferences": false,
-      "freshWindow": "past month",
-      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/80",
-      "prNumber": 80
     },
     {
       "id": "01034e5d9539f208a2e848fc5fc65047b995ddc7",
@@ -484,11 +525,13 @@
       "topAuthors": [
         {
           "name": "M. Gubanov",
-          "hIndex": 15
+          "hIndex": 15,
+          "authorId": "1705924"
         },
         {
           "name": "A. Pyayt",
-          "hIndex": 12
+          "hIndex": 12,
+          "authorId": "1743601"
         }
       ],
       "affiliations": [
@@ -509,7 +552,7 @@
       "addedAt": "2026-09-14",
       "overlap": 4,
       "direction": "forward",
-      "score": 44.44444444444444,
+      "score": 41.49674067650342,
       "why": "past year · cites 4 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
@@ -526,14 +569,19 @@
       "topAuthors": [
         {
           "name": "Haruki Fujimaki",
-          "hIndex": 1
+          "hIndex": 1,
+          "authorId": "2356525498"
         },
         {
           "name": "Makoto P. Kato",
-          "hIndex": 1
+          "hIndex": 1,
+          "authorId": "2385575480"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "University of Tsukuba",
+        "National Institute of Informatics"
+      ],
       "year": 2026,
       "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
       "publicationDate": "2026-05-11",
@@ -549,7 +597,7 @@
       "addedAt": "2026-09-14",
       "overlap": 4,
       "direction": "forward",
-      "score": 44.44444444444444,
+      "score": 38.15196294690363,
       "why": "past year · cites 4 in your list",
       "fromReferences": false,
       "freshWindow": "past year"
@@ -565,14 +613,19 @@
       "topAuthors": [
         {
           "name": "Vallidevi Krishnamurthy",
-          "hIndex": 3
+          "hIndex": 3,
+          "authorId": "134839292"
         },
         {
           "name": "Abhilasha Singh",
-          "hIndex": 2
+          "hIndex": 2,
+          "authorId": "2339533332"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "Vellore Institute of Technology University",
+        "Rochester Institute of Technology - Dubai"
+      ],
       "year": 2025,
       "venue": "Conference Information and Communication Technology",
       "publicationDate": "2025-12-19",
@@ -588,7 +641,7 @@
       "addedAt": "2026-09-14",
       "overlap": 3,
       "direction": "forward",
-      "score": 33.33333333333333,
+      "score": 29.450166642577674,
       "why": "past year · cites 3 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
@@ -608,11 +661,13 @@
       "topAuthors": [
         {
           "name": "Antonio de Sousa Leitão",
-          "hIndex": 0
+          "hIndex": 0,
+          "authorId": null
         },
         {
           "name": "Allan Kardec Duailibe Barros",
-          "hIndex": 0
+          "hIndex": 0,
+          "authorId": "2478630669"
         }
       ],
       "affiliations": [],
@@ -631,93 +686,199 @@
       "addedAt": "2026-09-14",
       "overlap": 3,
       "direction": "forward",
-      "score": 33.33333333333333,
+      "score": 27.777777777777775,
       "why": "past year · cites 3 in your list",
       "fromReferences": false,
       "freshWindow": "past year"
     },
     {
-      "id": "901f1745460e4a94e70ed102d48242357754c45c",
-      "title": "How Much Is One Recurrence Worth? Iso-Depth Scaling Laws for Looped Language Models",
+      "id": "c8520ff73d361da4fa5370f46ac712af83219ff8",
+      "title": "From Sampled Outcomes to Capability Distributions: Rethinking Supervision for LLM Routing",
       "authors": [
-        "Kristian Schwethelm",
-        "D. Rueckert",
-        "G. Kaissis"
+        "Guannan Lai",
+        "Haoran Hu",
+        "Long Chen",
+        "Zhenguo Li",
+        "Han-Jia Ye"
       ],
       "topAuthors": [
         {
-          "name": "D. Rueckert",
-          "hIndex": 13
+          "name": "Zhenguo Li",
+          "hIndex": 63,
+          "authorId": "7718952"
         },
         {
-          "name": "G. Kaissis",
-          "hIndex": 9
+          "name": "Han-Jia Ye",
+          "hIndex": 36,
+          "authorId": "2151459740"
         }
       ],
       "affiliations": [],
       "year": 2026,
       "venue": "arXiv.org",
-      "publicationDate": "2026-04-22",
-      "summary": "The utility of $\\varphi$ is demonstrated as a diagnostic tool on two case studies, indicating that the loop mechanism is poorly trained under truncation, even though validation loss decreases.",
-      "url": "https://www.semanticscholar.org/paper/901f1745460e4a94e70ed102d48242357754c45c",
-      "doi": "10.48550/arXiv.2604.21106",
-      "arxivId": "2604.21106",
+      "publicationDate": "2026-06-05",
+      "summary": "DARS (Distribution-Aware Routing Supervision), which estimates query-level model capability from repeated observations spanning semantics-preserving query rewrites and stochastic decoding, is proposed, which generally improves routing utility and cost--quality trade-offs over single-shot supervision.",
+      "url": "https://www.semanticscholar.org/paper/c8520ff73d361da4fa5370f46ac712af83219ff8",
+      "doi": "10.48550/arXiv.2606.06924",
+      "arxivId": "2606.06924",
       "pdf": null,
-      "citationCount": 12,
-      "referenceCount": 57,
-      "influentialCitationCount": 1,
-      "source": null,
-      "addedAt": "2026-09-14",
-      "overlap": 2,
-      "direction": "forward",
-      "score": 22.22222222222222,
-      "why": "past year · cites 2 in your list",
-      "fromReferences": false,
-      "freshWindow": "past year",
-      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/83",
-      "prNumber": 83
-    },
-    {
-      "id": "60117cee6c5137272b11b5bf8ef0e5639b68cc99",
-      "title": "RMA: an Agentic System for Research-Level Mathematical Problems",
-      "authors": [
-        "Zeli Zhao",
-        "Bo Yuan",
-        "Jaemoo Choi",
-        "Yongxin Chen"
-      ],
-      "topAuthors": [
-        {
-          "name": "Yongxin Chen",
-          "hIndex": 9
-        },
-        {
-          "name": "Jaemoo Choi",
-          "hIndex": 6
-        }
-      ],
-      "affiliations": [],
-      "year": 2026,
-      "venue": "arXiv.org",
-      "publicationDate": "2026-05-20",
-      "summary": "Through comprehensive expert evaluation, RMA outperforms strong baselines on the First Proof benchmark, including GPT-5.2R and Aletheia, solving eight out of ten research problems and producing more logically sound and readable proofs.",
-      "url": "https://www.semanticscholar.org/paper/60117cee6c5137272b11b5bf8ef0e5639b68cc99",
-      "doi": "10.48550/arXiv.2605.22875",
-      "arxivId": "2605.22875",
-      "pdf": null,
-      "citationCount": 4,
-      "referenceCount": 59,
+      "citationCount": 1,
+      "referenceCount": 48,
       "influentialCitationCount": 0,
       "source": null,
       "addedAt": "2026-09-14",
       "overlap": 2,
       "direction": "forward",
-      "score": 22.22222222222222,
+      "score": 21.86329624811831,
       "why": "past year · cites 2 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
-      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/84",
-      "prNumber": 84
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/104",
+      "prNumber": 104
+    },
+    {
+      "id": "3317cf89130698f0671724a0466ec468e285be52",
+      "title": "BLADE: Scalable Bi-level Adaptive Data Selection for LLM Training",
+      "authors": [
+        "Jiaxing Wang",
+        "De-Ping Xiang",
+        "Jin Xu",
+        "Zirui Liu",
+        "Zicheng Zhang",
+        "Guo-Qiang Gong",
+        "Junfeng Fang",
+        "Chao Liu",
+        "Pengzhang Liu",
+        "Tongxuan Liu",
+        "Ke Zhang",
+        "Qi-Xia Jiang"
+      ],
+      "topAuthors": [
+        {
+          "name": "Zicheng Zhang",
+          "hIndex": 34,
+          "authorId": "2116459218"
+        },
+        {
+          "name": "Zirui Liu",
+          "hIndex": 23,
+          "authorId": "47781070"
+        }
+      ],
+      "affiliations": [],
+      "year": 2026,
+      "venue": "arXiv.org",
+      "publicationDate": "2026-06-17",
+      "summary": "BLADE reformulates the bi-level optimization problem underlying influence-based methods as a penalized single-level objective via Lagrange multipliers, avoiding inverse-Hessian computation while revealing a principled connection to excess-loss based data selection.",
+      "url": "https://www.semanticscholar.org/paper/3317cf89130698f0671724a0466ec468e285be52",
+      "doi": "10.48550/arXiv.2606.18650",
+      "arxivId": "2606.18650",
+      "pdf": null,
+      "citationCount": 1,
+      "referenceCount": 52,
+      "influentialCitationCount": 0,
+      "source": null,
+      "addedAt": "2026-09-14",
+      "overlap": 2,
+      "direction": "forward",
+      "score": 21.377903785833844,
+      "why": "past year · cites 2 in your list",
+      "fromReferences": false,
+      "freshWindow": "past year",
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/105",
+      "prNumber": 105
+    },
+    {
+      "id": "a104ebe1d02f64c089064fe906f7b2236675caa8",
+      "title": "DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention",
+      "authors": [
+        "Yuxiang Huang",
+        "Nuno Gonccalves",
+        "Federico Alvetreti",
+        "Lei Li",
+        "Xu Han",
+        "E. Ponti",
+        "André F. T. Martins",
+        "Marcos V. Treviso"
+      ],
+      "topAuthors": [
+        {
+          "name": "E. Ponti",
+          "hIndex": 33,
+          "authorId": "3381663"
+        },
+        {
+          "name": "Yuxiang Huang",
+          "hIndex": 7,
+          "authorId": "2214586078"
+        }
+      ],
+      "affiliations": [],
+      "year": 2026,
+      "venue": "arXiv.org",
+      "publicationDate": "2026-05-18",
+      "summary": "This work proposes DashAttention (Differentiable and Adaptive Sparse Hierarchical Attention), which leverages the adaptively sparse $\\alpha$-entmax transformation to select a variable number of blocks according to the current query in the first stage, keeping the entire hierarchy fully differentiable.",
+      "url": "https://www.semanticscholar.org/paper/a104ebe1d02f64c089064fe906f7b2236675caa8",
+      "doi": "10.48550/arXiv.2605.18753",
+      "arxivId": "2605.18753",
+      "pdf": null,
+      "citationCount": 3,
+      "referenceCount": 73,
+      "influentialCitationCount": 0,
+      "source": null,
+      "addedAt": "2026-09-14",
+      "overlap": 2,
+      "direction": "forward",
+      "score": 21.35459058711529,
+      "why": "past year · cites 2 in your list",
+      "fromReferences": false,
+      "freshWindow": "past year",
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/85",
+      "prNumber": 85
+    },
+    {
+      "id": "5f05f03cec63def6db6137b9b4b047a8957b049b",
+      "title": "SOMA: Efficient Multi-turn LLM Serving via Small Language Model",
+      "authors": [
+        "Xueqi Cheng",
+        "Qiong Wu",
+        "Zhengyi Zhou",
+        "Xugui Zhou",
+        "Tyler Derr",
+        "Yushun Dong"
+      ],
+      "topAuthors": [
+        {
+          "name": "Tyler Derr",
+          "hIndex": 31,
+          "authorId": "12524628"
+        },
+        {
+          "name": "Xueqi Cheng",
+          "hIndex": 14,
+          "authorId": "2244825947"
+        }
+      ],
+      "affiliations": [],
+      "year": 2026,
+      "venue": "arXiv.org",
+      "publicationDate": "2026-05-11",
+      "summary": "This work proposes a framework that exploits the early turns of a session to estimate a local response manifold and then adapt a smaller surrogate model to this local region for the remainder of the conversation, and learns soft prompts that maximize semantic divergence between the large and surrogate small language models.",
+      "url": "https://www.semanticscholar.org/paper/5f05f03cec63def6db6137b9b4b047a8957b049b",
+      "doi": "10.48550/arXiv.2605.11317",
+      "arxivId": "2605.11317",
+      "pdf": null,
+      "citationCount": 1,
+      "referenceCount": 55,
+      "influentialCitationCount": 0,
+      "source": null,
+      "addedAt": "2026-09-14",
+      "overlap": 2,
+      "direction": "forward",
+      "score": 21.30583329318501,
+      "why": "past year · cites 2 in your list",
+      "fromReferences": false,
+      "freshWindow": "past year"
     },
     {
       "id": "864ded814edacbc19172163841aa37397149d039",
@@ -733,11 +894,13 @@
       "topAuthors": [
         {
           "name": "Thiago Oliveira-Santos",
-          "hIndex": 27
+          "hIndex": 27,
+          "authorId": "1397136266"
         },
         {
           "name": "C. Badue",
-          "hIndex": 20
+          "hIndex": 20,
+          "authorId": "3015563"
         }
       ],
       "affiliations": [
@@ -758,7 +921,7 @@
       "addedAt": "2026-09-14",
       "overlap": 2,
       "direction": "forward",
-      "score": 22.22222222222222,
+      "score": 21.19844079878189,
       "why": "past year · cites 2 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
@@ -766,138 +929,53 @@
       "prNumber": 100
     },
     {
-      "id": "a104ebe1d02f64c089064fe906f7b2236675caa8",
-      "title": "DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention",
+      "id": "8eb989a547eac5dde40aa489e8d2e0fa922240cb",
+      "title": "From Role Prompt to Infinite Thinking: Exploiting Persona Conditioning for Inference Cost Attacks in LLMs",
       "authors": [
-        "Yuxiang Huang",
-        "Nuno Gonccalves",
-        "Federico Alvetreti",
-        "Lei Li",
-        "Xu Han",
-        "E. Ponti",
-        "André F. T. Martins",
-        "Marcos V. Treviso"
+        "Zhiyi Mou",
+        "Wangze Ni",
+        "Tianfang Xiao",
+        "HaoYang Li",
+        "C. Zhang",
+        "Hanzhi Ma",
+        "Yang Bai",
+        "Zhibo Wang",
+        "Kui Ren"
       ],
       "topAuthors": [
         {
-          "name": "E. Ponti",
-          "hIndex": 33
+          "name": "Zhibo Wang",
+          "hIndex": 26,
+          "authorId": "2288040582"
         },
         {
-          "name": "Yuxiang Huang",
-          "hIndex": 7
+          "name": "C. Zhang",
+          "hIndex": 5,
+          "authorId": "2315453573"
         }
       ],
       "affiliations": [],
       "year": 2026,
       "venue": "arXiv.org",
-      "publicationDate": "2026-05-18",
-      "summary": "This work proposes DashAttention (Differentiable and Adaptive Sparse Hierarchical Attention), which leverages the adaptively sparse $\\alpha$-entmax transformation to select a variable number of blocks according to the current query in the first stage, keeping the entire hierarchy fully differentiable.",
-      "url": "https://www.semanticscholar.org/paper/a104ebe1d02f64c089064fe906f7b2236675caa8",
-      "doi": "10.48550/arXiv.2605.18753",
-      "arxivId": "2605.18753",
+      "publicationDate": "2026-07-28",
+      "summary": "RolePlay is proposed, a task-aware dynamic persona alignment framework that constructs adaptive personas to naturally induce inefficient yet semantically coherent behaviors for inference cost amplification, and identifies persona conditioning as a new attack surface for LLM inference efficiency and offers a new perspective on computational cost amplification.",
+      "url": "https://www.semanticscholar.org/paper/8eb989a547eac5dde40aa489e8d2e0fa922240cb",
+      "doi": "10.48550/arXiv.2607.25936",
+      "arxivId": "2607.25936",
       "pdf": null,
-      "citationCount": 3,
-      "referenceCount": 73,
+      "citationCount": 0,
+      "referenceCount": 31,
       "influentialCitationCount": 0,
       "source": null,
       "addedAt": "2026-09-14",
       "overlap": 2,
       "direction": "forward",
-      "score": 22.22222222222222,
+      "score": 21.169192155849977,
       "why": "past year · cites 2 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
-      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/85",
-      "prNumber": 85
-    },
-    {
-      "id": "c3ca06256be58846b2107c66ab8d1f68a7f036b6",
-      "title": "FRAME: Learning the Adaptation Domain with a Mixture of Fractional-Fourier Experts",
-      "authors": [
-        "Tom Saliencro",
-        "Maya Lindqvist",
-        "Rohan Desai",
-        "Priya Nair",
-        "D. Whitmore"
-      ],
-      "topAuthors": [
-        {
-          "name": "Rohan Desai",
-          "hIndex": 2
-        },
-        {
-          "name": "D. Whitmore",
-          "hIndex": 1
-        }
-      ],
-      "affiliations": [],
-      "year": 2026,
-      "venue": "arXiv.org",
-      "publicationDate": "2026-06-30",
-      "summary": "Fractional-Fourier Mixture of Experts improves over strong MoE-LoRA and spectral baselines -- including FlyLoRA, FourierMoE, and HMoRA -- while keeping the active-parameter budget small, and analysis shows that the learned orders specialize by task and layer in interpretable ways.",
-      "url": "https://www.semanticscholar.org/paper/c3ca06256be58846b2107c66ab8d1f68a7f036b6",
-      "doi": "10.48550/arXiv.2607.00162",
-      "arxivId": "2607.00162",
-      "pdf": null,
-      "citationCount": 2,
-      "referenceCount": 57,
-      "influentialCitationCount": 0,
-      "source": null,
-      "addedAt": "2026-09-14",
-      "overlap": 2,
-      "direction": "forward",
-      "score": 22.22222222222222,
-      "why": "past year · cites 2 in your list",
-      "fromReferences": false,
-      "freshWindow": "past year",
-      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/86",
-      "prNumber": 86
-    },
-    {
-      "id": "029ded09849517b638e5d3322fdb61afcec5143a",
-      "title": "The Routing Plateau: Understanding and Breaking the Accuracy Limits of LLM Routers",
-      "authors": [
-        "Yi-Fan Lu",
-        "Qi-Yue Zhang",
-        "Shenrun Zhang",
-        "Zhi-Bo Yu",
-        "Zhuang Wang",
-        "Han-Jie Chen",
-        "Jiarong Xing"
-      ],
-      "topAuthors": [
-        {
-          "name": "Jiarong Xing",
-          "hIndex": 6
-        },
-        {
-          "name": "Zhuang Wang",
-          "hIndex": 4
-        }
-      ],
-      "affiliations": [],
-      "year": 2026,
-      "venue": "arXiv.org",
-      "publicationDate": "2026-05-27",
-      "summary": "This investigation shows that the plateau is largely caused by a predictability bottleneck: current routers mainly learn global averaged model-performance trends rather than fine-grained query-specific routing signals, and that larger training datasets, stronger encoders, and end-to-end fine-tuning can further improve routing accuracy.",
-      "url": "https://www.semanticscholar.org/paper/029ded09849517b638e5d3322fdb61afcec5143a",
-      "doi": "10.48550/arXiv.2606.07587",
-      "arxivId": "2606.07587",
-      "pdf": null,
-      "citationCount": 2,
-      "referenceCount": 76,
-      "influentialCitationCount": 1,
-      "source": null,
-      "addedAt": "2026-09-14",
-      "overlap": 2,
-      "direction": "forward",
-      "score": 22.22222222222222,
-      "why": "past year · cites 2 in your list",
-      "fromReferences": false,
-      "freshWindow": "past year",
-      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/87",
-      "prNumber": 87
+      "prUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/106",
+      "prNumber": 106
     },
     {
       "id": "afed6dc6900d3b37e528b9086661bba583d60bf6",
@@ -911,14 +989,19 @@
       "topAuthors": [
         {
           "name": "Pushmeet Kohli",
-          "hIndex": 118
+          "hIndex": 118,
+          "authorId": "143967473"
         },
         {
           "name": "Edward Grefenstette",
-          "hIndex": 47
+          "hIndex": 47,
+          "authorId": "1864353"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "Google (United States)",
+        "Meta (Israel)"
+      ],
       "year": 2019,
       "venue": "International Conference on Learning Representations",
       "publicationDate": "2019-04-02",
@@ -949,11 +1032,13 @@
       "topAuthors": [
         {
           "name": "Rodrigo Nogueira",
-          "hIndex": 32
+          "hIndex": 32,
+          "authorId": "143744603"
         },
         {
           "name": "Jimmy J. Li",
-          "hIndex": 2
+          "hIndex": 2,
+          "authorId": "2476433796"
         }
       ],
       "affiliations": [],
@@ -972,7 +1057,7 @@
       "addedAt": "2026-09-14",
       "overlap": 9,
       "direction": "forward",
-      "score": 100,
+      "score": 95.98761616564907,
       "why": "cites 9 in your list",
       "fromReferences": false
     },
@@ -986,14 +1071,18 @@
       "topAuthors": [
         {
           "name": "Yejin Choi",
-          "hIndex": 113
+          "hIndex": 113,
+          "authorId": "1699545"
         },
         {
           "name": "M. Forbes",
-          "hIndex": 19
+          "hIndex": 19,
+          "authorId": "39191185"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "University of Washington"
+      ],
       "year": 2017,
       "venue": "Annual Meeting of the Association for Computational Linguistics",
       "publicationDate": "2017-06-12",
@@ -1023,14 +1112,18 @@
       "topAuthors": [
         {
           "name": "Chitta Baral",
-          "hIndex": 32
+          "hIndex": 32,
+          "authorId": "2064619864"
         },
         {
           "name": "Kuntal Pal",
-          "hIndex": 14
+          "hIndex": 14,
+          "authorId": "2127130514"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "Arizona State University"
+      ],
       "year": 2021,
       "venue": "Conference on Empirical Methods in Natural Language Processing",
       "publicationDate": "2021-09-10",
@@ -1046,7 +1139,7 @@
       "addedAt": "2026-09-14",
       "overlap": 7,
       "direction": "forward",
-      "score": 77.77777777777779,
+      "score": 74.65703479550484,
       "why": "cites 7 in your list",
       "fromReferences": false
     },
@@ -1060,11 +1153,13 @@
       "topAuthors": [
         {
           "name": "alexander rosenberg johansen",
-          "hIndex": 13
+          "hIndex": 13,
+          "authorId": "153849889"
         },
         {
           "name": "Andreas Madsen",
-          "hIndex": 7
+          "hIndex": 7,
+          "authorId": "152446182"
         }
       ],
       "affiliations": [
@@ -1086,7 +1181,7 @@
       "addedAt": "2026-09-14",
       "overlap": 3,
       "direction": "backward",
-      "score": 71.15817850045077,
+      "score": 66.09484736263923,
       "why": "cited by 3 in your list",
       "fromReferences": false
     },
@@ -1102,14 +1197,19 @@
       "topAuthors": [
         {
           "name": "G. Corrado",
-          "hIndex": 43
+          "hIndex": 43,
+          "authorId": "102388768"
         },
         {
           "name": "Tomas Mikolov",
-          "hIndex": 40
+          "hIndex": 40,
+          "authorId": "2047446108"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "Google (United States)",
+        "Brno University of Technology"
+      ],
       "year": 2013,
       "venue": "International Conference on Learning Representations",
       "publicationDate": "2013-01-16",
@@ -1140,10 +1240,13 @@
       "topAuthors": [
         {
           "name": "G. Miller",
-          "hIndex": 48
+          "hIndex": 48,
+          "authorId": "144096985"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "Princeton University"
+      ],
       "year": 1995,
       "venue": "Human Language Technology - The Baltic Perspectiv",
       "publicationDate": "1995-11-01",
@@ -1174,10 +1277,13 @@
       "topAuthors": [
         {
           "name": "T. Kohonen",
-          "hIndex": 69
+          "hIndex": 69,
+          "authorId": "1688681"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "University of Helsinki"
+      ],
       "year": 1990,
       "venue": "Neurocomputing",
       "publicationDate": "1990-09-01",
@@ -1208,10 +1314,13 @@
       "topAuthors": [
         {
           "name": "K. Wynn",
-          "hIndex": 45
+          "hIndex": 45,
+          "authorId": "5745658"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "University of Arizona"
+      ],
       "year": 1990,
       "venue": "Cognition",
       "publicationDate": "1990-08-01",
@@ -1243,11 +1352,13 @@
       "topAuthors": [
         {
           "name": "Lior Wolf",
-          "hIndex": 64
+          "hIndex": 64,
+          "authorId": "145128145"
         },
         {
           "name": "Ofir Press",
-          "hIndex": 21
+          "hIndex": 21,
+          "authorId": "40170001"
         }
       ],
       "affiliations": [
@@ -1287,14 +1398,19 @@
       "topAuthors": [
         {
           "name": "C. Gallistel",
-          "hIndex": 59
+          "hIndex": 59,
+          "authorId": "2646034"
         },
         {
           "name": "R. Gelman",
-          "hIndex": 57
+          "hIndex": 57,
+          "authorId": "19950414"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "Rutgers, The State University of New Jersey",
+        "University of California, Los Angeles"
+      ],
       "year": 2001,
       "venue": "Psychonomic Bulletin & Review",
       "publicationDate": "2001-12-01",
@@ -1329,11 +1445,13 @@
       "topAuthors": [
         {
           "name": "D. Wiliam",
-          "hIndex": 44
+          "hIndex": 44,
+          "authorId": "41184214"
         },
         {
           "name": "Mike Askew",
-          "hIndex": 22
+          "hIndex": 22,
+          "authorId": "103352242"
         }
       ],
       "affiliations": [],
@@ -1368,14 +1486,18 @@
       "topAuthors": [
         {
           "name": "E. Spelke",
-          "hIndex": 98
+          "hIndex": 98,
+          "authorId": "2252285"
         },
         {
           "name": "Katherine D. Kinzler",
-          "hIndex": 36
+          "hIndex": 36,
+          "authorId": "7709363"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "Harvard University"
+      ],
       "year": 2007,
       "venue": "Progress in Brain Research",
       "publicationDate": null,
@@ -1410,11 +1532,13 @@
       "topAuthors": [
         {
           "name": "Jonathan Berant",
-          "hIndex": 59
+          "hIndex": 59,
+          "authorId": "1750652"
         },
         {
           "name": "Oyvind Tafjord",
-          "hIndex": 34
+          "hIndex": 34,
+          "authorId": "3385516"
         }
       ],
       "affiliations": [
@@ -1559,11 +1683,13 @@
       "topAuthors": [
         {
           "name": "Noah A. Smith",
-          "hIndex": 115
+          "hIndex": 115,
+          "authorId": "144365875"
         },
         {
           "name": "Zhe Zhang",
-          "hIndex": 77
+          "hIndex": 77,
+          "authorId": "1682342"
         }
       ],
       "affiliations": [
@@ -1613,11 +1739,13 @@
       "topAuthors": [
         {
           "name": "Oren Etzioni",
-          "hIndex": 88
+          "hIndex": 88,
+          "authorId": "1741101"
         },
         {
           "name": "Peter Clark",
-          "hIndex": 64
+          "hIndex": 64,
+          "authorId": "48323507"
         }
       ],
       "affiliations": [
@@ -1656,11 +1784,13 @@
       "topAuthors": [
         {
           "name": "Navin Goyal",
-          "hIndex": 24
+          "hIndex": 24,
+          "authorId": "144260125"
         },
         {
           "name": "S. Bhattamishra",
-          "hIndex": 11
+          "hIndex": 11,
+          "authorId": "92954142"
         }
       ],
       "affiliations": [
@@ -1701,14 +1831,18 @@
       "topAuthors": [
         {
           "name": "Deborah A. Fein",
-          "hIndex": 61
+          "hIndex": 61,
+          "authorId": "49692085"
         },
         {
           "name": "E. Kaplan",
-          "hIndex": 45
+          "hIndex": 45,
+          "authorId": "46677571"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "University of Connecticut"
+      ],
       "year": 2004,
       "venue": "Archives of Clinical Neuropsychology",
       "publicationDate": "2004-09-01",
@@ -1741,11 +1875,13 @@
       "topAuthors": [
         {
           "name": "Christopher D. Manning",
-          "hIndex": 149
+          "hIndex": 149,
+          "authorId": "144783904"
         },
         {
           "name": "Christopher Potts",
-          "hIndex": 58
+          "hIndex": 58,
+          "authorId": "144922861"
         }
       ],
       "affiliations": [
@@ -1786,11 +1922,13 @@
       "topAuthors": [
         {
           "name": "L. Carin",
-          "hIndex": 100
+          "hIndex": 100,
+          "authorId": "145006560"
         },
         {
           "name": "Devamanyu Hazarika",
-          "hIndex": 32
+          "hIndex": 32,
+          "authorId": "8223433"
         }
       ],
       "affiliations": [
@@ -1829,14 +1967,19 @@
       "topAuthors": [
         {
           "name": "M. Zorzi",
-          "hIndex": 53
+          "hIndex": 53,
+          "authorId": "46787329"
         },
         {
           "name": "Alberto Testolin",
-          "hIndex": 20
+          "hIndex": 20,
+          "authorId": "1915299"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "University of Padua",
+        "Ghent University Hospital"
+      ],
       "year": 2020,
       "venue": "Scientific Reports",
       "publicationDate": "2020-06-22",
@@ -1870,11 +2013,13 @@
       "topAuthors": [
         {
           "name": "Hsin-Hsi Chen",
-          "hIndex": 39
+          "hIndex": 39,
+          "authorId": "153924342"
         },
         {
           "name": "Hiroya Takamura",
-          "hIndex": 29
+          "hIndex": 29,
+          "authorId": "36514372"
         }
       ],
       "affiliations": [
@@ -1911,14 +2056,19 @@
       "topAuthors": [
         {
           "name": "Daniel M. Spokoyny",
-          "hIndex": 6
+          "hIndex": 6,
+          "authorId": "2064240141"
         },
         {
           "name": "Taylor Berg-Kirkpatrick",
-          "hIndex": 5
+          "hIndex": 5,
+          "authorId": "2315300467"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "UC San Diego Health System",
+        "Carnegie Mellon University"
+      ],
       "year": 2020,
       "venue": "Conference on Empirical Methods in Natural Language Processing",
       "publicationDate": "2020-10-20",
@@ -1955,11 +2105,13 @@
       "topAuthors": [
         {
           "name": "Kewei Tu",
-          "hIndex": 28
+          "hIndex": 28,
+          "authorId": "40341553"
         },
         {
           "name": "Libin Shen",
-          "hIndex": 19
+          "hIndex": 19,
+          "authorId": "39839719"
         }
       ],
       "affiliations": [
@@ -1999,11 +2151,13 @@
       "topAuthors": [
         {
           "name": "P. Bhattacharyya",
-          "hIndex": 58
+          "hIndex": 58,
+          "authorId": "145532184"
         },
         {
           "name": "Aditya Joshi",
-          "hIndex": 20
+          "hIndex": 20,
+          "authorId": "145714972"
         }
       ],
       "affiliations": [
@@ -2042,11 +2196,13 @@
       "topAuthors": [
         {
           "name": "P. Vossen",
-          "hIndex": 42
+          "hIndex": 42,
+          "authorId": "1791713"
         },
         {
           "name": "Marten Postma",
-          "hIndex": 37
+          "hIndex": 37,
+          "authorId": "1853748"
         }
       ],
       "affiliations": [
@@ -2087,11 +2243,13 @@
       "topAuthors": [
         {
           "name": "M. Surdeanu",
-          "hIndex": 44
+          "hIndex": 44,
+          "authorId": "1760868"
         },
         {
           "name": "Rebecca Sharp",
-          "hIndex": 11
+          "hIndex": 11,
+          "authorId": "144597423"
         }
       ],
       "affiliations": [
@@ -2128,10 +2286,13 @@
       "topAuthors": [
         {
           "name": "M. Nefedov",
-          "hIndex": 19
+          "hIndex": 19,
+          "authorId": "4013694"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "National Research University Higher School of Economics"
+      ],
       "year": 2020,
       "venue": null,
       "publicationDate": null,
@@ -2163,14 +2324,18 @@
       "topAuthors": [
         {
           "name": "R. Power",
-          "hIndex": 26
+          "hIndex": 26,
+          "authorId": "144585612"
         },
         {
           "name": "Sandra Williams",
-          "hIndex": 17
+          "hIndex": 17,
+          "authorId": "145280410"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "The Open University"
+      ],
       "year": 2010,
       "venue": "International Conference on Language Resources and Evaluation",
       "publicationDate": "2010-05-01",
