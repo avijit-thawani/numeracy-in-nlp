@@ -214,7 +214,7 @@ All of these have working defaults; change them only if you want to.
 | `title`, `description` | Leave empty to use the repo name and description. |
 | `contactEmail` | Optional, sent only to OpenAlex for their faster pool. Empty means the bot tries your public GitHub email and skips it if you have none. |
 | `candidateCount` | How many Recs to keep. |
-| `previewRows` | Rows of each list shown on the README. Default 10. |
+| `previewRows` | Rows shown per table on the README. Default 5; the full lists live in `views/`. |
 | `algorithm.forward` / `.backward` | Turn either direction off. |
 | `algorithm.minCount` | How many of your papers something must connect to before it is suggested. Default 2. Set it to 1 for a survey too small to produce any. |
 | `algorithm.popularityPenalty` | Higher favours obscure papers, lower favours famous ones. Default 0.2. |

@@ -148,6 +148,60 @@ test("the README keeps the order the ranking chose, not score order", () => {
  * published this month" rendered as an unremarkable middle row. Each window
  * gets its own table so the answer to "what is new?" is a heading.
  */
+/**
+ * The count used to be the link, which made it the only clickable thing under
+ * a table -- and it only ever offered one of the four sort orders that already
+ * exist as files.
+ */
+test("the row count is plain text and every sort order is offered", () => {
+  const core = Array.from({ length: 12 }, (_, i) => ({ id: `p${i}`, title: `Paper ${i}`, score: 100 - i }));
+  const block = renderSurvey({ config: { title: "T", description: "" }, core, recs: [], preview: 5 });
+
+  assert.match(block, /… and 7 more\. View all, sorted by/);
+  assert.doesNotMatch(block, /\[… and 7 more/, "the count must not be a link");
+  for (const sort of ["score", "year", "citations", "title"]) {
+    assert.match(block, new RegExp(`\\(views/core-by-${sort}\\.md\\)`), `${sort} view is linked`);
+  }
+});
+
+test("a table showing everything still links the other sort orders", () => {
+  const core = [{ id: "a", title: "Only", score: 1 }];
+  const block = renderSurvey({ config: { title: "T", description: "" }, core, recs: [], preview: 5 });
+  assert.doesNotMatch(block, /more\./, "nothing was hidden, so nothing is claimed to be");
+  assert.match(block, /View all, sorted by .*\[Year\]\(views\/core-by-year\.md\)/);
+});
+
+test("five rows per table, including each recency window", () => {
+  const window = (n, label) =>
+    Array.from({ length: n }, (_, i) => ({
+      id: `${label}${i}`,
+      title: `${label} paper ${i}`,
+      score: 100 - i,
+      why: `${label} · cites 2 in Core`,
+      freshWindow: label,
+    }));
+
+  const block = renderSurvey({
+    config: { title: "T", description: "" },
+    core: [],
+    recs: [...window(8, "past month"), ...window(9, "past year")],
+    preview: 5,
+  });
+
+  // Sliced at the "View all" line rather than at the next <sub>, because every
+  // row contains <sub> tags of its own for the authors and the summary.
+  const rows = (heading) => {
+    const from = block.indexOf(`### New in the ${heading}`);
+    const to = block.indexOf("View all, sorted by", from);
+    return block.slice(from, to).split("\n").filter((l) => /^\| \d+ \|/.test(l)).length;
+  };
+
+  assert.equal(rows("past month"), 5);
+  assert.equal(rows("past year"), 5);
+  assert.equal((block.match(/… and 3 more/g) ?? []).length, 1, "past month hid 3");
+  assert.equal((block.match(/… and 4 more/g) ?? []).length, 1, "past year hid 4");
+});
+
 test("each recency window gets its own table", () => {
   const recs = [
     { id: "a", title: "Fresh", score: 5, why: "past month · cites 2 in Core", freshWindow: "past month" },
@@ -217,8 +271,18 @@ test("a repo name becomes a readable title", () => {
 
 test("config beats the repo name, which beats the default", () => {
   const event = { repository: { name: "numeracy-in-nlp", description: "About numbers" } };
-  assert.equal(resolveIdentity({ title: "Chosen" }, event).title, "Chosen");
-  assert.equal(resolveIdentity({ title: "  " }, event).title, "Numeracy in NLP");
-  assert.equal(resolveIdentity({}, event).description, "About numbers");
-  assert.equal(resolveIdentity({}, null).title, "My Living Survey");
+  assert.equal(resolveIdentity({ title: "Chosen" }, event, "").title, "Chosen");
+  assert.equal(resolveIdentity({ title: "  " }, event, "").title, "Numeracy in NLP");
+  assert.equal(resolveIdentity({}, event, "").description, "About numbers");
+  assert.equal(resolveIdentity({}, null, "").title, "My Living Survey");
+});
+
+/**
+ * A scheduled run carries no event payload, so the title used to fall back to
+ * "My Living Survey" on exactly the days nobody pushed -- renaming the survey
+ * every night and renaming it back on the next push.
+ */
+test("a run with no event still knows the repository it is in", () => {
+  assert.equal(resolveIdentity({}, null, "someone/numeracy-in-nlp").title, "Numeracy in NLP");
+  assert.equal(resolveIdentity({ title: "Chosen" }, null, "someone/numeracy-in-nlp").title, "Chosen");
 });

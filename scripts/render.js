@@ -74,7 +74,7 @@ export const render = (surveyRoot = ROOT, { name = ".", isOnlySurvey = true } = 
     recs,
     repo,
     survey,
-    preview: Number(config.previewRows) || 10,
+    preview: Number(config.previewRows) || 5,
   });
   writeFileSync(readmePath, applyFooter(applySurvey(existing, block), renderFooter()), "utf8");
 
