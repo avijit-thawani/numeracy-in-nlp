@@ -10,3 +10,91 @@
 # Commit this file and the survey rebuilds itself. Lines starting with # are
 # ignored. Anything that could not be looked up is left here so you can fix it.
 
+# --- most connected ---
+# Analysing Mathematical Reasoning Abilities of Neural Models
+#   Pushmeet Kohli (h=118) · Google (United States) · 2019 · 532 citations · cited by 9 in your list
+https://arxiv.org/abs/1904.01557
+
+# Investigating the Limitations of Transformers with Simple Arithmetic Tasks
+#   Rodrigo Nogueira (h=32) · 2021 · 165 citations · cites 9 in your list
+https://arxiv.org/abs/2102.13019
+
+# Investigating Numeracy Learning Ability of a Text-to-Text Transfer Model
+#   Chitta Baral (h=32) · Arizona State University · 2021 · 22 citations · cites 7 in your list
+https://arxiv.org/abs/2109.04672
+
+# Measuring Arithmetic Extrapolation Performance
+#   alexander rosenberg johansen (h=13) · Technical University of Denmark · 2019 · 12 citations · cited by 3 in your list
+https://arxiv.org/abs/1910.01888
+
+# Neural Arithmetic Expression Calculator
+#   Xipeng Qiu (h=67) · Fudan University · 2018 · 17 citations · cited by 3 in your list
+https://arxiv.org/abs/1809.08590
+
+# EQUATE: A Benchmark Evaluation Framework for Quantitative Reasoning in Natural Language Inference
+#   E. Hovy (h=98) · Carnegie Mellon University · 2019 · 87 citations · cited by 4 in your list
+https://arxiv.org/abs/1901.03735
+
+# Extracting Commonsense Properties from Embeddings with Limited Human Guidance
+#   Doug Downey (h=38) · Allen Institute for Artificial Intelligence · 2018 · 21 citations · cited by 3 in your list
+https://doi.org/10.18653/v1/P18-2102
+
+# NUMCoT: Numerals and Units of Measurement in Chain-of-Thought Reasoning using Large Language Models
+#   Ruifeng Xu (h=10) · Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences · 2024 · 1 citations · cites 5 in your list
+https://arxiv.org/abs/2406.02864
+
+# Exploring the Learning Mechanisms of Neural Division Modules
+#   K. Farrahi (h=19) · 2022 · 0 citations · cites 3 in your list
+https://www.semanticscholar.org/paper/c36277b67814e0a522e786a38e1768612b0e63f2
+
+# QA Dataset Explosion: A Taxonomy of NLP Resources for Question Answering and Reading Comprehension
+#   Matt Gardner (h=50) · Allen Institute for Artificial Intelligence · 2021 · 206 citations · cites 5 in your list
+https://arxiv.org/abs/2107.12708
+
+# How Large Are Lions? Inducing Distributions over Quantitative Attributes
+#   Dan Roth (h=99) · University of Pennsylvania, Oracle · 2019 · 62 citations · cited by 3 in your list
+https://arxiv.org/abs/1906.01327
+
+# Predicting Numerals in Natural Language Text Using a Language Model Considering the Quantitative Aspects of Numerals
+#   Akiko Aizawa (h=33) · The University of Tokyo · 2021 · 5 citations · cites 6 in your list
+https://doi.org/10.18653/V1/2021.DEELIO-1.14
+
+# Enhancing Quantitative Reasoning Skills of Large Language Models through Dimension Perception
+#   Jiaqing Liang (h=23) · Fudan University · 2023 · 7 citations · cites 5 in your list
+https://arxiv.org/abs/2312.17532
+
+# Do Language Models Understand Measurements?
+#   E. Choi (h=30) · 2022 · 6 citations · cites 5 in your list
+https://arxiv.org/abs/2210.12694
+
+# MathQA: Towards Interpretable Math Word Problem Solving with Operation-Based Formalisms
+#   Yejin Choi (h=113) · University of Washington · 2019 · 915 citations · cited by 5 in your list
+https://arxiv.org/abs/1905.13319
+
+# Number Cookbook: Number Understanding of Language Models and How to Improve It
+#   Haotong Yang (h=7) · 2024 · 51 citations · cites 6 in your list
+https://arxiv.org/abs/2411.03766
+
+# Visual sense of number vs. sense of magnitude in humans and machines
+#   M. Zorzi (h=53) · University of Padua · 2020 · 55 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://doi.org/10.1038/s41598-020-66838-5
+
+# Numeracy-600K: Learning Numeracy for Detecting Exaggerated Information in Market Comments
+#   Hsin-Hsi Chen (h=39) · AIST, Japan · 2019 · 51 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://doi.org/10.18653/v1/P19-1635
+
+# Learning Numeral Embedding
+#   Kewei Tu (h=28) · School of Engineering and Applied Science, University of Pennsylvania · 2019 · 28 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://arxiv.org/abs/2001.00003
+
+# “When Numbers Matter!”: Detecting Sarcasm in Numerical Portions of Text
+#   P. Bhattacharyya (h=58) · University of New South Wales · 2019 · 23 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://doi.org/10.18653/v1/W19-1309
+
+# SemEval-2018 Task 5: Counting Events and Participants in the Long Tail
+#   P. Vossen (h=42) · Vrije Universiteit Amsterdam · 2018 · 19 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://doi.org/10.18653/v1/S18-1009
+
+# A Fact-aligned Corpus of Numerical Expressions
+#   R. Power (h=26) · The Open University · 2010 · 2 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://doi.org/10.63317/2ua93xmdk8zw
