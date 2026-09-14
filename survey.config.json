@@ -17,7 +17,7 @@
     "minCount": 2,
     "popularityPenalty": 0.2
   },
-  "previewRows": 10,
+  "previewRows": 5,
   "recPullRequests": {
     "enabled": true,
     "count": "all",
