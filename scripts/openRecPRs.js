@@ -24,7 +24,34 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const p = (...parts) => join(ROOT, ...parts);
 
 const BRANCH_PREFIX = "rec/";
+const BATCH_PREFIX = "recs/";
 const LABEL = "rec";
+
+/** `past month` -> `recs/past-month`, stable across runs so a PR updates in place. */
+const batchBranch = (window) =>
+  `${BATCH_PREFIX}${String(window).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+
+/**
+ * One line per paper, plus enough commented context to recognise it without
+ * opening anything.
+ *
+ * The comment carries the name, the best author with their h-index, and the
+ * affiliation, because the decision being asked for is "do I want this?" and a
+ * bare URL cannot answer it. Deleting the pair of lines is how you say no, so
+ * they are kept adjacent and in that order.
+ */
+const seedEntry = (rec) => {
+  const author = (rec.topAuthors ?? [])[0];
+  const facts = [
+    author ? `${author.name} (h=${author.hIndex})` : (rec.authors ?? [])[0],
+    (rec.affiliations ?? [])[0],
+    rec.year,
+    `${rec.citationCount ?? 0} citations`,
+    rec.why,
+  ].filter(Boolean);
+
+  return [`# ${rec.title}`, `#   ${facts.join(" · ")}`, linkFor(rec)].join("\n");
+};
 
 const gh = (args, options = {}) =>
   execFileSync("gh", args, { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], ...options });
@@ -128,6 +155,152 @@ const closeStale = (recs) => {
   }
 };
 
+/**
+ * One pull request per table, rather than one per paper.
+ *
+ * Per-paper pull requests made two problems. Deciding on ten papers meant ten
+ * pages and ten merges, and only the first few Recs ever got one -- so the
+ * `add` link opened a pull request on some rows and an issue on others, with
+ * nothing in the link to say which. A batch is one page holding the whole
+ * table: every paper as a commented line, delete the ones you do not want,
+ * merge once.
+ *
+ * The branch name is derived from the window, so a later run updates the same
+ * pull request instead of opening a second one for the same five papers.
+ */
+const openBatches = ({ recs, base, labelArgs }) => {
+  const groups = new Map();
+  for (const rec of recs) {
+    const key = rec.freshWindow ?? "most connected";
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(rec);
+  }
+
+  const open = (() => {
+    try {
+      return JSON.parse(gh(["pr", "list", "--state", "open", "--limit", "100", "--json", "headRefName,url,number"]));
+    } catch (err) {
+      log.warn(`Could not list pull requests: ${String(err.message).split("\n")[0]}`);
+      return [];
+    }
+  })();
+  const byBranch = new Map(open.map((x) => [x.headRefName, x]));
+
+  const links = new Map();
+  let opened = 0;
+
+  for (const [window, papers] of groups) {
+    if (!papers.length) continue;
+    const branch = batchBranch(window);
+    const seedFile = p("import/papers.txt");
+    const title = `Add ${papers.length} paper${papers.length === 1 ? "" : "s"} from the ${window}`;
+
+    try {
+      git(["checkout", "-q", "-B", branch, `origin/${base}`]);
+
+      const current = readFileSync(seedFile, "utf8").replace(/\s*$/, "");
+      const block = papers.map(seedEntry).join("\n\n");
+      writeFileSync(seedFile, `${current}\n\n# --- ${window} ---\n${block}\n`, "utf8");
+
+      git(["add", "import/papers.txt"]);
+      git([
+        "-c", "user.name=github-actions[bot]",
+        "-c", "user.email=41898282+github-actions[bot]@users.noreply.github.com",
+        "commit", "-q", "-m", title.slice(0, 72),
+      ]);
+      // Force, because the same branch is rewritten every run as the table
+      // changes. An open pull request picks the new contents up in place.
+      git(["push", "-q", "-f", "origin", branch]);
+
+      const existing = byBranch.get(branch);
+      if (existing) {
+        gh(["pr", "edit", String(existing.number), "--title", title, "--body", batchBody(window, papers)]);
+        links.set(window, existing);
+        log.info(`Updated #${existing.number} with the current ${window} table.`);
+      } else {
+        const url = gh([
+          "pr", "create",
+          "--base", base,
+          "--head", branch,
+          "--title", title,
+          "--body", batchBody(window, papers),
+          ...labelArgs,
+        ]).trim().split("\n").pop();
+        const number = Number(url.split("/").pop());
+        links.set(window, { url, number });
+        opened++;
+        log.info(`Opened ${url} for the ${window} table.`);
+      }
+    } catch (err) {
+      const message = String(err.stderr || err.message).split("\n").filter(Boolean)[0] ?? "";
+      if (/not permitted to create or approve pull requests/i.test(message)) {
+        log.warn(
+          "GitHub is blocking Actions from opening pull requests. Turn on " +
+            "Settings > Actions > General > Allow GitHub Actions to create and " +
+            "approve pull requests, or set recPullRequests.enabled to false."
+        );
+        break;
+      }
+      log.warn(`Could not prepare the ${window} pull request: ${message}`);
+    } finally {
+      try {
+        git(["checkout", "-q", base]);
+      } catch {
+        /* already there */
+      }
+    }
+  }
+
+  // Per-paper pull requests from before this changed are noise now: the same
+  // papers are in the batches, so leaving them open asks twice.
+  for (const pr of open) {
+    if (!pr.headRefName.startsWith(BRANCH_PREFIX)) continue;
+    try {
+      gh(["pr", "close", String(pr.number), "--delete-branch", "--comment",
+          "Superseded: suggestions are now proposed one pull request per table."]);
+      log.info(`Closed the old per-paper #${pr.number}.`);
+    } catch {
+      /* it will be closed on a later run */
+    }
+  }
+
+  // Each row learns its table's pull request, so the README can offer one
+  // link per table rather than one per paper.
+  try {
+    const path = p("data/recs.json");
+    const store = readJson(path, { recs: [] });
+    store.recs = (store.recs ?? []).map((rec) => {
+      const match = links.get(rec.freshWindow ?? "most connected");
+      const { prUrl, prNumber, batchPrUrl, batchPrNumber, ...rest } = rec;
+      return match ? { ...rest, batchPrUrl: match.url, batchPrNumber: match.number } : rest;
+    });
+    writeFileSync(path, `${JSON.stringify(store, null, 2)}\n`, "utf8");
+  } catch (err) {
+    log.warn(`Could not record pull request links: ${String(err.message).split("\n")[0]}`);
+  }
+
+  log.stat("pull requests opened", opened);
+};
+
+const batchBody = (window, papers) =>
+  [
+    `The **${window}** suggestions, ${papers.length} of them, as lines in \`import/papers.txt\`.`,
+    "",
+    "**Delete the lines for anything you do not want**, then merge. Merging adds",
+    "the rest to your list; closing rejects the whole batch. Each paper is three",
+    "lines: its title, a line of context, and the link that actually counts.",
+    "",
+    "| Paper | Who | Why |",
+    "| --- | --- | --- |",
+    ...papers.map((p) => {
+      const author = (p.topAuthors ?? [])[0];
+      const who = [author ? `${author.name} (h=${author.hIndex})` : null, (p.affiliations ?? [])[0]]
+        .filter(Boolean)
+        .join(" · ") || "-";
+      return `| [${String(p.title).replace(/\|/g, "\\|")}](${linkFor(p)}) | ${who.replace(/\|/g, "\\|")} | ${p.why ?? "-"} |`;
+    }),
+  ].join("\n");
+
 const main = () => {
   const config = readJson(p("survey.config.json"), {});
   const settings = config.recPullRequests ?? {};
@@ -139,6 +312,19 @@ const main = () => {
   const recs = readJson(p("data/recs.json"), { recs: [] }).recs ?? [];
   if (!recs.length) {
     log.info("No Recs to open pull requests for.");
+    return;
+  }
+
+  if ((settings.mode ?? "batch") === "batch") {
+    const base = process.env.GITHUB_REF_NAME || "main";
+    let labelArgs = ["--label", LABEL];
+    try {
+      gh(["label", "create", LABEL, "--description", "Suggested papers awaiting a decision", "--color", "1D76DB"]);
+    } catch (err) {
+      if (!/already exists/i.test(String(err.stderr || err.message))) labelArgs = [];
+    }
+    openBatches({ recs, base, labelArgs });
+    writeSummary();
     return;
   }
 

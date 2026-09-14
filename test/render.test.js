@@ -65,11 +65,11 @@ test("Decide offers add and drop links once the repo is known", () => {
 });
 
 /**
- * The words stay put even when the destination changes. A cell reading
- * "review #71" described the mechanism and left the reader no way to tell that
- * this is how a paper joins their list.
+ * Decide asks the same question on every row -- add or drop, never "review
+ * #71" -- but where `add` leads has to be visible, because a pull request and
+ * an issue are very different pages to land on.
  */
-test("Decide always asks the same question, and add opens the pull request", () => {
+test("Decide offers add and drop, and names the pull request route", () => {
   const [, , row] = renderTable({
     rows: [rec({ prUrl: "https://github.com/o/r/pull/12", prNumber: 12 })],
     list: "recs",
@@ -77,9 +77,9 @@ test("Decide always asks the same question, and add opens the pull request", () 
     repo: "o/r",
   });
 
-  assert.match(row, /\[add\]\(https:\/\/github\.com\/o\/r\/pull\/12\)/, "merging the PR is the acceptance");
+  assert.match(row, /\[add via PR\]\(https:\/\/github\.com\/o\/r\/pull\/12\)/, "merging the PR is the acceptance");
   assert.match(row, /\[drop\]\(https:\/\/github\.com\/o\/r\/issues\/new\?labels=drop-paper/);
-  assert.doesNotMatch(row, /review/, "no mechanism words, and no issue numbers");
+  assert.doesNotMatch(row, /review #/, "no bare issue numbers");
 });
 
 test("a pipe in a title cannot break the table", () => {
@@ -410,4 +410,48 @@ test("one author cannot fill both affiliation slots with their own employers", (
 test("but a lone author's second affiliation still beats an empty slot", () => {
   const authors = [{ name: "Solo", hIndex: 20, affiliations: ["MIT", "DeepMind"] }];
   assert.deepEqual(affiliationsOf(authors), ["MIT", "DeepMind"]);
+});
+
+// ---- Bulk review -------------------------------------------------------
+
+/**
+ * Deciding on a table of five used to mean five pages and five merges. The
+ * batch pull request holds the whole table, so the link belongs above it.
+ */
+test("a table with a batch pull request offers it before the rows", () => {
+  const recs = [
+    { id: "a", title: "One", score: 9, why: "cites 2 in your list", freshWindow: "past month", batchPrUrl: "https://github.com/o/r/pull/9", batchPrNumber: 9 },
+    { id: "b", title: "Two", score: 8, why: "cites 2 in your list", freshWindow: "past month" },
+  ];
+  const block = renderSurvey({ config: { title: "T", description: "" }, core: [], recs, repo: "o/r" });
+
+  assert.match(block, /Review all 2 in one pull request →\]\(https:\/\/github\.com\/o\/r\/pull\/9\)/);
+  assert.ok(
+    block.indexOf("Review all 2") < block.indexOf("| # | Paper"),
+    "the quicker path comes before the table it summarises"
+  );
+});
+
+test("no batch pull request, no bulk link", () => {
+  const recs = [{ id: "a", title: "One", score: 9, why: "cites 2", freshWindow: "past month" }];
+  const block = renderSurvey({ config: { title: "T", description: "" }, core: [], recs, repo: "o/r" });
+  assert.doesNotMatch(block, /Review all/);
+});
+
+/**
+ * The complaint that prompted this: two `add` links side by side, one opening
+ * a pull request and one an issue, with nothing to tell them apart.
+ */
+test("a row whose add goes to a pull request says so", () => {
+  const [, , withPr] = renderTable({
+    rows: [rec({ prUrl: "https://github.com/o/r/pull/12" })],
+    list: "recs",
+    showWhy: true,
+    repo: "o/r",
+  });
+  const [, , withIssue] = renderTable({ rows: [rec()], list: "recs", showWhy: true, repo: "o/r" });
+
+  assert.match(withPr, /\[add via PR\]\(https:\/\/github\.com\/o\/r\/pull\/12\)/);
+  assert.match(withIssue, /\[add\]\(https:\/\/github\.com\/o\/r\/issues\/new/);
+  assert.doesNotMatch(withIssue, /add via PR/);
 });

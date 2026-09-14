@@ -124,11 +124,16 @@ Every row in the Recs table carries a **Decide** cell offering the same two
 choices, `add` and `drop`. Both open a prefilled issue that the bot acts on and
 closes, so nothing needs editing by hand.
 
-Where `recPullRequests` is on, `add` instead opens the pull request already
-waiting for that paper, and merging it is the acceptance. The words do not
-change with the mechanism: whichever is behind the link, you are answering the
-same question. Dropping a paper still goes through an issue, and the next run
-closes the pull request along with every other Rec that has left the list.
+**Deciding on a whole table at once.** Turn on `recPullRequests` and each table
+gets one pull request holding all of its papers, linked above the table: *Review
+all 5 in one pull request*. The diff is `import/papers.txt` with one entry per
+paper — its title, a line naming the best author, their h-index and affiliation,
+then the link that counts. Delete the entries you do not want, merge, and the
+rest join your list. Closing rejects the batch.
+
+One pull request per table rather than per paper, because ten papers used to
+mean ten pages and ten merges. The branch is named after the table, so later
+runs update the same pull request instead of opening more.
 
 The longhand equivalents, if you prefer them:
 
@@ -267,9 +272,10 @@ All of these have working defaults; change them only if you want to.
 | `algorithm.graphBudget` | How many papers' citations to refresh per run. Default 150, which bounds the cost for a large survey. |
 | `algorithm.graphMaxAgeDays` | How stale a *recent* paper's citation data may get. Default 7. |
 | `algorithm.graphAgeAware` | Let older papers go staler than that, since their citation lists barely move: the allowance is `graphMaxAgeDays` × the paper's age in years, capped at 12×. Default on. Turn it off for a uniform weekly refresh. |
-| `recPullRequests.enabled` | Open a pull request per Rec, so accepting is a merge and rejecting a close. Needs *Allow GitHub Actions to create and approve pull requests* in Settings. |
-| `recPullRequests.count` | How many may sit open at once. `"all"` gives every Rec one, turning the pull request list into your whole triage queue. Default 3. |
-| `recPullRequests.maxPerRun` | Cap on how many to open in a single run, so a large survey fills the queue over a few runs instead of firing dozens of notifications at once. Default 20. |
+| `recPullRequests.enabled` | One pull request per table, so accepting a whole table is a single merge. Needs *Allow GitHub Actions to create and approve pull requests* in Settings, which GitHub leaves off. |
+| `recPullRequests.mode` | `batch` (default) for one pull request per table; `perRec` for the older one-per-paper behaviour, where `count` and `maxPerRun` apply. |
+| `recPullRequests.count` | `perRec` only. How many may sit open at once; `"all"` gives every Rec one. Default 3. |
+| `recPullRequests.maxPerRun` | `perRec` only. Cap per run, so a large survey fills the queue over several runs rather than firing dozens of notifications at once. Default 20. |
 
 Elsewhere:
 
