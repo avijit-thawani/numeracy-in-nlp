@@ -125,11 +125,13 @@ choices, `add` and `drop`. Both open a prefilled issue that the bot acts on and
 closes, so nothing needs editing by hand.
 
 **Deciding on a whole table at once.** Turn on `recPullRequests` and each table
-gets one pull request holding all of its papers, linked above the table: *Review
-all 5 in one pull request*. The diff is `import/papers.txt` with one entry per
-paper — its title, a line naming the best author, their h-index and affiliation,
-then the link that counts. Delete the entries you do not want, merge, and the
-rest join your list. Closing rejects the batch.
+gets one pull request holding all of its papers. The link above the table —
+*Review all 5 in one file* — opens GitHub's editor on that branch's
+`import/papers.txt`, because the decision is which lines to keep. Each paper is
+three lines: its title, a line naming the best author with their h-index and
+affiliation, then the link that counts. Delete the entries you do not want,
+commit, and follow the merge link beside it. Closing the pull request rejects
+the batch.
 
 One pull request per table rather than per paper, because ten papers used to
 mean ten pages and ten merges. The branch is named after the table, so later

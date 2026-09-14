@@ -418,18 +418,50 @@ test("but a lone author's second affiliation still beats an empty slot", () => {
  * Deciding on a table of five used to mean five pages and five merges. The
  * batch pull request holds the whole table, so the link belongs above it.
  */
-test("a table with a batch pull request offers it before the rows", () => {
+/**
+ * The link opens the file, not the pull request: the decision is "delete the
+ * lines I do not want", and that happens in the editor. The merge link follows
+ * for afterwards.
+ */
+test("a table with a batch pull request opens the file, then offers the merge", () => {
   const recs = [
-    { id: "a", title: "One", score: 9, why: "cites 2 in your list", freshWindow: "past month", batchPrUrl: "https://github.com/o/r/pull/9", batchPrNumber: 9 },
+    {
+      id: "a", title: "One", score: 9, why: "cites 2 in your list", freshWindow: "past month",
+      batchPrUrl: "https://github.com/o/r/pull/9", batchPrNumber: 9, batchBranch: "recs/past-month",
+    },
     { id: "b", title: "Two", score: 8, why: "cites 2 in your list", freshWindow: "past month" },
   ];
   const block = renderSurvey({ config: { title: "T", description: "" }, core: [], recs, repo: "o/r" });
 
-  assert.match(block, /Review all 2 in one pull request →\]\(https:\/\/github\.com\/o\/r\/pull\/9\)/);
+  assert.match(block, /Review all 2 in one file →\]\(https:\/\/github\.com\/o\/r\/edit\/recs\/past-month\/import\/papers\.txt\)/);
+  assert.match(block, /\[merge #9\]\(https:\/\/github\.com\/o\/r\/pull\/9\)/);
   assert.ok(
     block.indexOf("Review all 2") < block.indexOf("| # | Paper"),
     "the quicker path comes before the table it summarises"
   );
+});
+
+test("a survey in a subfolder edits its own seed list", () => {
+  const recs = [
+    {
+      id: "a", title: "One", score: 9, why: "cites 2 in your list", freshWindow: "past month",
+      batchPrUrl: "https://github.com/o/r/pull/9", batchPrNumber: 9, batchBranch: "recs/past-month",
+    },
+  ];
+  const block = renderSurvey({ config: { title: "T", description: "" }, core: [], recs, repo: "o/r", survey: "demos/dean" });
+  assert.match(block, /edit\/recs\/past-month\/demos\/dean\/import\/papers\.txt/);
+});
+
+/**
+ * Surveys rendered before the branch was recorded still have a working link,
+ * just the older one.
+ */
+test("without a branch recorded, the pull request link still stands", () => {
+  const recs = [
+    { id: "a", title: "One", score: 9, why: "cites 2", freshWindow: "past month", batchPrUrl: "https://github.com/o/r/pull/9", batchPrNumber: 9 },
+  ];
+  const block = renderSurvey({ config: { title: "T", description: "" }, core: [], recs, repo: "o/r" });
+  assert.match(block, /Review all 1 in one pull request →\]\(https:\/\/github\.com\/o\/r\/pull\/9\)/);
 });
 
 test("no batch pull request, no bulk link", () => {

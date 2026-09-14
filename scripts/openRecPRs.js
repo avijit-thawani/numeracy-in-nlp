@@ -270,9 +270,14 @@ const openBatches = ({ recs, base, labelArgs }) => {
     const path = p("data/recs.json");
     const store = readJson(path, { recs: [] });
     store.recs = (store.recs ?? []).map((rec) => {
-      const match = links.get(rec.freshWindow ?? "most connected");
-      const { prUrl, prNumber, batchPrUrl, batchPrNumber, ...rest } = rec;
-      return match ? { ...rest, batchPrUrl: match.url, batchPrNumber: match.number } : rest;
+      const window = rec.freshWindow ?? "most connected";
+      const match = links.get(window);
+      const { prUrl, prNumber, batchPrUrl, batchPrNumber, batchBranch: _old, ...rest } = rec;
+      // The branch travels with the link so the README can offer the file
+      // itself, not just the pull request that contains it.
+      return match
+        ? { ...rest, batchPrUrl: match.url, batchPrNumber: match.number, batchBranch: batchBranch(window) }
+        : rest;
     });
     writeFileSync(path, `${JSON.stringify(store, null, 2)}\n`, "utf8");
   } catch (err) {
