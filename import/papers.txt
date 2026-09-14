@@ -50,3 +50,144 @@ https://doi.org/10.1109/CICT67193.2025.11399104
 # Enhancing Numerical Prediction in LLMs via Smooth MMD Alignment
 #   L. Yue (h=21) · 2026 · 0 citations · past year · cites 3 in your list
 https://arxiv.org/abs/2606.27731
+
+# --- most connected ---
+# Numeracy for Language Models: Evaluating and Improving their Ability to Predict Numbers
+#   Sebastian Riedel (h=71) · University College London · 2018 · 98 citations · cited by 13 in your list
+https://arxiv.org/abs/1805.08154
+
+# Can neural networks do arithmetic? A survey on the elementary numerical skills of state-of-the-art deep learning models
+#   Alberto Testolin (h=20) · University of Padua · 2023 · 39 citations · cites 11 in your list
+https://arxiv.org/abs/2303.07735
+
+# Mining Numbers in Text: A Survey
+#   Kenji Kita (h=13) · 2021 · 4 citations · cites 11 in your list
+https://doi.org/10.5772/INTECHOPEN.98540
+
+# A Primer for Neural Arithmetic Logic Modules
+#   K. Farrahi (h=19) · University of Southampton · 2021 · 12 citations · cites 6 in your list
+https://arxiv.org/abs/2101.09530
+
+# Predicting Numerals in Text Using Nearest Neighbor Language Models
+#   T. Sakamoto (h=38) · The University of Tokyo · 2023 · 1 citations · cites 7 in your list
+https://doi.org/10.18653/v1/2023.findings-acl.295
+
+# Masked Measurement Prediction: Learning to Jointly Predict Quantities and Units from Textual Context
+#   Daniel M. Spokoyny (h=6) · University of California, San Diego · 2021 · 10 citations · cites 9 in your list
+https://arxiv.org/abs/2112.08616
+
+# Exploring Numeracy in Word Embeddings
+#   E. Hovy (h=98) · Carnegie Mellon University · 2019 · 66 citations · cited by 9 in your list
+https://doi.org/10.18653/v1/P19-1329
+
+# Verb Physics: Relative Physical Knowledge of Actions and Objects
+#   Yejin Choi (h=113) · University of Washington · 2017 · 87 citations · cited by 9 in your list
+https://arxiv.org/abs/1706.03799
+
+# Learning Division with Neural Arithmetic Logic Modules
+#   K. Farrahi (h=19) · University of Southampton · 2021 · 0 citations · cites 4 in your list
+https://arxiv.org/abs/2110.05177
+
+# Numeracy enhances the Literacy of Language Models
+#   J. Pujara (h=26) · University of Southern California · 2021 · 31 citations · cites 6 in your list
+https://doi.org/10.18653/v1/2021.emnlp-main.557
+
+# How to Leverage Digit Embeddings to Represent Numbers?
+#   N. Moosavi (h=17) · University of Sheffield · 2024 · 8 citations · cites 8 in your list
+https://arxiv.org/abs/2407.00894
+
+# Laying Anchors: Semantically Priming Numerals in Language Modeling
+#   Nikhil Muralidhar (h=13) · Virginia Tech · 2024 · 5 citations · cites 6 in your list
+https://arxiv.org/abs/2404.01536
+
+# The Value of Numbers in Clinical Text Classification
+#   Irena Spasic (h=31) · Cardiff University · 2023 · 3 citations · cites 7 in your list
+https://doi.org/10.3390/make5030040
+
+# Exploring the Numerical Reasoning Capabilities of Language Models: A Comprehensive Analysis on Tabular Data
+#   O. Cocarascu (h=20) · University of California San Diego · 2023 · 51 citations · cites 8 in your list
+https://arxiv.org/abs/2311.02216
+
+# Exploring Internal Numeracy in Language Models: A Case Study on ALBERT
+#   G. Henter (h=30) · 2024 · 1 citations · cites 5 in your list
+https://arxiv.org/abs/2404.16574
+
+# Numerical Correlation in Text
+#   Caiming Xiong (h=39) · Salesforce · 2022 · 0 citations · cites 6 in your list
+https://doi.org/10.18653/v1/2022.mathnlp-1.5
+
+# Overcoming Barriers to Skill Injection in Language Modeling: Case Study in Arithmetic
+#   Naren Ramakrishnan (h=19) · 2022 · 6 citations · cites 6 in your list
+https://arxiv.org/abs/2211.02098
+
+# Induced Natural Language Rationales and Interleaved Markup Tokens Enable Extrapolation in Large Language Models
+#   R. Lotufo (h=33) · 2022 · 14 citations · cites 6 in your list
+https://arxiv.org/abs/2208.11445
+
+# Improving the Robustness of Neural Multiplication Units with Reversible Stochasticity
+#   K. Farrahi (h=19) · 2022 · 0 citations · cites 4 in your list
+https://arxiv.org/abs/2211.05624
+
+# NumGPT: Improving Numeracy Ability of Generative Pre-trained Models
+#   Xin Jiang (h=33) · Department of Computer Science and Engineering, The Hong Kong University of Science and Technology · 2021 · 22 citations · cites 7 in your list
+https://arxiv.org/abs/2109.03137
+
+# Evaluating Numeracy of Language Models as a Natural Language Inference Task
+#   I. Sutskever (h=74) · Google DeepMind · 2025 · 6 citations · cites 6 in your list
+https://doi.org/10.18653/v1/2025.findings-naacl.467
+
+# Enhancing Knowledge Bases with Quantity Facts
+#   G. Weikum (h=94) · Max Planck Institute for Informatics · 2022 · 10 citations · cites 5 in your list
+https://doi.org/10.1145/3485447.3511932
+
+# Do Language Embeddings capture Scales?
+#   Dan Roth (h=99) · University of Pennsylvania, Oracle · 2020 · 100 citations · cited by 7 in your list
+https://arxiv.org/abs/2010.05345
+
+# WordNet: A Lexical Database for English
+#   G. Miller (h=48) · Princeton University · 1995 · 17724 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://doi.org/10.1145/219717.219748
+
+# Children's understanding of counting.
+#   K. Wynn (h=45) · University of Arizona · 1990 · 1071 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://doi.org/10.1016/0010-0277(90)90003-3
+
+# Using the Output Embedding to Improve Language Models
+#   Lior Wolf (h=64) · Facebook AI Research and Tel Aviv University · 2016 · 846 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://arxiv.org/abs/1608.05859
+
+# Variability signatures distinguish verbal from nonverbal counting for both large and small numbers
+#   C. Gallistel (h=59) · Rutgers, The State University of New Jersey · 2001 · 428 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://doi.org/10.3758/BF03196206
+
+# EFFECTIVE TEACHERS OF NUMERACY
+#   D. Wiliam (h=44) · 1997 · 383 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://www.semanticscholar.org/paper/3182aa468641a3aa4f1b26a853aed45a48099853
+
+# Core systems in human cognition.
+#   E. Spelke (h=98) · Harvard University · 2007 · 126 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://doi.org/10.1016/S0079-6123(07)64014-X
+
+# Leap-Of-Thought: Teaching Pre-Trained Models to Systematically Reason Over Implicit Knowledge
+#   Jonathan Berant (h=59) · Tel-Aviv University and Google DeepMind · 2020 · 118 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://www.semanticscholar.org/paper/f56fc41eff96afbc64030ce5e97d444706e4997c
+
+# Conference on Empirical Methods in Natural Language Processing Proceedings of the Fourth International Workshop on Natural Language Processing for Social Media Socialnlp@emnlp2016 Chairs' Welcome Identifying and Categorizing Disaster-related Tweets Why Do They Leave: Modeling Participation in Online
+#   Noah A. Smith (h=115) · University of Washington · 108 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://www.semanticscholar.org/paper/51db583f89e0191c7ebf3fe212c5271c98b33c6b
+
+# From 'F' to 'A' on the N.Y. Regents Science Exams: An Overview of the Aristo Project
+#   Oren Etzioni (h=88) · Allen Institute for AI · 2019 · 107 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://arxiv.org/abs/1909.01958
+
+# The Biber Cognitive Estimation Test.
+#   Deborah A. Fein (h=61) · University of Connecticut · 2004 · 79 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://doi.org/10.1016/J.ACN.2003.12.002
+
+# “Was It Good? It Was Provocative.” Learning the Meaning of Scalar Adjectives
+#   Christopher D. Manning (h=149) · Stanford University · 2010 · 66 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://www.semanticscholar.org/paper/b8e6e8fd64d71f7c89b1aa9cf1fa073451f6d5e9
+
+# Grounding Gradable Adjectives through Crowdsourcing
+#   M. Surdeanu (h=44) · University of Arizona · 2018 · 5 citations · from Representing Numbers in NLP: a Survey and a Vision
+https://doi.org/10.63317/5ii9w43m49ix
