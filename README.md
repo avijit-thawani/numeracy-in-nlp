@@ -12,7 +12,7 @@ A living survey of numeracy in NLP
 
 ### New in the past year
 
-<sub>**[Review all 4 in one pull request →](https://github.com/avijit-thawani/numeracy-in-nlp/pull/108)** Delete the lines you do not want, then merge.</sub>
+<sub>**[Review all 4 in one file →](https://github.com/avijit-thawani/numeracy-in-nlp/edit/recs/past-year/import/papers.txt)** Delete the lines you do not want, commit, then [merge #108](https://github.com/avijit-thawani/numeracy-in-nlp/pull/108).</sub>
 
 | # | Paper | Top authors | Affiliation | Details | Score | Decide |
 | ---: | --- | --- | --- | --- | ---: | --- |
@@ -25,7 +25,7 @@ A living survey of numeracy in NLP
 
 ### Most connected, any year
 
-<sub>**[Review all 43 in one pull request →](https://github.com/avijit-thawani/numeracy-in-nlp/pull/109)** Delete the lines you do not want, then merge.</sub>
+<sub>**[Review all 43 in one file →](https://github.com/avijit-thawani/numeracy-in-nlp/edit/recs/most-connected/import/papers.txt)** Delete the lines you do not want, commit, then [merge #109](https://github.com/avijit-thawani/numeracy-in-nlp/pull/109).</sub>
 
 | # | Paper | Top authors | Affiliation | Details | Score | Decide |
 | ---: | --- | --- | --- | --- | ---: | --- |

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-14T18:22:01.404Z",
+  "updatedAt": "2026-09-14T18:30:20.023Z",
   "recs": [
     {
       "id": "01034e5d9539f208a2e848fc5fc65047b995ddc7",
@@ -44,7 +44,8 @@
       "fromReferences": false,
       "freshWindow": "past year",
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/108",
-      "batchPrNumber": 108
+      "batchPrNumber": 108,
+      "batchBranch": "recs/past-year"
     },
     {
       "id": "5d8cc0a280f58ccf4215ffe4f7900c84383035e4",
@@ -89,7 +90,8 @@
       "fromReferences": false,
       "freshWindow": "past year",
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/108",
-      "batchPrNumber": 108
+      "batchPrNumber": 108,
+      "batchBranch": "recs/past-year"
     },
     {
       "id": "78ac5f3860d4d1bac6abe0cc0ac876b8e8329875",
@@ -134,7 +136,8 @@
       "fromReferences": false,
       "freshWindow": "past year",
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/108",
-      "batchPrNumber": 108
+      "batchPrNumber": 108,
+      "batchBranch": "recs/past-year"
     },
     {
       "id": "29c8b567b865ff5e854c106a3ff1e24270bc1908",
@@ -180,7 +183,8 @@
       "fromReferences": false,
       "freshWindow": "past year",
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/108",
-      "batchPrNumber": 108
+      "batchPrNumber": 108,
+      "batchBranch": "recs/past-year"
     },
     {
       "id": "afed6dc6900d3b37e528b9086661bba583d60bf6",
@@ -226,7 +230,8 @@
       "why": "cited by 9 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "2cc3ab9fa41ba2804e301f7eae9598636e62422a",
@@ -268,7 +273,8 @@
       "why": "cites 9 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "c9f343b492c170c726f607c255ec6c7177dc5800",
@@ -311,7 +317,8 @@
       "why": "cited by 5 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "37588705a2af7d5b24d901dd33ade1ff293aabdd",
@@ -354,7 +361,8 @@
       "why": "cites 7 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "112ac68ddb0f021517dd465e89918fa52755cc35",
@@ -398,7 +406,8 @@
       "why": "cited by 3 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "6f69e19348870552a7ab92d038c8b8d753fe6b60",
@@ -443,7 +452,8 @@
       "why": "cited by 3 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "5fc548f3f3112de7eddad3744717dc2f9d22ca38",
@@ -491,7 +501,8 @@
       "why": "cited by 5 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "1eff94b44432a8e6af29288b8234494516579ad3",
@@ -536,7 +547,8 @@
       "why": "cited by 4 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "8eb9b2ea146e3a381a29b4a9314c36f61b71e367",
@@ -582,7 +594,8 @@
       "why": "cited by 3 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "5fda196ca0039089181e7d8e22cc500cbea4c877",
@@ -629,7 +642,8 @@
       "why": "cites 5 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "def7c67c3688bc459fbef3ce50a466a0cbf411a9",
@@ -673,7 +687,8 @@
       "why": "cites 3 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "0ce6a798f8222ed8f221326ca566311c648cb4dc",
@@ -717,7 +732,8 @@
       "why": "cites 3 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "c36277b67814e0a522e786a38e1768612b0e63f2",
@@ -759,7 +775,8 @@
       "why": "cites 3 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "0e6e8274d0dcbc1c3c1ccdbd87f3e5d53fdf62b4",
@@ -804,7 +821,8 @@
       "why": "cites 5 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "d34e6c84119cef8eb9149a27d6b4903131407ea6",
@@ -851,7 +869,8 @@
       "why": "cited by 3 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "df2b0e26d0599ce3e70df8a9da02e51594e0e992",
@@ -883,7 +902,7 @@
       "doi": "10.18653/v1/N19-1423",
       "arxivId": "1810.04805",
       "pdf": "https://doi.org/10.18653/v1/n19-1423",
-      "citationCount": 120786,
+      "citationCount": 120792,
       "referenceCount": 63,
       "influentialCitationCount": 22918,
       "source": null,
@@ -894,7 +913,8 @@
       "why": "cited by 14 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "c9343c26a0e604f7afd94b7290bbdf8d96cd65b6",
@@ -937,7 +957,8 @@
       "why": "cites 6 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "18cad1aa7a3f6e783183a5588e85a9dc3ba6ede6",
@@ -985,7 +1006,8 @@
       "why": "cites 5 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "ff8f3dfd9e2f4a92310999722abefab202935521",
@@ -1027,7 +1049,8 @@
       "why": "cites 5 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "eef7cfe8267954adbb4675576072a1d80ca7a3a8",
@@ -1074,7 +1097,8 @@
       "why": "cited by 5 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "c9e55ef1b3362db711d95a928a28a8cbd0db3092",
@@ -1118,7 +1142,8 @@
       "why": "cites 6 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "f6b51c8753a871dc94ff32152c00c01e94f90f09",
@@ -1153,7 +1178,7 @@
       "doi": null,
       "arxivId": "1301.3781",
       "pdf": null,
-      "citationCount": 35055,
+      "citationCount": 35056,
       "referenceCount": 36,
       "influentialCitationCount": 4365,
       "source": null,
@@ -1164,7 +1189,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "68c03788224000794d5491ab459be0b2a2c38677",
@@ -1190,7 +1216,7 @@
       "doi": "10.1145/219717.219748",
       "arxivId": null,
       "pdf": "https://dl.acm.org/doi/pdf/10.1145/219717.219748",
-      "citationCount": 17722,
+      "citationCount": 17723,
       "referenceCount": 8,
       "influentialCitationCount": 2695,
       "source": null,
@@ -1201,7 +1227,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "03c4edfb06cfa0b1d58db18e40d3931196cda750",
@@ -1238,7 +1265,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "e7cafbce5945fe8d9ca94df04bd7cb45f68af1ae",
@@ -1275,7 +1303,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "63e39cdf1ad884da6bc69096bb3413b5b1100559",
@@ -1319,7 +1348,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "24d34fb890b3c13a1019342faf129e25b6419a14",
@@ -1365,7 +1395,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "3182aa468641a3aa4f1b26a853aed45a48099853",
@@ -1409,7 +1440,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "6ddc5a5009e6b2a146e103e7d1dac283d3741fa3",
@@ -1452,7 +1484,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "f56fc41eff96afbc64030ce5e97d444706e4997c",
@@ -1498,7 +1531,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "51db583f89e0191c7ebf3fe212c5271c98b33c6b",
@@ -1650,7 +1684,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "007bc04c97f9f8bcec0487699e197315418f22e7",
@@ -1706,7 +1741,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "75e17a2dc0a2b2c1cce5ab89d8c703fb8bddbef1",
@@ -1750,7 +1786,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "91fa08ca6f7d39489d53af1deb87e9f7219f2dba",
@@ -1797,7 +1834,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "b8e6e8fd64d71f7c89b1aa9cf1fa073451f6d5e9",
@@ -1841,7 +1879,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "cfa097ad84c0056e8e37bdf3285543eb85a063c5",
@@ -1888,7 +1927,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "251a27e00b9838c8c315f0152cb52762db766aee",
@@ -1934,7 +1974,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "11bb73c6cdec9c5ce579194c26ad74c722e32f95",
@@ -1979,7 +2020,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "d5fcad8a3b183642fcf609519a4dbbda9c3541ff",
@@ -2027,7 +2069,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "5f277d2605a272c321615373254097939aae4fac",
@@ -2074,7 +2117,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "da4fc448a81ca207609e78bced9a02a10f75866e",
@@ -2119,7 +2163,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "ef89a1f27d1b1bfd451d4482a6de2dcd3d4a1318",
@@ -2166,7 +2211,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     },
     {
       "id": "0ee09a9f7c586b703650f9a189668366f619b9e2",
@@ -2209,7 +2255,8 @@
       "why": "from Representing Numbers in NLP: a Survey and a Vision",
       "fromReferences": true,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/109",
-      "batchPrNumber": 109
+      "batchPrNumber": 109,
+      "batchBranch": "recs/most-connected"
     }
   ]
 }
