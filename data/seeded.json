@@ -1,11 +1,6 @@
 {
-  "updatedAt": "2026-09-14T18:30:20.023Z",
+  "updatedAt": "2026-09-14T19:35:26.928Z",
   "seeded": [
-    {
-      "id": "2cc3ab9fa41ba2804e301f7eae9598636e62422a",
-      "from": "arXiv:2103.13136",
-      "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
-    },
     {
       "id": "cfa097ad84c0056e8e37bdf3285543eb85a063c5",
       "from": "arXiv:2103.13136",
@@ -27,11 +22,6 @@
       "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
     },
     {
-      "id": "251a27e00b9838c8c315f0152cb52762db766aee",
-      "from": "arXiv:2103.13136",
-      "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
-    },
-    {
       "id": "75e17a2dc0a2b2c1cce5ab89d8c703fb8bddbef1",
       "from": "arXiv:2103.13136",
       "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
@@ -48,11 +38,6 @@
     },
     {
       "id": "b9485d1e2c66c3ae452ec4903c2a157caef4d2ed",
-      "from": "arXiv:2103.13136",
-      "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
-    },
-    {
-      "id": "d5fcad8a3b183642fcf609519a4dbbda9c3541ff",
       "from": "arXiv:2103.13136",
       "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
     },
@@ -82,27 +67,7 @@
       "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
     },
     {
-      "id": "11bb73c6cdec9c5ce579194c26ad74c722e32f95",
-      "from": "arXiv:2103.13136",
-      "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
-    },
-    {
       "id": "da6ba9f19581bd7e28bc280c53385a1327eb09dd",
-      "from": "arXiv:2103.13136",
-      "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
-    },
-    {
-      "id": "d34e6c84119cef8eb9149a27d6b4903131407ea6",
-      "from": "arXiv:2103.13136",
-      "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
-    },
-    {
-      "id": "5f277d2605a272c321615373254097939aae4fac",
-      "from": "arXiv:2103.13136",
-      "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
-    },
-    {
-      "id": "eef7cfe8267954adbb4675576072a1d80ca7a3a8",
       "from": "arXiv:2103.13136",
       "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
     },
@@ -113,16 +78,6 @@
     },
     {
       "id": "d9f6ada77448664b71128bb19df15765336974a6",
-      "from": "arXiv:2103.13136",
-      "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
-    },
-    {
-      "id": "afed6dc6900d3b37e528b9086661bba583d60bf6",
-      "from": "arXiv:2103.13136",
-      "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
-    },
-    {
-      "id": "1eff94b44432a8e6af29288b8234494516579ad3",
       "from": "arXiv:2103.13136",
       "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
     },
@@ -207,11 +162,6 @@
       "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
     },
     {
-      "id": "0ee09a9f7c586b703650f9a189668366f619b9e2",
-      "from": "arXiv:2103.13136",
-      "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
-    },
-    {
       "id": "91fa08ca6f7d39489d53af1deb87e9f7219f2dba",
       "from": "arXiv:2103.13136",
       "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
@@ -248,11 +198,6 @@
     },
     {
       "id": "df2b0e26d0599ce3e70df8a9da02e51594e0e992",
-      "from": "arXiv:2103.13136",
-      "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
-    },
-    {
-      "id": "da4fc448a81ca207609e78bced9a02a10f75866e",
       "from": "arXiv:2103.13136",
       "fromTitle": "Representing Numbers in NLP: a Survey and a Vision"
     },
