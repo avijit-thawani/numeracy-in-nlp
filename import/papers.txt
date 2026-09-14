@@ -19,10 +19,6 @@ https://arxiv.org/abs/1904.01557
 #   Rodrigo Nogueira (h=32) · 2021 · 165 citations · cites 9 in your list
 https://arxiv.org/abs/2102.13019
 
-# Verb Physics: Relative Physical Knowledge of Actions and Objects
-#   Yejin Choi (h=113) · University of Washington · 2017 · 87 citations · cited by 5 in your list
-https://arxiv.org/abs/1706.03799
-
 # Investigating Numeracy Learning Ability of a Text-to-Text Transfer Model
 #   Chitta Baral (h=32) · Arizona State University · 2021 · 22 citations · cites 7 in your list
 https://arxiv.org/abs/2109.04672
@@ -34,10 +30,6 @@ https://arxiv.org/abs/1910.01888
 # Neural Arithmetic Expression Calculator
 #   Xipeng Qiu (h=67) · Fudan University · 2018 · 17 citations · cited by 3 in your list
 https://arxiv.org/abs/1809.08590
-
-# Neural Arithmetic Logic Units
-#   Chris Dyer (h=77) · Google (United States) · 2018 · 226 citations · cited by 5 in your list
-https://arxiv.org/abs/1808.00508
 
 # EQUATE: A Benchmark Evaluation Framework for Quantitative Reasoning in Natural Language Inference
 #   E. Hovy (h=98) · Carnegie Mellon University · 2019 · 87 citations · cited by 4 in your list
@@ -51,14 +43,6 @@ https://doi.org/10.18653/v1/P18-2102
 #   Ruifeng Xu (h=10) · Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences · 2024 · 1 citations · cites 5 in your list
 https://arxiv.org/abs/2406.02864
 
-# A Primer for Neural Arithmetic Logic Modules
-#   K. Farrahi (h=19) · University of Southampton · 2021 · 12 citations · cites 3 in your list
-https://arxiv.org/abs/2101.09530
-
-# Learning Division with Neural Arithmetic Logic Modules
-#   K. Farrahi (h=19) · University of Southampton · 2021 · 0 citations · cites 3 in your list
-https://arxiv.org/abs/2110.05177
-
 # Exploring the Learning Mechanisms of Neural Division Modules
 #   K. Farrahi (h=19) · 2022 · 0 citations · cites 3 in your list
 https://www.semanticscholar.org/paper/c36277b67814e0a522e786a38e1768612b0e63f2
@@ -70,10 +54,6 @@ https://arxiv.org/abs/2107.12708
 # How Large Are Lions? Inducing Distributions over Quantitative Attributes
 #   Dan Roth (h=99) · University of Pennsylvania, Oracle · 2019 · 62 citations · cited by 3 in your list
 https://arxiv.org/abs/1906.01327
-
-# BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
-#   Kristina Toutanova (h=48) · 2019 · 120792 citations · cited by 14 in your list
-https://arxiv.org/abs/1810.04805
 
 # Predicting Numerals in Natural Language Text Using a Language Model Considering the Quantitative Aspects of Numerals
 #   Akiko Aizawa (h=33) · The University of Tokyo · 2021 · 5 citations · cites 6 in your list
@@ -95,66 +75,6 @@ https://arxiv.org/abs/1905.13319
 #   Haotong Yang (h=7) · 2024 · 51 citations · cites 6 in your list
 https://arxiv.org/abs/2411.03766
 
-# Efficient Estimation of Word Representations in Vector Space
-#   G. Corrado (h=43) · Google (United States) · 2013 · 35056 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://arxiv.org/abs/1301.3781
-
-# WordNet: A Lexical Database for English
-#   G. Miller (h=48) · Princeton University · 1995 · 17723 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://doi.org/10.1145/219717.219748
-
-# The self-organizing map
-#   T. Kohonen (h=69) · University of Helsinki · 1990 · 10598 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://doi.org/10.1016/S0925-2312(98)00030-7
-
-# Children's understanding of counting.
-#   K. Wynn (h=45) · University of Arizona · 1990 · 1071 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://doi.org/10.1016/0010-0277(90)90003-3
-
-# Using the Output Embedding to Improve Language Models
-#   Lior Wolf (h=64) · Facebook AI Research and Tel Aviv University · 2016 · 846 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://arxiv.org/abs/1608.05859
-
-# Variability signatures distinguish verbal from nonverbal counting for both large and small numbers
-#   C. Gallistel (h=59) · Rutgers, The State University of New Jersey · 2001 · 428 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://doi.org/10.3758/BF03196206
-
-# EFFECTIVE TEACHERS OF NUMERACY
-#   D. Wiliam (h=44) · 1997 · 383 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://www.semanticscholar.org/paper/3182aa468641a3aa4f1b26a853aed45a48099853
-
-# Core systems in human cognition.
-#   E. Spelke (h=98) · Harvard University · 2007 · 126 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://doi.org/10.1016/S0079-6123(07)64014-X
-
-# Leap-Of-Thought: Teaching Pre-Trained Models to Systematically Reason Over Implicit Knowledge
-#   Jonathan Berant (h=59) · Tel-Aviv University and Google DeepMind · 2020 · 118 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://www.semanticscholar.org/paper/f56fc41eff96afbc64030ce5e97d444706e4997c
-
-# Conference on Empirical Methods in Natural Language Processing Proceedings of the Fourth International Workshop on Natural Language Processing for Social Media Socialnlp@emnlp2016 Chairs' Welcome Identifying and Categorizing Disaster-related Tweets Why Do They Leave: Modeling Participation in Online
-#   Noah A. Smith (h=115) · University of Washington · 108 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://www.semanticscholar.org/paper/51db583f89e0191c7ebf3fe212c5271c98b33c6b
-
-# From 'F' to 'A' on the N.Y. Regents Science Exams: An Overview of the Aristo Project
-#   Oren Etzioni (h=88) · Allen Institute for AI · 2019 · 107 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://arxiv.org/abs/1909.01958
-
-# On the Computational Power of Transformers and Its Implications in Sequence Modeling
-#   Navin Goyal (h=24) · Mila, McGill · 2020 · 102 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://arxiv.org/abs/2006.09286
-
-# The Biber Cognitive Estimation Test.
-#   Deborah A. Fein (h=61) · University of Connecticut · 2004 · 79 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://doi.org/10.1016/J.ACN.2003.12.002
-
-# “Was It Good? It Was Provocative.” Learning the Meaning of Scalar Adjectives
-#   Christopher D. Manning (h=149) · Stanford University · 2010 · 66 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://www.semanticscholar.org/paper/b8e6e8fd64d71f7c89b1aa9cf1fa073451f6d5e9
-
-# Methods for Numeracy-Preserving Word Embeddings
-#   L. Carin (h=100) · National University of Singapore · 2020 · 58 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://doi.org/10.18653/v1/2020.emnlp-main.384
-
 # Visual sense of number vs. sense of magnitude in humans and machines
 #   M. Zorzi (h=53) · University of Padua · 2020 · 55 citations · from Representing Numbers in NLP: a Survey and a Vision
 https://doi.org/10.1038/s41598-020-66838-5
@@ -174,10 +94,6 @@ https://doi.org/10.18653/v1/W19-1309
 # SemEval-2018 Task 5: Counting Events and Participants in the Long Tail
 #   P. Vossen (h=42) · Vrije Universiteit Amsterdam · 2018 · 19 citations · from Representing Numbers in NLP: a Survey and a Vision
 https://doi.org/10.18653/v1/S18-1009
-
-# Grounding Gradable Adjectives through Crowdsourcing
-#   M. Surdeanu (h=44) · University of Arizona · 2018 · 5 citations · from Representing Numbers in NLP: a Survey and a Vision
-https://doi.org/10.63317/5ii9w43m49ix
 
 # A Fact-aligned Corpus of Numerical Expressions
 #   R. Power (h=26) · The Open University · 2010 · 2 citations · from Representing Numbers in NLP: a Survey and a Vision
