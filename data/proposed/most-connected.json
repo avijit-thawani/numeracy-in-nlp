@@ -1,0 +1,101 @@
+{
+  "window": "most connected",
+  "proposedAt": "2026-09-15T13:57:36.672Z",
+  "papers": [
+    {
+      "id": "5df55d94ab5026ff84ec01871592108fbadbddbe",
+      "link": "https://doi.org/10.18653/v1/2022.findings-emnlp.161",
+      "title": "Measurement Extraction with Natural Language Processing: A Review"
+    },
+    {
+      "id": "4740ef8dc634864695b5b933f416980b9eb6555b",
+      "link": "https://arxiv.org/abs/2011.07961",
+      "title": "An Empirical Investigation of Contextualized Number Prediction"
+    },
+    {
+      "id": "187c25de08261760cf48b4e9dabf308d2f7f15d9",
+      "link": "https://doi.org/10.1162/tacl_a_00118",
+      "title": "Reasoning about Quantities in Natural Language"
+    },
+    {
+      "id": "be8f769f135b0ffcf829594b9421788781f38008",
+      "link": "https://arxiv.org/abs/2304.10739",
+      "title": "KitchenScale: Learning to predict ingredient quantities from recipe contexts"
+    },
+    {
+      "id": "678fd7c48efe21434148b4b3482c2b8b3ee618fc",
+      "link": "https://doi.org/10.18653/v1/D17-1088",
+      "title": "Deep Neural Solver for Math Word Problems"
+    },
+    {
+      "id": "ab19c23080065dd5f12ddda9184a3f9a82193779",
+      "link": "https://doi.org/10.18653/v1/2025.findings-acl.1220",
+      "title": "Dense Retrieval with Quantity Comparison Intent"
+    },
+    {
+      "id": "c97bcf9e605938c2bef54f12b2156c678f1a2373",
+      "link": "https://www.semanticscholar.org/paper/c97bcf9e605938c2bef54f12b2156c678f1a2373",
+      "title": "Introducing Semantic Information for Numerical Attribute Prediction over Knowledge Graphs"
+    },
+    {
+      "id": "c1042f515770caeeba47b79599bca4017b9a89e9",
+      "link": "https://doi.org/10.18653/v1/2024.bionlp-1.32",
+      "title": "Do Numbers Matter? Types and Prevalence of Numbers in Clinical Texts"
+    },
+    {
+      "id": "09900b36ca35af12301507cf992675808a709838",
+      "link": "https://doi.org/10.18653/v1/P16-1084",
+      "title": "How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation"
+    },
+    {
+      "id": "730043364aed106241ef18ab3e3b5e316802a254",
+      "link": "https://arxiv.org/abs/1910.06701",
+      "title": "NumNet: Machine Reading Comprehension with Numerical Reasoning"
+    },
+    {
+      "id": "9b45af10429681249fafb07c3b6012ea4ce63ffe",
+      "link": "https://arxiv.org/abs/2210.12023",
+      "title": "A Causal Framework to Quantify the Robustness of Mathematical Reasoning with Language Models"
+    },
+    {
+      "id": "5ee871537ae51e7e2e93d2a70fff5d100649a655",
+      "link": "https://arxiv.org/abs/2312.07622",
+      "title": "Mathematical Language Models: A Survey"
+    },
+    {
+      "id": "7e1eea0235e1902b6e3219fd9de9105e2f08fd65",
+      "link": "https://arxiv.org/abs/1608.04147",
+      "title": "Numerically Grounded Language Models for Semantic Error Correction"
+    },
+    {
+      "id": "a27ec251891ec0b55910c3a318fa6f2d71266d52",
+      "link": "https://arxiv.org/abs/2407.10283",
+      "title": "Numbers Matter! Bringing Quantity-awareness to Retrieval Systems"
+    },
+    {
+      "id": "9e1ba67d5f443a8bd42a8b856534f50c429baf11",
+      "link": "https://arxiv.org/abs/2305.08246",
+      "title": "Learning Non-linguistic Skills without Sacrificing Linguistic Proficiency"
+    },
+    {
+      "id": "73df3e273452aacfe90f0c4bf22ff24249de0e07",
+      "link": "https://arxiv.org/abs/2503.17726",
+      "title": "A Survey on Mathematical Reasoning and Optimization with Large Language Models"
+    },
+    {
+      "id": "9aa080f8ef7425c7ccc56585212a410fe8e6fd02",
+      "link": "https://arxiv.org/abs/2205.03559",
+      "title": "Improving Downstream Task Performance by Treating Numbers as Entities"
+    },
+    {
+      "id": "2bdbb07bc12b8d8c332b7a84aa05e76218c07cd9",
+      "link": "https://doi.org/10.18653/v1/N16-1136",
+      "title": "MAWPS: A Math Word Problem Repository"
+    },
+    {
+      "id": "513167c08db5139162710aad9b2c217b344df2c4",
+      "link": "https://doi.org/10.1609/aaai.v30i1.10361",
+      "title": "Numerical Relation Extraction with Minimal Supervision"
+    }
+  ]
+}
