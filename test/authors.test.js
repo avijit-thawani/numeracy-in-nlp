@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import { parseAuthorTarget, resolveAuthorPapers } from "../lib/authors.js";
 import { resolveAll } from "../lib/resolve.js";
 import { applyFreshness, ageInDays } from "../lib/recommend.js";
+import { rejectedFrom } from "../lib/decisions.js";
 
 test("an author line is recognised however it is written", () => {
   const { authors, resolved, unresolved } = resolveAll([
@@ -220,4 +221,44 @@ test("with no threshold set, anything recent still qualifies", () => {
   const paper = { id: "a", score: 1, overlap: 0, publicationDate: new Date().toISOString().slice(0, 10) };
   const out = applyFreshness([paper], { windows: [{ days: 30, count: 1, label: "past month" }] });
   assert.equal(out[0].freshWindow, "past month");
+});
+
+// ---- Reading a decision out of a merged batch --------------------------
+
+/**
+ * The bug this prevents: delete ten papers from a batch pull request, merge,
+ * and every one of them is suggested again on the next run. Deleting a line is
+ * the only way to say no in that review, so it has to count as a refusal.
+ */
+test("papers deleted from the merged file are refusals", () => {
+  const proposed = [
+    { id: "kept", link: "https://arxiv.org/abs/1111.1111", title: "Kept" },
+    { id: "deleted", link: "https://arxiv.org/abs/2222.2222", title: "Deleted" },
+  ];
+  const seedText = "# comment\nhttps://arxiv.org/abs/1111.1111\n";
+
+  const out = rejectedFrom({ proposed, seedText, coreIds: new Set() });
+  assert.deepEqual(out, [{ id: "deleted", title: "Deleted" }]);
+});
+
+test("a paper already in the list is not treated as a refusal", () => {
+  const proposed = [{ id: "already", link: "https://arxiv.org/abs/3333.3333", title: "Already" }];
+  // Not in the seed file, because a previous run ingested it and rewrote it out.
+  const out = rejectedFrom({ proposed, seedText: "", coreIds: new Set(["already"]) });
+  assert.deepEqual(out, []);
+});
+
+test("nothing merged, nothing rejected", () => {
+  assert.deepEqual(rejectedFrom({ proposed: [], seedText: "", coreIds: new Set() }), []);
+  assert.deepEqual(rejectedFrom({ proposed: undefined, seedText: undefined, coreIds: undefined }), []);
+});
+
+/**
+ * The reader may tidy the comment lines while deleting entries, so only the
+ * link decides.
+ */
+test("an edited comment does not make a kept paper look deleted", () => {
+  const proposed = [{ id: "kept", link: "https://doi.org/10.1/x", title: "Kept" }];
+  const seedText = "my own note\nhttps://doi.org/10.1/x   # renamed by hand\n";
+  assert.deepEqual(rejectedFrom({ proposed, seedText, coreIds: new Set() }), []);
 });

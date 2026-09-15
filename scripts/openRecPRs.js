@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -236,7 +236,26 @@ const openBatches = ({ recs, base, labelArgs }) => {
       const block = papers.map(seedEntry).join("\n\n");
       writeFileSync(seedFile, `${current}\n\n# --- ${window} ---\n${block}\n`, "utf8");
 
-      git(["add", "import/papers.txt"]);
+      // What this branch proposed, in a form the next run can read. It reaches
+      // the default branch only on merge, which is exactly when the deletions
+      // in it become a decision worth recording.
+      const manifest = p(`data/proposed/${branch.replace(`${BATCH_PREFIX}`, "")}.json`);
+      mkdirSync(dirname(manifest), { recursive: true });
+      writeFileSync(
+        manifest,
+        `${JSON.stringify(
+          {
+            window,
+            proposedAt: new Date().toISOString(),
+            papers: papers.map((r) => ({ id: r.id, link: linkFor(r), title: r.title })),
+          },
+          null,
+          2
+        )}\n`,
+        "utf8"
+      );
+
+      git(["add", "import/papers.txt", "data/proposed"]);
       git([
         "-c", "user.name=github-actions[bot]",
         "-c", "user.email=41898282+github-actions[bot]@users.noreply.github.com",

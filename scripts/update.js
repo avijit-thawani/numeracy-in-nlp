@@ -10,6 +10,7 @@ import { fetchPapersFallback, fetchAffiliations } from "../lib/openalex.js";
 import { buildRecommendations } from "../lib/recommend.js";
 import { loadGraph, saveGraph, keysWorthKeeping } from "../lib/graphCache.js";
 import { parseBibliography } from "../lib/bibliography.js";
+import { rejectedFrom } from "../lib/decisions.js";
 import { INTRO_START, INTRO_END } from "../lib/renderReadme.js";
 import { lookupOwnerEmail } from "../lib/identity.js";
 import { findSurveys, surveyName, surveyByName } from "../lib/surveys.js";
@@ -257,6 +258,56 @@ const clearDemoIfInherited = () => {
 };
 
 /**
+ * Records what a merged batch pull request rejected.
+ *
+ * Merging says "keep these" and "reject those" in one action: the lines left
+ * in the seed file are the keepers, and the ones deleted are refusals. The
+ * keeping took care of itself, but the refusals were silent, so a paper
+ * deleted from a pull request was suggested again on the very next run. Anyone
+ * curating a table would watch their work reappear.
+ *
+ * The manifest each batch branch carries reaches the default branch only when
+ * the pull request is merged, so its presence *is* the merge signal. It is
+ * consumed here: read once, acted on, deleted.
+ */
+const absorbMergedDecisions = (seedText, papers, dismissed) => {
+  const dir = p("data/proposed");
+  if (!existsSync(dir)) return;
+
+  const files = readdirSync(dir).filter((f) => f.endsWith(".json"));
+  if (!files.length) return;
+
+  const store = readJson(p("data/dismissed.json"), { ids: [], notes: {} });
+  store.ids = store.ids ?? [];
+  store.notes = store.notes ?? {};
+
+  const coreIds = new Set(papers.map((x) => x.id));
+  let rejected = 0;
+
+  for (const file of files) {
+    const manifest = readJson(join(dir, file), null);
+    const dropped = rejectedFrom({ proposed: manifest?.papers, seedText, coreIds });
+
+    for (const paper of dropped) {
+      if (store.ids.includes(paper.id)) continue;
+      store.ids.push(paper.id);
+      store.notes[paper.id] = `Removed from the ${manifest?.window ?? "batch"} pull request`;
+      dismissed.push(paper.id);
+      rejected++;
+    }
+
+    // Consumed either way: a manifest that is still here next run would
+    // re-judge papers that have since been decided on by other means.
+    rmSync(join(dir, file));
+  }
+
+  if (rejected) {
+    writeJson(p("data/dismissed.json"), store);
+    log.stat("papers you removed from a pull request", rejected);
+  }
+};
+
+/**
  * Reads any .bib or .ris files dropped in `import/` and turns them into
  * lookups. These land in the survey itself rather than in suggestions: a
  * bibliography export is the owner's own library, already curated.
@@ -377,6 +428,12 @@ const runSurvey = async ({ refreshMode, isOnlySurvey, label }) => {
   if (purged) {
     log.info(`Removed ${purged} stale bibliography line(s) that an older run wrote into papers.txt.`);
   }
+
+  // ---- Absorb the decisions in a merged batch --------------------------
+  // Must happen before anything rewrites the seed file: what the reader left
+  // in it is the answer, and this run is about to replace it with whatever
+  // failed to resolve.
+  absorbMergedDecisions(rawQueueLines.join("\n"), papers, dismissed);
 
   const issueLinks = linksFromIssue({ isOnlySurvey, thisSurvey: label });
   const incoming = [...queueLines, ...issueLinks];
