@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T09:27:38.682Z",
+  "updatedAt": "2026-09-18T09:01:11.632Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 2930,
+      "citationCount": 2931,
       "referenceCount": 14,
       "influentialCitationCount": 268,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -69,7 +69,7 @@
       "doi": "10.18653/v1/D18-1256",
       "arxivId": "1808.09637",
       "pdf": "https://www.aclweb.org/anthology/D18-1256.pdf",
-      "citationCount": 257,
+      "citationCount": 258,
       "referenceCount": 34,
       "influentialCitationCount": 48,
       "source": "https://arxiv.org/abs/1808.09637",
@@ -594,7 +594,7 @@
       "topAuthors": [
         {
           "name": "Devin J. Johnson",
-          "hIndex": 3,
+          "hIndex": 2,
           "authorId": "2109809054"
         },
         {
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6406,
+      "citationCount": 6414,
       "referenceCount": 71,
-      "influentialCitationCount": 1449,
+      "influentialCitationCount": 1450,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 10
@@ -694,9 +694,9 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1348,
+      "citationCount": 1351,
       "referenceCount": 28,
-      "influentialCitationCount": 273,
+      "influentialCitationCount": 275,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
       "score": 15
@@ -856,9 +856,9 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1372,
+      "citationCount": 1373,
       "referenceCount": 54,
-      "influentialCitationCount": 234,
+      "influentialCitationCount": 233,
       "source": "https://arxiv.org/abs/1903.00161",
       "addedAt": "2026-09-13",
       "score": 45
@@ -893,7 +893,7 @@
       "doi": null,
       "arxivId": "1904.01557",
       "pdf": null,
-      "citationCount": 532,
+      "citationCount": 533,
       "referenceCount": 32,
       "influentialCitationCount": 52,
       "source": "https://arxiv.org/abs/1904.01557",
@@ -1104,7 +1104,7 @@
         },
         {
           "name": "L. Birnbaum",
-          "hIndex": 30,
+          "hIndex": 29,
           "authorId": "144218567"
         }
       ],
@@ -1430,7 +1430,7 @@
       "doi": "10.18653/v1/N19-1245",
       "arxivId": "1905.13319",
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
-      "citationCount": 916,
+      "citationCount": 917,
       "referenceCount": 25,
       "influentialCitationCount": 114,
       "source": "https://arxiv.org/abs/1905.13319",
@@ -1454,9 +1454,9 @@
           "authorId": "2185454298"
         },
         {
-          "name": "Yi Hu",
+          "name": "Muhan Zhang",
           "hIndex": 6,
-          "authorId": "2288333334"
+          "authorId": "2257092769"
         }
       ],
       "affiliations": [],
@@ -1688,7 +1688,7 @@
         },
         {
           "name": "Sandra Williams",
-          "hIndex": 17,
+          "hIndex": 16,
           "authorId": "145280410"
         }
       ],
@@ -1834,14 +1834,14 @@
       ],
       "topAuthors": [
         {
+          "name": "Allan Kardec Duailibe Barros",
+          "hIndex": 1,
+          "authorId": "2478630669"
+        },
+        {
           "name": "Antonio de Sousa Leitão",
           "hIndex": 0,
           "authorId": null
-        },
-        {
-          "name": "Allan Kardec Duailibe Barros",
-          "hIndex": 0,
-          "authorId": "2478630669"
         }
       ],
       "affiliations": [],
@@ -2092,7 +2092,7 @@
       "doi": "10.18653/v1/P18-1196",
       "arxivId": "1805.08154",
       "pdf": "https://www.aclweb.org/anthology/P18-1196.pdf",
-      "citationCount": 98,
+      "citationCount": 99,
       "referenceCount": 75,
       "influentialCitationCount": 11,
       "source": "https://arxiv.org/abs/1805.08154",
@@ -3475,12 +3475,12 @@
       "topAuthors": [
         {
           "name": "G. Weikum",
-          "hIndex": 94,
+          "hIndex": 96,
           "authorId": "1751591"
         },
         {
           "name": "Jannik Strötgen",
-          "hIndex": 25,
+          "hIndex": 26,
           "authorId": "2013656"
         }
       ],
