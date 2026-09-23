@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T09:19:10.537Z",
+  "updatedAt": "2026-09-23T09:19:39.649Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 2933,
+      "citationCount": 2934,
       "referenceCount": 14,
       "influentialCitationCount": 268,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -69,7 +69,7 @@
       "doi": "10.18653/v1/D18-1256",
       "arxivId": "1808.09637",
       "pdf": "https://www.aclweb.org/anthology/D18-1256.pdf",
-      "citationCount": 259,
+      "citationCount": 260,
       "referenceCount": 34,
       "influentialCitationCount": 48,
       "source": "https://arxiv.org/abs/1808.09637",
@@ -562,7 +562,7 @@
         },
         {
           "name": "Václav Šmídl",
-          "hIndex": 19,
+          "hIndex": 20,
           "authorId": "10192900"
         }
       ],
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6437,
+      "citationCount": 6452,
       "referenceCount": 71,
-      "influentialCitationCount": 1450,
+      "influentialCitationCount": 1457,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 10
@@ -694,7 +694,7 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1354,
+      "citationCount": 1355,
       "referenceCount": 28,
       "influentialCitationCount": 275,
       "source": "https://arxiv.org/abs/2103.07191",
@@ -773,7 +773,7 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.53",
       "arxivId": "2103.13136",
       "pdf": "https://aclanthology.org/2021.naacl-main.53.pdf",
-      "citationCount": 152,
+      "citationCount": 153,
       "referenceCount": 70,
       "influentialCitationCount": 8,
       "source": "https://arxiv.org/abs/2103.13136",
@@ -814,7 +814,7 @@
       "doi": "10.18653/v1/D19-1534",
       "arxivId": "1909.07940",
       "pdf": "https://www.aclweb.org/anthology/D19-1534.pdf",
-      "citationCount": 321,
+      "citationCount": 322,
       "referenceCount": 30,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.07940",
@@ -856,7 +856,7 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1374,
+      "citationCount": 1375,
       "referenceCount": 54,
       "influentialCitationCount": 233,
       "source": "https://arxiv.org/abs/1903.00161",
@@ -1430,7 +1430,7 @@
       "doi": "10.18653/v1/N19-1245",
       "arxivId": "1905.13319",
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
-      "citationCount": 918,
+      "citationCount": 919,
       "referenceCount": 25,
       "influentialCitationCount": 114,
       "source": "https://arxiv.org/abs/1905.13319",
@@ -1445,7 +1445,7 @@
         "Yi Hu",
         "Shijia Kang",
         "Zhou-Chen Lin",
-        "Muhan Zhang"
+        "Mu-Han Zhang"
       ],
       "topAuthors": [
         {
@@ -1454,7 +1454,7 @@
           "authorId": "2185454298"
         },
         {
-          "name": "Muhan Zhang",
+          "name": "Mu-Han Zhang",
           "hIndex": 6,
           "authorId": "2257092769"
         }
@@ -1468,7 +1468,7 @@
       "doi": "10.48550/arXiv.2411.03766",
       "arxivId": "2411.03766",
       "pdf": null,
-      "citationCount": 51,
+      "citationCount": 52,
       "referenceCount": 66,
       "influentialCitationCount": 5,
       "source": "https://arxiv.org/abs/2411.03766",
