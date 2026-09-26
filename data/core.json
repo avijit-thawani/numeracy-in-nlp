@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T09:37:35.189Z",
+  "updatedAt": "2026-09-26T09:22:15.269Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 2936,
+      "citationCount": 2937,
       "referenceCount": 14,
       "influentialCitationCount": 268,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -161,7 +161,7 @@
         "P. Smolensky",
         "Roland Fernandez",
         "N. Jojic",
-        "J. Schmidhuber",
+        "Jürgen Schmidhuber",
         "Jianfeng Gao"
       ],
       "topAuthors": [
@@ -171,9 +171,9 @@
           "authorId": "1800422"
         },
         {
-          "name": "J. Schmidhuber",
-          "hIndex": 96,
-          "authorId": "145341374"
+          "name": "P. Smolensky",
+          "hIndex": 54,
+          "authorId": "1748557"
         }
       ],
       "affiliations": [],
@@ -185,7 +185,7 @@
       "doi": null,
       "arxivId": "1910.06611",
       "pdf": null,
-      "citationCount": 60,
+      "citationCount": 61,
       "referenceCount": 29,
       "influentialCitationCount": 2,
       "source": "https://arxiv.org/abs/1910.06611",
@@ -630,7 +630,7 @@
         "Steven Basart",
         "Eric Tang",
         "D. Song",
-        "J. Steinhardt"
+        "Jacob Steinhardt"
       ],
       "topAuthors": [
         {
@@ -639,7 +639,7 @@
           "authorId": "143711382"
         },
         {
-          "name": "J. Steinhardt",
+          "name": "Jacob Steinhardt",
           "hIndex": 49,
           "authorId": "5164568"
         }
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6477,
+      "citationCount": 6484,
       "referenceCount": 71,
-      "influentialCitationCount": 1461,
+      "influentialCitationCount": 1462,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 10
@@ -694,7 +694,7 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1356,
+      "citationCount": 1357,
       "referenceCount": 28,
       "influentialCitationCount": 275,
       "source": "https://arxiv.org/abs/2103.07191",
@@ -856,9 +856,9 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1379,
+      "citationCount": 1380,
       "referenceCount": 54,
-      "influentialCitationCount": 233,
+      "influentialCitationCount": 232,
       "source": "https://arxiv.org/abs/1903.00161",
       "addedAt": "2026-09-13",
       "score": 45
@@ -1092,7 +1092,7 @@
       "title": "Extracting Commonsense Properties from Embeddings with Limited Human Guidance",
       "authors": [
         "Yiben Yang",
-        "L. Birnbaum",
+        "Larry Birnbaum",
         "Ji-Ping Z. Wang",
         "Doug Downey"
       ],
@@ -1103,9 +1103,9 @@
           "authorId": "145612610"
         },
         {
-          "name": "L. Birnbaum",
-          "hIndex": 29,
-          "authorId": "144218567"
+          "name": "Ji-Ping Z. Wang",
+          "hIndex": 25,
+          "authorId": "2109493175"
         }
       ],
       "affiliations": [
@@ -1430,7 +1430,7 @@
       "doi": "10.18653/v1/N19-1245",
       "arxivId": "1905.13319",
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
-      "citationCount": 920,
+      "citationCount": 921,
       "referenceCount": 25,
       "influentialCitationCount": 114,
       "source": "https://arxiv.org/abs/1905.13319",
@@ -1505,7 +1505,7 @@
       "doi": "10.1038/s41598-020-66838-5",
       "arxivId": null,
       "pdf": "https://www.nature.com/articles/s41598-020-66838-5.pdf",
-      "citationCount": 55,
+      "citationCount": 56,
       "referenceCount": 92,
       "influentialCitationCount": 3,
       "source": "https://doi.org/10.1038/s41598-020-66838-5",
@@ -2545,11 +2545,11 @@
       "authors": [
         "Daniel M. Spokoyny",
         "Chien-Sheng Wu",
-        "Caiming Xiong"
+        "Cai-Ming Xiong"
       ],
       "topAuthors": [
         {
-          "name": "Caiming Xiong",
+          "name": "Cai-Ming Xiong",
           "hIndex": 39,
           "authorId": "2054594326"
         },
@@ -2623,7 +2623,7 @@
         "Qun Liu",
         "Yong Wang",
         "Xiaozhe Ren",
-        "Huamin Qu"
+        "Hua-Min Qu"
       ],
       "topAuthors": [
         {
@@ -2768,7 +2768,7 @@
         "Qi Fan",
         "Zhaoye Fei",
         "Yang Gao",
-        "Jiaye Ge",
+        "Jia-Ye Ge",
         "Chenya Gu",
         "Yuzhe Gu",
         "Tao Gui",
@@ -2824,7 +2824,6 @@
         "Yanping Zhao",
         "Andrew M Huang",
         "Dai",
-        "Kevin Clark",
         "Minh-Thang Luong",
         "Quoc V. Le",
         "Christopher D. Manning. 2020",
@@ -2853,7 +2852,7 @@
         "Wenjun Gao",
         "Ruiqi Ge",
         "Kang Guan",
-        "Daya Guo",
+        "Da-Ya Guo",
         "Jianzhong Guo",
         "Guangbo Hao",
         "Zhewen Hao",
@@ -2982,7 +2981,6 @@
         "Nick Egebo",
         "Nicolas Usunier",
         "Nikolay Pavlovich",
-        "Laptev Ning",
         "Ning Dong",
         "Norman Zhang",
         "O. Cheng",
@@ -3162,7 +3160,6 @@
         "Ross Mcilroy",
         "Ruibo Liu",
         "Ryan Mullins",
-        "Samuel L. Smith",
         "Sebastian Borgeaud",
         "Sertan Girgin",
         "Sholto Douglas",
@@ -3188,7 +3185,6 @@
         "D. Ghahramani",
         "J. Eck",
         "F. Barral",
-        "Eli Pereira",
         "A. Collins",
         "Noah Joulin",
         "F. Evan",
@@ -3235,13 +3231,11 @@
         "Chris Perry",
         "Christoper A. Welty",
         "D. Sinopal-nikov",
-        "David Weinberger",
         "D. Vijaykumar",
         "Dominika Rogozi'nska",
         "D. Herbison",
         "Elisa Bandy",
         "Emma Wang",
-        "Erica Mor-eira",
         "Evan Senter",
         "Evgenii Eltyshev",
         "Francesco Visin",
@@ -3283,7 +3277,7 @@
         "L. Soares",
         "Lucas Kilpatrick",
         "Luciano Dixon",
-        "Machel Martins",
+        "M. Martins",
         "Manvinder Reid",
         "Mark Singh",
         "Mat Velloso Martin Gorner",
@@ -3329,7 +3323,6 @@
         "Tom Eccles",
         "Tomás Kociský",
         "Tulsee Doshi",
-        "Vinay Jain",
         "Vikas Yadav",
         "Vilobh Meshram",
         "Vishal Dharmadhikari",
@@ -3406,7 +3399,7 @@
         "X. Martinet",
         "Todor Mihaylov",
         "Pushkar Mishra",
-        "Yixin Nie",
+        "Yi-Xin Nie",
         "Andrew Poulton",
         "J. Reizenstein",
         "Rashi Rungta",
@@ -3419,7 +3412,7 @@
         "Binh Tang",
         "Ross Taylor",
         "Adina Williams",
-        "Jian Xiang Kuan",
+        "Jian-Xiang Kuan",
         "Puxin Xu",
         "Zhengxu Yan",
         "Iliyan Zarov",
