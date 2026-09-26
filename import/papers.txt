@@ -11,119 +11,26 @@
 # ignored. Anything that could not be looked up is left here so you can fix it.
 
 # --- past year ---
-# CONE: Embeddings for Complex Numerical Data Preserving Unit and Variable Semantics
-#   M. Gubanov (h=15) · Florida State Univesrity · 2026 · 0 citations · past year · cites 6 in your list
-https://arxiv.org/abs/2603.04741
+# Neural Isomorphic Fields: A Transformer-based Algebraic Numerical Embedding
+#   S. Momtazi (h=23) · 2026 · 0 citations · past year · cites 4 in your list
+https://arxiv.org/abs/2601.12095
 
-# Efficient numeracy in language models through single-token number embeddings
-#   M. Menten (h=20) · 2025 · 6 citations · past year · cites 3 in your list
-https://arxiv.org/abs/2510.06824
+# The Effect of Scripts and Formats on LLM Numeracy
+#   Yuval Pinter (h=19) · Ben-Gurion University of the Negev · 2026 · 1 citations · past year · cites 3 in your list
+https://arxiv.org/abs/2601.15251
 
-# PyraMathBench: Evaluating and Improving Mathematical Capability in Large Language Models
-#   Linlin Wang (h=7) · East China Normal University · 2026 · 0 citations · past year · cites 4 in your list
-https://arxiv.org/abs/2606.03858
+# Even GPT-5.2 Can't Count to Five: The Case for Zero-Error Horizons in Trustworthy LLMs
+#   Ryoma Sato (h=3) · 2026 · 1 citations · past year · cites 3 in your list
+https://arxiv.org/abs/2601.15714
 
-# Toten: A Knowledge-Based System For Structure-Preserving Representation Of Physical Quantities And Technical Notation In Brazilian Portuguese
-#   Antonio de Sousa Leitão (h=0) · 2026 · 0 citations · past year · cites 4 in your list
-https://arxiv.org/abs/2606.19626
+# AI-rithmetic
+#   Sergei Vassilvitskii (h=6) · 2026 · 1 citations · past year · cites 3 in your list
+https://arxiv.org/abs/2602.10416
 
-# NumColBERT: Non-Intrusive Numeracy Injection for Late-Interaction Retrieval Models
-#   Haruki Fujimaki (h=1) · University of Tsukuba · 2026 · 0 citations · past year · cites 4 in your list
-https://arxiv.org/abs/2605.10109
+# Numerical Hallucinations in Retrieval-Augmented Generation: Detection and Analysis
+#   Sera Singha Roy (h=1) · 2026 · 0 citations · past year · cites 3 in your list
+https://doi.org/10.1145/3805712.3809882
 
-# Variable-length Gray codes for the Natural Numbers
-#   Ezequiel López-Rubio (h=1) · 2026 · 0 citations · past year · cites 3 in your list
-https://arxiv.org/abs/2607.16088
-
-# Numeracy in Large Language Models: Fundamental Limitations and Paths to Improvement
-#   Ao-Xin Ni (h=0) · 2026 · 1 citations · past year · cites 3 in your list
-https://arxiv.org/abs/2608.13129
-
-# LogiNumSynth: Synthesizing Joint Logical-Numerical Reasoning Problems for Language Models
-#   Yuchen Li (h=3) · 2025 · 2 citations · past year · cites 4 in your list
-https://arxiv.org/abs/2510.11031
-
-# GenBERTplus : A New Approach to Numeracy in Natural Language Processing
-#   Vallidevi Krishnamurthy (h=3) · Vellore Institute of Technology University · 2025 · 0 citations · past year · cites 3 in your list
-https://doi.org/10.1109/CICT67193.2025.11399104
-
-# Enhancing Numerical Prediction in LLMs via Smooth MMD Alignment
-#   L. Yue (h=21) · 2026 · 0 citations · past year · cites 3 in your list
-https://arxiv.org/abs/2606.27731
-
-# --- most connected ---
-# Numeracy for Language Models: Evaluating and Improving their Ability to Predict Numbers
-#   Sebastian Riedel (h=71) · University College London · 2018 · 98 citations · cited by 13 in your list
-https://arxiv.org/abs/1805.08154
-
-# Can neural networks do arithmetic? A survey on the elementary numerical skills of state-of-the-art deep learning models
-#   Alberto Testolin (h=20) · University of Padua · 2023 · 39 citations · cites 11 in your list
-https://arxiv.org/abs/2303.07735
-
-# Mining Numbers in Text: A Survey
-#   Kenji Kita (h=13) · 2021 · 4 citations · cites 11 in your list
-https://doi.org/10.5772/INTECHOPEN.98540
-
-# Predicting Numerals in Text Using Nearest Neighbor Language Models
-#   T. Sakamoto (h=38) · The University of Tokyo · 2023 · 1 citations · cites 7 in your list
-https://doi.org/10.18653/v1/2023.findings-acl.295
-
-# Masked Measurement Prediction: Learning to Jointly Predict Quantities and Units from Textual Context
-#   Daniel M. Spokoyny (h=6) · University of California, San Diego · 2021 · 10 citations · cites 9 in your list
-https://arxiv.org/abs/2112.08616
-
-# Exploring Numeracy in Word Embeddings
-#   E. Hovy (h=98) · Carnegie Mellon University · 2019 · 66 citations · cited by 9 in your list
-https://doi.org/10.18653/v1/P19-1329
-
-# Verb Physics: Relative Physical Knowledge of Actions and Objects
-#   Yejin Choi (h=113) · University of Washington · 2017 · 87 citations · cited by 9 in your list
-https://arxiv.org/abs/1706.03799
-
-# Numeracy enhances the Literacy of Language Models
-#   J. Pujara (h=26) · University of Southern California · 2021 · 31 citations · cites 6 in your list
-https://doi.org/10.18653/v1/2021.emnlp-main.557
-
-# How to Leverage Digit Embeddings to Represent Numbers?
-#   N. Moosavi (h=17) · University of Sheffield · 2024 · 8 citations · cites 8 in your list
-https://arxiv.org/abs/2407.00894
-
-# Laying Anchors: Semantically Priming Numerals in Language Modeling
-#   Nikhil Muralidhar (h=13) · Virginia Tech · 2024 · 5 citations · cites 6 in your list
-https://arxiv.org/abs/2404.01536
-
-# The Value of Numbers in Clinical Text Classification
-#   Irena Spasic (h=31) · Cardiff University · 2023 · 3 citations · cites 7 in your list
-https://doi.org/10.3390/make5030040
-
-# Exploring the Numerical Reasoning Capabilities of Language Models: A Comprehensive Analysis on Tabular Data
-#   O. Cocarascu (h=20) · University of California San Diego · 2023 · 51 citations · cites 8 in your list
-https://arxiv.org/abs/2311.02216
-
-# Exploring Internal Numeracy in Language Models: A Case Study on ALBERT
-#   G. Henter (h=30) · 2024 · 1 citations · cites 5 in your list
-https://arxiv.org/abs/2404.16574
-
-# Numerical Correlation in Text
-#   Caiming Xiong (h=39) · Salesforce · 2022 · 0 citations · cites 6 in your list
-https://doi.org/10.18653/v1/2022.mathnlp-1.5
-
-# Overcoming Barriers to Skill Injection in Language Modeling: Case Study in Arithmetic
-#   Naren Ramakrishnan (h=19) · 2022 · 6 citations · cites 6 in your list
-https://arxiv.org/abs/2211.02098
-
-# NumGPT: Improving Numeracy Ability of Generative Pre-trained Models
-#   Xin Jiang (h=33) · Department of Computer Science and Engineering, The Hong Kong University of Science and Technology · 2021 · 22 citations · cites 7 in your list
-https://arxiv.org/abs/2109.03137
-
-# Evaluating Numeracy of Language Models as a Natural Language Inference Task
-#   I. Sutskever (h=74) · Google DeepMind · 2025 · 6 citations · cites 6 in your list
-https://doi.org/10.18653/v1/2025.findings-naacl.467
-
-# Enhancing Knowledge Bases with Quantity Facts
-#   G. Weikum (h=94) · Max Planck Institute for Informatics · 2022 · 10 citations · cites 5 in your list
-https://doi.org/10.1145/3485447.3511932
-
-# Do Language Embeddings capture Scales?
-#   Dan Roth (h=99) · University of Pennsylvania, Oracle · 2020 · 100 citations · cited by 7 in your list
-https://arxiv.org/abs/2010.05345
+# Generalizing Numerical Reasoning in Table Data through Operation Sketches and Self-Supervised Learning
+#   H. Kim (h=5) · 2026 · 0 citations · past year · cites 3 in your list
+https://arxiv.org/abs/2604.21495
