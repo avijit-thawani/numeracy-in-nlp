@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T10:42:29.909Z",
+  "updatedAt": "2026-09-30T10:30:38.780Z",
   "recs": [
     {
       "id": "d7260db07abc181866ddc52dd1fedc52bb975228",
@@ -34,10 +34,10 @@
       "referenceCount": 43,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 4,
       "direction": "forward",
-      "score": 35.345862715031615,
+      "score": 35.31404718739214,
       "why": "past year · cites 4 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
@@ -59,7 +59,7 @@
       "topAuthors": [
         {
           "name": "Yuval Pinter",
-          "hIndex": 19,
+          "hIndex": 21,
           "authorId": "1826312"
         },
         {
@@ -84,10 +84,10 @@
       "referenceCount": 20,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 3,
       "direction": "forward",
-      "score": 31.636572985515937,
+      "score": 31.7238683649753,
       "why": "past year · cites 3 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
@@ -121,10 +121,10 @@
       "referenceCount": 69,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 3,
       "direction": "forward",
-      "score": 20.270301343601847,
+      "score": 20.249684907368554,
       "why": "past year · cites 3 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
@@ -146,12 +146,12 @@
       "topAuthors": [
         {
           "name": "Sergei Vassilvitskii",
-          "hIndex": 6,
+          "hIndex": 7,
           "authorId": "2282962033"
         },
         {
           "name": "A. Bie",
-          "hIndex": 0,
+          "hIndex": 1,
           "authorId": "146024076"
         }
       ],
@@ -168,10 +168,10 @@
       "referenceCount": 38,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 3,
       "direction": "forward",
-      "score": 16.65135137930841,
+      "score": 16.72122693543431,
       "why": "past year · cites 3 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
@@ -205,10 +205,10 @@
       "referenceCount": 18,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 3,
       "direction": "forward",
-      "score": 15.511807712223803,
+      "score": 15.49784521961228,
       "why": "past year · cites 3 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
@@ -250,10 +250,10 @@
       "referenceCount": 27,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 3,
       "direction": "forward",
-      "score": 10.331661637157662,
+      "score": 10.31643854568665,
       "why": "past year · cites 3 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
@@ -274,12 +274,12 @@
       "topAuthors": [
         {
           "name": "D. Stolten",
-          "hIndex": 79,
+          "hIndex": 81,
           "authorId": "2852152"
         },
         {
           "name": "J. Weinand",
-          "hIndex": 23,
+          "hIndex": 26,
           "authorId": "101166098"
         }
       ],
@@ -298,7 +298,7 @@
       "referenceCount": 175,
       "influentialCitationCount": 3,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 10,
       "direction": "forward",
       "score": 100,
@@ -312,8 +312,8 @@
       "id": "4740ef8dc634864695b5b933f416980b9eb6555b",
       "title": "An Empirical Investigation of Contextualized Number Prediction",
       "authors": [
-        "Daniel M. Spokoyny",
-        "Taylor Berg-Kirkpatrick"
+        "Taylor Berg-Kirkpatrick",
+        "Daniel M. Spokoyny"
       ],
       "topAuthors": [
         {
@@ -343,10 +343,10 @@
       "referenceCount": 31,
       "influentialCitationCount": 4,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 11,
       "direction": "backward",
-      "score": 91.11161935149703,
+      "score": 91.02960793570203,
       "why": "cited by 11 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -364,7 +364,7 @@
       "topAuthors": [
         {
           "name": "Dan Roth",
-          "hIndex": 99,
+          "hIndex": 100,
           "authorId": "144590225"
         },
         {
@@ -389,10 +389,10 @@
       "referenceCount": 53,
       "influentialCitationCount": 22,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 13,
       "direction": "backward",
-      "score": 88.52746116220338,
+      "score": 88.44777579958635,
       "why": "cited by 13 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -413,7 +413,7 @@
       "topAuthors": [
         {
           "name": "Jaewoo Kang",
-          "hIndex": 46,
+          "hIndex": 47,
           "authorId": "144323862"
         },
         {
@@ -437,10 +437,10 @@
       "referenceCount": 44,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 8,
       "direction": "forward",
-      "score": 72.60863936524204,
+      "score": 72.60010989593376,
       "why": "cites 8 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -458,7 +458,7 @@
       "topAuthors": [
         {
           "name": "Shuming Shi",
-          "hIndex": 40,
+          "hIndex": 41,
           "authorId": "34720053"
         },
         {
@@ -482,10 +482,10 @@
       "referenceCount": 29,
       "influentialCitationCount": 105,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 13,
       "direction": "backward",
-      "score": 70.2604361226,
+      "score": 70.26045494703351,
       "why": "cited by 13 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -510,7 +510,7 @@
         },
         {
           "name": "Soumen Chakrabarti",
-          "hIndex": 3,
+          "hIndex": 4,
           "authorId": "2288267998"
         }
       ],
@@ -527,10 +527,10 @@
       "referenceCount": 49,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 7,
       "direction": "forward",
-      "score": 68.5816297049952,
+      "score": 68.5198979896589,
       "why": "cites 7 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -553,7 +553,7 @@
         },
         {
           "name": "Yanzeng Li",
-          "hIndex": 10,
+          "hIndex": 11,
           "authorId": "32732179"
         }
       ],
@@ -572,10 +572,10 @@
       "referenceCount": 53,
       "influentialCitationCount": 1,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 8,
       "direction": "forward",
-      "score": 65.99358571918333,
+      "score": 65.93418355470925,
       "why": "cites 8 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -618,10 +618,10 @@
       "referenceCount": 46,
       "influentialCitationCount": 1,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 7,
       "direction": "forward",
-      "score": 65.51195361330534,
+      "score": 65.45298497565447,
       "why": "cites 7 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -641,7 +641,7 @@
       "topAuthors": [
         {
           "name": "Wei-Ying Ma",
-          "hIndex": 92,
+          "hIndex": 93,
           "authorId": "1712167"
         },
         {
@@ -665,10 +665,10 @@
       "referenceCount": 24,
       "influentialCitationCount": 16,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 9,
       "direction": "backward",
-      "score": 64.58927596561682,
+      "score": 64.55618204273576,
       "why": "cited by 9 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -688,13 +688,13 @@
       "topAuthors": [
         {
           "name": "Zhiyuan Liu",
-          "hIndex": 89,
+          "hIndex": 90,
           "authorId": "49293587"
         },
         {
-          "name": "Jie Zhou",
+          "name": "Yankai Lin",
           "hIndex": 41,
-          "authorId": "2108485135"
+          "authorId": "2427350"
         }
       ],
       "affiliations": [
@@ -713,10 +713,10 @@
       "referenceCount": 26,
       "influentialCitationCount": 31,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 9,
       "direction": "backward",
-      "score": 63.62739402051645,
+      "score": 63.59564115269591,
       "why": "cited by 9 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -736,12 +736,12 @@
       "topAuthors": [
         {
           "name": "Mrinmaya Sachan",
-          "hIndex": 43,
+          "hIndex": 46,
           "authorId": "2790926"
         },
         {
           "name": "Zhijing Jin",
-          "hIndex": 21,
+          "hIndex": 22,
           "authorId": "2111472502"
         }
       ],
@@ -754,14 +754,14 @@
       "doi": "10.48550/arXiv.2210.12023",
       "arxivId": "2210.12023",
       "pdf": "http://arxiv.org/pdf/2210.12023",
-      "citationCount": 89,
+      "citationCount": 90,
       "referenceCount": 78,
       "influentialCitationCount": 8,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 7,
       "direction": "forward",
-      "score": 59.88836092292299,
+      "score": 59.98165870948123,
       "why": "cites 7 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -787,12 +787,12 @@
       "topAuthors": [
         {
           "name": "Jie Zhou",
-          "hIndex": 18,
+          "hIndex": 20,
           "authorId": "145558445"
         },
         {
           "name": "Qin Chen",
-          "hIndex": 16,
+          "hIndex": 17,
           "authorId": "2152518131"
         }
       ],
@@ -811,10 +811,10 @@
       "referenceCount": 276,
       "influentialCitationCount": 2,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 11,
       "direction": "forward",
-      "score": 56.6141147162999,
+      "score": 56.76812910602447,
       "why": "cites 11 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -832,12 +832,12 @@
       "topAuthors": [
         {
           "name": "Sebastian Riedel",
-          "hIndex": 71,
+          "hIndex": 72,
           "authorId": "48662861"
         },
         {
           "name": "Isabelle Augenstein",
-          "hIndex": 43,
+          "hIndex": 44,
           "authorId": "1736067"
         }
       ],
@@ -856,10 +856,10 @@
       "referenceCount": 23,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 5,
       "direction": "backward",
-      "score": 55.63888516244688,
+      "score": 55.61688712169236,
       "why": "cited by 5 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -877,7 +877,7 @@
       "topAuthors": [
         {
           "name": "Satya Almasian",
-          "hIndex": 5,
+          "hIndex": 6,
           "authorId": "10297746"
         },
         {
@@ -901,10 +901,10 @@
       "referenceCount": 34,
       "influentialCitationCount": 1,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 8,
       "direction": "forward",
-      "score": 55.21662106449262,
+      "score": 55.50958009943302,
       "why": "cites 8 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -944,10 +944,10 @@
       "referenceCount": 45,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 8,
       "direction": "forward",
-      "score": 53.840447258876125,
+      "score": 53.788901022265435,
       "why": "cites 8 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -980,10 +980,10 @@
       "referenceCount": 284,
       "influentialCitationCount": 2,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 11,
       "direction": "forward",
-      "score": 51.9390941686924,
+      "score": 51.87975813549378,
       "why": "cites 11 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -1003,12 +1003,12 @@
       "topAuthors": [
         {
           "name": "L. Carin",
-          "hIndex": 100,
+          "hIndex": 101,
           "authorId": "145006560"
         },
         {
           "name": "Guoyin Wang",
-          "hIndex": 30,
+          "hIndex": 31,
           "authorId": "2107926840"
         }
       ],
@@ -1027,10 +1027,10 @@
       "referenceCount": 25,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 3,
       "direction": "backward",
-      "score": 51.67731783120346,
+      "score": 51.63080202970646,
       "why": "cited by 3 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -1054,7 +1054,7 @@
         },
         {
           "name": "Hannaneh Hajishirzi",
-          "hIndex": 83,
+          "hIndex": 85,
           "authorId": "2548384"
         }
       ],
@@ -1073,10 +1073,10 @@
       "referenceCount": 35,
       "influentialCitationCount": 82,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 9,
       "direction": "backward",
-      "score": 51.44423249943383,
+      "score": 51.39792650276958,
       "why": "cited by 9 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -1093,12 +1093,12 @@
       "topAuthors": [
         {
           "name": "Dan Roth",
-          "hIndex": 99,
+          "hIndex": 100,
           "authorId": "144590225"
         },
         {
           "name": "Subhro Roy",
-          "hIndex": 13,
+          "hIndex": 14,
           "authorId": "2248453"
         }
       ],
@@ -1113,14 +1113,14 @@
       "doi": "10.18653/v1/D15-1202",
       "arxivId": "1608.01413",
       "pdf": "https://www.aclweb.org/anthology/D15-1202.pdf",
-      "citationCount": 681,
+      "citationCount": 682,
       "referenceCount": 18,
       "influentialCitationCount": 109,
       "source": null,
-      "addedAt": "2026-09-29",
+      "addedAt": "2026-09-30",
       "overlap": 9,
       "direction": "backward",
-      "score": 50.76844376686359,
+      "score": 50.72274606133861,
       "why": "cited by 9 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
