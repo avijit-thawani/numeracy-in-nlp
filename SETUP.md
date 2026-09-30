@@ -282,6 +282,7 @@ All of these have working defaults; change them only if you want to.
 | `algorithm.graphBudget` | How many papers' citations to refresh per run. Default 150, which bounds the cost for a large survey. |
 | `algorithm.graphMaxAgeDays` | How stale a *recent* paper's citation data may get. Default 7. |
 | `algorithm.graphAgeAware` | Let older papers go staler than that, since their citation lists barely move: the allowance is `graphMaxAgeDays` × the paper's age in years, capped at 12×. Default on. Turn it off for a uniform weekly refresh. |
+| `algorithm.graphMaxStaleDays` | Ceiling on that allowance, so no paper can go unrefreshed long enough to hide new work from the recency tables. Defaults to half the shortest window, so 15 days. |
 | `recPullRequests.enabled` | One pull request per table, so accepting a whole table is a single merge. Needs *Allow GitHub Actions to create and approve pull requests* in Settings, which GitHub leaves off. |
 | `recPullRequests.mode` | `batch` (default) for one pull request per table; `perRec` for the older one-per-paper behaviour, where `count` and `maxPerRun` apply. |
 | `recPullRequests.count` | `perRec` only. How many may sit open at once; `"all"` gives every Rec one. Default 3. |

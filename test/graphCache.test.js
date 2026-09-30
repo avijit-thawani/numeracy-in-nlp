@@ -112,6 +112,29 @@ test("an older paper is allowed to go staler, up to a cap", () => {
 });
 
 /**
+ * The old papers are where new work arrives: a paper published last week cites
+ * Sennrich 2015, not last month's preprints. A twelve-fold allowance therefore
+ * blinds the very tables that exist to show recent work, so the caller passes
+ * the window's own deadline as a ceiling.
+ */
+test("the ceiling wins over the age-aware allowance", () => {
+  assert.equal(stalenessAllowance(1990, 7, NOW, 15), 15);
+  assert.equal(stalenessAllowance(2021, 7, NOW, 15), 15);
+  assert.equal(stalenessAllowance(2024, 7, NOW, 15), 14, "still under the ceiling on its own");
+  assert.equal(stalenessAllowance(2026, 7, NOW, 15), 7);
+});
+
+/**
+ * A ceiling below the base would refetch everything every run, which is the
+ * cost the cache exists to avoid. Configuring one is a mistake, not a request.
+ */
+test("the ceiling never drives a paper below the base allowance", () => {
+  assert.equal(stalenessAllowance(1990, 7, NOW, 2), 7);
+  assert.equal(stalenessAllowance(2026, 7, NOW, 2), 7);
+  assert.equal(stalenessAllowance(null, 7, NOW, 2), 7);
+});
+
+/**
  * A missing year must not buy a paper a three-month holiday: refreshing an old
  * paper too often costs one request, missing a new paper's citations costs a
  * Rec that the recency windows exist to surface.

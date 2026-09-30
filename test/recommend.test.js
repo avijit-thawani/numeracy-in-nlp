@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import { buildRecommendations } from "../lib/recommend.js";
+import { buildRecommendations, discoveryDeadline } from "../lib/recommend.js";
 
 const today = new Date().toISOString().slice(0, 10);
 
@@ -184,4 +184,26 @@ test("the boost can be switched off", async () => {
   const result = await build({ core: core("a", "b"), graph, algorithm: { intentBoost: 0 } });
   const scores = result.recs.map((r) => Math.round(r.score));
   assert.deepEqual(scores, [100, 100]);
+});
+
+// ---- Keeping the graph fresh enough for the recency windows ------------
+
+/**
+ * The tables reserved for recent work are only as good as the graph behind
+ * them: a paper has to be noticed while it is still inside its window, and it
+ * is noticed through the papers it cites. Half the window gives every paper
+ * two chances to be seen before it ages out.
+ */
+test("the refresh deadline is half the tightest window", () => {
+  assert.equal(discoveryDeadline({}), 15);
+  assert.equal(discoveryDeadline({ freshness: { windows: [{ days: 90, count: 5 }] } }), 45);
+});
+
+test("with the windows off nothing needs refreshing on a deadline", () => {
+  assert.equal(discoveryDeadline({ freshness: { enabled: false } }), Infinity);
+});
+
+test("a malformed window list falls back to the defaults", () => {
+  assert.equal(discoveryDeadline({ freshness: { windows: [] } }), 15);
+  assert.equal(discoveryDeadline({ freshness: { windows: [{ days: "soon" }] } }), 15);
 });
