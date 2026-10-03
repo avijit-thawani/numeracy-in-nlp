@@ -127,3 +127,84 @@ https://doi.org/10.1145/3485447.3511932
 # Do Language Embeddings capture Scales?
 #   Dan Roth (h=99) · University of Pennsylvania, Oracle · 2020 · 100 citations · cited by 7 in your list
 https://arxiv.org/abs/2010.05345
+
+# --- most connected ---
+# Measurement Extraction with Natural Language Processing: A Review
+#   D. Stolten (h=81) · Forschungszentrum Jülich · 2022 · 22 citations · cites 10 in your list
+https://doi.org/10.18653/v1/2022.findings-emnlp.161
+
+# Reasoning about Quantities in Natural Language
+#   Dan Roth (h=100) · University of Pennsylvania, Oracle · 2015 · 178 citations · cited by 13 in your list
+https://doi.org/10.1162/tacl_a_00118
+
+# An Empirical Investigation of Contextualized Number Prediction
+#   Daniel M. Spokoyny (h=6) · University of California San Diego · 2020 · 43 citations · cited by 11 in your list
+https://arxiv.org/abs/2011.07961
+
+# Deep Neural Solver for Math Word Problems
+#   Shuming Shi (h=41) · Tencent AI Lab · 2017 · 400 citations · cited by 13 in your list
+https://doi.org/10.18653/v1/D17-1088
+
+# KitchenScale: Learning to predict ingredient quantities from recipe contexts
+#   Jaewoo Kang (h=47) · Korea University · 2023 · 15 citations · cites 8 in your list
+https://arxiv.org/abs/2304.10739
+
+# Introducing Semantic Information for Numerical Attribute Prediction over Knowledge Graphs
+#   Lei Zou (h=35) · Beijing Normal University · 2022 · 8 citations · cites 8 in your list
+https://www.semanticscholar.org/paper/c97bcf9e605938c2bef54f12b2156c678f1a2373
+
+# NumNet: Machine Reading Comprehension with Numerical Reasoning
+#   Zhiyuan Liu (h=90) · Tsinghua University · 2019 · 131 citations · cited by 9 in your list
+https://arxiv.org/abs/1910.06701
+
+# How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation
+#   Wei-Ying Ma (h=93) · Microsoft Research Asia · 2016 · 158 citations · cited by 9 in your list
+https://doi.org/10.18653/v1/P16-1084
+
+# Dense Retrieval with Quantity Comparison Intent
+#   M. Chelliah (h=8) · 2025 · 1 citations · cites 7 in your list
+https://doi.org/10.18653/v1/2025.findings-acl.1220
+
+# Do Numbers Matter? Types and Prevalence of Numbers in Clinical Texts
+#   L. Cavedon (h=32) · RMIT University · 2024 · 5 citations · cites 7 in your list
+https://doi.org/10.18653/v1/2024.bionlp-1.32
+
+# A Causal Framework to Quantify the Robustness of Mathematical Reasoning with Language Models
+#   Mrinmaya Sachan (h=46) · 2022 · 90 citations · cites 7 in your list
+https://arxiv.org/abs/2210.12023
+
+# Mathematical Language Models: A Survey
+#   Jie Zhou (h=20) · East China Normal University · 2023 · 29 citations · cites 11 in your list
+https://arxiv.org/abs/2312.07622
+
+# Towards Robust Numerical Question Answering: Diagnosing Numerical Capabilities of NLP Systems
+#   Shi Han (h=30) · Microsoft (United States) · 2022 · 12 citations · cites 7 in your list
+https://arxiv.org/abs/2211.07455
+
+# Learning Non-linguistic Skills without Sacrificing Linguistic Proficiency
+#   Naren Ramakrishnan (h=19) · 2023 · 5 citations · cites 8 in your list
+https://arxiv.org/abs/2305.08246
+
+# Numerically Grounded Language Models for Semantic Error Correction
+#   Sebastian Riedel (h=72) · University of Copenhagen · 2016 · 16 citations · cited by 5 in your list
+https://arxiv.org/abs/1608.04147
+
+# Neural GPUs Learn Algorithms
+#   I. Sutskever (h=74) · 2015 · 410 citations · cited by 8 in your list
+https://arxiv.org/abs/1511.08228
+
+# Solving General Arithmetic Word Problems
+#   Dan Roth (h=100) · University of Pennsylvania, Oracle · 2016 · 682 citations · cited by 9 in your list
+https://arxiv.org/abs/1608.01413
+
+# Numbers Matter! Bringing Quantity-awareness to Retrieval Systems
+#   Satya Almasian (h=6) · Heidelberg University · 2024 · 4 citations · cites 8 in your list
+https://arxiv.org/abs/2407.10283
+
+# Numerical Relation Extraction with Minimal Supervision
+#   Sunita Sarawagi (h=53) · Indian Institute of Technology Bombay · 2016 · 57 citations · cited by 6 in your list
+https://doi.org/10.1609/aaai.v30i1.10361
+
+# Learning to Solve Arithmetic Word Problems with Verb Categorization
+#   Oren Etzioni (h=88) · University of Edinburgh · 2014 · 489 citations · cited by 9 in your list
+https://doi.org/10.3115/v1/D14-1058
