@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T11:31:08.042Z",
+  "updatedAt": "2026-10-06T11:18:26.151Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -146,7 +146,7 @@
       "doi": "10.18653/v1/D19-1332",
       "arxivId": "1909.03065",
       "pdf": "https://www.aclweb.org/anthology/D19-1332.pdf",
-      "citationCount": 242,
+      "citationCount": 243,
       "referenceCount": 36,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.03065",
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6691,
+      "citationCount": 6707,
       "referenceCount": 71,
-      "influentialCitationCount": 1521,
+      "influentialCitationCount": 1523,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 10
@@ -694,7 +694,7 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1370,
+      "citationCount": 1371,
       "referenceCount": 28,
       "influentialCitationCount": 276,
       "source": "https://arxiv.org/abs/2103.07191",
@@ -2342,7 +2342,7 @@
       "url": "https://www.semanticscholar.org/paper/31699d03a49e38295298f1b1a53185644abba12e",
       "doi": "10.18653/v1/2021.emnlp-main.557",
       "arxivId": null,
-      "pdf": "https://doi.org/10.18653/v1/2021.emnlp-main.557",
+      "pdf": "https://aclanthology.org/2021.emnlp-main.557.pdf",
       "citationCount": 31,
       "referenceCount": 21,
       "influentialCitationCount": 3,
