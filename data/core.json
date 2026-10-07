@@ -1,23 +1,23 @@
 {
-  "updatedAt": "2026-10-06T11:18:26.151Z",
+  "updatedAt": "2026-10-07T11:05:40.516Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
       "title": "Self-Attention with Relative Position Representations",
       "authors": [
         "Peter Shaw",
-        "Jakob Uszkoreit",
+        "J. Uszkoreit",
         "Ashish Vaswani"
       ],
       "topAuthors": [
         {
-          "name": "Jakob Uszkoreit",
-          "hIndex": 32,
+          "name": "J. Uszkoreit",
+          "hIndex": 33,
           "authorId": "39328010"
         },
         {
           "name": "Ashish Vaswani",
-          "hIndex": 25,
+          "hIndex": 26,
           "authorId": "40348417"
         }
       ],
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 2950,
+      "citationCount": 2954,
       "referenceCount": 14,
       "influentialCitationCount": 268,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -69,7 +69,7 @@
       "doi": "10.18653/v1/D18-1256",
       "arxivId": "1808.09637",
       "pdf": "https://www.aclweb.org/anthology/D18-1256.pdf",
-      "citationCount": 264,
+      "citationCount": 266,
       "referenceCount": 34,
       "influentialCitationCount": 48,
       "source": "https://arxiv.org/abs/1808.09637",
@@ -172,7 +172,7 @@
         },
         {
           "name": "P. Smolensky",
-          "hIndex": 54,
+          "hIndex": 53,
           "authorId": "1748557"
         }
       ],
@@ -280,7 +280,7 @@
       "topAuthors": [
         {
           "name": "J. Gratch",
-          "hIndex": 66,
+          "hIndex": 65,
           "authorId": "145438097"
         },
         {
@@ -315,7 +315,7 @@
       "topAuthors": [
         {
           "name": "Roger Wattenhofer",
-          "hIndex": 78,
+          "hIndex": 75,
           "authorId": "1716440"
         },
         {
@@ -377,7 +377,7 @@
       "doi": "10.18653/v1/2020.acl-main.43",
       "arxivId": "2004.08500",
       "pdf": "https://aclanthology.org/2020.acl-main.43.pdf",
-      "citationCount": 101,
+      "citationCount": 102,
       "referenceCount": 30,
       "influentialCitationCount": 6,
       "source": "https://arxiv.org/abs/2004.08500",
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6707,
+      "citationCount": 6725,
       "referenceCount": 71,
-      "influentialCitationCount": 1523,
+      "influentialCitationCount": 1526,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 10
@@ -674,7 +674,7 @@
       "topAuthors": [
         {
           "name": "Navin Goyal",
-          "hIndex": 24,
+          "hIndex": 25,
           "authorId": "144260125"
         },
         {
@@ -694,9 +694,9 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1371,
+      "citationCount": 1374,
       "referenceCount": 28,
-      "influentialCitationCount": 276,
+      "influentialCitationCount": 277,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
       "score": 15
@@ -814,7 +814,7 @@
       "doi": "10.18653/v1/D19-1534",
       "arxivId": "1909.07940",
       "pdf": "https://www.aclweb.org/anthology/D19-1534.pdf",
-      "citationCount": 326,
+      "citationCount": 327,
       "referenceCount": 30,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.07940",
@@ -856,9 +856,9 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1396,
+      "citationCount": 1402,
       "referenceCount": 54,
-      "influentialCitationCount": 236,
+      "influentialCitationCount": 237,
       "source": "https://arxiv.org/abs/1903.00161",
       "addedAt": "2026-09-13",
       "score": 40
@@ -869,7 +869,7 @@
       "authors": [
         "D. Saxton",
         "Edward Grefenstette",
-        "Felix Hill",
+        "F. Hill",
         "Pushmeet Kohli"
       ],
       "topAuthors": [
@@ -893,7 +893,7 @@
       "doi": null,
       "arxivId": "1904.01557",
       "pdf": null,
-      "citationCount": 539,
+      "citationCount": 540,
       "referenceCount": 32,
       "influentialCitationCount": 53,
       "source": "https://arxiv.org/abs/1904.01557",
@@ -1120,7 +1120,7 @@
       "doi": "10.18653/v1/P18-2102",
       "arxivId": null,
       "pdf": "https://www.aclweb.org/anthology/P18-2102.pdf",
-      "citationCount": 21,
+      "citationCount": 22,
       "referenceCount": 14,
       "influentialCitationCount": 3,
       "source": "https://doi.org/10.18653/v1/P18-2102",
@@ -1277,7 +1277,7 @@
       "doi": "10.18653/v1/P19-1388",
       "arxivId": "1906.01327",
       "pdf": "https://www.aclweb.org/anthology/P19-1388.pdf",
-      "citationCount": 62,
+      "citationCount": 63,
       "referenceCount": 30,
       "influentialCitationCount": 2,
       "source": "https://arxiv.org/abs/1906.01327",
@@ -1352,7 +1352,7 @@
       "url": "https://www.semanticscholar.org/paper/18cad1aa7a3f6e783183a5588e85a9dc3ba6ede6",
       "doi": "10.1109/ICDE60146.2024.00066",
       "arxivId": "2312.17532",
-      "pdf": "https://arxiv.org/pdf/2312.17532",
+      "pdf": null,
       "citationCount": 7,
       "referenceCount": 43,
       "influentialCitationCount": 0,
@@ -1430,7 +1430,7 @@
       "doi": "10.18653/v1/N19-1245",
       "arxivId": "1905.13319",
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
-      "citationCount": 933,
+      "citationCount": 934,
       "referenceCount": 25,
       "influentialCitationCount": 117,
       "source": "https://arxiv.org/abs/1905.13319",
@@ -2304,7 +2304,7 @@
       "doi": "10.18653/v1/P17-1025",
       "arxivId": "1706.03799",
       "pdf": "https://www.aclweb.org/anthology/P17-1025.pdf",
-      "citationCount": 87,
+      "citationCount": 88,
       "referenceCount": 40,
       "influentialCitationCount": 9,
       "source": "https://arxiv.org/abs/1706.03799",
@@ -2471,12 +2471,12 @@
         "Abhilash Shankarampeta",
         "Vivek Gupta",
         "Arpit Patil",
-        "O. Cocarascu",
+        "Oana Cocarascu",
         "E. Simperl"
       ],
       "topAuthors": [
         {
-          "name": "O. Cocarascu",
+          "name": "Oana Cocarascu",
           "hIndex": 20,
           "authorId": "3458679"
         },
@@ -2514,7 +2514,7 @@
       "topAuthors": [
         {
           "name": "G. Henter",
-          "hIndex": 30,
+          "hIndex": 31,
           "authorId": "2763884"
         },
         {
@@ -2667,12 +2667,12 @@
       "topAuthors": [
         {
           "name": "L. Cavedon",
-          "hIndex": 32,
+          "hIndex": 31,
           "authorId": "1788025"
         },
         {
           "name": "Damiano Spina",
-          "hIndex": 18,
+          "hIndex": 19,
           "authorId": "1630446247"
         }
       ],
