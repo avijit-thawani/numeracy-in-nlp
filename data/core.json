@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T11:05:40.516Z",
+  "updatedAt": "2026-10-08T11:23:00.873Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 2954,
+      "citationCount": 2956,
       "referenceCount": 14,
       "influentialCitationCount": 268,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -551,12 +551,12 @@
       "title": "Neural Power Units",
       "authors": [
         "Niklas Heim",
-        "Tomáš Pevný",
+        "T. Pevný",
         "Václav Šmídl"
       ],
       "topAuthors": [
         {
-          "name": "Tomáš Pevný",
+          "name": "T. Pevný",
           "hIndex": 34,
           "authorId": "1802358"
         },
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6725,
+      "citationCount": 6759,
       "referenceCount": 71,
-      "influentialCitationCount": 1526,
+      "influentialCitationCount": 1533,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 10
@@ -694,7 +694,7 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1374,
+      "citationCount": 1378,
       "referenceCount": 28,
       "influentialCitationCount": 277,
       "source": "https://arxiv.org/abs/2103.07191",
@@ -773,7 +773,7 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.53",
       "arxivId": "2103.13136",
       "pdf": "https://aclanthology.org/2021.naacl-main.53.pdf",
-      "citationCount": 153,
+      "citationCount": 154,
       "referenceCount": 70,
       "influentialCitationCount": 8,
       "source": "https://arxiv.org/abs/2103.13136",
@@ -814,7 +814,7 @@
       "doi": "10.18653/v1/D19-1534",
       "arxivId": "1909.07940",
       "pdf": "https://www.aclweb.org/anthology/D19-1534.pdf",
-      "citationCount": 327,
+      "citationCount": 328,
       "referenceCount": 30,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.07940",
@@ -856,7 +856,7 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1402,
+      "citationCount": 1406,
       "referenceCount": 54,
       "influentialCitationCount": 237,
       "source": "https://arxiv.org/abs/1903.00161",
@@ -893,9 +893,9 @@
       "doi": null,
       "arxivId": "1904.01557",
       "pdf": null,
-      "citationCount": 540,
+      "citationCount": 541,
       "referenceCount": 32,
-      "influentialCitationCount": 53,
+      "influentialCitationCount": 54,
       "source": "https://arxiv.org/abs/1904.01557",
       "addedAt": "2026-09-14",
       "score": 45
@@ -929,7 +929,7 @@
       "doi": null,
       "arxivId": "2102.13019",
       "pdf": null,
-      "citationCount": 169,
+      "citationCount": 170,
       "referenceCount": 49,
       "influentialCitationCount": 15,
       "source": "https://arxiv.org/abs/2102.13019",
@@ -1468,7 +1468,7 @@
       "doi": "10.48550/arXiv.2411.03766",
       "arxivId": "2411.03766",
       "pdf": null,
-      "citationCount": 52,
+      "citationCount": 53,
       "referenceCount": 66,
       "influentialCitationCount": 5,
       "source": "https://arxiv.org/abs/2411.03766",
@@ -2306,7 +2306,7 @@
       "pdf": "https://www.aclweb.org/anthology/P17-1025.pdf",
       "citationCount": 88,
       "referenceCount": 40,
-      "influentialCitationCount": 9,
+      "influentialCitationCount": 10,
       "source": "https://arxiv.org/abs/1706.03799",
       "addedAt": "2026-09-14",
       "score": 25
