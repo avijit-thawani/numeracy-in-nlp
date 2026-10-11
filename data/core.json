@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T10:41:30.408Z",
+  "updatedAt": "2026-10-11T10:50:23.689Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 2964,
+      "citationCount": 2968,
       "referenceCount": 14,
       "influentialCitationCount": 269,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -69,9 +69,9 @@
       "doi": "10.18653/v1/D18-1256",
       "arxivId": "1808.09637",
       "pdf": "https://www.aclweb.org/anthology/D18-1256.pdf",
-      "citationCount": 268,
+      "citationCount": 269,
       "referenceCount": 34,
-      "influentialCitationCount": 48,
+      "influentialCitationCount": 49,
       "source": "https://arxiv.org/abs/1808.09637",
       "addedAt": "2026-09-12",
       "score": 2.5
@@ -146,7 +146,7 @@
       "doi": "10.18653/v1/D19-1332",
       "arxivId": "1909.03065",
       "pdf": "https://www.aclweb.org/anthology/D19-1332.pdf",
-      "citationCount": 243,
+      "citationCount": 244,
       "referenceCount": 36,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.03065",
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6792,
+      "citationCount": 6798,
       "referenceCount": 71,
-      "influentialCitationCount": 1540,
+      "influentialCitationCount": 1541,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 10
@@ -694,9 +694,9 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1381,
+      "citationCount": 1382,
       "referenceCount": 28,
-      "influentialCitationCount": 277,
+      "influentialCitationCount": 278,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
       "score": 15
@@ -1432,7 +1432,7 @@
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
       "citationCount": 935,
       "referenceCount": 25,
-      "influentialCitationCount": 117,
+      "influentialCitationCount": 116,
       "source": "https://arxiv.org/abs/1905.13319",
       "addedAt": "2026-09-14",
       "score": 37.5
