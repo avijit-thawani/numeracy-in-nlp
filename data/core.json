@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T11:49:47.343Z",
+  "updatedAt": "2026-10-14T09:32:05.668Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -12,7 +12,7 @@
       "topAuthors": [
         {
           "name": "J. Uszkoreit",
-          "hIndex": 33,
+          "hIndex": 36,
           "authorId": "39328010"
         },
         {
@@ -51,7 +51,7 @@
       "topAuthors": [
         {
           "name": "Percy Liang",
-          "hIndex": 103,
+          "hIndex": 104,
           "authorId": "145419642"
         },
         {
@@ -130,7 +130,7 @@
         },
         {
           "name": "Daniel Khashabi",
-          "hIndex": 49,
+          "hIndex": 51,
           "authorId": "1783281"
         }
       ],
@@ -172,7 +172,7 @@
         },
         {
           "name": "P. Smolensky",
-          "hIndex": 53,
+          "hIndex": 54,
           "authorId": "1748557"
         }
       ],
@@ -315,7 +315,7 @@
       "topAuthors": [
         {
           "name": "Roger Wattenhofer",
-          "hIndex": 75,
+          "hIndex": 82,
           "authorId": "1716440"
         },
         {
@@ -482,7 +482,7 @@
         },
         {
           "name": "Bill Yuchen Lin",
-          "hIndex": 38,
+          "hIndex": 39,
           "authorId": "51583409"
         }
       ],
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6821,
+      "citationCount": 6827,
       "referenceCount": 71,
-      "influentialCitationCount": 1546,
+      "influentialCitationCount": 1547,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 10
@@ -694,9 +694,9 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1386,
+      "citationCount": 1388,
       "referenceCount": 28,
-      "influentialCitationCount": 278,
+      "influentialCitationCount": 277,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
       "score": 15
@@ -856,7 +856,7 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1413,
+      "citationCount": 1414,
       "referenceCount": 54,
       "influentialCitationCount": 240,
       "source": "https://arxiv.org/abs/1903.00161",
@@ -880,7 +880,7 @@
         },
         {
           "name": "Edward Grefenstette",
-          "hIndex": 48,
+          "hIndex": 49,
           "authorId": "1864353"
         }
       ],
@@ -1060,7 +1060,7 @@
       "topAuthors": [
         {
           "name": "E. Hovy",
-          "hIndex": 97,
+          "hIndex": 98,
           "authorId": "144547315"
         },
         {
@@ -1099,7 +1099,7 @@
       "topAuthors": [
         {
           "name": "Doug Downey",
-          "hIndex": 39,
+          "hIndex": 40,
           "authorId": "145612610"
         },
         {
@@ -1335,7 +1335,7 @@
       "topAuthors": [
         {
           "name": "Jia-Qing Liang",
-          "hIndex": 25,
+          "hIndex": 26,
           "authorId": "3366523"
         },
         {
@@ -1410,12 +1410,12 @@
       "topAuthors": [
         {
           "name": "Yejin Choi",
-          "hIndex": 114,
+          "hIndex": 115,
           "authorId": "1699545"
         },
         {
           "name": "Hannaneh Hajishirzi",
-          "hIndex": 85,
+          "hIndex": 86,
           "authorId": "2548384"
         }
       ],
@@ -1650,7 +1650,7 @@
         },
         {
           "name": "Marten Postma",
-          "hIndex": 34,
+          "hIndex": 35,
           "authorId": "1853748"
         }
       ],
@@ -2044,7 +2044,7 @@
         },
         {
           "name": "Wenhao Zheng",
-          "hIndex": 7,
+          "hIndex": 8,
           "authorId": "2283848842"
         }
       ],
@@ -2079,7 +2079,7 @@
         },
         {
           "name": "G. Spithourakis",
-          "hIndex": 13,
+          "hIndex": 14,
           "authorId": "3130583"
         }
       ],
@@ -2215,7 +2215,7 @@
         },
         {
           "name": "Taylor Berg-Kirkpatrick",
-          "hIndex": 5,
+          "hIndex": 6,
           "authorId": "2315300467"
         }
       ],
@@ -2249,7 +2249,7 @@
       "topAuthors": [
         {
           "name": "E. Hovy",
-          "hIndex": 97,
+          "hIndex": 98,
           "authorId": "144547315"
         },
         {
@@ -2286,7 +2286,7 @@
       "topAuthors": [
         {
           "name": "Yejin Choi",
-          "hIndex": 114,
+          "hIndex": 115,
           "authorId": "1699545"
         },
         {
@@ -2514,7 +2514,7 @@
       "topAuthors": [
         {
           "name": "G. Henter",
-          "hIndex": 31,
+          "hIndex": 30,
           "authorId": "2763884"
         },
         {
@@ -2550,7 +2550,7 @@
       "topAuthors": [
         {
           "name": "Cai-Ming Xiong",
-          "hIndex": 40,
+          "hIndex": 41,
           "authorId": "2054594326"
         },
         {
@@ -2672,7 +2672,7 @@
         },
         {
           "name": "Damiano Spina",
-          "hIndex": 19,
+          "hIndex": 20,
           "authorId": "1630446247"
         }
       ],
@@ -2705,7 +2705,7 @@
       "topAuthors": [
         {
           "name": "G. Weikum",
-          "hIndex": 97,
+          "hIndex": 98,
           "authorId": "1751591"
         },
         {
