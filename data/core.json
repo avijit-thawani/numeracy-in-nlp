@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T09:32:05.668Z",
+  "updatedAt": "2026-10-15T09:21:30.546Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 2970,
+      "citationCount": 2973,
       "referenceCount": 14,
       "influentialCitationCount": 269,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -69,7 +69,7 @@
       "doi": "10.18653/v1/D18-1256",
       "arxivId": "1808.09637",
       "pdf": "https://www.aclweb.org/anthology/D18-1256.pdf",
-      "citationCount": 271,
+      "citationCount": 272,
       "referenceCount": 34,
       "influentialCitationCount": 49,
       "source": "https://arxiv.org/abs/1808.09637",
@@ -146,7 +146,7 @@
       "doi": "10.18653/v1/D19-1332",
       "arxivId": "1909.03065",
       "pdf": "https://www.aclweb.org/anthology/D19-1332.pdf",
-      "citationCount": 244,
+      "citationCount": 245,
       "referenceCount": 36,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.03065",
@@ -656,12 +656,12 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6827,
+      "citationCount": 6879,
       "referenceCount": 71,
-      "influentialCitationCount": 1547,
+      "influentialCitationCount": 1555,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
-      "score": 10
+      "score": 7.5
     },
     {
       "id": "13c4e5a6122f3fa2663f63e49537091da6532f35",
@@ -694,9 +694,9 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1388,
+      "citationCount": 1395,
       "referenceCount": 28,
-      "influentialCitationCount": 277,
+      "influentialCitationCount": 279,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
       "score": 15
@@ -814,7 +814,7 @@
       "doi": "10.18653/v1/D19-1534",
       "arxivId": "1909.07940",
       "pdf": "https://www.aclweb.org/anthology/D19-1534.pdf",
-      "citationCount": 328,
+      "citationCount": 329,
       "referenceCount": 30,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.07940",
@@ -856,12 +856,12 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1414,
+      "citationCount": 1419,
       "referenceCount": 54,
-      "influentialCitationCount": 240,
+      "influentialCitationCount": 241,
       "source": "https://arxiv.org/abs/1903.00161",
       "addedAt": "2026-09-13",
-      "score": 40
+      "score": 0
     },
     {
       "id": "afed6dc6900d3b37e528b9086661bba583d60bf6",
@@ -929,7 +929,7 @@
       "doi": null,
       "arxivId": "2102.13019",
       "pdf": null,
-      "citationCount": 171,
+      "citationCount": 172,
       "referenceCount": 49,
       "influentialCitationCount": 15,
       "source": "https://arxiv.org/abs/2102.13019",
@@ -1430,9 +1430,9 @@
       "doi": "10.18653/v1/N19-1245",
       "arxivId": "1905.13319",
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
-      "citationCount": 937,
+      "citationCount": 942,
       "referenceCount": 25,
-      "influentialCitationCount": 116,
+      "influentialCitationCount": 117,
       "source": "https://arxiv.org/abs/1905.13319",
       "addedAt": "2026-09-14",
       "score": 37.5
@@ -2196,7 +2196,7 @@
       "influentialCitationCount": 0,
       "source": "https://doi.org/10.18653/v1/2023.findings-acl.295",
       "addedAt": "2026-09-14",
-      "score": 30
+      "score": 27.500000000000004
     },
     {
       "id": "24f09c1eb5d7b662bd53892f846600c5e0b66a6c",
@@ -2274,7 +2274,7 @@
       "influentialCitationCount": 6,
       "source": "https://doi.org/10.18653/v1/P19-1329",
       "addedAt": "2026-09-14",
-      "score": 45
+      "score": 2.5
     },
     {
       "id": "c9f343b492c170c726f607c255ec6c7177dc5800",
@@ -2502,7 +2502,7 @@
       "influentialCitationCount": 1,
       "source": "https://arxiv.org/abs/2311.02216",
       "addedAt": "2026-09-14",
-      "score": 40
+      "score": 30
     },
     {
       "id": "61ae65ce83a5e51022ad8a5dcfb77c0cd0c77805",
@@ -2653,7 +2653,7 @@
       "influentialCitationCount": 3,
       "source": "https://arxiv.org/abs/2109.03137",
       "addedAt": "2026-09-14",
-      "score": 37.5
+      "score": 40
     },
     {
       "id": "31e76e4b186a51e5f7471d8c508a280a6c1f217d",
