@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T08:35:48.398Z",
+  "updatedAt": "2026-10-18T08:58:24.237Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -34,7 +34,7 @@
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
       "citationCount": 2980,
       "referenceCount": 14,
-      "influentialCitationCount": 269,
+      "influentialCitationCount": 268,
       "source": "https://arxiv.org/abs/1803.02155",
       "addedAt": "2026-09-12",
       "score": 0
@@ -656,7 +656,7 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6932,
+      "citationCount": 6935,
       "referenceCount": 71,
       "influentialCitationCount": 1569,
       "source": "https://arxiv.org/abs/2103.03874",
