@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T09:27:18.804Z",
+  "updatedAt": "2026-10-21T09:22:51.580Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 2980,
+      "citationCount": 2984,
       "referenceCount": 14,
       "influentialCitationCount": 268,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -51,7 +51,7 @@
       "topAuthors": [
         {
           "name": "Percy Liang",
-          "hIndex": 104,
+          "hIndex": 105,
           "authorId": "145419642"
         },
         {
@@ -69,7 +69,7 @@
       "doi": "10.18653/v1/D18-1256",
       "arxivId": "1808.09637",
       "pdf": "https://www.aclweb.org/anthology/D18-1256.pdf",
-      "citationCount": 273,
+      "citationCount": 274,
       "referenceCount": 34,
       "influentialCitationCount": 49,
       "source": "https://arxiv.org/abs/1808.09637",
@@ -146,7 +146,7 @@
       "doi": "10.18653/v1/D19-1332",
       "arxivId": "1909.03065",
       "pdf": "https://www.aclweb.org/anthology/D19-1332.pdf",
-      "citationCount": 246,
+      "citationCount": 247,
       "referenceCount": 36,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.03065",
@@ -635,7 +635,7 @@
       "topAuthors": [
         {
           "name": "D. Song",
-          "hIndex": 140,
+          "hIndex": 141,
           "authorId": "143711382"
         },
         {
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 6962,
+      "citationCount": 7000,
       "referenceCount": 71,
-      "influentialCitationCount": 1572,
+      "influentialCitationCount": 1580,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,9 +694,9 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1401,
+      "citationCount": 1402,
       "referenceCount": 28,
-      "influentialCitationCount": 279,
+      "influentialCitationCount": 280,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
       "score": 15
@@ -856,7 +856,7 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1430,
+      "citationCount": 1433,
       "referenceCount": 54,
       "influentialCitationCount": 245,
       "source": "https://arxiv.org/abs/1903.00161",
@@ -916,7 +916,7 @@
         },
         {
           "name": "Rodrigo Nogueira",
-          "hIndex": 33,
+          "hIndex": 34,
           "authorId": "143744603"
         }
       ],
@@ -1220,7 +1220,7 @@
         },
         {
           "name": "Isabelle Augenstein",
-          "hIndex": 44,
+          "hIndex": 45,
           "authorId": "1736067"
         }
       ],
@@ -1430,9 +1430,9 @@
       "doi": "10.18653/v1/N19-1245",
       "arxivId": "1905.13319",
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
-      "citationCount": 945,
+      "citationCount": 947,
       "referenceCount": 25,
-      "influentialCitationCount": 117,
+      "influentialCitationCount": 118,
       "source": "https://arxiv.org/abs/1905.13319",
       "addedAt": "2026-09-14",
       "score": 37.5
@@ -1468,7 +1468,7 @@
       "doi": "10.48550/arXiv.2411.03766",
       "arxivId": "2411.03766",
       "pdf": null,
-      "citationCount": 53,
+      "citationCount": 54,
       "referenceCount": 66,
       "influentialCitationCount": 5,
       "source": "https://arxiv.org/abs/2411.03766",
@@ -1529,7 +1529,7 @@
         },
         {
           "name": "Hiroya Takamura",
-          "hIndex": 29,
+          "hIndex": 30,
           "authorId": "36514372"
         }
       ],
@@ -1964,14 +1964,14 @@
       ],
       "topAuthors": [
         {
+          "name": "Gong Cheng",
+          "hIndex": 4,
+          "authorId": "2244623823"
+        },
+        {
           "name": "Yuchen Li",
           "hIndex": 3,
           "authorId": "2374178248"
-        },
-        {
-          "name": "Gong Cheng",
-          "hIndex": 3,
-          "authorId": "2244623823"
         }
       ],
       "affiliations": [],
@@ -2705,12 +2705,12 @@
       "topAuthors": [
         {
           "name": "G. Weikum",
-          "hIndex": 98,
+          "hIndex": 100,
           "authorId": "1751591"
         },
         {
           "name": "Jannik Strötgen",
-          "hIndex": 26,
+          "hIndex": 27,
           "authorId": "2013656"
         }
       ],
