@@ -1,0 +1,26 @@
+{
+  "window": "past year",
+  "proposedAt": "2026-10-24T08:53:39.476Z",
+  "papers": [
+    {
+      "id": "d7260db07abc181866ddc52dd1fedc52bb975228",
+      "link": "https://arxiv.org/abs/2601.12095",
+      "title": "Neural Isomorphic Fields: A Transformer-based Algebraic Numerical Embedding"
+    },
+    {
+      "id": "849075f7b903e1ced0ae583a746e768aded53989",
+      "link": "https://arxiv.org/abs/2601.15251",
+      "title": "The Effect of Scripts and Formats on LLM Numeracy"
+    },
+    {
+      "id": "83eec4161f84925073f8ae9de47fcef755e4ba27",
+      "link": "https://arxiv.org/abs/2601.15714",
+      "title": "Even GPT-5.2 Can't Count to Five: The Case for Zero-Error Horizons in Trustworthy LLMs"
+    },
+    {
+      "id": "5547a415240210d67812763c2d2837311a2c5c3f",
+      "link": "https://arxiv.org/abs/2602.10416",
+      "title": "AI-rithmetic"
+    }
+  ]
+}

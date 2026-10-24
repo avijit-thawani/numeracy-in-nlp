@@ -127,3 +127,20 @@ https://doi.org/10.1145/3485447.3511932
 # Do Language Embeddings capture Scales?
 #   Dan Roth (h=99) · University of Pennsylvania, Oracle · 2020 · 100 citations · cited by 7 in your list
 https://arxiv.org/abs/2010.05345
+
+# --- past year ---
+# Neural Isomorphic Fields: A Transformer-based Algebraic Numerical Embedding
+#   S. Momtazi (h=23) · Amirkabir University of Technology · 2026 · 0 citations · past year · cites 4 in your list
+https://arxiv.org/abs/2601.12095
+
+# The Effect of Scripts and Formats on LLM Numeracy
+#   Yuval Pinter (h=21) · Ben-Gurion University of the Negev · 2026 · 1 citations · past year · cites 3 in your list
+https://arxiv.org/abs/2601.15251
+
+# Even GPT-5.2 Can't Count to Five: The Case for Zero-Error Horizons in Trustworthy LLMs
+#   Ryoma Sato (h=3) · National Institute of Informatics · 2026 · 1 citations · past year · cites 3 in your list
+https://arxiv.org/abs/2601.15714
+
+# AI-rithmetic
+#   Alex Bie (h=9) · 2026 · 1 citations · past year · cites 3 in your list
+https://arxiv.org/abs/2602.10416
