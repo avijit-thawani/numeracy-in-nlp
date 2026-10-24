@@ -1,0 +1,11 @@
+{
+  "window": "past month",
+  "proposedAt": "2026-10-24T08:53:36.293Z",
+  "papers": [
+    {
+      "id": "45f5db8ae09cb858c1803c235470aca76f59d507",
+      "link": "https://arxiv.org/abs/2609.39294",
+      "title": "ANI: Adaptive Numerical Injection for Unifying Semantic and Arithmetic Representations in Numerical Reasoning"
+    }
+  ]
+}
