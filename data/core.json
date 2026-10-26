@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T09:29:03.000Z",
+  "updatedAt": "2026-10-26T10:31:30.450Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -1473,7 +1473,7 @@
       "influentialCitationCount": 6,
       "source": "https://arxiv.org/abs/2411.03766",
       "addedAt": "2026-09-14",
-      "score": 40
+      "score": 7.5
     },
     {
       "id": "251a27e00b9838c8c315f0152cb52762db766aee",
