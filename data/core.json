@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T09:53:52.945Z",
+  "updatedAt": "2026-10-28T10:35:54.352Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 2997,
+      "citationCount": 3000,
       "referenceCount": 14,
       "influentialCitationCount": 268,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -167,7 +167,7 @@
       "topAuthors": [
         {
           "name": "Jianfeng Gao",
-          "hIndex": 97,
+          "hIndex": 98,
           "authorId": "1800422"
         },
         {
@@ -356,7 +356,7 @@
       "topAuthors": [
         {
           "name": "Noah A. Smith",
-          "hIndex": 115,
+          "hIndex": 116,
           "authorId": "144365875"
         },
         {
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 7082,
+      "citationCount": 7106,
       "referenceCount": 71,
-      "influentialCitationCount": 1598,
+      "influentialCitationCount": 1601,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,9 +694,9 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1410,
+      "citationCount": 1412,
       "referenceCount": 28,
-      "influentialCitationCount": 281,
+      "influentialCitationCount": 282,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
       "score": 15
@@ -1566,7 +1566,7 @@
       "topAuthors": [
         {
           "name": "Kewei Tu",
-          "hIndex": 28,
+          "hIndex": 29,
           "authorId": "40341553"
         },
         {
@@ -1719,12 +1719,12 @@
       "topAuthors": [
         {
           "name": "M. Gubanov",
-          "hIndex": 15,
+          "hIndex": 16,
           "authorId": "1705924"
         },
         {
           "name": "Anna Pyayt",
-          "hIndex": 12,
+          "hIndex": 13,
           "authorId": "1743601"
         }
       ],
