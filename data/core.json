@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T10:35:54.352Z",
+  "updatedAt": "2026-10-29T10:54:30.247Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,9 +32,9 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 3000,
+      "citationCount": 3003,
       "referenceCount": 14,
-      "influentialCitationCount": 268,
+      "influentialCitationCount": 269,
       "source": "https://arxiv.org/abs/1803.02155",
       "addedAt": "2026-09-12",
       "score": 0
@@ -106,7 +106,7 @@
       "doi": "10.1109/WI.2018.00-97",
       "arxivId": "1809.05356",
       "pdf": "https://arxiv.org/pdf/1809.05356",
-      "citationCount": 49,
+      "citationCount": 50,
       "referenceCount": 22,
       "influentialCitationCount": 3,
       "source": "https://arxiv.org/abs/1809.05356",
@@ -146,7 +146,7 @@
       "doi": "10.18653/v1/D19-1332",
       "arxivId": "1909.03065",
       "pdf": "https://www.aclweb.org/anthology/D19-1332.pdf",
-      "citationCount": 247,
+      "citationCount": 248,
       "referenceCount": 36,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.03065",
@@ -225,9 +225,9 @@
       "doi": "10.1162/tacl_a_00342",
       "arxivId": "1912.13283",
       "pdf": "https://doi.org/10.1162/tacl_a_00342",
-      "citationCount": 318,
+      "citationCount": 319,
       "referenceCount": 63,
-      "influentialCitationCount": 31,
+      "influentialCitationCount": 30,
       "source": "https://arxiv.org/abs/1912.13283",
       "addedAt": "2026-09-12",
       "score": 22.5
@@ -498,7 +498,7 @@
       "doi": "10.18653/v1/2020.emnlp-main.557",
       "arxivId": "2005.00683",
       "pdf": "https://aclanthology.org/2020.emnlp-main.557.pdf",
-      "citationCount": 170,
+      "citationCount": 171,
       "referenceCount": 32,
       "influentialCitationCount": 12,
       "source": "https://arxiv.org/abs/2005.00683",
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 7106,
+      "citationCount": 7144,
       "referenceCount": 71,
-      "influentialCitationCount": 1601,
+      "influentialCitationCount": 1614,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,7 +694,7 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1412,
+      "citationCount": 1414,
       "referenceCount": 28,
       "influentialCitationCount": 282,
       "source": "https://arxiv.org/abs/2103.07191",
@@ -733,7 +733,7 @@
       "doi": "10.18653/v1/2020.acl-main.89",
       "arxivId": "2004.04487",
       "pdf": "https://www.aclweb.org/anthology/2020.acl-main.89.pdf",
-      "citationCount": 249,
+      "citationCount": 250,
       "referenceCount": 36,
       "influentialCitationCount": 25,
       "source": "https://arxiv.org/abs/2004.04487",
@@ -814,7 +814,7 @@
       "doi": "10.18653/v1/D19-1534",
       "arxivId": "1909.07940",
       "pdf": "https://www.aclweb.org/anthology/D19-1534.pdf",
-      "citationCount": 331,
+      "citationCount": 333,
       "referenceCount": 30,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.07940",
@@ -856,7 +856,7 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1444,
+      "citationCount": 1448,
       "referenceCount": 54,
       "influentialCitationCount": 246,
       "source": "https://arxiv.org/abs/1903.00161",
@@ -893,7 +893,7 @@
       "doi": null,
       "arxivId": "1904.01557",
       "pdf": null,
-      "citationCount": 543,
+      "citationCount": 544,
       "referenceCount": 32,
       "influentialCitationCount": 55,
       "source": "https://arxiv.org/abs/1904.01557",
@@ -929,7 +929,7 @@
       "doi": null,
       "arxivId": "2102.13019",
       "pdf": null,
-      "citationCount": 172,
+      "citationCount": 201,
       "referenceCount": 49,
       "influentialCitationCount": 15,
       "source": "https://arxiv.org/abs/2102.13019",
@@ -964,7 +964,7 @@
       "doi": "10.18653/v1/2021.findings-emnlp.265",
       "arxivId": "2109.04672",
       "pdf": "https://aclanthology.org/2021.findings-emnlp.265.pdf",
-      "citationCount": 22,
+      "citationCount": 51,
       "referenceCount": 18,
       "influentialCitationCount": 1,
       "source": "https://arxiv.org/abs/2109.04672",
@@ -1065,7 +1065,7 @@
         },
         {
           "name": "C. Rosé",
-          "hIndex": 54,
+          "hIndex": 56,
           "authorId": "35959897"
         }
       ],
@@ -1080,7 +1080,7 @@
       "doi": "10.18653/v1/K19-1033",
       "arxivId": "1901.03735",
       "pdf": "https://www.aclweb.org/anthology/K19-1033.pdf",
-      "citationCount": 89,
+      "citationCount": 90,
       "referenceCount": 70,
       "influentialCitationCount": 14,
       "source": "https://arxiv.org/abs/1901.03735",
@@ -1277,9 +1277,9 @@
       "doi": "10.18653/v1/P19-1388",
       "arxivId": "1906.01327",
       "pdf": "https://www.aclweb.org/anthology/P19-1388.pdf",
-      "citationCount": 63,
+      "citationCount": 66,
       "referenceCount": 30,
-      "influentialCitationCount": 2,
+      "influentialCitationCount": 3,
       "source": "https://arxiv.org/abs/1906.01327",
       "addedAt": "2026-09-14",
       "score": 37.5
@@ -1299,7 +1299,7 @@
         },
         {
           "name": "Taku Sakamoto",
-          "hIndex": 2,
+          "hIndex": 3,
           "authorId": "2101317401"
         }
       ],
@@ -1340,7 +1340,7 @@
         },
         {
           "name": "Yanghua Xiao",
-          "hIndex": 13,
+          "hIndex": 14,
           "authorId": "2267005966"
         }
       ],
@@ -1353,7 +1353,7 @@
       "doi": "10.1109/ICDE60146.2024.00066",
       "arxivId": "2312.17532",
       "pdf": "https://arxiv.org/pdf/2312.17532",
-      "citationCount": 7,
+      "citationCount": 8,
       "referenceCount": 43,
       "influentialCitationCount": 0,
       "source": "https://arxiv.org/abs/2312.17532",
@@ -1376,7 +1376,7 @@
         },
         {
           "name": "E. Choi",
-          "hIndex": 29,
+          "hIndex": 28,
           "authorId": "3242613"
         }
       ],
@@ -1430,7 +1430,7 @@
       "doi": "10.18653/v1/N19-1245",
       "arxivId": "1905.13319",
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
-      "citationCount": 950,
+      "citationCount": 952,
       "referenceCount": 25,
       "influentialCitationCount": 118,
       "source": "https://arxiv.org/abs/1905.13319",
@@ -1544,7 +1544,7 @@
       "doi": "10.18653/v1/P19-1635",
       "arxivId": null,
       "pdf": "https://www.aclweb.org/anthology/P19-1635.pdf",
-      "citationCount": 51,
+      "citationCount": 52,
       "referenceCount": 16,
       "influentialCitationCount": 7,
       "source": "https://doi.org/10.18653/v1/P19-1635",
@@ -1586,7 +1586,7 @@
       "doi": "10.18653/v1/2020.findings-emnlp.235",
       "arxivId": "2001.00003",
       "pdf": "https://www.aclweb.org/anthology/2020.findings-emnlp.235.pdf",
-      "citationCount": 29,
+      "citationCount": 30,
       "referenceCount": 43,
       "influentialCitationCount": 5,
       "source": "https://arxiv.org/abs/2001.00003",
@@ -1826,7 +1826,6 @@
       "id": "78ac5f3860d4d1bac6abe0cc0ac876b8e8329875",
       "title": "Toten: A Knowledge-Based System For Structure-Preserving Representation Of Physical Quantities And Technical Notation In Brazilian Portuguese",
       "authors": [
-        "Antonio de Sousa Leitão",
         "Allan Kardec Duailibe Barros",
         "Fabrício Saul Lima",
         "Selby Mykael Lima dos Santos",
@@ -1839,9 +1838,9 @@
           "authorId": "2478630669"
         },
         {
-          "name": "Antonio de Sousa Leitão",
+          "name": "Fabrício Saul Lima",
           "hIndex": 0,
-          "authorId": null
+          "authorId": "2421635897"
         }
       ],
       "affiliations": [],
@@ -2092,7 +2091,7 @@
       "doi": "10.18653/v1/P18-1196",
       "arxivId": "1805.08154",
       "pdf": "https://www.aclweb.org/anthology/P18-1196.pdf",
-      "citationCount": 99,
+      "citationCount": 100,
       "referenceCount": 75,
       "influentialCitationCount": 11,
       "source": "https://arxiv.org/abs/1805.08154",
@@ -2137,14 +2136,14 @@
       ],
       "topAuthors": [
         {
-          "name": "Kenji Kita",
-          "hIndex": 13,
-          "authorId": "2138347"
+          "name": "Minoru Yoshida",
+          "hIndex": 0,
+          "authorId": null
         },
         {
-          "name": "Minoru Yoshida",
-          "hIndex": 10,
-          "authorId": "145329865"
+          "name": "Kenji Kita",
+          "hIndex": 0,
+          "authorId": null
         }
       ],
       "affiliations": [],
@@ -2156,8 +2155,8 @@
       "doi": "10.5772/INTECHOPEN.98540",
       "arxivId": null,
       "pdf": "https://doi.org/10.5772/intechopen.98540",
-      "citationCount": 4,
-      "referenceCount": 42,
+      "citationCount": 0,
+      "referenceCount": 39,
       "influentialCitationCount": 0,
       "source": "https://doi.org/10.5772/INTECHOPEN.98540",
       "addedAt": "2026-09-14",
@@ -2254,7 +2253,7 @@
         },
         {
           "name": "C. Rosé",
-          "hIndex": 54,
+          "hIndex": 56,
           "authorId": "35959897"
         }
       ],
@@ -2764,7 +2763,7 @@
       "doi": "10.18653/v1/2020.findings-emnlp.439",
       "arxivId": "2010.05345",
       "pdf": "https://www.aclweb.org/anthology/2020.findings-emnlp.439.pdf",
-      "citationCount": 100,
+      "citationCount": 99,
       "referenceCount": 20,
       "influentialCitationCount": 9,
       "source": "https://arxiv.org/abs/2010.05345",
