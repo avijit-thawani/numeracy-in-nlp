@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T10:54:30.247Z",
+  "updatedAt": "2026-10-30T10:57:44.670Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,9 +32,9 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 3003,
+      "citationCount": 3006,
       "referenceCount": 14,
-      "influentialCitationCount": 269,
+      "influentialCitationCount": 270,
       "source": "https://arxiv.org/abs/1803.02155",
       "addedAt": "2026-09-12",
       "score": 0
@@ -146,7 +146,7 @@
       "doi": "10.18653/v1/D19-1332",
       "arxivId": "1909.03065",
       "pdf": "https://www.aclweb.org/anthology/D19-1332.pdf",
-      "citationCount": 248,
+      "citationCount": 249,
       "referenceCount": 36,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.03065",
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 7144,
+      "citationCount": 7158,
       "referenceCount": 71,
-      "influentialCitationCount": 1614,
+      "influentialCitationCount": 1618,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,7 +694,7 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1414,
+      "citationCount": 1416,
       "referenceCount": 28,
       "influentialCitationCount": 282,
       "source": "https://arxiv.org/abs/2103.07191",
@@ -814,7 +814,7 @@
       "doi": "10.18653/v1/D19-1534",
       "arxivId": "1909.07940",
       "pdf": "https://www.aclweb.org/anthology/D19-1534.pdf",
-      "citationCount": 333,
+      "citationCount": 334,
       "referenceCount": 30,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.07940",
@@ -858,10 +858,10 @@
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
       "citationCount": 1448,
       "referenceCount": 54,
-      "influentialCitationCount": 246,
+      "influentialCitationCount": 247,
       "source": "https://arxiv.org/abs/1903.00161",
       "addedAt": "2026-09-13",
-      "score": 0
+      "score": 30
     },
     {
       "id": "afed6dc6900d3b37e528b9086661bba583d60bf6",
@@ -893,7 +893,7 @@
       "doi": null,
       "arxivId": "1904.01557",
       "pdf": null,
-      "citationCount": 544,
+      "citationCount": 545,
       "referenceCount": 32,
       "influentialCitationCount": 55,
       "source": "https://arxiv.org/abs/1904.01557",
@@ -929,7 +929,7 @@
       "doi": null,
       "arxivId": "2102.13019",
       "pdf": null,
-      "citationCount": 201,
+      "citationCount": 208,
       "referenceCount": 49,
       "influentialCitationCount": 15,
       "source": "https://arxiv.org/abs/2102.13019",
@@ -964,7 +964,7 @@
       "doi": "10.18653/v1/2021.findings-emnlp.265",
       "arxivId": "2109.04672",
       "pdf": "https://aclanthology.org/2021.findings-emnlp.265.pdf",
-      "citationCount": 51,
+      "citationCount": 58,
       "referenceCount": 18,
       "influentialCitationCount": 1,
       "source": "https://arxiv.org/abs/2109.04672",
@@ -1260,14 +1260,13 @@
           "authorId": "144590225"
         },
         {
-          "name": "Yanai Elazar",
-          "hIndex": 30,
-          "authorId": "51131518"
+          "name": "Deepak Ramachandran",
+          "hIndex": 11,
+          "authorId": "34968061"
         }
       ],
       "affiliations": [
-        "University of Pennsylvania, Oracle",
-        "Bar-Ilan University"
+        "University of Pennsylvania, Oracle"
       ],
       "year": 2019,
       "venue": "Annual Meeting of the Association for Computational Linguistics",
@@ -1313,7 +1312,7 @@
       "url": "https://www.semanticscholar.org/paper/c9343c26a0e604f7afd94b7290bbdf8d96cd65b6",
       "doi": "10.18653/V1/2021.DEELIO-1.14",
       "arxivId": null,
-      "pdf": "https://doi.org/10.18653/v1/2021.deelio-1.14",
+      "pdf": "https://aclanthology.org/2021.deelio-1.14.pdf",
       "citationCount": 5,
       "referenceCount": 25,
       "influentialCitationCount": 0,
@@ -1713,7 +1712,7 @@
       "title": "CONE: Embeddings for Complex Numerical Data Preserving Unit and Variable Semantics",
       "authors": [
         "Gyanendra Shrestha",
-        "Anna Pyayt",
+        "A. Pyayt",
         "M. Gubanov"
       ],
       "topAuthors": [
@@ -1723,7 +1722,7 @@
           "authorId": "1705924"
         },
         {
-          "name": "Anna Pyayt",
+          "name": "A. Pyayt",
           "hIndex": 13,
           "authorId": "1743601"
         }
@@ -1826,6 +1825,7 @@
       "id": "78ac5f3860d4d1bac6abe0cc0ac876b8e8329875",
       "title": "Toten: A Knowledge-Based System For Structure-Preserving Representation Of Physical Quantities And Technical Notation In Brazilian Portuguese",
       "authors": [
+        "Antonio de Sousa Leitão",
         "Allan Kardec Duailibe Barros",
         "Fabrício Saul Lima",
         "Selby Mykael Lima dos Santos",
@@ -1838,9 +1838,9 @@
           "authorId": "2478630669"
         },
         {
-          "name": "Fabrício Saul Lima",
+          "name": "Antonio de Sousa Leitão",
           "hIndex": 0,
-          "authorId": "2421635897"
+          "authorId": "2522567643"
         }
       ],
       "affiliations": [],
@@ -2136,14 +2136,14 @@
       ],
       "topAuthors": [
         {
-          "name": "Minoru Yoshida",
-          "hIndex": 0,
-          "authorId": null
+          "name": "Kenji Kita",
+          "hIndex": 13,
+          "authorId": "2138347"
         },
         {
-          "name": "Kenji Kita",
-          "hIndex": 0,
-          "authorId": null
+          "name": "Minoru Yoshida",
+          "hIndex": 10,
+          "authorId": "145329865"
         }
       ],
       "affiliations": [],
@@ -2160,7 +2160,7 @@
       "influentialCitationCount": 0,
       "source": "https://doi.org/10.5772/INTECHOPEN.98540",
       "addedAt": "2026-09-14",
-      "score": 35
+      "score": 32.5
     },
     {
       "id": "c77feebb06b530079a34f04c64de359ae28c0a32",
@@ -2195,7 +2195,7 @@
       "influentialCitationCount": 0,
       "source": "https://doi.org/10.18653/v1/2023.findings-acl.295",
       "addedAt": "2026-09-14",
-      "score": 27.500000000000004
+      "score": 30
     },
     {
       "id": "24f09c1eb5d7b662bd53892f846600c5e0b66a6c",
@@ -2273,7 +2273,7 @@
       "influentialCitationCount": 6,
       "source": "https://doi.org/10.18653/v1/P19-1329",
       "addedAt": "2026-09-14",
-      "score": 2.5
+      "score": 45
     },
     {
       "id": "c9f343b492c170c726f607c255ec6c7177dc5800",
@@ -2496,12 +2496,12 @@
       "doi": "10.48550/arXiv.2311.02216",
       "arxivId": "2311.02216",
       "pdf": null,
-      "citationCount": 52,
+      "citationCount": 53,
       "referenceCount": 62,
       "influentialCitationCount": 1,
       "source": "https://arxiv.org/abs/2311.02216",
       "addedAt": "2026-09-14",
-      "score": 30
+      "score": 40
     },
     {
       "id": "61ae65ce83a5e51022ad8a5dcfb77c0cd0c77805",
@@ -2531,7 +2531,7 @@
       "doi": "10.48550/arXiv.2404.16574",
       "arxivId": "2404.16574",
       "pdf": null,
-      "citationCount": 1,
+      "citationCount": 2,
       "referenceCount": 31,
       "influentialCitationCount": 0,
       "source": "https://arxiv.org/abs/2404.16574",
@@ -2746,14 +2746,14 @@
           "authorId": "144590225"
         },
         {
-          "name": "Yanai Elazar",
-          "hIndex": 30,
-          "authorId": "51131518"
+          "name": "Ian Tenney",
+          "hIndex": 21,
+          "authorId": "6117577"
         }
       ],
       "affiliations": [
         "University of Pennsylvania, Oracle",
-        "Bar-Ilan University"
+        "Stanford University"
       ],
       "year": 2020,
       "venue": "Findings",
@@ -2768,7 +2768,7 @@
       "influentialCitationCount": 9,
       "source": "https://arxiv.org/abs/2010.05345",
       "addedAt": "2026-09-14",
-      "score": 52.5
+      "score": 50
     }
   ]
 }
