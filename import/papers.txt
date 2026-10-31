@@ -127,3 +127,80 @@ https://doi.org/10.1145/3485447.3511932
 # Do Language Embeddings capture Scales?
 #   Dan Roth (h=99) · University of Pennsylvania, Oracle · 2020 · 100 citations · cited by 7 in your list
 https://arxiv.org/abs/2010.05345
+
+# --- most connected ---
+# Measurement Extraction with Natural Language Processing: A Review
+#   D. Stolten (h=82) · Forschungszentrum Jülich · 2022 · 23 citations · cites 9 in your list
+https://doi.org/10.18653/v1/2022.findings-emnlp.161
+
+# Reasoning about Quantities in Natural Language
+#   Dan Roth (h=100) · University of Pennsylvania, Oracle · 2015 · 179 citations · cited by 13 in your list
+https://doi.org/10.1162/tacl_a_00118
+
+# An Empirical Investigation of Contextualized Number Prediction
+#   Taylor Berg-Kirkpatrick (h=6) · University of California San Diego · 2020 · 44 citations · cited by 11 in your list
+https://arxiv.org/abs/2011.07961
+
+# KitchenScale: Learning to predict ingredient quantities from recipe contexts
+#   Jaewoo Kang (h=47) · Korea University · 2023 · 15 citations · cites 8 in your list
+https://arxiv.org/abs/2304.10739
+
+# Deep Neural Solver for Math Word Problems
+#   Shuming Shi (h=41) · Tencent AI Lab · 2017 · 404 citations · cited by 13 in your list
+https://doi.org/10.18653/v1/D17-1088
+
+# Introducing Semantic Information for Numerical Attribute Prediction over Knowledge Graphs
+#   Lei Zou (h=36) · Beijing Normal University · 2022 · 8 citations · cites 8 in your list
+https://www.semanticscholar.org/paper/c97bcf9e605938c2bef54f12b2156c678f1a2373
+
+# We are IntechOpen, the world’s leading publisher of Open Access books Built by scientists, for scientists
+#   Kenji Kita (h=13) · 2022 · 4 citations · cites 11 in your list
+https://www.semanticscholar.org/paper/bc2a12ee5cd80980d278ba535c5864217291e26d
+
+# Dense Retrieval with Quantity Comparison Intent
+#   M. Chelliah (h=8) · Indian Institute of Technology Bombay · 2025 · 1 citations · cites 7 in your list
+https://doi.org/10.18653/v1/2025.findings-acl.1220
+
+# NumNet: Machine Reading Comprehension with Numerical Reasoning
+#   Zhiyuan Liu (h=92) · Tsinghua University · 2019 · 133 citations · cited by 9 in your list
+https://arxiv.org/abs/1910.06701
+
+# A Causal Framework to Quantify the Robustness of Mathematical Reasoning with Language Models
+#   Mrinmaya Sachan (h=47) · 2022 · 91 citations · cites 7 in your list
+https://arxiv.org/abs/2210.12023
+
+# How well do Computers Solve Math Word Problems? Large-Scale Dataset Construction and Evaluation
+#   Wei-Ying Ma (h=93) · Microsoft Research Asia · 2016 · 158 citations · cited by 9 in your list
+https://doi.org/10.18653/v1/P16-1084
+
+# Mathematical Language Models: A Survey
+#   Jie Zhou (h=20) · East China Normal University · 2023 · 29 citations · cites 11 in your list
+https://arxiv.org/abs/2312.07622
+
+# Numerically Grounded Language Models for Semantic Error Correction
+#   Sebastian Riedel (h=72) · University of Copenhagen · 2016 · 17 citations · cited by 6 in your list
+https://arxiv.org/abs/1608.04147
+
+# Learning Non-linguistic Skills without Sacrificing Linguistic Proficiency
+#   Naren Ramakrishnan (h=19) · Virginia Tech · 2023 · 5 citations · cites 8 in your list
+https://arxiv.org/abs/2305.08246
+
+# Numbers Matter! Bringing Quantity-awareness to Retrieval Systems
+#   Satya Almasian (h=6) · Heidelberg University · 2024 · 4 citations · cites 8 in your list
+https://arxiv.org/abs/2407.10283
+
+# Towards Robust Numerical Question Answering: Diagnosing Numerical Capabilities of NLP Systems
+#   Shi Han (h=30) · Microsoft (United States) · 2022 · 12 citations · cites 7 in your list
+https://arxiv.org/abs/2211.07455
+
+# Numeric Magnitude Comparison Effects in Large Language Models
+#   Sashank Varma (h=22) · Georgia Institute of Technology · 2023 · 15 citations · cites 9 in your list
+https://arxiv.org/abs/2305.10782
+
+# Improving Downstream Task Performance by Treating Numbers as Entities
+#   L. Carin (h=101) · Emory University · 2022 · 5 citations · cited by 3 in your list
+https://arxiv.org/abs/2205.03559
+
+# NQuAD: 70,000+ Questions for Machine Comprehension of the Numerals in Text
+#   Hsin-Hsi Chen (h=39) · National Taiwan University · 2021 · 15 citations · cites 7 in your list
+https://doi.org/10.1145/3459637.3482155
