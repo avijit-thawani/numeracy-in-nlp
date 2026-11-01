@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T10:24:17.446Z",
+  "updatedAt": "2026-11-01T11:21:01.746Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -106,7 +106,7 @@
       "doi": "10.1109/WI.2018.00-97",
       "arxivId": "1809.05356",
       "pdf": "https://arxiv.org/pdf/1809.05356",
-      "citationCount": 50,
+      "citationCount": 51,
       "referenceCount": 22,
       "influentialCitationCount": 3,
       "source": "https://arxiv.org/abs/1809.05356",
@@ -656,9 +656,9 @@
       "doi": null,
       "arxivId": "2103.03874",
       "pdf": null,
-      "citationCount": 7180,
+      "citationCount": 7181,
       "referenceCount": 71,
-      "influentialCitationCount": 1625,
+      "influentialCitationCount": 1626,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,7 +694,7 @@
       "doi": "10.18653/V1/2021.NAACL-MAIN.168",
       "arxivId": "2103.07191",
       "pdf": "https://aclanthology.org/2021.naacl-main.168.pdf",
-      "citationCount": 1418,
+      "citationCount": 1419,
       "referenceCount": 28,
       "influentialCitationCount": 282,
       "source": "https://arxiv.org/abs/2103.07191",
@@ -814,7 +814,7 @@
       "doi": "10.18653/v1/D19-1534",
       "arxivId": "1909.07940",
       "pdf": "https://www.aclweb.org/anthology/D19-1534.pdf",
-      "citationCount": 334,
+      "citationCount": 335,
       "referenceCount": 30,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.07940",
