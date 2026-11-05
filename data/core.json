@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T12:21:55.126Z",
+  "updatedAt": "2026-11-05T12:23:06.132Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,9 +32,9 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 3014,
+      "citationCount": 3015,
       "referenceCount": 14,
-      "influentialCitationCount": 269,
+      "influentialCitationCount": 270,
       "source": "https://arxiv.org/abs/1803.02155",
       "addedAt": "2026-09-12",
       "score": 0
@@ -56,7 +56,7 @@
         },
         {
           "name": "He He",
-          "hIndex": 41,
+          "hIndex": 42,
           "authorId": "144533687"
         }
       ],
@@ -69,7 +69,7 @@
       "doi": "10.18653/v1/D18-1256",
       "arxivId": "1808.09637",
       "pdf": "https://www.aclweb.org/anthology/D18-1256.pdf",
-      "citationCount": 278,
+      "citationCount": 280,
       "referenceCount": 34,
       "influentialCitationCount": 49,
       "source": "https://arxiv.org/abs/1808.09637",
@@ -125,7 +125,7 @@
       "topAuthors": [
         {
           "name": "Dan Roth",
-          "hIndex": 100,
+          "hIndex": 102,
           "authorId": "144590225"
         },
         {
@@ -167,12 +167,12 @@
       "topAuthors": [
         {
           "name": "Jianfeng Gao",
-          "hIndex": 98,
+          "hIndex": 99,
           "authorId": "1800422"
         },
         {
           "name": "P. Smolensky",
-          "hIndex": 54,
+          "hIndex": 55,
           "authorId": "1748557"
         }
       ],
@@ -204,7 +204,7 @@
       "topAuthors": [
         {
           "name": "Jonathan Berant",
-          "hIndex": 60,
+          "hIndex": 61,
           "authorId": "1750652"
         },
         {
@@ -243,7 +243,7 @@
       "topAuthors": [
         {
           "name": "A. Hotho",
-          "hIndex": 54,
+          "hIndex": 55,
           "authorId": "1792623"
         },
         {
@@ -280,7 +280,7 @@
       "topAuthors": [
         {
           "name": "J. Gratch",
-          "hIndex": 65,
+          "hIndex": 67,
           "authorId": "145438097"
         },
         {
@@ -396,7 +396,7 @@
       "topAuthors": [
         {
           "name": "Song-Chun Zhu",
-          "hIndex": 93,
+          "hIndex": 94,
           "authorId": "145380991"
         },
         {
@@ -437,7 +437,7 @@
       "topAuthors": [
         {
           "name": "Dan Roth",
-          "hIndex": 100,
+          "hIndex": 102,
           "authorId": "144590225"
         },
         {
@@ -562,7 +562,7 @@
         },
         {
           "name": "Václav Šmídl",
-          "hIndex": 20,
+          "hIndex": 21,
           "authorId": "10192900"
         }
       ],
@@ -656,9 +656,9 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7206,
+      "citationCount": 7247,
       "referenceCount": 72,
-      "influentialCitationCount": 1629,
+      "influentialCitationCount": 1636,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,9 +694,9 @@
       "doi": "10.48550/arXiv.2103.07191",
       "arxivId": "2103.07191",
       "pdf": "http://arxiv.org/pdf/2103.07191",
-      "citationCount": 1421,
+      "citationCount": 1430,
       "referenceCount": 29,
-      "influentialCitationCount": 282,
+      "influentialCitationCount": 284,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
       "score": 15
@@ -712,12 +712,12 @@
       "topAuthors": [
         {
           "name": "Jonathan Berant",
-          "hIndex": 60,
+          "hIndex": 61,
           "authorId": "1750652"
         },
         {
           "name": "Mor Geva",
-          "hIndex": 35,
+          "hIndex": 36,
           "authorId": "22245981"
         }
       ],
@@ -793,7 +793,7 @@
       "topAuthors": [
         {
           "name": "Sameer Singh",
-          "hIndex": 64,
+          "hIndex": 66,
           "authorId": "34650964"
         },
         {
@@ -835,7 +835,7 @@
       "topAuthors": [
         {
           "name": "Sameer Singh",
-          "hIndex": 64,
+          "hIndex": 66,
           "authorId": "34650964"
         },
         {
@@ -856,7 +856,7 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1455,
+      "citationCount": 1458,
       "referenceCount": 54,
       "influentialCitationCount": 246,
       "source": "https://arxiv.org/abs/1903.00161",
@@ -893,9 +893,9 @@
       "doi": "10.48550/arXiv.1904.01557",
       "arxivId": "1904.01557",
       "pdf": "http://arxiv.org/pdf/1904.01557",
-      "citationCount": 548,
+      "citationCount": 549,
       "referenceCount": 32,
-      "influentialCitationCount": 56,
+      "influentialCitationCount": 57,
       "source": "https://arxiv.org/abs/1904.01557",
       "addedAt": "2026-09-14",
       "score": 45
@@ -911,7 +911,7 @@
       "topAuthors": [
         {
           "name": "Jimmy Lin",
-          "hIndex": 91,
+          "hIndex": 93,
           "authorId": "145580839"
         },
         {
@@ -929,7 +929,7 @@
       "doi": null,
       "arxivId": "2102.13019",
       "pdf": null,
-      "citationCount": 208,
+      "citationCount": 209,
       "referenceCount": 49,
       "influentialCitationCount": 14,
       "source": "https://arxiv.org/abs/2102.13019",
@@ -946,7 +946,7 @@
       "topAuthors": [
         {
           "name": "Chitta Baral",
-          "hIndex": 32,
+          "hIndex": 33,
           "authorId": "2064619864"
         },
         {
@@ -1104,7 +1104,7 @@
         },
         {
           "name": "Ji-Ping Z. Wang",
-          "hIndex": 25,
+          "hIndex": 26,
           "authorId": "2109493175"
         }
       ],
@@ -1236,7 +1236,7 @@
       "doi": "10.1145/3560260",
       "arxivId": "2107.12708",
       "pdf": "https://arxiv.org/pdf/2107.12708",
-      "citationCount": 208,
+      "citationCount": 209,
       "referenceCount": 347,
       "influentialCitationCount": 8,
       "source": "https://arxiv.org/abs/2107.12708",
@@ -1256,13 +1256,13 @@
       "topAuthors": [
         {
           "name": "Dan Roth",
-          "hIndex": 100,
+          "hIndex": 102,
           "authorId": "144590225"
         },
         {
-          "name": "Deepak Ramachandran",
-          "hIndex": 11,
-          "authorId": "34968061"
+          "name": "Yanai Elazar",
+          "hIndex": 22,
+          "authorId": "2508065994"
         }
       ],
       "affiliations": [
@@ -1328,7 +1328,7 @@
         "Qi He",
         "Jia-Qing Liang",
         "Si-Hang Jiang",
-        "Yanghua Xiao",
+        "Yang-Hua Xiao",
         "Yunwen Chen"
       ],
       "topAuthors": [
@@ -1338,7 +1338,7 @@
           "authorId": "3366523"
         },
         {
-          "name": "Yanghua Xiao",
+          "name": "Yang-Hua Xiao",
           "hIndex": 14,
           "authorId": "2267005966"
         }
@@ -1409,7 +1409,7 @@
       "topAuthors": [
         {
           "name": "Yejin Choi",
-          "hIndex": 115,
+          "hIndex": 116,
           "authorId": "1699545"
         },
         {
@@ -1523,7 +1523,7 @@
       "topAuthors": [
         {
           "name": "Hsin-Hsi Chen",
-          "hIndex": 39,
+          "hIndex": 40,
           "authorId": "153924342"
         },
         {
@@ -1605,7 +1605,7 @@
       "topAuthors": [
         {
           "name": "P. Bhattacharyya",
-          "hIndex": 59,
+          "hIndex": 60,
           "authorId": "145532184"
         },
         {
@@ -1682,12 +1682,12 @@
       "topAuthors": [
         {
           "name": "R. Power",
-          "hIndex": 26,
+          "hIndex": 30,
           "authorId": "144585612"
         },
         {
           "name": "Sandra Williams",
-          "hIndex": 16,
+          "hIndex": 17,
           "authorId": "145280410"
         }
       ],
@@ -1723,7 +1723,7 @@
         },
         {
           "name": "A. Pyayt",
-          "hIndex": 13,
+          "hIndex": 15,
           "authorId": "1743601"
         }
       ],
@@ -1737,7 +1737,7 @@
       "url": "https://www.semanticscholar.org/paper/01034e5d9539f208a2e848fc5fc65047b995ddc7",
       "doi": "10.1145/3802049",
       "arxivId": "2603.04741",
-      "pdf": null,
+      "pdf": "https://arxiv.org/pdf/2603.04741",
       "citationCount": 0,
       "referenceCount": 84,
       "influentialCitationCount": 0,
@@ -1764,7 +1764,7 @@
         },
         {
           "name": "D. Rueckert",
-          "hIndex": 14,
+          "hIndex": 15,
           "authorId": "2091163163"
         }
       ],
@@ -1957,7 +1957,7 @@
       "title": "LogiNumSynth: Synthesizing Joint Logical-Numerical Reasoning Problems for Language Models",
       "authors": [
         "Yi-Wei Liu",
-        "Yuchen Li",
+        "Yu-Chen Li",
         "Xiao Li",
         "Gong Cheng"
       ],
@@ -1968,7 +1968,7 @@
           "authorId": "2244623823"
         },
         {
-          "name": "Yuchen Li",
+          "name": "Yu-Chen Li",
           "hIndex": 3,
           "authorId": "2374178248"
         }
@@ -2056,7 +2056,7 @@
       "doi": "10.48550/arXiv.2606.27731",
       "arxivId": "2606.27731",
       "pdf": null,
-      "citationCount": 1,
+      "citationCount": 2,
       "referenceCount": 34,
       "influentialCitationCount": 0,
       "source": "https://arxiv.org/abs/2606.27731",
@@ -2091,7 +2091,7 @@
       "doi": "10.18653/v1/P18-1196",
       "arxivId": "1805.08154",
       "pdf": "https://www.aclweb.org/anthology/P18-1196.pdf",
-      "citationCount": 100,
+      "citationCount": 101,
       "referenceCount": 75,
       "influentialCitationCount": 11,
       "source": "https://arxiv.org/abs/1805.08154",
@@ -2285,7 +2285,7 @@
       "topAuthors": [
         {
           "name": "Yejin Choi",
-          "hIndex": 115,
+          "hIndex": 116,
           "authorId": "1699545"
         },
         {
@@ -2513,7 +2513,7 @@
       "topAuthors": [
         {
           "name": "G. Henter",
-          "hIndex": 30,
+          "hIndex": 31,
           "authorId": "2763884"
         },
         {
@@ -2632,7 +2632,7 @@
         },
         {
           "name": "Qun Liu",
-          "hIndex": 29,
+          "hIndex": 28,
           "authorId": "30738758"
         }
       ],
@@ -2666,12 +2666,12 @@
       "topAuthors": [
         {
           "name": "L. Cavedon",
-          "hIndex": 31,
+          "hIndex": 33,
           "authorId": "1788025"
         },
         {
           "name": "Damiano Spina",
-          "hIndex": 20,
+          "hIndex": 21,
           "authorId": "1630446247"
         }
       ],
@@ -2704,7 +2704,7 @@
       "topAuthors": [
         {
           "name": "G. Weikum",
-          "hIndex": 100,
+          "hIndex": 101,
           "authorId": "1751591"
         },
         {
@@ -2742,13 +2742,13 @@
       "topAuthors": [
         {
           "name": "Dan Roth",
-          "hIndex": 100,
+          "hIndex": 102,
           "authorId": "144590225"
         },
         {
-          "name": "Ian Tenney",
-          "hIndex": 21,
-          "authorId": "6117577"
+          "name": "Yanai Elazar",
+          "hIndex": 22,
+          "authorId": "2508065994"
         }
       ],
       "affiliations": [
