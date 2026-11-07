@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T12:08:53.400Z",
+  "updatedAt": "2026-11-07T11:10:42.181Z",
   "recs": [
     {
       "id": "d7260db07abc181866ddc52dd1fedc52bb975228",
@@ -36,179 +36,11 @@
       "referenceCount": 43,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 4,
       "direction": "forward",
       "score": 43.36948937443138,
       "why": "past year · cites 4 in your list",
-      "fromReferences": false,
-      "freshWindow": "past year",
-      "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/111",
-      "batchPrNumber": 111,
-      "batchBranch": "recs/past-year"
-    },
-    {
-      "id": "83eec4161f84925073f8ae9de47fcef755e4ba27",
-      "title": "Even GPT-5.2 Can't Count to Five: The Case for Zero-Error Horizons in Trustworthy LLMs",
-      "authors": [
-        "Ryoma Sato"
-      ],
-      "topAuthors": [
-        {
-          "name": "Ryoma Sato",
-          "hIndex": 3,
-          "authorId": "2330247302"
-        }
-      ],
-      "affiliations": [
-        "National Institute of Informatics"
-      ],
-      "year": 2026,
-      "venue": "arXiv.org",
-      "publicationDate": "2026-01-22",
-      "summary": "",
-      "url": "https://www.semanticscholar.org/paper/83eec4161f84925073f8ae9de47fcef755e4ba27",
-      "doi": "10.48550/arXiv.2601.15714",
-      "arxivId": "2601.15714",
-      "pdf": null,
-      "citationCount": 1,
-      "referenceCount": 69,
-      "influentialCitationCount": 0,
-      "source": null,
-      "addedAt": "2026-11-06",
-      "overlap": 3,
-      "direction": "forward",
-      "score": 21.768305462006516,
-      "why": "past year · cites 3 in your list",
-      "fromReferences": false,
-      "freshWindow": "past year",
-      "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/111",
-      "batchPrNumber": 111,
-      "batchBranch": "recs/past-year"
-    },
-    {
-      "id": "7563a855eb7b7599aef824b62407e87f5e8e5221",
-      "title": "Towards Robust Numerical Claim Verification",
-      "authors": [
-        "Peter Røysland Aarnes",
-        "Vinay Setty"
-      ],
-      "topAuthors": [
-        {
-          "name": "Vinay Setty",
-          "hIndex": 5,
-          "authorId": "2284685952"
-        },
-        {
-          "name": "Peter Røysland Aarnes",
-          "hIndex": 1,
-          "authorId": "2314691438"
-        }
-      ],
-      "affiliations": [
-        "University of Stavanger"
-      ],
-      "year": 2026,
-      "venue": null,
-      "publicationDate": "2026-09-30",
-      "summary": "Using parameter-efficient fine-tuning, small Qwen3 models reach 98.7% accuracy on label-flipping perturbations, outperforming larger zero-shot models and frontier systems and generalising to unseen perturbation types, indicating robust numerical decision boundaries rather than memorised edits.",
-      "url": "https://www.semanticscholar.org/paper/7563a855eb7b7599aef824b62407e87f5e8e5221",
-      "doi": null,
-      "arxivId": "2610.00689",
-      "pdf": null,
-      "citationCount": 0,
-      "referenceCount": 32,
-      "influentialCitationCount": 0,
-      "source": null,
-      "addedAt": "2026-11-06",
-      "overlap": 3,
-      "direction": "forward",
-      "score": 21.35644372875389,
-      "why": "past year · cites 3 in your list",
-      "fromReferences": false,
-      "freshWindow": "past year",
-      "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/111",
-      "batchPrNumber": 111,
-      "batchBranch": "recs/past-year"
-    },
-    {
-      "id": "ef225e0d5c9d1c414d45d1c6eba8897b0f2dfa7c",
-      "title": "Numerical Hallucinations in Retrieval-Augmented Generation: Detection and Analysis",
-      "authors": [
-        "Sera Singha Roy"
-      ],
-      "topAuthors": [
-        {
-          "name": "Sera Singha Roy",
-          "hIndex": 1,
-          "authorId": "2499737687"
-        }
-      ],
-      "affiliations": [],
-      "year": 2026,
-      "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
-      "publicationDate": "2026-07-19",
-      "summary": "These findings highlight numerical fabrication as a critical gap in current hallucination detection approaches and recommend the need for specialized, number-aware methods in RAG systems.",
-      "url": "https://www.semanticscholar.org/paper/ef225e0d5c9d1c414d45d1c6eba8897b0f2dfa7c",
-      "doi": "10.1145/3805712.3809882",
-      "arxivId": null,
-      "pdf": "https://doi.org/10.1145/3805712.3809882",
-      "citationCount": 0,
-      "referenceCount": 18,
-      "influentialCitationCount": 0,
-      "source": null,
-      "addedAt": "2026-11-06",
-      "overlap": 3,
-      "direction": "forward",
-      "score": 19.053714306033985,
-      "why": "past year · cites 3 in your list",
-      "fromReferences": false,
-      "freshWindow": "past year",
-      "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/111",
-      "batchPrNumber": 111,
-      "batchBranch": "recs/past-year"
-    },
-    {
-      "id": "5547a415240210d67812763c2d2837311a2c5c3f",
-      "title": "AI-rithmetic",
-      "authors": [
-        "Alex Bie",
-        "Travis Dick",
-        "A. Kulesza",
-        "Prabhakar Raghavan",
-        "V. Raman",
-        "Sergei Vassilvitskii"
-      ],
-      "topAuthors": [
-        {
-          "name": "Alex Bie",
-          "hIndex": 9,
-          "authorId": "1400416115"
-        },
-        {
-          "name": "Sergei Vassilvitskii",
-          "hIndex": 8,
-          "authorId": "2282962033"
-        }
-      ],
-      "affiliations": [],
-      "year": 2026,
-      "venue": "arXiv.org",
-      "publicationDate": "2026-02-11",
-      "summary": "It is demonstrated empirically that all frontier models suffer significantly degraded accuracy for integer addition as the number of digits increases, and most errors made by these models are highly interpretable and can be attributed to either operand misalignment or a failure to correctly carry.",
-      "url": "https://www.semanticscholar.org/paper/5547a415240210d67812763c2d2837311a2c5c3f",
-      "doi": "10.48550/arXiv.2602.10416",
-      "arxivId": "2602.10416",
-      "pdf": null,
-      "citationCount": 1,
-      "referenceCount": 38,
-      "influentialCitationCount": 0,
-      "source": null,
-      "addedAt": "2026-11-06",
-      "overlap": 3,
-      "direction": "forward",
-      "score": 18.069306240932054,
-      "why": "past year · cites 3 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/111",
@@ -249,10 +81,10 @@
       "referenceCount": 24,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 3,
       "direction": "forward",
-      "score": 12.741276904807943,
+      "score": 12.739564510812663,
       "why": "past year · cites 3 in your list",
       "fromReferences": false,
       "freshWindow": "past year",
@@ -297,7 +129,7 @@
       "referenceCount": 175,
       "influentialCitationCount": 3,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 9,
       "direction": "forward",
       "score": 100,
@@ -343,7 +175,7 @@
       "referenceCount": 53,
       "influentialCitationCount": 23,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 13,
       "direction": "backward",
       "score": 98.22204275317489,
@@ -388,7 +220,7 @@
       "referenceCount": 31,
       "influentialCitationCount": 4,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 11,
       "direction": "backward",
       "score": 90.98940334111259,
@@ -436,10 +268,10 @@
       "referenceCount": 44,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 8,
       "direction": "forward",
-      "score": 84.94610827026725,
+      "score": 84.93554229929272,
       "why": "cites 8 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -481,7 +313,7 @@
       "referenceCount": 29,
       "influentialCitationCount": 105,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 13,
       "direction": "backward",
       "score": 80.84433660313847,
@@ -526,7 +358,7 @@
       "referenceCount": 53,
       "influentialCitationCount": 1,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 8,
       "direction": "forward",
       "score": 80.60195935236526,
@@ -562,10 +394,10 @@
       "referenceCount": 35,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 11,
       "direction": "forward",
-      "score": 75.82570021196648,
+      "score": 75.81402762248449,
       "why": "cites 11 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -609,7 +441,7 @@
       "referenceCount": 49,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 7,
       "direction": "forward",
       "score": 74.7155661480387,
@@ -657,7 +489,7 @@
       "referenceCount": 26,
       "influentialCitationCount": 30,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 9,
       "direction": "backward",
       "score": 70.42465048704814,
@@ -685,8 +517,8 @@
         },
         {
           "name": "Zhijing Jin",
-          "hIndex": 23,
-          "authorId": "2111472502"
+          "hIndex": 14,
+          "authorId": "8752221"
         }
       ],
       "affiliations": [
@@ -704,7 +536,7 @@
       "referenceCount": 78,
       "influentialCitationCount": 8,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 7,
       "direction": "forward",
       "score": 69.8814243853145,
@@ -751,7 +583,7 @@
       "referenceCount": 24,
       "influentialCitationCount": 16,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 9,
       "direction": "backward",
       "score": 68.09242370826982,
@@ -804,10 +636,10 @@
       "referenceCount": 276,
       "influentialCitationCount": 2,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 11,
       "direction": "forward",
-      "score": 65.98221173505793,
+      "score": 65.97985653802408,
       "why": "cites 11 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -849,7 +681,7 @@
       "referenceCount": 24,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 6,
       "direction": "backward",
       "score": 65.20734928680062,
@@ -895,10 +727,10 @@
       "referenceCount": 45,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 8,
       "direction": "forward",
-      "score": 63.47512557766958,
+      "score": 63.47386527870893,
       "why": "cites 8 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -940,7 +772,7 @@
       "referenceCount": 34,
       "influentialCitationCount": 1,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 8,
       "direction": "forward",
       "score": 62.41464656435014,
@@ -988,10 +820,10 @@
       "referenceCount": 52,
       "influentialCitationCount": 1,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 7,
       "direction": "forward",
-      "score": 61.22851569741381,
+      "score": 61.226591103562846,
       "why": "cites 7 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -1035,10 +867,10 @@
       "referenceCount": 48,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 9,
       "direction": "forward",
-      "score": 57.902808075608746,
+      "score": 57.88955727462778,
       "why": "cites 9 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
@@ -1082,7 +914,7 @@
       "referenceCount": 25,
       "influentialCitationCount": 0,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 3,
       "direction": "backward",
       "score": 57.13534997879108,
@@ -1128,11 +960,183 @@
       "referenceCount": 46,
       "influentialCitationCount": 1,
       "source": null,
-      "addedAt": "2026-11-06",
+      "addedAt": "2026-11-07",
       "overlap": 6,
       "direction": "forward",
       "score": 56.27399419565934,
       "why": "cites 6 in your list",
+      "fromReferences": false,
+      "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
+      "batchPrNumber": 112,
+      "batchBranch": "recs/most-connected"
+    },
+    {
+      "id": "320c1c6647a5b975c901347f71638c881888686b",
+      "title": "NQuAD: 70,000+ Questions for Machine Comprehension of the Numerals in Text",
+      "authors": [
+        "Chung-Chi Chen",
+        "Hen-Hsen Huang",
+        "Hsin-Hsi Chen"
+      ],
+      "topAuthors": [
+        {
+          "name": "Hsin-Hsi Chen",
+          "hIndex": 40,
+          "authorId": "153924342"
+        },
+        {
+          "name": "Hen-Hsen Huang",
+          "hIndex": 16,
+          "authorId": "152354730"
+        }
+      ],
+      "affiliations": [
+        "National Taiwan University",
+        "Academia Sinica"
+      ],
+      "year": 2021,
+      "venue": "International Conference on Information and Knowledge Management",
+      "publicationDate": "2021-10-26",
+      "summary": "A Numeral-related Question Answering Dataset, NQuAD, for fine-grained numeracy, is presented, and several baselines for future works are proposed and it is shown that N QuAD is more challenging than the numeral- related questions in other datasets.",
+      "url": "https://www.semanticscholar.org/paper/320c1c6647a5b975c901347f71638c881888686b",
+      "doi": "10.1145/3459637.3482155",
+      "arxivId": null,
+      "pdf": "https://doi.org/10.1145/3459637.3482155",
+      "citationCount": 15,
+      "referenceCount": 30,
+      "influentialCitationCount": 5,
+      "source": null,
+      "addedAt": "2026-11-07",
+      "overlap": 7,
+      "direction": "forward",
+      "score": 56.207271702727304,
+      "why": "cites 7 in your list",
+      "fromReferences": false,
+      "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
+      "batchPrNumber": 112,
+      "batchBranch": "recs/most-connected"
+    },
+    {
+      "id": "73df3e273452aacfe90f0c4bf22ff24249de0e07",
+      "title": "A Survey on Mathematical Reasoning and Optimization with Large Language Models",
+      "authors": [
+        "Ali Forootani"
+      ],
+      "topAuthors": [
+        {
+          "name": "Ali Forootani",
+          "hIndex": 8,
+          "authorId": "31183264"
+        }
+      ],
+      "affiliations": [
+        "Helmholtz Centre for Environmental Research"
+      ],
+      "year": 2025,
+      "venue": "arXiv.org",
+      "publicationDate": "2025-03-22",
+      "summary": "This survey explores the evolution of mathematical problem-solving in AI, from early statistical learning approaches to modern deep learning and transformer-based methodologies, and the capabilities of pretrained language models and LLMs in performing arithmetic operations, complex reasoning, theorem proving, and structured symbolic computation.",
+      "url": "https://www.semanticscholar.org/paper/73df3e273452aacfe90f0c4bf22ff24249de0e07",
+      "doi": "10.48550/arXiv.2503.17726",
+      "arxivId": "2503.17726",
+      "pdf": null,
+      "citationCount": 22,
+      "referenceCount": 284,
+      "influentialCitationCount": 2,
+      "source": null,
+      "addedAt": "2026-11-07",
+      "overlap": 11,
+      "direction": "forward",
+      "score": 56.01922200177316,
+      "why": "cites 11 in your list",
+      "fromReferences": false,
+      "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
+      "batchPrNumber": 112,
+      "batchBranch": "recs/most-connected"
+    },
+    {
+      "id": "5e4eb58d5b47ac1c73f4cf189497170e75ae6237",
+      "title": "Neural GPUs Learn Algorithms",
+      "authors": [
+        "Lukasz Kaiser",
+        "I. Sutskever"
+      ],
+      "topAuthors": [
+        {
+          "name": "I. Sutskever",
+          "hIndex": 74,
+          "authorId": "1701686"
+        },
+        {
+          "name": "Lukasz Kaiser",
+          "hIndex": 31,
+          "authorId": "40527594"
+        }
+      ],
+      "affiliations": [
+        "Google (United States)"
+      ],
+      "year": 2015,
+      "venue": "International Conference on Learning Representations",
+      "publicationDate": "2015-11-25",
+      "summary": "It is shown that the Neural GPU can be trained on short instances of an algorithmic task and successfully generalize to long instances, and a technique for training deep recurrent networks: parameter sharing relaxation is introduced.",
+      "url": "https://www.semanticscholar.org/paper/5e4eb58d5b47ac1c73f4cf189497170e75ae6237",
+      "doi": "10.48550/arXiv.1511.08228",
+      "arxivId": "1511.08228",
+      "pdf": null,
+      "citationCount": 414,
+      "referenceCount": 36,
+      "influentialCitationCount": 29,
+      "source": null,
+      "addedAt": "2026-11-07",
+      "overlap": 8,
+      "direction": "backward",
+      "score": 55.732989449811654,
+      "why": "cited by 8 in your list",
+      "fromReferences": false,
+      "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
+      "batchPrNumber": 112,
+      "batchBranch": "recs/most-connected"
+    },
+    {
+      "id": "4c6fe6179c408e1fbb3871af13d1a8e64f766e54",
+      "title": "Solving General Arithmetic Word Problems",
+      "authors": [
+        "Subhro Roy",
+        "Dan Roth"
+      ],
+      "topAuthors": [
+        {
+          "name": "Dan Roth",
+          "hIndex": 102,
+          "authorId": "144590225"
+        },
+        {
+          "name": "Subhro Roy",
+          "hIndex": 14,
+          "authorId": "2248453"
+        }
+      ],
+      "affiliations": [
+        "University of Pennsylvania, Oracle"
+      ],
+      "year": 2016,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "publicationDate": "2016-08-04",
+      "summary": "This is the first algorithmic approach that can handle arithmetic problems with multiple steps and operations, without depending on additional annotations or predefined templates, and it outperforms existing systems, achieving state of the art performance on benchmark datasets of arithmetic word problems.",
+      "url": "https://www.semanticscholar.org/paper/4c6fe6179c408e1fbb3871af13d1a8e64f766e54",
+      "doi": "10.18653/v1/D15-1202",
+      "arxivId": "1608.01413",
+      "pdf": "https://www.aclweb.org/anthology/D15-1202.pdf",
+      "citationCount": 702,
+      "referenceCount": 18,
+      "influentialCitationCount": 114,
+      "source": null,
+      "addedAt": "2026-11-07",
+      "overlap": 9,
+      "direction": "backward",
+      "score": 55.46284035368626,
+      "why": "cited by 9 in your list",
       "fromReferences": false,
       "batchPrUrl": "https://github.com/avijit-thawani/numeracy-in-nlp/pull/112",
       "batchPrNumber": 112,
