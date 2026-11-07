@@ -1,0 +1,16 @@
+{
+  "window": "past year",
+  "proposedAt": "2026-11-07T11:10:43.726Z",
+  "papers": [
+    {
+      "id": "d7260db07abc181866ddc52dd1fedc52bb975228",
+      "link": "https://arxiv.org/abs/2601.12095",
+      "title": "Neural Isomorphic Fields: A Transformer-based Algebraic Numerical Embedding"
+    },
+    {
+      "id": "45f5db8ae09cb858c1803c235470aca76f59d507",
+      "link": "https://arxiv.org/abs/2609.39294",
+      "title": "ANI: Adaptive Numerical Injection for Unifying Semantic and Arithmetic Representations in Numerical Reasoning"
+    }
+  ]
+}
