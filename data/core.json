@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T11:10:42.181Z",
+  "updatedAt": "2026-11-08T11:19:02.988Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 3020,
+      "citationCount": 3022,
       "referenceCount": 14,
       "influentialCitationCount": 270,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -656,7 +656,7 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7277,
+      "citationCount": 7282,
       "referenceCount": 72,
       "influentialCitationCount": 1643,
       "source": "https://arxiv.org/abs/2103.03874",
