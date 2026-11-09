@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T11:19:02.988Z",
+  "updatedAt": "2026-11-09T12:55:49.550Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -498,7 +498,7 @@
       "doi": "10.48550/arXiv.2005.00683",
       "arxivId": "2005.00683",
       "pdf": "https://aclanthology.org/2020.emnlp-main.557.pdf",
-      "citationCount": 172,
+      "citationCount": 173,
       "referenceCount": 32,
       "influentialCitationCount": 12,
       "source": "https://arxiv.org/abs/2005.00683",
@@ -551,12 +551,12 @@
       "title": "Neural Power Units",
       "authors": [
         "Niklas Heim",
-        "T. Pevný",
+        "T. Pevnỳ",
         "Václav Šmídl"
       ],
       "topAuthors": [
         {
-          "name": "T. Pevný",
+          "name": "T. Pevnỳ",
           "hIndex": 34,
           "authorId": "1802358"
         },
@@ -656,9 +656,9 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7282,
+      "citationCount": 7288,
       "referenceCount": 72,
-      "influentialCitationCount": 1643,
+      "influentialCitationCount": 1647,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -695,7 +695,7 @@
       "arxivId": "2103.07191",
       "pdf": "http://arxiv.org/pdf/2103.07191",
       "citationCount": 1431,
-      "referenceCount": 29,
+      "referenceCount": 28,
       "influentialCitationCount": 284,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
@@ -929,7 +929,7 @@
       "doi": null,
       "arxivId": "2102.13019",
       "pdf": null,
-      "citationCount": 209,
+      "citationCount": 210,
       "referenceCount": 49,
       "influentialCitationCount": 14,
       "source": "https://arxiv.org/abs/2102.13019",
@@ -964,7 +964,7 @@
       "doi": "10.48550/arXiv.2109.04672",
       "arxivId": "2109.04672",
       "pdf": "http://arxiv.org/pdf/2109.04672",
-      "citationCount": 58,
+      "citationCount": 59,
       "referenceCount": 18,
       "influentialCitationCount": 1,
       "source": "https://arxiv.org/abs/2109.04672",
@@ -1472,7 +1472,7 @@
       "influentialCitationCount": 6,
       "source": "https://arxiv.org/abs/2411.03766",
       "addedAt": "2026-09-14",
-      "score": 7.5
+      "score": 40
     },
     {
       "id": "251a27e00b9838c8c315f0152cb52762db766aee",
