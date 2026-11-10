@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T12:55:49.550Z",
+  "updatedAt": "2026-11-10T12:40:47.275Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -656,9 +656,9 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7288,
+      "citationCount": 7300,
       "referenceCount": 72,
-      "influentialCitationCount": 1647,
+      "influentialCitationCount": 1651,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,7 +694,7 @@
       "doi": "10.48550/arXiv.2103.07191",
       "arxivId": "2103.07191",
       "pdf": "http://arxiv.org/pdf/2103.07191",
-      "citationCount": 1431,
+      "citationCount": 1433,
       "referenceCount": 28,
       "influentialCitationCount": 284,
       "source": "https://arxiv.org/abs/2103.07191",
@@ -856,9 +856,9 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1461,
+      "citationCount": 1462,
       "referenceCount": 54,
-      "influentialCitationCount": 248,
+      "influentialCitationCount": 249,
       "source": "https://arxiv.org/abs/1903.00161",
       "addedAt": "2026-09-13",
       "score": 30
@@ -1098,18 +1098,17 @@
       ],
       "topAuthors": [
         {
-          "name": "Doug Downey",
-          "hIndex": 40,
-          "authorId": "145612610"
-        },
-        {
           "name": "Ji-Ping Z. Wang",
           "hIndex": 26,
           "authorId": "2109493175"
+        },
+        {
+          "name": "Doug Downey",
+          "hIndex": 6,
+          "authorId": "2372536250"
         }
       ],
       "affiliations": [
-        "Allen Institute for Artificial Intelligence",
         "Northwestern University"
       ],
       "year": 2018,
@@ -1795,17 +1794,20 @@
       ],
       "topAuthors": [
         {
+          "name": "Gerard de Melo",
+          "hIndex": 48,
+          "authorId": "144608002"
+        },
+        {
           "name": "Linlin Wang",
           "hIndex": 8,
           "authorId": "2124862106"
-        },
-        {
-          "name": "Liang He",
-          "hIndex": 8,
-          "authorId": "2275985730"
         }
       ],
-      "affiliations": [],
+      "affiliations": [
+        "Hasso Plattner Institute",
+        "University of Potsdam"
+      ],
       "year": 2026,
       "venue": "Annual Meeting of the Association for Computational Linguistics",
       "publicationDate": "2026-06-02",
