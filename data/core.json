@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T12:40:47.275Z",
+  "updatedAt": "2026-11-11T11:53:26.124Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -12,12 +12,12 @@
       "topAuthors": [
         {
           "name": "J. Uszkoreit",
-          "hIndex": 36,
+          "hIndex": 34,
           "authorId": "39328010"
         },
         {
           "name": "Ashish Vaswani",
-          "hIndex": 26,
+          "hIndex": 27,
           "authorId": "40348417"
         }
       ],
@@ -32,9 +32,9 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 3022,
+      "citationCount": 3023,
       "referenceCount": 14,
-      "influentialCitationCount": 270,
+      "influentialCitationCount": 271,
       "source": "https://arxiv.org/abs/1803.02155",
       "addedAt": "2026-09-12",
       "score": 0
@@ -56,7 +56,7 @@
         },
         {
           "name": "He He",
-          "hIndex": 42,
+          "hIndex": 63,
           "authorId": "144533687"
         }
       ],
@@ -285,7 +285,7 @@
         },
         {
           "name": "Gale M. Lucas",
-          "hIndex": 41,
+          "hIndex": 42,
           "authorId": "2419453"
         }
       ],
@@ -377,7 +377,7 @@
       "doi": "10.48550/arXiv.2004.08500",
       "arxivId": "2004.08500",
       "pdf": "https://aclanthology.org/2020.acl-main.43.pdf",
-      "citationCount": 103,
+      "citationCount": 104,
       "referenceCount": 30,
       "influentialCitationCount": 6,
       "source": "https://arxiv.org/abs/2004.08500",
@@ -523,7 +523,7 @@
         },
         {
           "name": "Swaroop Mishra",
-          "hIndex": 30,
+          "hIndex": 31,
           "authorId": "1817207"
         }
       ],
@@ -635,7 +635,7 @@
       "topAuthors": [
         {
           "name": "D. Song",
-          "hIndex": 141,
+          "hIndex": 142,
           "authorId": "143711382"
         },
         {
@@ -656,9 +656,9 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7300,
+      "citationCount": 7319,
       "referenceCount": 72,
-      "influentialCitationCount": 1651,
+      "influentialCitationCount": 1655,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,9 +694,9 @@
       "doi": "10.48550/arXiv.2103.07191",
       "arxivId": "2103.07191",
       "pdf": "http://arxiv.org/pdf/2103.07191",
-      "citationCount": 1433,
+      "citationCount": 1435,
       "referenceCount": 28,
-      "influentialCitationCount": 284,
+      "influentialCitationCount": 285,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
       "score": 15
@@ -814,7 +814,7 @@
       "doi": "10.18653/v1/D19-1534",
       "arxivId": "1909.07940",
       "pdf": "https://www.aclweb.org/anthology/D19-1534.pdf",
-      "citationCount": 339,
+      "citationCount": 340,
       "referenceCount": 30,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.07940",
@@ -856,7 +856,7 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1462,
+      "citationCount": 1465,
       "referenceCount": 54,
       "influentialCitationCount": 249,
       "source": "https://arxiv.org/abs/1903.00161",
@@ -875,7 +875,7 @@
       "topAuthors": [
         {
           "name": "Pushmeet Kohli",
-          "hIndex": 119,
+          "hIndex": 120,
           "authorId": "143967473"
         },
         {
@@ -1021,7 +1021,7 @@
       "topAuthors": [
         {
           "name": "Xipeng Qiu",
-          "hIndex": 67,
+          "hIndex": 68,
           "authorId": "1767521"
         },
         {
@@ -1098,14 +1098,14 @@
       ],
       "topAuthors": [
         {
+          "name": "Doug Downey",
+          "hIndex": 42,
+          "authorId": "2372536250"
+        },
+        {
           "name": "Ji-Ping Z. Wang",
           "hIndex": 26,
           "authorId": "2109493175"
-        },
-        {
-          "name": "Doug Downey",
-          "hIndex": 6,
-          "authorId": "2372536250"
         }
       ],
       "affiliations": [
@@ -1219,7 +1219,7 @@
         },
         {
           "name": "Isabelle Augenstein",
-          "hIndex": 45,
+          "hIndex": 46,
           "authorId": "1736067"
         }
       ],
@@ -1430,7 +1430,7 @@
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
       "citationCount": 958,
       "referenceCount": 25,
-      "influentialCitationCount": 118,
+      "influentialCitationCount": 117,
       "source": "https://arxiv.org/abs/1905.13319",
       "addedAt": "2026-09-14",
       "score": 37.5
@@ -1452,9 +1452,9 @@
           "authorId": "2185454298"
         },
         {
-          "name": "Yi Hu",
-          "hIndex": 6,
-          "authorId": "2288333334"
+          "name": "Mu-Han Zhang",
+          "hIndex": 7,
+          "authorId": "2257092769"
         }
       ],
       "affiliations": [],
@@ -1722,7 +1722,7 @@
         },
         {
           "name": "A. Pyayt",
-          "hIndex": 15,
+          "hIndex": 14,
           "authorId": "1743601"
         }
       ],
@@ -1795,7 +1795,7 @@
       "topAuthors": [
         {
           "name": "Gerard de Melo",
-          "hIndex": 48,
+          "hIndex": 37,
           "authorId": "144608002"
         },
         {
@@ -1870,14 +1870,14 @@
       ],
       "topAuthors": [
         {
+          "name": "Makoto P. Kato",
+          "hIndex": 2,
+          "authorId": "2385575480"
+        },
+        {
           "name": "Haruki Fujimaki",
           "hIndex": 1,
           "authorId": "2356525498"
-        },
-        {
-          "name": "Makoto P. Kato",
-          "hIndex": 1,
-          "authorId": "2385575480"
         }
       ],
       "affiliations": [],
@@ -2002,7 +2002,7 @@
       "topAuthors": [
         {
           "name": "Vallidevi Krishnamurthy",
-          "hIndex": 3,
+          "hIndex": 4,
           "authorId": "134839292"
         },
         {
@@ -2039,14 +2039,14 @@
       ],
       "topAuthors": [
         {
+          "name": "L. Yue",
+          "hIndex": 32,
+          "authorId": "2056564688"
+        },
+        {
           "name": "Xiang-Gen Liu",
           "hIndex": 12,
           "authorId": "2280179781"
-        },
-        {
-          "name": "Wenhao Zheng",
-          "hIndex": 8,
-          "authorId": "2283848842"
         }
       ],
       "affiliations": [],
@@ -2483,7 +2483,7 @@
         },
         {
           "name": "Mubashara Akhtar",
-          "hIndex": 10,
+          "hIndex": 11,
           "authorId": "2265589650"
         }
       ],
@@ -2515,7 +2515,7 @@
       "topAuthors": [
         {
           "name": "G. Henter",
-          "hIndex": 31,
+          "hIndex": 32,
           "authorId": "2763884"
         },
         {
@@ -2706,7 +2706,7 @@
       "topAuthors": [
         {
           "name": "G. Weikum",
-          "hIndex": 101,
+          "hIndex": 102,
           "authorId": "1751591"
         },
         {
@@ -2765,7 +2765,7 @@
       "doi": "10.48550/arXiv.2010.05345",
       "arxivId": "2010.05345",
       "pdf": "https://www.aclweb.org/anthology/2020.findings-emnlp.439.pdf",
-      "citationCount": 99,
+      "citationCount": 100,
       "referenceCount": 20,
       "influentialCitationCount": 8,
       "source": "https://arxiv.org/abs/2010.05345",
