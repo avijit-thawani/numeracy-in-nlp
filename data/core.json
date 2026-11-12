@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T11:53:26.124Z",
+  "updatedAt": "2026-11-12T12:44:18.499Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 3023,
+      "citationCount": 3025,
       "referenceCount": 14,
       "influentialCitationCount": 271,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -261,7 +261,7 @@
       "doi": "10.3389/frai.2020.00071",
       "arxivId": "2003.07629",
       "pdf": "https://www.frontiersin.org/articles/10.3389/frai.2020.00071/pdf",
-      "citationCount": 18,
+      "citationCount": 19,
       "referenceCount": 20,
       "influentialCitationCount": 1,
       "source": "https://arxiv.org/abs/2003.07629",
@@ -656,9 +656,9 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7319,
+      "citationCount": 7335,
       "referenceCount": 72,
-      "influentialCitationCount": 1655,
+      "influentialCitationCount": 1658,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -1428,9 +1428,9 @@
       "doi": "10.18653/v1/N19-1245",
       "arxivId": "1905.13319",
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
-      "citationCount": 958,
+      "citationCount": 959,
       "referenceCount": 25,
-      "influentialCitationCount": 117,
+      "influentialCitationCount": 118,
       "source": "https://arxiv.org/abs/1905.13319",
       "addedAt": "2026-09-14",
       "score": 37.5
