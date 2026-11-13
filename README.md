@@ -4,7 +4,7 @@
 
 A living survey of numeracy in NLP
 
-**73** in your list · **25** Recs · updated 2026-11-12
+**73** in your list · **25** Recs · updated 2026-11-13
 
 ## ✨ Recs
 
