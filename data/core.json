@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T12:14:41.841Z",
+  "updatedAt": "2026-11-14T11:35:17.384Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 3029,
+      "citationCount": 3030,
       "referenceCount": 14,
       "influentialCitationCount": 271,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -69,9 +69,9 @@
       "doi": "10.18653/v1/D18-1256",
       "arxivId": "1808.09637",
       "pdf": "https://www.aclweb.org/anthology/D18-1256.pdf",
-      "citationCount": 281,
+      "citationCount": 283,
       "referenceCount": 34,
-      "influentialCitationCount": 49,
+      "influentialCitationCount": 50,
       "source": "https://arxiv.org/abs/1808.09637",
       "addedAt": "2026-09-12",
       "score": 2.5
@@ -266,7 +266,7 @@
       "influentialCitationCount": 1,
       "source": "https://arxiv.org/abs/2003.07629",
       "addedAt": "2026-09-12",
-      "score": 12.5
+      "score": 7.5
     },
     {
       "id": "716efab73e1916fdc2a23727b581d200271ed499",
@@ -340,7 +340,7 @@
       "influentialCitationCount": 1,
       "source": "https://arxiv.org/abs/2004.07085",
       "addedAt": "2026-09-12",
-      "score": 17.5
+      "score": 12.5
     },
     {
       "id": "45e5d7637a585a87d967a4a357d17c5d89aecea2",
@@ -580,7 +580,7 @@
       "influentialCitationCount": 3,
       "source": "https://arxiv.org/abs/2006.01681",
       "addedAt": "2026-09-12",
-      "score": 17.5
+      "score": 10
     },
     {
       "id": "0c7f81e26ae77b4be5e5e6ab96641effe219ab1c",
@@ -656,9 +656,9 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7339,
+      "citationCount": 7364,
       "referenceCount": 72,
-      "influentialCitationCount": 1658,
+      "influentialCitationCount": 1657,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,12 +694,12 @@
       "doi": "10.48550/arXiv.2103.07191",
       "arxivId": "2103.07191",
       "pdf": "http://arxiv.org/pdf/2103.07191",
-      "citationCount": 1436,
+      "citationCount": 1437,
       "referenceCount": 28,
       "influentialCitationCount": 285,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
-      "score": 15
+      "score": 12.5
     },
     {
       "id": "3dd61d97827e3f380bf9304101149a3f865051fc",
@@ -856,9 +856,9 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1465,
+      "citationCount": 1467,
       "referenceCount": 54,
-      "influentialCitationCount": 249,
+      "influentialCitationCount": 250,
       "source": "https://arxiv.org/abs/1903.00161",
       "addedAt": "2026-09-13",
       "score": 30
@@ -898,7 +898,7 @@
       "influentialCitationCount": 57,
       "source": "https://arxiv.org/abs/1904.01557",
       "addedAt": "2026-09-14",
-      "score": 45
+      "score": 42.5
     },
     {
       "id": "2cc3ab9fa41ba2804e301f7eae9598636e62422a",
@@ -1007,7 +1007,7 @@
       "influentialCitationCount": 3,
       "source": "https://arxiv.org/abs/1910.01888",
       "addedAt": "2026-09-14",
-      "score": 10
+      "score": 7.5
     },
     {
       "id": "6f69e19348870552a7ab92d038c8b8d753fe6b60",
@@ -1046,7 +1046,7 @@
       "influentialCitationCount": 3,
       "source": "https://arxiv.org/abs/1809.08590",
       "addedAt": "2026-09-14",
-      "score": 7.5
+      "score": 5
     },
     {
       "id": "1eff94b44432a8e6af29288b8234494516579ad3",
@@ -1098,18 +1098,19 @@
       ],
       "topAuthors": [
         {
-          "name": "Doug Downey",
-          "hIndex": 42,
-          "authorId": "2372536250"
-        },
-        {
           "name": "Ji-Ping Z. Wang",
           "hIndex": 26,
           "authorId": "2109493175"
+        },
+        {
+          "name": "Yiben Yang",
+          "hIndex": 5,
+          "authorId": "79327062"
         }
       ],
       "affiliations": [
-        "Northwestern University"
+        "Northwestern University",
+        "Allen Institute for Artificial Intelligence"
       ],
       "year": 2018,
       "venue": "Annual Meeting of the Association for Computational Linguistics",
@@ -1260,12 +1261,13 @@
         },
         {
           "name": "Yanai Elazar",
-          "hIndex": 22,
-          "authorId": "2508065994"
+          "hIndex": 14,
+          "authorId": "51131518"
         }
       ],
       "affiliations": [
-        "University of Pennsylvania, Oracle"
+        "University of Pennsylvania, Oracle",
+        "Bar-Ilan University"
       ],
       "year": 2019,
       "venue": "Annual Meeting of the Association for Computational Linguistics",
@@ -1275,7 +1277,7 @@
       "doi": "10.18653/v1/P19-1388",
       "arxivId": "1906.01327",
       "pdf": "https://www.aclweb.org/anthology/P19-1388.pdf",
-      "citationCount": 66,
+      "citationCount": 67,
       "referenceCount": 30,
       "influentialCitationCount": 3,
       "source": "https://arxiv.org/abs/1906.01327",
@@ -1428,7 +1430,7 @@
       "doi": "10.18653/v1/N19-1245",
       "arxivId": "1905.13319",
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
-      "citationCount": 959,
+      "citationCount": 961,
       "referenceCount": 25,
       "influentialCitationCount": 118,
       "source": "https://arxiv.org/abs/1905.13319",
@@ -2093,7 +2095,7 @@
       "doi": "10.18653/v1/P18-1196",
       "arxivId": "1805.08154",
       "pdf": "https://www.aclweb.org/anthology/P18-1196.pdf",
-      "citationCount": 102,
+      "citationCount": 103,
       "referenceCount": 75,
       "influentialCitationCount": 11,
       "source": "https://arxiv.org/abs/1805.08154",
@@ -2275,7 +2277,7 @@
       "influentialCitationCount": 7,
       "source": "https://doi.org/10.18653/v1/P19-1329",
       "addedAt": "2026-09-14",
-      "score": 45
+      "score": 42.5
     },
     {
       "id": "c9f343b492c170c726f607c255ec6c7177dc5800",
@@ -2729,7 +2731,7 @@
       "influentialCitationCount": 0,
       "source": "https://doi.org/10.1145/3485447.3511932",
       "addedAt": "2026-09-14",
-      "score": 20
+      "score": 2.5
     },
     {
       "id": "b042444e4e9501ab2fcae6b1f6b9d834146b3fc9",
@@ -2748,14 +2750,14 @@
           "authorId": "144590225"
         },
         {
-          "name": "Yanai Elazar",
-          "hIndex": 22,
-          "authorId": "2508065994"
+          "name": "Ian Tenney",
+          "hIndex": 21,
+          "authorId": "6117577"
         }
       ],
       "affiliations": [
         "University of Pennsylvania, Oracle",
-        "Stanford University"
+        "Bar-Ilan University"
       ],
       "year": 2020,
       "venue": "Findings",
@@ -2765,7 +2767,7 @@
       "doi": "10.48550/arXiv.2010.05345",
       "arxivId": "2010.05345",
       "pdf": "https://www.aclweb.org/anthology/2020.findings-emnlp.439.pdf",
-      "citationCount": 100,
+      "citationCount": 101,
       "referenceCount": 20,
       "influentialCitationCount": 8,
       "source": "https://arxiv.org/abs/2010.05345",
