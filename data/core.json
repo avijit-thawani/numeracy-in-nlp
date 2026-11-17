@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T12:47:29.461Z",
+  "updatedAt": "2026-11-17T13:28:49.830Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -161,7 +161,7 @@
         "P. Smolensky",
         "Roland Fernandez",
         "N. Jojic",
-        "Jürgen Schmidhuber",
+        "J. Schmidhuber",
         "Jianfeng Gao"
       ],
       "topAuthors": [
@@ -552,7 +552,7 @@
       "authors": [
         "Niklas Heim",
         "T. Pevnỳ",
-        "Václav Šmídl"
+        "V. Šmídl"
       ],
       "topAuthors": [
         {
@@ -561,7 +561,7 @@
           "authorId": "1802358"
         },
         {
-          "name": "Václav Šmídl",
+          "name": "V. Šmídl",
           "hIndex": 21,
           "authorId": "10192900"
         }
@@ -575,7 +575,7 @@
       "doi": "10.48550/arXiv.2006.01681",
       "arxivId": "2006.01681",
       "pdf": null,
-      "citationCount": 14,
+      "citationCount": 15,
       "referenceCount": 25,
       "influentialCitationCount": 3,
       "source": "https://arxiv.org/abs/2006.01681",
@@ -587,15 +587,15 @@
       "title": "Probing for Multilingual Numerical Understanding in Transformer-Based Language Models",
       "authors": [
         "Devin J. Johnson",
-        "Denise Mak",
+        "Denise Y. F. Mak",
         "Andrew Barker",
         "Lexi Loessberg-Zahl"
       ],
       "topAuthors": [
         {
-          "name": "Andrew Barker",
-          "hIndex": 6,
-          "authorId": "145817859"
+          "name": "Denise Y. F. Mak",
+          "hIndex": 8,
+          "authorId": "3219035"
         },
         {
           "name": "Devin J. Johnson",
@@ -630,7 +630,7 @@
         "Steven Basart",
         "Eric Tang",
         "D. Song",
-        "Jacob Steinhardt"
+        "J. Steinhardt"
       ],
       "topAuthors": [
         {
@@ -639,7 +639,7 @@
           "authorId": "143711382"
         },
         {
-          "name": "Jacob Steinhardt",
+          "name": "J. Steinhardt",
           "hIndex": 51,
           "authorId": "5164568"
         }
@@ -656,9 +656,9 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7368,
+      "citationCount": 7380,
       "referenceCount": 72,
-      "influentialCitationCount": 1657,
+      "influentialCitationCount": 1664,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,9 +694,9 @@
       "doi": "10.48550/arXiv.2103.07191",
       "arxivId": "2103.07191",
       "pdf": "http://arxiv.org/pdf/2103.07191",
-      "citationCount": 1439,
+      "citationCount": 1442,
       "referenceCount": 28,
-      "influentialCitationCount": 285,
+      "influentialCitationCount": 286,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
       "score": 12.5
@@ -856,7 +856,7 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1467,
+      "citationCount": 1468,
       "referenceCount": 54,
       "influentialCitationCount": 250,
       "source": "https://arxiv.org/abs/1903.00161",
@@ -870,11 +870,11 @@
         "D. Saxton",
         "Edward Grefenstette",
         "F. Hill",
-        "Pushmeet Kohli"
+        "P. Kohli"
       ],
       "topAuthors": [
         {
-          "name": "Pushmeet Kohli",
+          "name": "P. Kohli",
           "hIndex": 120,
           "authorId": "143967473"
         },
@@ -1092,20 +1092,20 @@
       "title": "Extracting Commonsense Properties from Embeddings with Limited Human Guidance",
       "authors": [
         "Yiben Yang",
-        "Larry Birnbaum",
+        "L. Birnbaum",
         "Ji-Ping Z. Wang",
         "Doug Downey"
       ],
       "topAuthors": [
         {
+          "name": "L. Birnbaum",
+          "hIndex": 30,
+          "authorId": "144218567"
+        },
+        {
           "name": "Ji-Ping Z. Wang",
           "hIndex": 26,
           "authorId": "2109493175"
-        },
-        {
-          "name": "Yiben Yang",
-          "hIndex": 5,
-          "authorId": "79327062"
         }
       ],
       "affiliations": [
@@ -1430,7 +1430,7 @@
       "doi": "10.18653/v1/N19-1245",
       "arxivId": "1905.13319",
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
-      "citationCount": 961,
+      "citationCount": 962,
       "referenceCount": 25,
       "influentialCitationCount": 118,
       "source": "https://arxiv.org/abs/1905.13319",
@@ -1902,13 +1902,13 @@
       "id": "5bc3af2c542f1b7e7498cfac50fcfce082baa892",
       "title": "Variable-length Gray codes for the Natural Numbers",
       "authors": [
-        "Ezequiel López-Rubio"
+        "E. López-Rubio"
       ],
       "topAuthors": [
         {
-          "name": "Ezequiel López-Rubio",
-          "hIndex": 1,
-          "authorId": "2064335424"
+          "name": "E. López-Rubio",
+          "hIndex": 25,
+          "authorId": "123170618"
         }
       ],
       "affiliations": [],
@@ -1997,7 +1997,7 @@
       "id": "29c8b567b865ff5e854c106a3ff1e24270bc1908",
       "title": "GenBERTplus : A New Approach to Numeracy in Natural Language Processing",
       "authors": [
-        "Shuruthi Ajay",
+        "S. Ajay",
         "Vallidevi Krishnamurthy",
         "Abhilasha Singh"
       ],
@@ -2208,18 +2208,18 @@
         "Daniel M. Spokoyny",
         "Ivan Lee",
         "Zhao Jin",
-        "Taylor Berg-Kirkpatrick"
+        "T. Berg-Kirkpatrick"
       ],
       "topAuthors": [
+        {
+          "name": "T. Berg-Kirkpatrick",
+          "hIndex": 18,
+          "authorId": "2257289790"
+        },
         {
           "name": "Daniel M. Spokoyny",
           "hIndex": 6,
           "authorId": "2064240141"
-        },
-        {
-          "name": "Taylor Berg-Kirkpatrick",
-          "hIndex": 6,
-          "authorId": "2315300467"
         }
       ],
       "affiliations": [
@@ -2283,7 +2283,7 @@
       "id": "c9f343b492c170c726f607c255ec6c7177dc5800",
       "title": "Verb Physics: Relative Physical Knowledge of Actions and Objects",
       "authors": [
-        "M. Forbes",
+        "Maxwell Forbes",
         "Yejin Choi"
       ],
       "topAuthors": [
@@ -2293,7 +2293,7 @@
           "authorId": "1699545"
         },
         {
-          "name": "M. Forbes",
+          "name": "Maxwell Forbes",
           "hIndex": 19,
           "authorId": "39191185"
         }
@@ -2479,14 +2479,14 @@
       ],
       "topAuthors": [
         {
+          "name": "E. Simperl",
+          "hIndex": 44,
+          "authorId": "2927032"
+        },
+        {
           "name": "Oana Cocarascu",
           "hIndex": 20,
           "authorId": "3458679"
-        },
-        {
-          "name": "Mubashara Akhtar",
-          "hIndex": 11,
-          "authorId": "2265589650"
         }
       ],
       "affiliations": [
@@ -2699,22 +2699,22 @@
       "id": "d6d1403e4ae95776e75e12378e675a82101cf33c",
       "title": "Enhancing Knowledge Bases with Quantity Facts",
       "authors": [
-        "V. T. Ho",
-        "D. Stepanova",
+        "Vinh Thinh Ho",
+        "Daria Stepanova",
         "Dragan Milchevski",
         "Jannik Strötgen",
         "G. Weikum"
       ],
       "topAuthors": [
         {
-          "name": "G. Weikum",
-          "hIndex": 102,
-          "authorId": "1751591"
-        },
-        {
           "name": "Jannik Strötgen",
           "hIndex": 27,
           "authorId": "2013656"
+        },
+        {
+          "name": "Daria Stepanova",
+          "hIndex": 13,
+          "authorId": "144075663"
         }
       ],
       "affiliations": [],
