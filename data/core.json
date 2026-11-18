@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T13:28:49.830Z",
+  "updatedAt": "2026-11-18T13:03:59.609Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -12,7 +12,7 @@
       "topAuthors": [
         {
           "name": "J. Uszkoreit",
-          "hIndex": 34,
+          "hIndex": 36,
           "authorId": "39328010"
         },
         {
@@ -32,9 +32,9 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 3034,
+      "citationCount": 3035,
       "referenceCount": 14,
-      "influentialCitationCount": 271,
+      "influentialCitationCount": 272,
       "source": "https://arxiv.org/abs/1803.02155",
       "addedAt": "2026-09-12",
       "score": 0
@@ -69,7 +69,7 @@
       "doi": "10.18653/v1/D18-1256",
       "arxivId": "1808.09637",
       "pdf": "https://www.aclweb.org/anthology/D18-1256.pdf",
-      "citationCount": 283,
+      "citationCount": 284,
       "referenceCount": 34,
       "influentialCitationCount": 50,
       "source": "https://arxiv.org/abs/1808.09637",
@@ -130,7 +130,7 @@
         },
         {
           "name": "Daniel Khashabi",
-          "hIndex": 51,
+          "hIndex": 52,
           "authorId": "1783281"
         }
       ],
@@ -172,7 +172,7 @@
         },
         {
           "name": "P. Smolensky",
-          "hIndex": 55,
+          "hIndex": 54,
           "authorId": "1748557"
         }
       ],
@@ -243,7 +243,7 @@
       "topAuthors": [
         {
           "name": "A. Hotho",
-          "hIndex": 55,
+          "hIndex": 57,
           "authorId": "1792623"
         },
         {
@@ -280,7 +280,7 @@
       "topAuthors": [
         {
           "name": "J. Gratch",
-          "hIndex": 67,
+          "hIndex": 68,
           "authorId": "145438097"
         },
         {
@@ -594,7 +594,7 @@
       "topAuthors": [
         {
           "name": "Denise Y. F. Mak",
-          "hIndex": 8,
+          "hIndex": 5,
           "authorId": "3219035"
         },
         {
@@ -635,12 +635,12 @@
       "topAuthors": [
         {
           "name": "D. Song",
-          "hIndex": 142,
+          "hIndex": 143,
           "authorId": "143711382"
         },
         {
           "name": "J. Steinhardt",
-          "hIndex": 51,
+          "hIndex": 57,
           "authorId": "5164568"
         }
       ],
@@ -656,9 +656,9 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7380,
+      "citationCount": 7404,
       "referenceCount": 72,
-      "influentialCitationCount": 1664,
+      "influentialCitationCount": 1669,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,7 +694,7 @@
       "doi": "10.48550/arXiv.2103.07191",
       "arxivId": "2103.07191",
       "pdf": "http://arxiv.org/pdf/2103.07191",
-      "citationCount": 1442,
+      "citationCount": 1444,
       "referenceCount": 28,
       "influentialCitationCount": 286,
       "source": "https://arxiv.org/abs/2103.07191",
@@ -745,13 +745,13 @@
       "title": "Representing Numbers in NLP: a Survey and a Vision",
       "authors": [
         "Avijit Thawani",
-        "J. Pujara",
-        "Pedro A. Szekely",
-        "Filip Ilievski"
+        "Jay Pujara",
+        "Filip Ilievski",
+        "Pedro A. Szekely"
       ],
       "topAuthors": [
         {
-          "name": "J. Pujara",
+          "name": "Jay Pujara",
           "hIndex": 27,
           "authorId": "2634786"
         },
@@ -773,7 +773,7 @@
       "doi": "10.48550/arXiv.2103.13136",
       "arxivId": "2103.13136",
       "pdf": "http://arxiv.org/pdf/2103.13136",
-      "citationCount": 155,
+      "citationCount": 156,
       "referenceCount": 70,
       "influentialCitationCount": 8,
       "source": "https://arxiv.org/abs/2103.13136",
@@ -814,7 +814,7 @@
       "doi": "10.18653/v1/D19-1534",
       "arxivId": "1909.07940",
       "pdf": "https://www.aclweb.org/anthology/D19-1534.pdf",
-      "citationCount": 341,
+      "citationCount": 342,
       "referenceCount": 30,
       "influentialCitationCount": 37,
       "source": "https://arxiv.org/abs/1909.07940",
@@ -856,9 +856,9 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1468,
+      "citationCount": 1471,
       "referenceCount": 54,
-      "influentialCitationCount": 250,
+      "influentialCitationCount": 252,
       "source": "https://arxiv.org/abs/1903.00161",
       "addedAt": "2026-09-13",
       "score": 30
@@ -875,7 +875,7 @@
       "topAuthors": [
         {
           "name": "P. Kohli",
-          "hIndex": 120,
+          "hIndex": 123,
           "authorId": "143967473"
         },
         {
@@ -929,7 +929,7 @@
       "doi": null,
       "arxivId": "2102.13019",
       "pdf": null,
-      "citationCount": 210,
+      "citationCount": 211,
       "referenceCount": 49,
       "influentialCitationCount": 14,
       "source": "https://arxiv.org/abs/2102.13019",
@@ -1060,12 +1060,12 @@
       "topAuthors": [
         {
           "name": "E. Hovy",
-          "hIndex": 98,
+          "hIndex": 100,
           "authorId": "144547315"
         },
         {
           "name": "C. Rosé",
-          "hIndex": 56,
+          "hIndex": 59,
           "authorId": "35959897"
         }
       ],
@@ -1098,19 +1098,19 @@
       ],
       "topAuthors": [
         {
-          "name": "L. Birnbaum",
-          "hIndex": 30,
-          "authorId": "144218567"
+          "name": "Doug Downey",
+          "hIndex": 44,
+          "authorId": "145612610"
         },
         {
-          "name": "Ji-Ping Z. Wang",
-          "hIndex": 26,
-          "authorId": "2109493175"
+          "name": "L. Birnbaum",
+          "hIndex": 29,
+          "authorId": "144218567"
         }
       ],
       "affiliations": [
-        "Northwestern University",
-        "Allen Institute for Artificial Intelligence"
+        "Allen Institute for Artificial Intelligence",
+        "Northwestern University"
       ],
       "year": 2018,
       "venue": "Annual Meeting of the Association for Computational Linguistics",
@@ -1261,7 +1261,7 @@
         },
         {
           "name": "Yanai Elazar",
-          "hIndex": 14,
+          "hIndex": 21,
           "authorId": "51131518"
         }
       ],
@@ -1294,7 +1294,7 @@
       "topAuthors": [
         {
           "name": "Akiko Aizawa",
-          "hIndex": 33,
+          "hIndex": 36,
           "authorId": "1705519"
         },
         {
@@ -1415,7 +1415,7 @@
         },
         {
           "name": "Hannaneh Hajishirzi",
-          "hIndex": 86,
+          "hIndex": 87,
           "authorId": "2548384"
         }
       ],
@@ -1430,9 +1430,9 @@
       "doi": "10.18653/v1/N19-1245",
       "arxivId": "1905.13319",
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
-      "citationCount": 962,
+      "citationCount": 963,
       "referenceCount": 25,
-      "influentialCitationCount": 118,
+      "influentialCitationCount": 119,
       "source": "https://arxiv.org/abs/1905.13319",
       "addedAt": "2026-09-14",
       "score": 37.5
@@ -1468,7 +1468,7 @@
       "doi": "10.48550/arXiv.2411.03766",
       "arxivId": "2411.03766",
       "pdf": null,
-      "citationCount": 56,
+      "citationCount": 55,
       "referenceCount": 66,
       "influentialCitationCount": 6,
       "source": "https://arxiv.org/abs/2411.03766",
@@ -1487,7 +1487,7 @@
       "topAuthors": [
         {
           "name": "M. Zorzi",
-          "hIndex": 54,
+          "hIndex": 55,
           "authorId": "46787329"
         },
         {
@@ -1606,7 +1606,7 @@
       "topAuthors": [
         {
           "name": "P. Bhattacharyya",
-          "hIndex": 60,
+          "hIndex": 61,
           "authorId": "145532184"
         },
         {
@@ -1683,7 +1683,7 @@
       "topAuthors": [
         {
           "name": "R. Power",
-          "hIndex": 30,
+          "hIndex": 31,
           "authorId": "144585612"
         },
         {
@@ -1713,7 +1713,7 @@
       "title": "CONE: Embeddings for Complex Numerical Data Preserving Unit and Variable Semantics",
       "authors": [
         "Gyanendra Shrestha",
-        "A. Pyayt",
+        "Anna L. Pyayt",
         "M. Gubanov"
       ],
       "topAuthors": [
@@ -1723,8 +1723,8 @@
           "authorId": "1705924"
         },
         {
-          "name": "A. Pyayt",
-          "hIndex": 14,
+          "name": "Anna L. Pyayt",
+          "hIndex": 13,
           "authorId": "1743601"
         }
       ],
@@ -1760,12 +1760,12 @@
       "topAuthors": [
         {
           "name": "M. Menten",
-          "hIndex": 20,
+          "hIndex": 21,
           "authorId": "31444976"
         },
         {
           "name": "D. Rueckert",
-          "hIndex": 15,
+          "hIndex": 16,
           "authorId": "2091163163"
         }
       ],
@@ -1797,7 +1797,7 @@
       "topAuthors": [
         {
           "name": "Gerard de Melo",
-          "hIndex": 37,
+          "hIndex": 43,
           "authorId": "144608002"
         },
         {
@@ -2077,7 +2077,7 @@
       "topAuthors": [
         {
           "name": "Sebastian Riedel",
-          "hIndex": 72,
+          "hIndex": 73,
           "authorId": "48662861"
         },
         {
@@ -2181,7 +2181,7 @@
         },
         {
           "name": "Akiko Aizawa",
-          "hIndex": 33,
+          "hIndex": 36,
           "authorId": "1705519"
         }
       ],
@@ -2213,7 +2213,7 @@
       "topAuthors": [
         {
           "name": "T. Berg-Kirkpatrick",
-          "hIndex": 18,
+          "hIndex": 30,
           "authorId": "2257289790"
         },
         {
@@ -2252,12 +2252,12 @@
       "topAuthors": [
         {
           "name": "E. Hovy",
-          "hIndex": 98,
+          "hIndex": 100,
           "authorId": "144547315"
         },
         {
           "name": "C. Rosé",
-          "hIndex": 56,
+          "hIndex": 59,
           "authorId": "35959897"
         }
       ],
@@ -2319,12 +2319,12 @@
       "title": "Numeracy enhances the Literacy of Language Models",
       "authors": [
         "Avijit Thawani",
-        "J. Pujara",
+        "Jay Pujara",
         "F. Ilievski"
       ],
       "topAuthors": [
         {
-          "name": "J. Pujara",
+          "name": "Jay Pujara",
           "hIndex": 27,
           "authorId": "2634786"
         },
@@ -2439,7 +2439,7 @@
       "topAuthors": [
         {
           "name": "Irena Spasic",
-          "hIndex": 31,
+          "hIndex": 32,
           "authorId": "1750238"
         },
         {
@@ -2558,7 +2558,7 @@
         },
         {
           "name": "Chien-Sheng Wu",
-          "hIndex": 28,
+          "hIndex": 29,
           "authorId": "30340989"
         }
       ],
@@ -2707,14 +2707,14 @@
       ],
       "topAuthors": [
         {
+          "name": "G. Weikum",
+          "hIndex": 84,
+          "authorId": "2074754693"
+        },
+        {
           "name": "Jannik Strötgen",
           "hIndex": 27,
           "authorId": "2013656"
-        },
-        {
-          "name": "Daria Stepanova",
-          "hIndex": 13,
-          "authorId": "144075663"
         }
       ],
       "affiliations": [],
