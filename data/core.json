@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T12:55:00.322Z",
+  "updatedAt": "2026-11-21T12:43:43.285Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -656,9 +656,9 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7425,
+      "citationCount": 7434,
       "referenceCount": 72,
-      "influentialCitationCount": 1671,
+      "influentialCitationCount": 1675,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -856,7 +856,7 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1472,
+      "citationCount": 1473,
       "referenceCount": 54,
       "influentialCitationCount": 252,
       "source": "https://arxiv.org/abs/1903.00161",
@@ -2767,7 +2767,7 @@
       "doi": "10.48550/arXiv.2010.05345",
       "arxivId": "2010.05345",
       "pdf": "https://www.aclweb.org/anthology/2020.findings-emnlp.439.pdf",
-      "citationCount": 101,
+      "citationCount": 100,
       "referenceCount": 20,
       "influentialCitationCount": 8,
       "source": "https://arxiv.org/abs/2010.05345",
