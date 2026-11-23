@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T12:36:42.806Z",
+  "updatedAt": "2026-11-23T14:41:33.385Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -656,9 +656,9 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7436,
+      "citationCount": 7437,
       "referenceCount": 72,
-      "influentialCitationCount": 1675,
+      "influentialCitationCount": 1673,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
