@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T14:53:23.457Z",
+  "updatedAt": "2026-11-25T14:25:14.438Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -12,7 +12,7 @@
       "topAuthors": [
         {
           "name": "J. Uszkoreit",
-          "hIndex": 36,
+          "hIndex": 35,
           "authorId": "39328010"
         },
         {
@@ -32,7 +32,7 @@
       "doi": "10.18653/v1/N18-2074",
       "arxivId": "1803.02155",
       "pdf": "https://www.aclweb.org/anthology/N18-2074.pdf",
-      "citationCount": 3039,
+      "citationCount": 3044,
       "referenceCount": 14,
       "influentialCitationCount": 272,
       "source": "https://arxiv.org/abs/1803.02155",
@@ -69,7 +69,7 @@
       "doi": "10.18653/v1/D18-1256",
       "arxivId": "1808.09637",
       "pdf": "https://www.aclweb.org/anthology/D18-1256.pdf",
-      "citationCount": 284,
+      "citationCount": 285,
       "referenceCount": 34,
       "influentialCitationCount": 50,
       "source": "https://arxiv.org/abs/1808.09637",
@@ -130,7 +130,7 @@
         },
         {
           "name": "Daniel Khashabi",
-          "hIndex": 52,
+          "hIndex": 53,
           "authorId": "1783281"
         }
       ],
@@ -243,13 +243,13 @@
       "topAuthors": [
         {
           "name": "A. Hotho",
-          "hIndex": 57,
+          "hIndex": 56,
           "authorId": "1792623"
         },
         {
-          "name": "Markus Ring",
+          "name": "Daniel Schlör",
           "hIndex": 11,
-          "authorId": "40473966"
+          "authorId": "3404943"
         }
       ],
       "affiliations": [],
@@ -396,7 +396,7 @@
       "topAuthors": [
         {
           "name": "Song-Chun Zhu",
-          "hIndex": 94,
+          "hIndex": 95,
           "authorId": "145380991"
         },
         {
@@ -442,7 +442,7 @@
         },
         {
           "name": "Hao Wu",
-          "hIndex": 53,
+          "hIndex": 54,
           "authorId": "1664776313"
         }
       ],
@@ -458,7 +458,7 @@
       "doi": "10.48550/arXiv.2005.00242",
       "arxivId": "2005.00242",
       "pdf": "https://www.aclweb.org/anthology/2020.emnlp-main.88.pdf",
-      "citationCount": 129,
+      "citationCount": 130,
       "referenceCount": 52,
       "influentialCitationCount": 16,
       "source": "https://arxiv.org/abs/2005.00242",
@@ -656,9 +656,9 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7453,
+      "citationCount": 7473,
       "referenceCount": 72,
-      "influentialCitationCount": 1677,
+      "influentialCitationCount": 1683,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,9 +694,9 @@
       "doi": "10.48550/arXiv.2103.07191",
       "arxivId": "2103.07191",
       "pdf": "http://arxiv.org/pdf/2103.07191",
-      "citationCount": 1448,
+      "citationCount": 1450,
       "referenceCount": 28,
-      "influentialCitationCount": 286,
+      "influentialCitationCount": 288,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
       "score": 12.5
@@ -752,7 +752,7 @@
       "topAuthors": [
         {
           "name": "Jay Pujara",
-          "hIndex": 27,
+          "hIndex": 29,
           "authorId": "2634786"
         },
         {
@@ -856,9 +856,9 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1476,
+      "citationCount": 1478,
       "referenceCount": 54,
-      "influentialCitationCount": 252,
+      "influentialCitationCount": 253,
       "source": "https://arxiv.org/abs/1903.00161",
       "addedAt": "2026-09-13",
       "score": 30
@@ -875,7 +875,7 @@
       "topAuthors": [
         {
           "name": "P. Kohli",
-          "hIndex": 123,
+          "hIndex": 124,
           "authorId": "143967473"
         },
         {
@@ -893,7 +893,7 @@
       "doi": "10.48550/arXiv.1904.01557",
       "arxivId": "1904.01557",
       "pdf": "http://arxiv.org/pdf/1904.01557",
-      "citationCount": 552,
+      "citationCount": 554,
       "referenceCount": 32,
       "influentialCitationCount": 57,
       "source": "https://arxiv.org/abs/1904.01557",
@@ -1140,7 +1140,7 @@
       "topAuthors": [
         {
           "name": "Rui-Feng Xu",
-          "hIndex": 11,
+          "hIndex": 12,
           "authorId": "2266809482"
         },
         {
@@ -1184,7 +1184,7 @@
         },
         {
           "name": "Jonathon S. Hare",
-          "hIndex": 7,
+          "hIndex": 8,
           "authorId": "2090567625"
         }
       ],
@@ -1760,7 +1760,7 @@
       "topAuthors": [
         {
           "name": "M. Menten",
-          "hIndex": 21,
+          "hIndex": 22,
           "authorId": "31444976"
         },
         {
@@ -1967,14 +1967,14 @@
       ],
       "topAuthors": [
         {
+          "name": "Yu-Chen Li",
+          "hIndex": 4,
+          "authorId": "2374178248"
+        },
+        {
           "name": "Gong Cheng",
           "hIndex": 4,
           "authorId": "2244623823"
-        },
-        {
-          "name": "Yu-Chen Li",
-          "hIndex": 3,
-          "authorId": "2374178248"
         }
       ],
       "affiliations": [],
@@ -2213,7 +2213,7 @@
       "topAuthors": [
         {
           "name": "T. Berg-Kirkpatrick",
-          "hIndex": 30,
+          "hIndex": 49,
           "authorId": "2257289790"
         },
         {
@@ -2325,7 +2325,7 @@
       "topAuthors": [
         {
           "name": "Jay Pujara",
-          "hIndex": 27,
+          "hIndex": 29,
           "authorId": "2634786"
         },
         {
@@ -2403,7 +2403,7 @@
       "topAuthors": [
         {
           "name": "Nikhil Muralidhar",
-          "hIndex": 13,
+          "hIndex": 15,
           "authorId": "50027530"
         },
         {
@@ -2517,7 +2517,7 @@
       "topAuthors": [
         {
           "name": "G. Henter",
-          "hIndex": 32,
+          "hIndex": 31,
           "authorId": "2763884"
         },
         {
@@ -2596,7 +2596,7 @@
         },
         {
           "name": "Nikhil Muralidhar",
-          "hIndex": 13,
+          "hIndex": 15,
           "authorId": "50027530"
         }
       ],
