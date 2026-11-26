@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T14:25:14.438Z",
+  "updatedAt": "2026-11-26T13:55:14.362Z",
   "core": [
     {
       "id": "c8efcc854d97dfc2a42b83316a2109f9d166e43f",
@@ -656,9 +656,9 @@
       "doi": "10.48550/arXiv.2103.03874",
       "arxivId": "2103.03874",
       "pdf": "http://arxiv.org/pdf/2103.03874",
-      "citationCount": 7473,
+      "citationCount": 7488,
       "referenceCount": 72,
-      "influentialCitationCount": 1683,
+      "influentialCitationCount": 1687,
       "source": "https://arxiv.org/abs/2103.03874",
       "addedAt": "2026-09-12",
       "score": 7.5
@@ -694,9 +694,9 @@
       "doi": "10.48550/arXiv.2103.07191",
       "arxivId": "2103.07191",
       "pdf": "http://arxiv.org/pdf/2103.07191",
-      "citationCount": 1450,
+      "citationCount": 1454,
       "referenceCount": 28,
-      "influentialCitationCount": 288,
+      "influentialCitationCount": 291,
       "source": "https://arxiv.org/abs/2103.07191",
       "addedAt": "2026-09-12",
       "score": 12.5
@@ -856,9 +856,9 @@
       "doi": "10.18653/v1/N19-1246",
       "arxivId": "1903.00161",
       "pdf": "https://doi.org/10.18653/v1/n19-1246",
-      "citationCount": 1478,
+      "citationCount": 1481,
       "referenceCount": 54,
-      "influentialCitationCount": 253,
+      "influentialCitationCount": 254,
       "source": "https://arxiv.org/abs/1903.00161",
       "addedAt": "2026-09-13",
       "score": 30
@@ -1430,9 +1430,9 @@
       "doi": "10.18653/v1/N19-1245",
       "arxivId": "1905.13319",
       "pdf": "https://doi.org/10.18653/v1/n19-1245",
-      "citationCount": 967,
+      "citationCount": 969,
       "referenceCount": 25,
-      "influentialCitationCount": 120,
+      "influentialCitationCount": 121,
       "source": "https://arxiv.org/abs/1905.13319",
       "addedAt": "2026-09-14",
       "score": 37.5
